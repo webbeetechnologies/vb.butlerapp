@@ -3,7 +3,7 @@ jQuery(document).ready(function($) {
 
 var headerHeight = $('#masthead').height();
 $('.hero-sec').css('margin-top',-headerHeight);
-	
+console.log('testing git');
 /*===============================================================================
  *  VIDEO SECTION 
  * =============================================================================*/
