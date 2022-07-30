@@ -117,6 +117,9 @@ Version: 1.0.0
     -webkit-animation-timing-function: ease;
     animation-timing-function: ease !important;
 }
+#pro-team .team-head img {
+    border-radius: 50%;
+}
 
 /*======================================================
  * BUTLERAPP SERVICES
@@ -175,7 +178,7 @@ Version: 1.0.0
 }
 .marq-text p {
 	color: #fff;
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 700;
 	margin: 0;
 }
@@ -195,15 +198,15 @@ Version: 1.0.0
 	display: flex;
     align-items: center;
 }
-.marq-button a svg {
-	margin-left: 8px;
+.marq-button a:after {
+    content: url(/wp-content/uploads/2022/06/marq-arrow-icon.png);
+    transform: scale(0.44);
+    position: relative;
+    top: 1px;
 }
 .marq-button a:hover {
     background: linear-gradient(180deg, #0B2541 0%, #213954 100%);
     box-shadow: 0px 20px 30px -10px rgb(11 37 65 / 36%), 0px 10px 10px -7px rgb(11 37 65 / 22%);
-    border-radius: 20px;
-    padding: 12px 25px;
-    padding-top: 13.5px;
     color: #fff;
 }
 
@@ -255,10 +258,6 @@ Version: 1.0.0
 }
 #ba-marq .track:hover {
 	animation-play-state: paused !important;
-}
-@keyframes marquee {
-  from { transform: translateX(0); }
-  to { transform: translateX(-75%); }
 }
 /*======================================================
  * HERO SECTION
@@ -628,7 +627,7 @@ nav.elementor-nav-menu--dropdown.elementor-nav-menu__container {
 	text-align: center;
 	color: #0B2541;
 	mix-blend-mode: normal;
-	opacity: 0.3;
+	opacity: 0.8;
 	margin-right: 35px;
 	width: 52px;
     height: 52px;
@@ -799,8 +798,8 @@ nav.elementor-nav-menu--dropdown.elementor-nav-menu__container {
 	max-width: 90%;
 }
 .faq-icon-switcher {
-    width: 54px;
-    height: 54px;
+    width: 60px;
+    height: 60px;
 	background-size: contain !important;
 	transition: all .4s ease;
 }
@@ -827,8 +826,7 @@ nav.elementor-nav-menu--dropdown.elementor-nav-menu__container {
     width: 75%;
 }
 .faq.faq-active .faq-icon-switcher {
-    width: 75px;
-    height: 75px;
+    transform: scale(1.3);
     top: 25px;
     right: 25px;
     position: absolute;
@@ -1105,28 +1103,62 @@ body:not(.elementor-editor-active) #casual-team {
 }
 /*-- FAQ IMG --*/
 .faq-flipper img {
-	transition: all .4s ease;
+	background: #fff;
+	padding: 5px;
+	transition: all .3s ease-in-out;
+	position: absolute;
 }
 .faq.faq-active .faq-flipper img {
 	padding: 5px;
 	background: linear-gradient(90deg, #FBB03B 0%, #ED1E79 100%);
 	border-radius: 50% 50% 50% 5px;
 }
-.faq:not(.faq-active):hover .faq-flipper img {
-	background: linear-gradient(90deg, #FBB03B 0%, #ED1E79 100%);
-	border-radius: 50% 5px 50% 50%;
-	padding: 5px;
-}
 .faq:not(.faq-active) .faq-flipper img {
 	border-radius: 50%;
+}
+#ba-slider-controls {
+	z-index: 2 !important;
+}
+#kunden--slider .flex-control-paging li a:hover {
+	background: #0b2541 !important;
 }
 /*=================================================================================
  * Responsive CSS
  * ===============================================================================*/
-@media (max-width:786.98px) {
-	.remove-pseudo:after {
-		display: none;
+@media (min-width:1024px) and (max-width:1200px) {
+	#butlerapp-services > div > .elementor-row > div:first-child {
+		order: unset !important;
 	}
+	#ba--sliders .slides li:nth-child(2) img:not(.btn-replaced),
+	#ba--sliders .slides li:nth-child(3) img:not(.btn-replaced) {
+		top: unset !important;
+    	left: 0 !important;
+	}
+	#kundenslide .th-slide-content .sld-back > div > div > section {
+		left: unset !important;
+		transform: none !important;
+		bottom: unset !important;
+	}
+	#kundenslide .th-slide-content > div > div > div > section > div > div > div:first-child {
+		width: initial !important;
+		align-items: center !important;
+		top: unset !important;
+	}
+	#kunden--slider .th-slide-content > div > div > div > section > div > div > div:last-child > div > .elementor-widget-wrap {
+    padding-left: 50px;
+	}
+	#kunden--slider img {
+		max-width: 300px !important;
+	}
+}
+@media (min-width: 1200px) {
+	.faq:not(.faq-active):hover .faq-flipper img {
+		background: linear-gradient(90deg, #FBB03B 0%, #ED1E79 100%);
+		border-radius: 50% 5px 50% 50%;
+		padding: 5px;
+	}
+}
+@media (max-width:1199.98px) {
 	.butler-guides-section {
 		background: url(/wp-content/uploads/2022/06/bm-section-bg.png);
 		padding: 60px 0;
@@ -1172,7 +1204,7 @@ body:not(.elementor-editor-active) #casual-team {
 		text-align: center;
 		color: #0B2541;
 		mix-blend-mode: normal;
-		opacity: 0.3;
+		opacity: 0.8;
 		width: 52px;
 		height: 52px;
 		display: flex;
@@ -1271,6 +1303,33 @@ body:not(.elementor-editor-active) #casual-team {
 	}
 }
 @media (max-width:467.98px) {
+	.pro-service .elementor-widget-container>img {
+		transform: scale(1.2);
+	}
+	.faq .faq-icon-switcher {
+    	right: -10px;
+		transform: scale(1);
+	}
+	.faq.faq-active .faq-icon-switcher {
+		transform: scale(1.1);
+		top: 10px;
+    	right: -10px;
+		position: relative;
+	}
+	#ba-marq {
+		display: flex;
+		height: 100%;
+		align-items: center;
+	}
+	#ba-marq .marq-container {
+		height: unset;
+	}
+	.faq-flipper {
+		align-self: flex-start;
+	}
+	.faq-flipper img {
+		position: relative;
+	}
 	.elementor-element-7990123 h4 {
 		font-size: 18px;
 	}
@@ -1278,12 +1337,70 @@ body:not(.elementor-editor-active) #casual-team {
 		padding-right: 0 !important;
 		padding-left: 0 !important;
 	}
+	/*== DRAGGABLE HOTSPOT IMAGE ==*/
+	.elementor-element-1f7e3d5 {
+		margin-top: -55px;
+		height: 100vh;
+		overflow-y: hidden;
+	}
+	.elementor-element-16bc62a {
+		padding-bottom: 50px;
+	}
+	.elementor-element-16bc62a #btnSubmit {
+		width: 100%;
+	}
+	.elementor-element-16bc62a #btnSubmit > span {
+		font-size: .9em;
+	}
+	.elementor-element-1f7e3d5 img {
+		width: 320% !important;
+		max-width: 320%;
+	}
+	.hotspot-container {
+		height: 100vh;
+		width: 320%;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	.elementor-repeater-item-89deaa0 {
+		display: none;
+	}
+	.ba-instructor img {
+		width: 40vw !important;
+		height: auto;
+	}
+	.ba-instructor {
+		width: 100%;
+		position: absolute;
+		z-index: 1;
+		height: 100px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding-left: 30px;
+		width: 320%;
+	}
+	/*-- The FINGER --*/
+	.ba-instructor img:last-child {
+		width: 30px !important;
+		position: relative;
+		left: -135px;
+		top: 25px;
+		animation: drag 4s infinite;
+		opacity: .5;
+	}
+	@keyframes drag {
+		50% {left: -35px; opacity:1};
+		75% {left: -35px; opacity:1};
+		100% {left: -135px; opacity:0.5}; 
+	}
 	/*-- SERVICES SECTION --*/
 	.pro-service .elementor-widget-container>img {
 		height: 302px;
 	}
 	.butlerapp-services-img-container .e-hotspot {
-		transform: scale(0.65) translateX(-25px) translateY(-10px) !important;
+		transform: scale(0.80) translateX(-25px) translateY(-10px) !important;
 	}
 	.butlerapp-services-img-container .e-hotspot__tooltip {
 		width: 100vw;
@@ -1310,10 +1427,6 @@ body:not(.elementor-editor-active) #casual-team {
     	padding-bottom: 10px;
 	}
 	.faq-active .faq-flipper {
-		position: absolute !important;
-		bottom: 35px;
-		right: -5px !important;
-		transform: scale(0.9);
 		opacity: 0;
 		animation: faqfix 1s 1;
 		animation-fill-mode: forwards;
@@ -1413,6 +1526,9 @@ body:not(.elementor-editor-active) #casual-team {
 	.elementor-element-e8ff13f .elementor-text-editor > *:first-child {
 		width: 75%;
 	}
+	#kundenslide {
+		padding-bottom: 0;
+	}
 	#ba--sliders * {
 		position: relative !important;
 		opacity: 1 !important;
@@ -1423,9 +1539,6 @@ body:not(.elementor-editor-active) #casual-team {
 		margin-right: 0 !important;
 		margin-left: 0 !important;
 		padding: 0 !important;
-	}
-	#kundenslide {
-		padding-bottom: 0;
 	}
 	#ba--sliders img:not(.ba-image):not(.btn-replaced),
 	#ba--sliders > div > div > div > div > div > div:last-child,
@@ -1535,8 +1648,8 @@ body:not(.elementor-editor-active) #casual-team {
 	#kunden--slider #main-flex-slider .slides img {
 		border-radius: 50%;
 		box-shadow: none;
-		width: 90% !important;
-		left: 5%;
+		width: 75% !important;
+		left: 15%;
 		top: -280px;
 	}
 	#kunden--slider #main-flex-slider .flex-control-nav {
@@ -1579,16 +1692,13 @@ body:not(.elementor-editor-active) #casual-team {
 		overflow: hidden;
 	}
 }
-@media (min-width:486px) {
-	#ba--sliders .slides li .th-slide-content .elementor-section-wrap > section:nth-child(2) img {
-		width: 340px;
-		position: relative;
-		top: 60px;
+@media (min-width: 468px) {
+	.ba-instructor {
+		display: none;
 	}
-	#ba--sliders .slides li .th-slide-content .elementor-section-wrap > section:first-child {
-		max-height: 500px;
-		min-height: 500px;
-		display: flex;
+	.faq-flipper img {
+		top: 25px;
+		right: 25px;
 	}
 	#ba--sliders .slides > li {
 		transition: all .4s ease;
@@ -1669,10 +1779,20 @@ body:not(.elementor-editor-active) #casual-team {
 		top: 70px;
 	}
 }
-@media (max-width:768.98px) {
-	
-}
-@media (max-width:486px) {
+@media (max-width: 467.98px) {
+	#kunden--slider #main-flex-slider {
+		padding-top: 200px;
+		position: relative;
+		top: -200px;
+		height: 900px !important;
+	}
+	#ba-marq {
+		margin-top: -200px;
+	}
+	#ba-marq #marquee {
+		justify-content: center;
+    	margin-left: -10px;
+	}
 	.butler-guides-section .elementor-container {
 		width: 100%;
 	}
@@ -1685,23 +1805,84 @@ body:not(.elementor-editor-active) #casual-team {
 		font-size: 18px;
 		max-width: 250px;
 	}
+	.hero-img img {
+		padding-top: 40px;
+		max-width: 185%;
+		margin-left: -15%;
+	}
+}
+@media (min-width: 768px) and (max-width: 1024.98px) {
+	.hero-img img {
+		margin-left: -6%;
+		max-width: 104%;
+		margin-top: -100px;
+	}
+}
+@media (min-width: 468px) and (max-width:1024px) {
+	/*=========================================
+	 * HERO SECTION
+	 * ======================================*/
+	#mainhero h1 {
+    	line-height: 1.2em;
+	}
+	#mainhero {
+		padding-top: 90px;
+	}
+	#mainhero > div > div > div > div > div > section > div > div > div {
+		width: 100%;
+	}
+	#mobile-hero-logos > div > div > div {
+		width: 23.5% !important;
+		margin-top: -60px;
+		margin-bottom: -60px;
+	}
+	#mobile-hero-logos > div > div > div:nth-child(3) {
+		position: relative;
+		left: -17px;
+		margin-right: 10px;
+	}
+	#mainhero .elementor-icon-list-item {
+		width: 40%;
+		float: left;
+		padding-bottom: 20px;
+		margin-top: 0;
+		align-items: flex-start;
+	}
+	#mainhero .elementor-icon-list-item > span:first-child {
+		padding-right: 10px;
+		position: relative;
+		top: 7px;
+	}
+	#mainhero .elementor-icon-list-item > span:last-child {
+		line-height: 1.5em;
+	}
+	#mainhero .elementor-icon-list-items li:nth-child(even) {
+		padding-left: 50px;
+	}
+	#mainhero .elementor-widget-button > div {
+		margin-left: 0;
+		padding-left: 20px;
+	}
 }
 @media (max-width:1080px) {
 	.logo-blocker {
 		display: none;
 	}
 }
-@media(min-width:768.98px) {
+@media(min-width: 768px) {
 	.e-hotspot__tooltip {
 		width: 400px;
 	}
 }
-@media (max-width:768.98px) {
+@media (max-width:767.98px) {
 	#main-flex-slider .th-slide-inner {
 		padding-top: 0;
 	}
+	#ba--sliders .removio {
+		display: block !important;
+	}
 }
-@media (min-width:769px) {
+@media (min-width: 768px) {
 	.elementor-element-2543b8b0 p,
 	 .elementor-element-291f8efd p {
 		font-size: .7em;
@@ -1727,19 +1908,18 @@ body:not(.elementor-editor-active) #casual-team {
 	#main-flex-slider .flex-control-nav {
     	bottom: 150px !important;
 	}
-	/*-- QUICK FIX --*/
-	.elementor-element-20d9e5a {
-		margin-top: -200px !important;
-		z-index: 2 !important;
-	}
 }
 @media (min-width:1160px) {
 	.elementor-1458 .elementor-element.elementor-element-102e249f {
 		min-height: 350px;
 		max-height: 350px;
 	}
+	#ba-marq {
+		margin-top: -200px !important;
+		z-index: 2 !important;
+	}
 }
-@media (max-width:768.97px) {
+@media (max-width:767.98px) {
 	.elementor-element-1f7e3d5 {
 		overflow-y: hidden;	
 	}
@@ -1784,15 +1964,15 @@ body:not(.elementor-editor-active) #casual-team {
 		justify-content: center;
 		padding: 0;
 		min-height: 52px;
+		max-width: 468px;
 	}
-	.hero-img img {
-		padding-top: 140px;
-		padding-bottom: 120px;
-		transform: scale(1.8);
-		position: relative;
-		right: -24%;
-		z-index: -1;
+	.scrolling-logo-text,
+	.scrolling-logo-images {
+		display: none;
 	}
+}
+@media (max-width: 1025px) {
+	/*-- MOBILE MENU --*/
 	#masthead nav.elementor-nav-menu--dropdown.elementor-nav-menu__container {
 		height: calc(100vh - 52px);
 		background: rgba(11, 37, 65, 0.8);
@@ -1814,14 +1994,6 @@ body:not(.elementor-editor-active) #casual-team {
 		opacity: 0.8;
 		justify-content: center;
 		position: relative;
-	}
-	#stb-menu ul {
-		height: calc(100% - 52px);
-		align-items: center;
-		justify-content: flex-start;
-		display: flex;
-		flex-direction: column;
-		padding-top: 75px;
 	}
 	#masthead nav.elementor-nav-menu--dropdown.elementor-nav-menu__container .menu-item-3460 {
 		background: rgba(255, 255, 255, 0.95);
@@ -1860,6 +2032,7 @@ body:not(.elementor-editor-active) #casual-team {
 		left: 10%;
 		transition: all .4s ease;
 	}
+	/*-- Mobile Menu's Footer --*/
 	.mobiler-footer, .mobiler-footer > a:first-child {
 		position: fixed;
 		flex-direction: column;
@@ -1869,12 +2042,37 @@ body:not(.elementor-editor-active) #casual-team {
 		justify-content: center;
 		width: 100%;
 	}
-	.scrolling-logo-text,
-	.scrolling-logo-images {
-		display: none;
-	}
 }
-@media (max-width:486px) {
+@media (max-width: 467.98px) {
+	#kunden--slider .bsa-left, #kunden--slider .bsa-right {
+		cursor: pointer;
+		width: 42px;
+		height: 42px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: rgba(11, 37, 65, 0.093795);
+		border-radius: 14px;
+		z-index: 999;
+	}
+	#kunden--slider svg {
+		width: 8px;
+		height: 8px;
+	}
+	#kunden--slider .bas-inner {
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		height: 100%;
+		align-items: center;
+	}
+	#kunden--slider .ba-slider-arrows {
+		position: absolute;
+		width: 250px;
+		height: 45px;
+		top: -20px;
+		right: -10px;
+	}
 	#pro-team .team-head img {
 		width: 64px !important;
 	}
@@ -1935,12 +2133,6 @@ body:not(.elementor-editor-active) #casual-team {
 	}
 	.marq-text {
     	padding: 0;
-	}
-	.marq-text p {
-		font-size: 32px;
-		line-height: 38px;
-		margin: auto;
-		max-width: 90%;
 	}
 	#ba-marq .marq-button {
 		width: 100%;
@@ -2046,7 +2238,7 @@ body:not(.elementor-editor-active) #casual-team {
 	}
 	.faq-content-area .faq-meta {
 		position: relative;
-		width: 70%;
+		width: 97%;
 	}
 	.faq-content-area {
 		flex-direction: column;
@@ -2101,6 +2293,7 @@ body:not(.elementor-editor-active) #casual-team {
 		background-size: 85%;
 		margin-left: 20px;
 		background-repeat: no-repeat;
+		transition: all .5s ease-in-out;
 	}
 	.ct-girl {
 		position: relative;
@@ -2137,16 +2330,16 @@ body:not(.elementor-editor-active) #casual-team {
 		background-position: 50% 0;
 		background-size: cover;
 	}
-	.elementor-941 .elementor-element.elementor-element-c30dcf2 .elementor-heading-title {
+	#butlerapp-contact .elementor-heading-title {
 		font-size: 2em;
 		line-height: 1.3em;
 	}
-	.elementor-element-15770ed > .elementor-container {
+	#butlerapp-contact > .elementor-container {
 		width: 100% !important;
 		position: relative;
 		top: -55px;
 	}
-	.elementor-element-16bc62a {
+	#butlerapp-contact .elementor-widget-form {
 		background-image: url(/wp-content/uploads/2022/06/contact-form-bg-min.png);
 		background-repeat: no-repeat;
 		background-size: cover;
@@ -2155,7 +2348,7 @@ body:not(.elementor-editor-active) #casual-team {
 		margin-top: 80px;
 		border-radius: 20px;
 	}
-	.elementor-941 .elementor-element.elementor-element-16bc62a .elementor-field-group:not(.elementor-field-type-upload) .elementor-field:not(.elementor-select-wrapper) {
+	#butlerapp-contact .elementor-field-group:not(.elementor-field-type-upload):not(.elementor-field-type-acceptance) .elementor-field:not(.elementor-select-wrapper) {
 		background: #FFFFFF;
 		box-shadow: 0px 1px 2px rgb(11 37 65 / 20%) !important;
 		border-radius: 8px;
@@ -2167,7 +2360,7 @@ body:not(.elementor-editor-active) #casual-team {
 		mix-blend-mode: normal;
 		opacity: 0.5;
 	}
-	.elementor-941 .elementor-element.elementor-element-16bc62a .elementor-field-group:not(.elementor-field-type-upload) .elementor-field:not(.elementor-select-wrapper):focus {
+	#butlerapp-contact .elementor-field-group:not(.elementor-field-type-upload) .elementor-field:not(.elementor-select-wrapper):focus {
 		background: #FFFFFF;
 		border: 2px solid #29ABDC !important;
 		border-radius: 8px;
@@ -2175,95 +2368,338 @@ body:not(.elementor-editor-active) #casual-team {
 		color: #0B2541 !important;
 		font-weight: 500;
 	}
-	.elementor-field-group-field_cd8fe50 > .elementor-field-subgroup span label {
+	#butlerapp-contact .elementor-field-type-acceptance > .elementor-field-subgroup span label {
 		width: 100% !important;
 		display: flex !important;
 		flex-direction: row !important;
 		font-size: .9em !important;
 	}
-	.elementor-field-group-field_cd8fe50 > .elementor-field-subgroup > .elementor-field-option {
+	#butlerapp-contact .elementor-field-type-acceptance > .elementor-field-subgroup > .elementor-field-option {
 		display: flex;
 	}
-	.elementor-field-group-field_cd8fe50 {
+	#butlerapp-contact .elementor-field-type-acceptance {
 		width: 100%;
 		align-items: center;
 		justify-content: center;
 	}
-	#form-field-field_cd8fe50 {
+	#butlerapp-contact .elementor-acceptance-field {
 		height: 40px !important;
 		box-shadow: none !important;
 		margin-right: 8px !important;
 	}
-	.elementor-element-1f7e3d5 {
-		margin-top: -55px;
-		height: 100vh;
-		overflow-y: hidden;
-	}
-	.elementor-element-16bc62a {
-		padding-bottom: 50px;
-	}
-	.elementor-element-16bc62a #btnSubmit {
-		width: 100%;
-	}
-	.elementor-element-16bc62a #btnSubmit > span {
-		font-size: .9em;
-	}
-	.elementor-element-1f7e3d5 img {
-		width: 320% !important;
-		max-width: 320%;
-	}
-	.hotspot-container {
-		height: 100vh;
-		width: 320%;
-		position: absolute;
-		top: 0;
-		left: 0;
-	}
-	.elementor-repeater-item-89deaa0 {
-		display: none;
-	}
-	.ba-instructor img {
-		width: 40vw !important;
-		height: auto;
-	}
-	.ba-instructor {
-		width: 100%;
-		position: absolute;
-		z-index: 1;
-		height: 100px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		padding-left: 30px;
-		width: 320%;
-	}
-	/*-- The FINGER --*/
-	.ba-instructor img:last-child {
-		width: 30px !important;
-		position: relative;
-		left: -135px;
-		top: 25px;
-		animation: drag 4s infinite;
-		opacity: .5;
-	}
-	@keyframes drag {
-		50% {left: -35px; opacity:1};
-		75% {left: -35px; opacity:1};
-		100% {left: -135px; opacity:0.5}; 
-	}
-
 }
 
 /*===================================================================
  * FIXES
  * ==============================================================*/
+@media (min-width: 1125px) {
+	#mobile-hero-logos {
+		margin-top: -70px !important;
+	}
+}
+@media (min-width: 1025px) and (max-width: 1988px) {
+	#mainhero > div {
+		max-width: calc(93% - 20px);
+	}
+}
 .fadeInDown,
 .fadeInUp {
 	animation-iteration-count: 1 !important;
 	animation-fill-mode: forwards !important;
 }
+#mobile-hero-logos {
+    margin: 0;
+}
+#target-button-hero-section:active,
+#target-button-hero-section:focus {
+	color: #fff;
+}
+#target-button-menu-bar:active,
+#target-button-menu-bar:focus {
+	color: #0B2541;
+}
 
+/*-- KUNDEN SLIDER CONTROLS --*/
+#kunden--slider .flex-control-nav li {
+	position: relative;
+	z-index: 2;
+	left: 10px;
+}
+#kunden--slider .ba-slider-arrows > div {
+	max-width: 200px;
+	margin: auto;
+}
+#kunden--slider .ba-slider-arrows {
+	width: 100%;
+}
+#butler_guides .b-filters > div span,
+#bm-guides .bm-head span{
+	border-radius: 20px;
+}
+#ba-marq {
+	cursor: pointer;
+}
+/*-- AUTO SCROLLING TEXT  --*/
+#ba-marq .swiper-slide {
+	background: transparent;
+	padding: 40px;
+}
 
+.mobiler-footer {
+	z-index: 999;
+}
+
+/*-- SPECIFICALLY TABS --*/
+@media (max-width: 1200px) and (min-width: 767.98px) {
+	.mobiler-footer:after {
+		width: 50%;
+	}
+	#ba--sliders .slides li .th-slide-content .elementor-section-wrap > section:first-child {
+		max-height: 500px;
+		min-height: 500px;
+		display: flex;
+	}
+	.bsa-left, .bsa-right {
+		background: #fff;
+	}
+	.bsa-left, .bsa-right {
+		box-shadow: 0px 1px 2px rgba(11, 37, 65, 0.199326);
+	}
+	#masthead nav.elementor-nav-menu--dropdown.elementor-nav-menu__container .menu-item-3460 {
+		display: none;
+	}
+	#butlerapp-services .elementor-widget-hotspot {
+		justify-content: center !important;
+	}
+	#ba--sliders .slides > li .th-slide-content > div > div > div > section:first-child > div > div > div > div > div > * {
+		margin-left: 30px !important;
+	}
+	#ba--sliders .slides > li .th-slide-content > div > div > div > section:first-child > div > div > div > div > div > div:nth-child(2) > div {
+		padding-right: 20px;
+	}
+	#ba--sliders .slides > li .th-slide-content > div > div > div > section:first-child section > div > div {
+		flex-direction: column !important;
+	}
+	#ba--sliders .slides > li .th-slide-content > div > div > div > section:first-child section > div,
+	#ba--sliders .slides > li .th-slide-content > div > div > div > section:first-child > div > div > div > div > div > div:last-child > div {
+		margin-left: 0 !important;
+	}
+	#ba--sliders .slides > li .th-slide-content > div > div > div > section:first-child section > div > div > div {
+		width: 100%;
+	}
+	#ba--sliders .slides > li .th-slide-content > div > div > div > section:first-child section > div > div > div:last-child 	{
+		position: relative;
+		top: -18px;
+	}
+	#ba--sliders .ba-slider-controls-container .elementor-widget-container {
+		position: absolute;
+		left: 280px;
+		bottom: 100px;
+	}
+	#ba--sliders h2 {
+		font-size: 2.4em;
+	}
+	#ba--sliders .slides > li .th-slide-content > div > div > div > section:first-child > div > div > div > div {
+		min-height: 600px;
+		max-height: 600px;
+		height: 600px;
+		transition: all .7s ease-in-out !important;
+	}
+	#ba--sliders .elementor-widget-button {
+		position: absolute;
+		bottom: 35px;
+	}
+	#ba--sliders .slides .th-slide-inner {
+		padding-top: 0;
+	}
+	#ba--sliders .slides > li:nth-child(1) .th-slide-content > div > div > div > section:first-child > div > div > div > div {
+		background-image: url(/wp-content/uploads/2022/07/tab-fs-1.jpg);
+	}
+	#ba--sliders .slides > li:nth-child(2) .th-slide-content > div > div > div > section:first-child > div > div > div > div {
+		background-image: url(/wp-content/uploads/2022/07/tab-fs-2.jpg);
+	}
+	#ba--sliders .slides > li:nth-child(3) .th-slide-content > div > div > div > section:first-child > div > div > div > div {
+		background-image: url(/wp-content/uploads/2022/07/tab-fs-3.jpg);
+	}
+	#ba--sliders .slides .th-slide-inner {
+		padding-right: 15px;
+		padding-left: 25px;
+	}
+	#kundenslide .th-slide-content > div > div > div > section > div > div > div:first-child {
+		width: 15%;
+		align-items: flex-start;
+		position: relative;
+		top: -30px;
+		left: -30px;
+	}
+	#kundenslide .th-slide-content > div > div > div > section > div > div > div:last-child {
+		width: 70%;
+		margin-left: auto;
+	}
+	#main-flex-slider .th-slide-inner {
+		padding-right: 0;
+		padding-left: 0;
+	}
+	#kundenslide .th-slide-content > div > div > div > section > div > div {
+		background: rgba(245, 247, 248, 0.6);
+		border-radius: 20px;
+		box-shadow: inset 0px 1px 1px #ffffff;
+		backdrop-filter: blur(19.028px);
+	}
+	#kundenslide .th-slide-content .sld-back > div > div > section {
+		left: -62%;
+		transform: scale(.8);
+		bottom: 280px;
+	}
+	#kundenslide .th-slide-content > div > div > div > section > div > div {
+		flex-wrap: nowrap;
+	}
+	#kundenslide .th-slide-content section:first-child
+	{
+		padding-right: 0;
+	}
+	#kundenslide p {
+		padding: 20px 0 20px 10px;
+	}
+	#kundenslide #main-flex-slider .flex-control-nav {
+		bottom: -50px !important;
+		width: 100%;
+	}
+	.butler-guides-section {
+		padding-bottom: 0 !important;
+	}
+	#kundenslide h2 {
+		margin-bottom: -100px !important;
+	}
+	#kunden--slider .slides li:first-child .elementor-inner-section > div > div.elementor-row > div:first-child
+	{
+		display: none;
+	}
+	#kunden--slider .slides li:last-child .elementor-inner-section > div > div.elementor-row > div:first-child {
+		position: relative;
+		top: -30px;
+	}
+	#butlerapp-services > div > .elementor-row > div {
+		width: 100% !important;
+	}
+	#butlerapp-services > div > .elementor-row > div:first-child {
+		order: 1;
+	}
+	#butlerapp-services > div > div > div:first-child > div > div > .elementor-widget:not(.elementor-widget-image):not(.elementor-widget-button) {
+		padding-left: 55px;
+		padding-right: 55px;
+	}
+	.elementor-941 .elementor-element.elementor-element-b0e0498:not(.elementor-motion-effects-element-type-background) > .elementor-column-wrap {
+		background-image: none;
+	}
+	.section-service {
+		padding-top: 50px !important;
+		padding-bottom: 50px !important;
+	}
+	.section-service > div > .elementor-row > div {
+		width: 100% !important;
+	}
+	.section-service .ba-points {
+		max-width: 90%;
+		margin: auto;
+	}
+	.section-service .ba-numbers {
+		position: absolute;
+	}
+	.section-service .ba-points h3, .section-service .ba-points p {
+		padding-left: 80px;
+	}
+	.section-service .ba-points {
+		max-width: 90%;
+		margin: auto;
+		margin-bottom: 40px;
+	}
+	.section-service h2 {
+		padding-left: 40px;
+		margin-bottom: 40px;
+		font-size: 2.5em !important;
+	}
+	.ba-logo img {
+		width: auto !important;
+		max-width: fit-content !important;
+	}
+	#ba--sliders .slides li img:not(.btn-replaced) {
+		max-width: 280px;
+		position: absolute;
+		left: 0;
+		bottom: 50%;
+	}
+	#ba--sliders .slides li:nth-child(2) img:not(.btn-replaced) {
+		top: -445px;
+		left: 10px;
+	}
+	#ba--sliders .slides li:nth-child(3) img:not(.btn-replaced) {
+		top: -445px;
+		left: 10px;
+	}
+}
+@media (max-width: 1201px) and (min-width: 1025px) {
+	#masthead nav {
+		min-width: 110%;
+		position: relative;
+		right: 10%;
+	}
+}
+@media (min-width: 468px) and (max-width: 767.98px) {
+	#ba--sliders .th-slide-content > div > div > div > section > div > div > div > div > div {
+		padding: 40px;
+	}
+	#ba--sliders {
+		margin: 0;
+		padding: 250px 0 200px 0;
+	}
+	#ba--sliders img:not(.btn-replaced) {
+		display: none;
+	}
+	#ba--sliders .th-slide-content > div > div > div > section > div > div > div > div > div > div > .elementor-widget-container {
+		padding-right: 0;
+	}
+	#ba--sliders .th-slide-content > div > div > div > section {
+		margin-left: -10px;
+		margin-right: 10px;
+	}
+	#ba--sliders .removio {
+		display: none !important; /*-- temporary -- will work on later --*/
+		z-index: 999;
+		margin-top: -54%;
+	}
+	/*==========================
+	 * KUNDEN SLIDER
+	 * =======================*/
+	#kunden--slider .slides li .elementor-widget-text-editor p {
+		font-size: .7em;
+		line-height: 1.7em;
+		padding: 80px 30px 30px 30px;
+	}
+	#kunden--slider img.attachment-full {
+		box-shadow: 0 0 27px rgb(0 0 0 / 30%);
+		border-radius: 50%;
+		width: 200px;
+	}
+	#kundenslide .elementor-section-boxed .elementor-container {
+		width: 130% !important;
+		margin-left: -15%;
+		padding: 0 10px;
+	}
+	.butler-guides-section {
+		padding-bottom: 0 !important;
+	}
+	#kunden--slider .th-slide-content > div > div > div > section > div > div > div > div > div > div > div > div.elementor-image {
+		height: 200px;
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.elementor-element-bcef45d img {
+		display: none !important;
+	}
+}
 
 
 
