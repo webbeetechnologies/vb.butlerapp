@@ -1306,6 +1306,9 @@ body:not(.elementor-editor-active) #casual-team {
 	}
 }
 @media (max-width:467.98px) {
+	#ba-marq #marquee {
+		padding: 0 !important;
+	}
 	.pro-service .elementor-widget-container>img {
 		transform: scale(1.2);
 	}
@@ -1665,9 +1668,6 @@ body:not(.elementor-editor-active) #casual-team {
 	#ba-marq .marq-container .marq-content {
 		flex-direction: column;
 	}
-	#ba-marq .marq-container .marq-content .marq-button {
-		order: 1;
-	}
 	.elementor-941 .elementor-element.elementor-element-b0e0498:not(.elementor-motion-effects-element-type-background) > .elementor-column-wrap {
 		background-image: none !important;
 	}
@@ -1883,6 +1883,21 @@ body:not(.elementor-editor-active) #casual-team {
 	}
 	#ba--sliders .removio {
 		display: block !important;
+	}
+	#marquee .marq-container.track .marq-content:not(:first-child) {
+		display: none;
+	}
+	#ba-marq #marquee {
+		justify-content: center;
+		padding: 70px 0 100px 0;
+		overflow: hidden;
+	}
+	#marquee .marq-container .marq-content {
+		flex-direction: column;
+		margin: 0;
+	}
+	#ba-marq .marq-container .marq-content .marq-button {
+		order: 1;
 	}
 }
 @media (min-width: 768px) {
@@ -2685,6 +2700,15 @@ body:not(.elementor-editor-active) #casual-team {
 		display: none !important; /*-- temporary -- will work on later --*/
 		z-index: 999;
 		margin-top: -54%;
+	}
+	.marq-text p {
+		font-size: 5vw;
+		padding-bottom: 10px;
+	}
+	#ba-marq #marquee {
+		justify-content: center;
+		padding: 85px 0 110px 0;
+		overflow: hidden;
 	}
 	/*==========================
 	 * KUNDEN SLIDER
