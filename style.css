@@ -1150,6 +1150,9 @@ body:not(.elementor-editor-active) #casual-team {
 	#kunden--slider img {
 		max-width: 300px !important;
 	}
+	#kunden--slider #kundenslide h2 {
+		margin-bottom: 0 !important;
+	}
 }
 @media (min-width: 1200px) {
 	.faq:not(.faq-active):hover .faq-flipper img {
@@ -2646,6 +2649,21 @@ body:not(.elementor-editor-active) #casual-team {
 	}
 }
 @media (min-width: 468px) and (max-width: 767.98px) {
+	#kunden--slider .th-slide-content > div > div > div > section > div > div > div > div > div > div > div > div.elementor-image img {
+		position: absolute;
+		bottom: -45%;
+		margin-left: -7.6%;
+	}
+	#kunden--slider .tst {
+		position: relative;
+		bottom: 30px;
+	}
+	#kunden--slider #main-flex-slider .flex-control-nav {
+		bottom: -80px;
+	}
+	#kunden--slider #main-flex-slider .flex-control-nav {
+		width: 100%;
+	}
 	#ba--sliders .th-slide-content > div > div > div > section > div > div > div > div > div {
 		padding: 40px;
 	}

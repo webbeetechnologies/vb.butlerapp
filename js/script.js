@@ -150,8 +150,8 @@ $('.elementor-element-1f7e3d5 img:not(.team-head img)').mouseup(function() {
 	function handleResize() {
 		var mQ = $(window).width();
 		var dE = $('#ba--sliders .slides > li:first-child > div .ba-image').length;
-		var ksH = $('#kunden--slider .th-slide-content');
-		var kundenSlide = $('#kundenslide .th-slide-content > div > div > div > section > div > div');
+		var ksH = $('#kunden--slider .th-slide-content').height() + 150;
+		// var kundenSlide = $('#kundenslide .th-slide-content > div > div > div > section > div > div');
 		var headerHeight = $('#masthead').height();
 		var cI = $('#kunden--slider .th-slide-content > div > div > div > section > div > div > div > div > div > div > div > div.elementor-image');
 		var kS = $('#kunden--slider #main-flex-slider');
@@ -186,18 +186,20 @@ $('.elementor-element-1f7e3d5 img:not(.team-head img)').mouseup(function() {
 			if(dE == 0) {
 				$('#ba--sliders .slides > li:first-child > div').prepend('<img class="removio ba-image" src="/wp-content/uploads/2022/06/mobile-mac-min.png">');
 				$('#ba--sliders .slides > li:nth-child(2) > div').prepend('<img class="removio ba-image" src="/wp-content/uploads/2022/06/mobile-mac-2-min.png">');
-				$('#ba--sliders .slides > li:nth-child(3) > div').prepend('<img class="removio ba-image" src="/wp-content/uploads/2022/06/mobile-mac-2-min.png">');
+				$('#ba--sliders .slides > li:nth-child(3) > div').prepend('<img class="removio ba-image" src="/wp-content/uploads/2022/06/mobile-mac-3-min.png">');
 			}
 		} else {
 			$('.removio').hide();
 		}
 		
-		if(mQ < 767.98 && mQ > 468) {
+		if(mQ > 468 && mQ < 767.98) {
 			cI.css('width',mQ+'px');
+		} else {
+			cI.css('width','');
 		}
 		
 		if(mQ < 1200 && mQ > 1024) {
-			kS.attr('style','height:'+ksH+'px'+'');
+			kS.attr('style','height:'+ksH+''+'px');
 		}
 	}
 	$(window).resize(handleResize);
