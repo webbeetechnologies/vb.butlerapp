@@ -1,7 +1,7 @@
 /* Javascript */
 jQuery(document).ready(function($) {
 
-$('#butlerapp-team-container .elementor-widget-hotspot .elementor-widget-container>img').removeAttr('loading');
+	$('#butlerapp-team-container .elementor-widget-hotspot .elementor-widget-container>img').removeAttr('loading');
 /*===============================================================================
  *  VIDEO SECTION 
  * =============================================================================*/
@@ -9,6 +9,7 @@ $('#butlerapp-team-container .elementor-widget-hotspot .elementor-widget-contain
 	// DEFAULT STATE
 	$('.b-filters > div:nth-child(1)').addClass('active');
 	$('.b-guides .guide:nth-child(1)').addClass('active');
+
 	var sV = $('.b-guides .guide:nth-child(1)').find('.video--link').text();
 	var cS = '<source src="'+sV+'" type="video/mp4">';
 	$('.b-guides .guide:nth-child(1)').find('video').append(cS);
@@ -43,8 +44,6 @@ $('#butlerapp-team-container .elementor-widget-hotspot .elementor-widget-contain
 /*===============================================================================
  * FUTURE SLIDER
  * ============================================================================*/
-	
-/* BA SLIDER CONTROLS */
 
 if($(window).width() > 468) {
 	// INITIAL STATE MODIFICATION
@@ -55,29 +54,17 @@ if($(window).width() > 468) {
 	var slideWidth = $('#ba--sliders .slides > li').width();
 	var slideWidth = slideWidth + 'px' + '!important';
 	
-	// FUCK ELEMENTOR'S ACTIVE STATE
+	// REMOVES ELEMENTOR'S ACTIVE STATE
 	slide.removeClass('flex-active-slide');
-	
-	$('#ba-slider-controls li').click(function() {
+
+	$('#ba-slider-controls li').on('click', function() {
 		$('#ba-slider-controls li').removeClass('active');
 		$(this).addClass('active');
-		
-		var activePoint = $('#ba-slider-controls li.active a').text();
+
+		var activePoint = $('#ba-slider-controls li.active').index();
 		console.log(activePoint);
-		// ACTIVE ON CONDITION
-		if(activePoint == 1) {
-			slide.removeClass('active');
-			slide.eq(0).addClass('active');
-		} else if(activePoint == 2) {
-			slide.removeClass('active');
-			slide.eq(1).addClass('active');
-		} else if(activePoint == 3) {
-			slide.removeClass('active');
-			slide.eq(2).addClass('active');
-		} else {
-			//speedy conzales :D
-		}
-		
+		slide.removeClass('active');
+		slide.eq(activePoint).addClass('active');
 	});
 	
 // HERE COMES D ARROWS
