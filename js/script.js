@@ -67,16 +67,16 @@ if($(window).width() > 468) {
 	function slideToIndex(nextIndex) {
 		$('#ba-slider-controls li').removeClass("active");
 		$('#ba-slider-controls li').eq(nextIndex).addClass('active');
-		var linerTxt = $('#ba-slider-controls li.active a').text();
 		slides.removeClass('active');
 		slides.eq(nextIndex).addClass('active');
 	}
 	function handlenextclick() {
 		var activeLiner = $('#ba-slider-controls li.active');
-		var nextIndex = $('#ba-slider-controls li').toArray().indexOf(activeLiner[0]) + 1;
+		var nextIndex = activeLiner.index() + 1;
 		if (!$('#ba-slider-controls li').eq(nextIndex).length) {
 			nextIndex = 0;
 		}
+		console.log(nextIndex);
 		slideToIndex.call(this, nextIndex);
 	}
 
