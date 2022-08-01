@@ -1153,6 +1153,25 @@ body:not(.elementor-editor-active) #casual-team {
 	#kunden--slider #kundenslide h2 {
 		margin-bottom: 0 !important;
 	}
+	/*==================================
+	* Kompetenter Services
+	==================================*/
+	#butlerapp-services .elementor-widget-button {
+		padding-left: 4em;
+	}
+	.elementor-941 .elementor-element.elementor-element-b0e0498:not(.elementor-motion-effects-element-type-background) > .elementor-column-wrap {
+		background-image: url("https://butlerapp.de/wp-content/uploads/2022/06/lady.png") !important;
+	}
+	.section-service {
+		margin-bottom: -50px;
+	}
+	.section-service h2 {
+		line-height: 40px !important;
+	}
+	.section-service > div > div > div:nth-child(2), .section-service > div > div > div:last-child {
+		padding-top: 100px;
+	}
+	
 }
 @media (min-width: 1200px) {
 	.faq:not(.faq-active):hover .faq-flipper img {
@@ -1422,6 +1441,9 @@ body:not(.elementor-editor-active) #casual-team {
 	}
 	.pro-service > .elementor-widget-container .e-hotspot:nth-child(5) .e-hotspot__tooltip {
 		left: -1405%;
+	}
+	#butlerapp-services .elementor-widget-hotspot {
+		justify-content: center;
 	}
 	/*-- FAQS SECTION --*/
 	#faqs-container .faq {
@@ -2740,6 +2762,39 @@ body:not(.elementor-editor-active) #casual-team {
 	}
 	.elementor-element-bcef45d img {
 		display: none !important;
+	}
+	/*===================================
+	* Support Section
+	===================================*/
+	.elementor-941 .elementor-element.elementor-element-b0e0498:not(.elementor-motion-effects-element-type-background) > .elementor-column-wrap {
+		background-image: none;
+	}
+	.section-service {
+		padding-top: 50px !important;
+		padding-bottom: 50px !important;
+	}
+	.section-service > div > .elementor-row > div {
+		width: 100% !important;
+	}
+	.section-service .ba-points {
+		max-width: 90%;
+		margin: auto;
+	}
+	.section-service .ba-numbers {
+		position: absolute;
+	}
+	.section-service .ba-points h3, .section-service .ba-points p {
+		padding-left: 80px;
+	}
+	.section-service .ba-points {
+		max-width: 90%;
+		margin: auto;
+		margin-bottom: 40px;
+	}
+	.section-service h2 {
+		padding-left: 40px;
+		margin-bottom: 40px;
+		font-size: 2.5em !important;
 	}
 }
 
