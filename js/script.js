@@ -6,7 +6,7 @@ jQuery(document).ready(function($) {
  *  VIDEO SECTION 
  * =============================================================================*/
 	
-	// DEFAULT STATE
+	// MAKES THE FIRST VIDEO ACTIVE ON LOAD
 	$('.b-filters > div:nth-child(1)').addClass('active');
 	$('.b-guides .guide:nth-child(1)').addClass('active');
 
@@ -46,59 +46,47 @@ jQuery(document).ready(function($) {
  * ============================================================================*/
 
 if($(window).width() > 468) {
-	// INITIAL STATE MODIFICATION
+	// MAKES THE FIRST SLIDE ACTIVE ON LOAD
 	$('#ba--sliders .slides > li:first-child').addClass('active');
 	
-	// SPEEDY CONZALES VARIABLES
-	var slide = $('#ba--sliders .slides > li');
-	var slideWidth = $('#ba--sliders .slides > li').width();
-	var slideWidth = slideWidth + 'px' + '!important';
+	// ALL SLIDES
+	var slides = $('#ba--sliders .slides > li');
 	
 	// REMOVES ELEMENTOR'S ACTIVE STATE
-	slide.removeClass('flex-active-slide');
-
+	slides.removeClass('flex-active-slide');
 	$('#ba-slider-controls li').on('click', function() {
 		$('#ba-slider-controls li').removeClass('active');
 		$(this).addClass('active');
 
 		var activePoint = $('#ba-slider-controls li.active').index();
-		console.log(activePoint);
-		slide.removeClass('active');
-		slide.eq(activePoint).addClass('active');
+		slides.removeClass('active');
+		slides.eq(activePoint).addClass('active');
 	});
 	
-// HERE COMES D ARROWS
+	// SLIDER CONTROLS
 	function slideToIndex(nextIndex) {
-		
 		$('#ba-slider-controls li').removeClass("active");
 		$('#ba-slider-controls li').eq(nextIndex).addClass('active');
-
 		var linerTxt = $('#ba-slider-controls li.active a').text();
-		
-		// ACTIVE ON CONDITION
-		slide.removeClass('active');
-		slide.eq(nextIndex).addClass('active');
+		slides.removeClass('active');
+		slides.eq(nextIndex).addClass('active');
 	}
 	function handlenextclick() {
 		var activeLiner = $('#ba-slider-controls li.active');
 		var nextIndex = $('#ba-slider-controls li').toArray().indexOf(activeLiner[0]) + 1;
-		
 		if (!$('#ba-slider-controls li').eq(nextIndex).length) {
 			nextIndex = 0;
 		}
 		slideToIndex.call(this, nextIndex);
 	}
+
+	// SLIDER CONTROLS -- NEXT PREV
 	$('.bsa-right').on('click', handlenextclick);
-	
-	
-	
 	$('.bsa-left').on('click',function(){
 		var activeLiner = $('#ba-slider-controls li.active');
 		var prevIndex = $('#ba-slider-controls li').toArray().indexOf(activeLiner[0]) - 1;
-
 		slideToIndex.call(this, prevIndex)
 	});
-	
 }
 	
 /*===============================================================================
