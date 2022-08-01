@@ -1851,6 +1851,10 @@ body:not(.elementor-editor-active) #casual-team {
 		max-width: 104%;
 		margin-top: -100px;
 	}
+	#butlerapp-contact {
+		background-position: bottom left;
+		background-size: 75%;
+	}
 }
 @media (min-width: 468px) and (max-width:1024px) {
 	/*=========================================
@@ -1897,6 +1901,17 @@ body:not(.elementor-editor-active) #casual-team {
 		margin-left: 0;
 		padding-left: 20px;
 	}
+	/*=========================================
+	 * CONTACT SECTION
+	 * ======================================*/
+	 #butlerapp-contact {
+		background-position: bottom left;
+		background-size: 65%;
+	}
+	#butlerapp-contact h2 {
+		font-size: 3em;
+		line-height: 1.3em;
+	}
 }
 @media (max-width:1080px) {
 	.logo-blocker {
@@ -1929,6 +1944,110 @@ body:not(.elementor-editor-active) #casual-team {
 	}
 	#ba-marq .marq-container .marq-content .marq-button {
 		order: 1;
+	}
+	/*-- Contact Form Section --*/
+	.nobgimage {
+		background-image: none !important;
+	}
+	.ct-girl-img {
+		height: 320px;
+		width: 100%;
+		background-size: 85%;
+		margin-left: 20px;
+		background-repeat: no-repeat;
+		transition: all .5s ease-in-out;
+	}
+	.ct-girl {
+		position: relative;
+	}
+	.ct-girl .floating-icon {
+		position: absolute;
+		top: 80px;
+		animation: float 7s ease;
+		right: 30px;
+		transform: translatey(0px);
+		animation: float 6s ease-in-out infinite;
+	}
+	@keyframes float {
+		0% {
+			transform: translatey(0px);
+		}
+		50% {
+			transform: translatey(-20px);
+		}
+		100% {
+			transform: translatey(0px);
+		}
+	}
+	.ct-girl .ct-girl-img:before {
+		content: ' ';
+		display: block;
+		position: absolute;
+		left: 0;
+		bottom: -50px;
+		width: 100%;
+		height: 40%;
+		background: linear-gradient(180deg, rgba(255, 255, 255, 0.0001) 0%, rgba(255, 255, 255, 0.917986) 54.64%, #FFFFFF 93.44%);
+		background-repeat: no-repeat;
+		background-position: 50% 0;
+		background-size: cover;
+	}
+	#butlerapp-contact .elementor-heading-title {
+		font-size: 2em;
+		line-height: 1.3em;
+	}
+	#butlerapp-contact > .elementor-container {
+		width: 100% !important;
+		position: relative;
+		top: -55px;
+	}
+	#butlerapp-contact .elementor-widget-form {
+		background-image: url(/wp-content/uploads/2022/06/contact-form-bg-min.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+		transform: scale(1.18);
+		padding: 20px 15px;
+		margin-top: 80px;
+		border-radius: 20px;
+	}
+	#butlerapp-contact .elementor-field-group:not(.elementor-field-type-upload):not(.elementor-field-type-acceptance) .elementor-field:not(.elementor-select-wrapper) {
+		background: #FFFFFF;
+		box-shadow: 0px 1px 2px rgb(11 37 65 / 20%) !important;
+		border-radius: 8px;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 13px;
+		line-height: 24px;
+		color: #0B2541 !important;
+		mix-blend-mode: normal;
+		opacity: 0.5;
+	}
+	#butlerapp-contact .elementor-field-group:not(.elementor-field-type-upload) .elementor-field:not(.elementor-select-wrapper):focus {
+		background: #FFFFFF;
+		border: 2px solid #29ABDC !important;
+		border-radius: 8px;
+		opacity: 1;
+		color: #0B2541 !important;
+		font-weight: 500;
+	}
+	#butlerapp-contact .elementor-field-type-acceptance > .elementor-field-subgroup span label {
+		width: 100% !important;
+		display: flex !important;
+		flex-direction: row !important;
+		font-size: .9em !important;
+	}
+	#butlerapp-contact .elementor-field-type-acceptance > .elementor-field-subgroup > .elementor-field-option {
+		display: flex;
+	}
+	#butlerapp-contact .elementor-field-type-acceptance {
+		width: 100%;
+		align-items: center;
+		justify-content: center;
+	}
+	#butlerapp-contact .elementor-acceptance-field {
+		height: 40px !important;
+		box-shadow: none !important;
+		margin-right: 8px !important;
 	}
 }
 @media (min-width: 768px) {
@@ -2332,110 +2451,6 @@ body:not(.elementor-editor-active) #casual-team {
 	.faq-meta a {
 		margin-top: 5px;
 	}
-	/*-- Contact Form Section --*/
-	.nobgimage {
-		background-image: none !important;
-	}
-	.ct-girl-img {
-		height: 320px;
-		width: 100%;
-		background-size: 85%;
-		margin-left: 20px;
-		background-repeat: no-repeat;
-		transition: all .5s ease-in-out;
-	}
-	.ct-girl {
-		position: relative;
-	}
-	.ct-girl .floating-icon {
-		position: absolute;
-		top: 80px;
-		animation: float 7s ease;
-		right: 30px;
-		transform: translatey(0px);
-		animation: float 6s ease-in-out infinite;
-	}
-	@keyframes float {
-		0% {
-			transform: translatey(0px);
-		}
-		50% {
-			transform: translatey(-20px);
-		}
-		100% {
-			transform: translatey(0px);
-		}
-	}
-	.ct-girl .ct-girl-img:before {
-		content: ' ';
-		display: block;
-		position: absolute;
-		left: 0;
-		bottom: -50px;
-		width: 100%;
-		height: 40%;
-		background: linear-gradient(180deg, rgba(255, 255, 255, 0.0001) 0%, rgba(255, 255, 255, 0.917986) 54.64%, #FFFFFF 93.44%);
-		background-repeat: no-repeat;
-		background-position: 50% 0;
-		background-size: cover;
-	}
-	#butlerapp-contact .elementor-heading-title {
-		font-size: 2em;
-		line-height: 1.3em;
-	}
-	#butlerapp-contact > .elementor-container {
-		width: 100% !important;
-		position: relative;
-		top: -55px;
-	}
-	#butlerapp-contact .elementor-widget-form {
-		background-image: url(/wp-content/uploads/2022/06/contact-form-bg-min.png);
-		background-repeat: no-repeat;
-		background-size: cover;
-		transform: scale(1.18);
-		padding: 20px 15px;
-		margin-top: 80px;
-		border-radius: 20px;
-	}
-	#butlerapp-contact .elementor-field-group:not(.elementor-field-type-upload):not(.elementor-field-type-acceptance) .elementor-field:not(.elementor-select-wrapper) {
-		background: #FFFFFF;
-		box-shadow: 0px 1px 2px rgb(11 37 65 / 20%) !important;
-		border-radius: 8px;
-		font-style: normal;
-		font-weight: 400;
-		font-size: 13px;
-		line-height: 24px;
-		color: #0B2541 !important;
-		mix-blend-mode: normal;
-		opacity: 0.5;
-	}
-	#butlerapp-contact .elementor-field-group:not(.elementor-field-type-upload) .elementor-field:not(.elementor-select-wrapper):focus {
-		background: #FFFFFF;
-		border: 2px solid #29ABDC !important;
-		border-radius: 8px;
-		opacity: 1;
-		color: #0B2541 !important;
-		font-weight: 500;
-	}
-	#butlerapp-contact .elementor-field-type-acceptance > .elementor-field-subgroup span label {
-		width: 100% !important;
-		display: flex !important;
-		flex-direction: row !important;
-		font-size: .9em !important;
-	}
-	#butlerapp-contact .elementor-field-type-acceptance > .elementor-field-subgroup > .elementor-field-option {
-		display: flex;
-	}
-	#butlerapp-contact .elementor-field-type-acceptance {
-		width: 100%;
-		align-items: center;
-		justify-content: center;
-	}
-	#butlerapp-contact .elementor-acceptance-field {
-		height: 40px !important;
-		box-shadow: none !important;
-		margin-right: 8px !important;
-	}
 }
 
 /*===================================================================
@@ -2692,6 +2707,10 @@ body:not(.elementor-editor-active) #casual-team {
 		min-width: 110%;
 		position: relative;
 		right: 10%;
+	}
+	#butlerapp-contact {
+		background-position: bottom left;
+		background-size: 65%;
 	}
 }
 @media (min-width: 468px) and (max-width: 767.98px) {

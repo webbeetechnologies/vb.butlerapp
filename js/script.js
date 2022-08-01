@@ -123,13 +123,13 @@ $('.elementor-element-1f7e3d5 img:not(.team-head img)').mouseup(function() {
 		var mQ = $(window).width();
 		var dE = $('#ba--sliders .slides > li:first-child > div .ba-image').length;
 		var ksH = $('#kunden--slider .th-slide-content').height() + 150;
-		// var kundenSlide = $('#kundenslide .th-slide-content > div > div > div > section > div > div');
 		var headerHeight = $('#masthead').height();
 		var cI = $('#kunden--slider .th-slide-content > div > div > div > section > div > div > div > div > div > div > div > div.elementor-image');
 		var kS = $('#kunden--slider #main-flex-slider');
 		$('.hero-sec').css('margin-top',-headerHeight);
 		var ptH = $('#casual-team').outerHeight();
 		var ptH = ptH + 'px';
+		var getBg = $('#butlerapp-contact').css('background-image');
 		$('#pro-team').parent().attr('style','position:relative;height:'+ ptH +'');
 		$('#casual-team').parent().attr('style','position:relative;height:'+ ptH +'');
 		
@@ -160,8 +160,16 @@ $('.elementor-element-1f7e3d5 img:not(.team-head img)').mouseup(function() {
 				$('#ba--sliders .slides > li:nth-child(2) > div').prepend('<img class="removio ba-image" src="/wp-content/uploads/2022/06/mobile-mac-2-min.png">');
 				$('#ba--sliders .slides > li:nth-child(3) > div').prepend('<img class="removio ba-image" src="/wp-content/uploads/2022/06/mobile-mac-3-min.png">');
 			}
+			// Contact Form Section
+			$('#butlerapp-contact').addClass('nobgimage');
+			if($('.ct-girl').length == 0) {
+				$('#butlerapp-contact').prepend('<div class="ct-girl"><div class="ct-girl-img"></div></div>');
+				$('#butlerapp-contact .ct-girl-img').css('background-image', getBg);
+				$('.ct-girl').append('<img class="floating-icon" src="/wp-content/uploads/2022/06/contact-mob-icon.png">');
+			}
 		} else {
 			$('.removio').hide();
+			$('.ct-girl, .floating-icon').remove();
 		}
 		
 		if(mQ > 468 && mQ < 767.98) {
@@ -445,13 +453,6 @@ $('.elementor-menu-toggle').on('click', function() {
 		$('#faqs-container .faq-meta').each(function() {
 			$(this).find('h5, span, a').wrapAll('<div>');
 		});
-	// Contact Form Section
-		var getBg = $('#butlerapp-contact').css('background-image');
-		$('#butlerapp-contact').addClass('nobgimage');
-		$('#butlerapp-contact').prepend('<div class="ct-girl"><div class="ct-girl-img"></div></div>')
-		$('#butlerapp-contact .ct-girl-img').css('background-image', getBg);
-		// Floating Icon
-    	$('.ct-girl').append('<img class="floating-icon" src="/wp-content/uploads/2022/06/contact-mob-icon.png">');
 	}
 
 	
