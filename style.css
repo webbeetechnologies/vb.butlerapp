@@ -1739,7 +1739,7 @@ body:not(.elementor-editor-active) #casual-team {
 	#ba-slider-controls {
 		list-style: none;
 		position: absolute !important;
-		z-index: 9999 !important;
+		z-index: 2 !important;
 		right: 0;
 	}
 	#ba-slider-controls {
@@ -1798,6 +1798,15 @@ body:not(.elementor-editor-active) #casual-team {
 		background: rgba(11, 37, 65, 0.093795);
 		border-radius: 14px;
 		z-index: 999;
+	}
+	.bsa-left:hover, .bsa-right:hover, #ba-slider-controls li:hover {
+		background: #062541;
+	}
+	.bsa-left, .bsa-right, .bsa-left:hover svg path, .bsa-right:hover svg path {
+		transition: all .3s ease;
+	}
+	.bsa-left:hover svg path, .bsa-right:hover svg path {
+		fill: #fff;
 	}
 	.elementor-element-b99dc4d {
 		position: relative;
