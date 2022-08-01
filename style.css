@@ -2723,6 +2723,9 @@ body:not(.elementor-editor-active) #casual-team {
 	}
 }
 @media (min-width: 468px) and (max-width: 767.98px) {
+	#butlerapp-services > div > div > div:first-child {
+		order: 1;
+	}
 	#kunden--slider .th-slide-content > div > div > div > section > div > div > div > div > div > div > div > div.elementor-image img {
 		position: absolute;
 		bottom: -45%;
