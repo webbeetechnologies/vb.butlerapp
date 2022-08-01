@@ -73,18 +73,15 @@ if($(window).width() > 468) {
 	function handlenextclick() {
 		var activeLiner = $('#ba-slider-controls li.active');
 		var nextIndex = activeLiner.index() + 1;
-		if (!$('#ba-slider-controls li').eq(nextIndex).length) {
-			nextIndex = 0;
-		}
-		console.log(nextIndex);
+		if (!$('#ba-slider-controls li').eq(nextIndex).length) {nextIndex = 0;}
 		slideToIndex.call(this, nextIndex);
 	}
 
-	// SLIDER CONTROLS -- NEXT PREV
+	// ON CLICK -- NEXT PREV
 	$('.bsa-right').on('click', handlenextclick);
 	$('.bsa-left').on('click',function(){
 		var activeLiner = $('#ba-slider-controls li.active');
-		var prevIndex = $('#ba-slider-controls li').toArray().indexOf(activeLiner[0]) - 1;
+		var prevIndex = activeLiner.index() - 1;
 		slideToIndex.call(this, prevIndex)
 	});
 }
