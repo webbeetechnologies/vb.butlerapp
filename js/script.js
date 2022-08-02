@@ -5,7 +5,7 @@ jQuery(document).ready(function($) {
 /*===============================================================================
  *  VIDEO SECTION 
  * =============================================================================*/
-	
+
 	// MAKES THE FIRST VIDEO ACTIVE ON LOAD
 	$('.b-filters > div:nth-child(1)').addClass('active');
 	$('.b-guides .guide:nth-child(1)').addClass('active');
@@ -15,30 +15,13 @@ jQuery(document).ready(function($) {
 	$('.b-guides .guide:nth-child(1)').find('video').append(cS);
 
 	// ON CLICK STATE
-	$('.b-filters > div a').each(function() {
-		$(this).click(function(e) {
-			var activeFilter = $(this).parent().find('span').text();
-			var activeFilter = activeFilter.replace(/^0+/, '');
-			e.preventDefault();
-			$('.b-filters > div').removeClass('active');
-			$(this).parent().addClass('active');
-
-			// DISPLAY GUIDE
-			$('.b-guides .guide').each(function() {
-				var guideVal = $(this).attr('data-id');
-				var guideVal = guideVal.replace(/^0+/, '');
-				var valMatches = activeFilter - guideVal == 0;
-				var theGuide = $(this);
-				
-				if(valMatches) {
-					$('.b-guides .guide').removeClass('active');
-					theGuide.addClass('active');
-					var theVideo = theGuide.find('.video--link').text();
-					var appendIt = '<source src="'+theVideo+'" type="video/mp4">';
-					theGuide.find('video').append(appendIt);
-				}
-			});
-		});
+	$('.b-filters > div').on('click', function(e) {
+		e.preventDefault();
+		let orderNo = $(this).attr('order-no');
+		$('.b-filters > div').removeClass('active');
+		$(this).addClass('active');
+		$(this).parent().next().find('.guide').removeClass('active');
+		$(this).parent().next().find('.guide[data-id='+orderNo+']').addClass('active');
 	});
 
 /*===============================================================================
