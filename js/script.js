@@ -183,12 +183,6 @@ $('.elementor-element-1f7e3d5 img:not(.team-head img)').mouseup(function() {
 			}
 		});
 	});
-	// VIDEO GUIDE SECTION
-	$('#bm-guides .bm-container .bm-filter').each(function() {
-		var videoLink = $(this).find('.video--link').text();
-		var theSource = '<source src="'+videoLink+'" type="video/mp4">';
-		$(this).find('video').append(theSource);
-	});
 })();
 	
 /*===============================================================================
