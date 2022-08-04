@@ -75,6 +75,7 @@ Version: 1.0.0
  * ===================================================*/
 #kunden--slider #main-flex-slider .flex-control-nav {
     display: block !important;
+	margin-top: 20px;
 }
 
 /*======================================================
@@ -87,6 +88,9 @@ Version: 1.0.0
 }
 .elementor-element-2024070 > .elementor-container {
     margin-left: 0;
+}
+#kunden--slider #main-flex-slider .flex-control-nav {
+	position: relative !important;
 }
 
 /*======================================================
@@ -1680,9 +1684,7 @@ body:not(.elementor-editor-active) #casual-team {
 	}
 	#kunden--slider .elementor-element-102e249f {
 		flex-direction: column;
-		flex-direction: column;
 		position: relative;
-		top: 40px;
 	}
 	#kunden--slider .elementor-element-2024070 {
 		margin-bottom: 25px;
@@ -1829,7 +1831,7 @@ body:not(.elementor-editor-active) #casual-team {
 	}
 }
 @media (max-width: 500px) {
-	#ba-slider-controls, .ba-slider-arrows {
+	#ba--sliders #ba-slider-controls, #ba--sliders .ba-slider-arrows {
 		display: none;
 	}
 }
@@ -1843,9 +1845,6 @@ body:not(.elementor-editor-active) #casual-team {
 		position: relative;
 		top: -200px;
 		height: 900px !important;
-	}
-	#ba-marq {
-		margin-top: -200px;
 	}
 	#ba-marq #marquee {
 		justify-content: center;
@@ -2124,18 +2123,11 @@ body:not(.elementor-editor-active) #casual-team {
 		height: auto;
 		padding-top: 100px;
 	}
-	#main-flex-slider .flex-control-nav {
-    	bottom: 150px !important;
-	}
 }
 @media (min-width:1160px) {
 	.elementor-1458 .elementor-element.elementor-element-102e249f {
 		min-height: 350px;
 		max-height: 350px;
-	}
-	#ba-marq {
-		margin-top: -200px !important;
-		z-index: 2 !important;
 	}
 }
 @media (max-width:767.98px) {
@@ -2686,7 +2678,6 @@ body:not(.elementor-editor-active) #casual-team {
 		padding: 20px 0 20px 10px;
 	}
 	#kundenslide #main-flex-slider .flex-control-nav {
-		bottom: -50px !important;
 		width: 100%;
 	}
 	.butler-guides-section {

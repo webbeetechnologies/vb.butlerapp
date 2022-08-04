@@ -166,6 +166,10 @@ butlerMediaQueries.register('desktop', function(e) {
 		var ptH = $('#casual-team').outerHeight() + 'px';
 		$('#pro-team, #casual-team').parent().attr('style','position:relative;height:'+ ptH +'');
 		
+		// KUNDEN SLIDER
+		var slideInnerHeight = $('#kunden--slider .th-slide-inner').outerHeight();
+		$('#kunden--slider .slider-bg').css('min-height',slideInnerHeight+'px');
+
 		if(mQ < 767.98) {
 			// Contact Form Section
 			$('#butlerapp-contact').addClass('nobgimage');
