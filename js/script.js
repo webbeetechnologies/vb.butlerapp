@@ -271,13 +271,13 @@ $('.elementor-menu-toggle').on('click', function() {
 				timeout = setTimeout(function() {
 					if(hasClicked()) return;
 					bsi1.fadeOut();
-					bsi2.css({'left':'0'});
+					bsi2.css({'left':'0', 'opacity':'1'});
 				}, 3000);
 			} else {
 				timeout = setTimeout(function() {
 					if(hasClicked()) return;
 					bsi1.fadeIn();
-					bsi2.css({'left':'150%'});
+					bsi2.css({'left':'150%','opacity':'0'});
 				}, 3000);
 			}
 		});

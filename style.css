@@ -141,6 +141,7 @@ Version: 1.0.0
 #butlerapp-services .casual-service {
     position: absolute;
     left: 150%;
+	opacity: 0;
     transition: all .4s ease;
 }
 #butlerapp-services .elementor-widget-hotspot {
