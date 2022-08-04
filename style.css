@@ -10,6 +10,13 @@ Version: 1.0.0
 /*======================================================
  * HEADER
  * ===================================================*/
+ #mainhero h1 {
+    max-width: 75%;
+}
+.hero-tab {
+    position: absolute;
+    display: none;
+}
 .logo-blocker {
     height: 50px;
     width: 50%;
@@ -596,6 +603,7 @@ nav.elementor-nav-menu--dropdown.elementor-nav-menu__container {
     background-size: 70% 110%;
     background-position: right;
     background-repeat: no-repeat;
+	overflow: hidden;
 }
 .butler-guides-section .elementor-widget-wrap {
 	padding-right: 0 !important;
@@ -1126,6 +1134,9 @@ body:not(.elementor-editor-active) #casual-team {
  * Responsive CSS
  * ===============================================================================*/
 @media (min-width:1024px) and (max-width:1200px) {
+	#mainhero h1 {
+		max-width: 85%;
+	}
 	#butlerapp-services > div > .elementor-row > div:first-child {
 		order: unset !important;
 	}
@@ -1183,8 +1194,20 @@ body:not(.elementor-editor-active) #casual-team {
 		min-height: 500px;
 		max-height: 500px;
 	}
+	#bm-guides {
+		display: none;
+	}
+	#butler-guides {
+		display: block;
+	}
 }
 @media (max-width:1199.98px) {
+	#butler_guides {
+		display: none;
+	}
+	#bm-guides {
+		display: block;
+	}
 	.butler-guides-section {
 		background: url(/wp-content/uploads/2022/06/bm-section-bg.png);
 		padding: 60px 0;
@@ -1265,8 +1288,8 @@ body:not(.elementor-editor-active) #casual-team {
 		-webkit-box-orient: vertical;
 		overflow: hidden;
 		font-size: 15px;
-		padding: 10px 0;
-		margin-bottom: 0;
+		padding-top: 10px;
+		margin-bottom: 10px;
 	}
 	.bm-guide a.lmore-link {
 		font-style: normal;
@@ -1572,7 +1595,7 @@ body:not(.elementor-editor-active) #casual-team {
 		margin-left: 0 !important;
 		padding: 0 !important;
 	}
-	#ba--sliders img:not(.ba-image):not(.btn-replaced),
+	#ba--sliders img:not(.ba-image):not(.btn-replaced):not(.mobile-slider-img),
 	#ba--sliders > div > div > div > div > div > div:last-child,
 	ol.flex-control-nav.flex-control-paging, 
 	.elementor-1458 .elementor-element.elementor-element-bcef45d img {
@@ -1620,15 +1643,6 @@ body:not(.elementor-editor-active) #casual-team {
 	}
 	#ba--sliders .slides > li:first-child > div > div > div > div > div > div > div > section > div > div > div > div {
 		background-position: top right;
-	}
-	#main-flex-slider .slides img:not(.btn-replaced) {
-		position: absolute !important;
-		z-index: 1;
-		width: 100% !important;
-		height: auto !important;
-		top: -130px;
-		padding-left: 10px !important;
-		padding-right: 10px !important;
 	}
 	#ba--sliders .elementor-widget-heading {
 		padding-top: 100px !important;
@@ -1722,9 +1736,6 @@ body:not(.elementor-editor-active) #casual-team {
 	}
 }
 @media (min-width: 468px) {
-	.ba-instructor {
-		display: none;
-	}
 	.faq-flipper img {
 		top: 25px;
 		right: 25px;
@@ -1817,7 +1828,16 @@ body:not(.elementor-editor-active) #casual-team {
 		top: 70px;
 	}
 }
+@media (max-width: 500px) {
+	#ba-slider-controls, .ba-slider-arrows {
+		display: none;
+	}
+}
 @media (max-width: 467.98px) {
+	.mobile-slider-img {
+		position: relative;
+		bottom: -100px;
+	}
 	#kunden--slider #main-flex-slider {
 		padding-top: 200px;
 		position: relative;
@@ -1859,11 +1879,21 @@ body:not(.elementor-editor-active) #casual-team {
 		background-position: bottom left;
 		background-size: 75%;
 	}
+	#mainhero h1 {
+		max-width: 82%;
+	}
 }
 @media (min-width: 468px) and (max-width:1024px) {
 	/*=========================================
 	 * HERO SECTION
 	 * ======================================*/
+	.hero-tab {
+		display: block;
+		position: relative;
+	}
+	.hero-img:not(.hero-tab) {
+		display: none;
+	}
 	#mainhero h1 {
     	line-height: 1.2em;
 	}
@@ -1926,8 +1956,15 @@ body:not(.elementor-editor-active) #casual-team {
 	.e-hotspot__tooltip {
 		width: 400px;
 	}
+	.ba-instructor-parent,
+	.mobile-slider-img {
+		display: none;
+	}
 }
 @media (max-width:767.98px) {
+	#ba--sliders .mobile-slider-img img {
+		display: block !important;
+	}
 	#masthead nav.elementor-nav-menu--dropdown.elementor-nav-menu__container .menu-item-3460 {
 		max-width: fit-content;
 		justify-content: center;
@@ -2018,7 +2055,7 @@ body:not(.elementor-editor-active) #casual-team {
 		transform: scale(1.18);
 		padding: 20px 15px;
 		margin-top: 80px;
-		border-radius: 20px;
+		border-radius: 20px 20px 0 0;
 	}
 	#butlerapp-contact .elementor-field-group:not(.elementor-field-type-upload):not(.elementor-field-type-acceptance) .elementor-field:not(.elementor-select-wrapper) {
 		background: #FFFFFF;
@@ -2058,6 +2095,10 @@ body:not(.elementor-editor-active) #casual-team {
 		height: 40px !important;
 		box-shadow: none !important;
 		margin-right: 8px !important;
+	}
+	#butlerapp-team-container {
+		transition: all .4s ease;
+		overflow-x: scroll;
 	}
 }
 @media (min-width: 768px) {
@@ -2225,6 +2266,12 @@ body:not(.elementor-editor-active) #casual-team {
 	}
 }
 @media (max-width: 467.98px) {
+	.mobile-slider-img {
+		display: block !important;
+	}
+	#mainhero h1 {
+		max-width: 100%;
+	}
 	#kunden--slider .bsa-left, #kunden--slider .bsa-right {
 		cursor: pointer;
 		width: 42px;
@@ -2754,7 +2801,7 @@ body:not(.elementor-editor-active) #casual-team {
 	}
 	#ba--sliders {
 		margin: 0;
-		padding: 250px 0 200px 0;
+		padding: 400px 0 200px 0;
 	}
 	#ba--sliders img:not(.btn-replaced) {
 		display: none;

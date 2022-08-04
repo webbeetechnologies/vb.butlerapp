@@ -10,7 +10,7 @@
 		); ?>
 		<?php $loop = new WP_Query( $args ); ?>
 		<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
-		<div order-no='<?= the_field('guide_val'); ?>'>
+		<div data-order-no='<?= the_field('guide_val'); ?>'>
 			<span><?php the_field('guide_val'); ?></span>
 			<a href=""><?php the_title(); ?></a>
 		</div>
@@ -18,7 +18,7 @@
 	</div>
 	<div class="b-guides">
 		<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
-		<div class="guide" data-id="<?php the_field('guide_val'); ?>">
+		<div class="guide" data-order-no="<?php the_field('guide_val'); ?>">
 			<h5><?php the_title(); ?></h5>
 			<div class="vid-container">
 				<video width="675" height="381" controls poster="<?php the_field('video_thumb') ?>">
@@ -40,7 +40,7 @@
 				<span><?php the_field('guide_val'); ?></span>
 				<a href=""><?php the_title(); ?></a>
 			</div>
-			<div class="bm-guide" data-id="<?php the_field('guide_val'); ?>">
+			<div class="bm-guide" data-order-no="<?php the_field('guide_val'); ?>">
 				<video controls poster="<?php the_field('video_thumb') ?>">
 					<?php $file = get_field('video_link'); ?>
 					<source src="<?= $file['url'] ?>" type="video/mp4">

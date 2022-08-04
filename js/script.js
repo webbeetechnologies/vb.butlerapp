@@ -1,36 +1,70 @@
-/* Javascript */
 jQuery(document).ready(function($) {
 
-	$('#butlerapp-team-container .elementor-widget-hotspot .elementor-widget-container>img').removeAttr('loading');
 /*===============================================================================
- *  VIDEO SECTION 
+ *  RESIZE HANDLERS
+ * =============================================================================*/
+var butlerMediaQueries = (function() {
+	var screenSizes = {
+		mobile: window.matchMedia('(max-width:467.98px)'),
+		largeMobile: window.matchMedia('(min-width:468px) and (max-width:767.98px'),
+		tab: window.matchMedia('(min-width:768px) and (max-width:1023.98px)'),
+		largeTab: window.matchMedia('(min-width:1024px) and (max-width:1199.98px)'),
+		desktop: window.matchMedia('(min-width:1200px)')
+	}
+	return {
+		register: function(screenSize, callback) {
+
+			if (!screenSizes[screenSize]) {
+				throw new Error("No handler for screenSize \"" + screenSize + "\". Try " + Object.keys(screenSizes).join(" or "));
+			}
+			var mediaQuery = screenSizes[screenSize];
+			const handleOnChange = function(e) {
+				callback(e.currentTarget);
+			}
+
+			try {
+				mediaQuery.addEventListener(handleOnChange);
+			} catch {
+				mediaQuery.addListener(handleOnChange);
+			}
+
+			if(mediaQuery.matches) callback(mediaQuery)
+		}
+	}
+})();
+
+butlerMediaQueries.register('mobile', function(e) {
+	if(e.matches) {
+		centerImage();
+		restructureSlider();
+	}
+});
+
+butlerMediaQueries.register('largeMobile', function(e) {
+	if(e.matches) {
+		restructureSlider();
+	}
+});
+
+butlerMediaQueries.register('desktop', function(e) {
+	if(e.matches) {
+		serviceBgChanger();
+	}
+});
+
+/*===============================================================================
+ *  GENERIC
  * =============================================================================*/
 
-	// MAKES THE FIRST VIDEO ACTIVE ON LOAD
-	$('.b-filters > div:nth-child(1)').addClass('active');
-	$('.b-guides .guide:nth-child(1)').addClass('active');
-
-	var sV = $('.b-guides .guide:nth-child(1)').find('.video--link').text();
-	var cS = '<source src="'+sV+'" type="video/mp4">';
-	$('.b-guides .guide:nth-child(1)').find('video').append(cS);
-
-	// ON CLICK STATE
-	$('.b-filters > div').on('click', function(e) {
-		e.preventDefault();
-		let orderNo = $(this).attr('order-no');
-		$('.b-filters > div').removeClass('active');
-		$(this).addClass('active');
-		$(this).parent().next().find('.guide').removeClass('active');
-		$(this).parent().next().find('.guide[data-id='+orderNo+']').addClass('active');
-	});
+	// REMOVES LAZY LOADING
+	$('#butlerapp-team-container .elementor-widget-hotspot .elementor-widget-container > img').removeAttr('loading');
 
 /*===============================================================================
- * FUTURE SLIDER
+ * FUTURE SLIDER -- Section 3
  * ============================================================================*/
 
-if($(window).width() > 468) {
 	// MAKES THE FIRST SLIDE ACTIVE ON LOAD
-	$('#ba--sliders .slides > li:first-child').addClass('active');
+	$('#ba--sliders .slides > li').eq(0).addClass('active');
 	
 	// ALL SLIDES
 	var slides = $('#ba--sliders .slides > li');
@@ -40,7 +74,6 @@ if($(window).width() > 468) {
 	$('#ba-slider-controls li').on('click', function() {
 		$('#ba-slider-controls li').removeClass('active');
 		$(this).addClass('active');
-
 		var activePoint = $('#ba-slider-controls li.active').index();
 		slides.removeClass('active');
 		slides.eq(activePoint).addClass('active');
@@ -59,90 +92,81 @@ if($(window).width() > 468) {
 		if (!$('#ba-slider-controls li').eq(nextIndex).length) {nextIndex = 0;}
 		slideToIndex.call(this, nextIndex);
 	}
-
-	// ON CLICK -- NEXT PREV
-	$('.bsa-right').on('click', handlenextclick);
-	$('.bsa-left').on('click',function(){
+	function prevClick() {
 		var activeLiner = $('#ba-slider-controls li.active');
-		var prevIndex = activeLiner.index() - 1;
-		slideToIndex.call(this, prevIndex)
-	});
-}
-	
+		var prevIndex = activeLiner.index() -1;
+		slideToIndex.call(this, prevIndex);
+	}
+
+	// INITIATES CONTROL FUNCTIONS ON CLICK
+	$('.bsa-right').on('click', handlenextclick);
+	$('.bsa-left').on('click', prevClick);
+
+	// RESTRUCTURES MOBILE IMAGE CONTAINER
+	function restructureSlider(){
+		$('#ba--sliders .slides li').each(function() {
+			var eachImage = $(this).find('.mobile-slider-img');
+			var prependArea = eachImage.closest('section').prev().find('.elementor-widget-wrap').eq(0);
+			eachImage.prependTo(prependArea);
+		});
+	}
+
 /*===============================================================================
- *  LAST HOTSPOT SECTION
+ *  VIDEO SWITCHER - Section 4 
  * =============================================================================*/
-setTimeout(function() {$('#butlerapp-team-container').scrollLeft(430)}, 2000);
-$('.elementor-element-1f7e3d5 img:not(.team-head img)').mouseup(function() {
-		$('.e-hotspot').removeClass('e-hotspot--active');
+
+	// MAKES THE FIRST VIDEO ACTIVE ON LOAD
+	$('#butler_guides [data-order-no]:first-of-type').addClass('active');
+	$('.bm-container .bm-filter').eq(0).addClass('active');
+
+	// ON CLICK STATE
+	$('#butler_guides [data-order-no]').on('click', function(e) {
+		e.preventDefault();
+		var orderNo = $(this).data('order-no');
+		$('.b-filters > div').removeClass('active');
+		$(this).addClass('active');
+		$(this).parent().next().find('.guide').removeClass('active');
+		$(this).parent().next().children('[data-order-no='+orderNo+']').addClass('active');
 	});
-	$('.elementor-element-07e3890').mouseup(function() {
-		$('.e-hotspot').removeClass('e-hotspot--active');
+
+	// FOR THE MORPHED ACCORDION ON MOBILE DEVICES
+	$('.bm-filter .bm-head').on('click', function(e) {
+		e.preventDefault();
+		$('.bm-filter').removeClass('active');
+		$(this).parent().toggleClass('active');
+		$('.bm-filter .bm-guide').slideUp();
+		if($(this).parent().find('.bm-guide').css('display') == 'none') {
+			$(this).parent().find('.bm-guide').slideDown();
+		} else {
+			$(this).parent().find('.bm-guide').slideUp();
+			$(this).parent().toggleClass('active');
+		}
 	});
-	
+
+/*===============================================================================
+ *  KUNDEN SLIDER - Section 5
+ * =============================================================================*/
+
 /*===============================================================================
  *  WINDOW RESIZE FUNCTION
  * =============================================================================*/
 (function butlerResize() {
-	// DEFAULT STATE
-	$('.bm-container .bm-filter:nth-child(1)').addClass('active');
-	$('.bm-filter.active .bm-guide').attr('style','display:block');
-	$('.bm-filter:not(.active) .bm-guide').attr('style','display:none');
-	$('#pro-team .e-hotspot').wrapAll('<div class="hotspot-container">');
-		
-	// Hotspot Instructor
-	$('#butlerapp-team-container').prepend('<div class="ba-instructor"><img src="/wp-content/uploads/2022/06/dragger-icon-1.png"></div>');
-
-	// Here comes the FINGER
-	$('.ba-instructor').append('<img src="/wp-content/uploads/2022/06/dragging-finger-icon.png">');
-
-	// Initial Scroll X Position
-	$('#butlerapp-team-container').css({
-		'overflow-x':'scroll',
-		'transition':'all .4s ease'
-	});
 	
 	function handleResize() {
 		var mQ = $(window).width();
-		var dE = $('#ba--sliders .slides > li:first-child > div .ba-image').length;
 		var ksH = $('#kunden--slider .th-slide-content').height() + 150;
 		var headerHeight = $('#masthead').height();
+		
 		var cI = $('#kunden--slider .th-slide-content > div > div > div > section > div > div > div > div > div > div > div > div.elementor-image');
 		var kS = $('#kunden--slider #main-flex-slider');
 		$('.hero-sec').css('margin-top',-headerHeight);
-		var ptH = $('#casual-team').outerHeight();
-		var ptH = ptH + 'px';
 		var getBg = $('#butlerapp-contact').css('background-image');
-		$('#pro-team').parent().attr('style','position:relative;height:'+ ptH +'');
-		$('#casual-team').parent().attr('style','position:relative;height:'+ ptH +'');
-		
-		if(mQ < 1200) {
-			$('#butler_guides').hide();
-			$('#bm-guides').show();
-			// Building the hotspot container
-			$('.scrolling-logo-text, .scrolling-logo-images').remove();
-		} else if(mQ > 1200) {
-			$('#bm-guides').hide();
-			$('#butler_guides').show();
-		} else {
-			// do nothing....
-		}
-		
-		if(mQ > 468 && mQ < 1025) {
-			$('.hero-img img').attr('src', '/wp-content/uploads/2022/07/tab-hero-img.png');
-			$('.hero-img img').attr('srcset', '/wp-content/uploads/2022/07/tab-hero-img.png');
-			$('#mainhero h1').html('Personalkoten effecktiv <br>um 60% <strong>senken!</strong>');
-		} else {
-			$('.hero-img img').attr('src', '/wp-content/uploads/2022/06/heroimg.png');
-			$('.hero-img img').attr('srcset', '/wp-content/uploads/2022/06/heroimg.png');
-		}
+
+		// LAST HOTSPOT SECTION
+		var ptH = $('#casual-team').outerHeight() + 'px';
+		$('#pro-team, #casual-team').parent().attr('style','position:relative;height:'+ ptH +'');
 		
 		if(mQ < 767.98) {
-			if(dE == 0) {
-				$('#ba--sliders .slides > li:first-child > div').prepend('<img class="removio ba-image" src="/wp-content/uploads/2022/06/mobile-mac-min.png">');
-				$('#ba--sliders .slides > li:nth-child(2) > div').prepend('<img class="removio ba-image" src="/wp-content/uploads/2022/06/mobile-mac-2-min.png">');
-				$('#ba--sliders .slides > li:nth-child(3) > div').prepend('<img class="removio ba-image" src="/wp-content/uploads/2022/06/mobile-mac-3-min.png">');
-			}
 			// Contact Form Section
 			$('#butlerapp-contact').addClass('nobgimage');
 			if($('.ct-girl').length == 0) {
@@ -168,21 +192,6 @@ $('.elementor-element-1f7e3d5 img:not(.team-head img)').mouseup(function() {
 	$(window).resize(handleResize);
 	$(window).trigger("resize");
 	
-	// ON CLICK STATE
-	$('.bm-filter .bm-head').each(function() {
-		$(this).click(function(e) {
-			e.preventDefault();
-			$('.bm-filter').removeClass('active');
-			$(this).parent().toggleClass('active');
-			$('.bm-filter .bm-guide').slideUp();
-			if($(this).parent().find('.bm-guide').css('display') == 'none') {
-				$(this).parent().find('.bm-guide').slideDown();
-			} else {
-				$(this).parent().find('.bm-guide').slideUp();
-				$(this).parent().toggleClass('active');
-			}
-		});
-	});
 })();
 	
 /*===============================================================================
@@ -208,46 +217,41 @@ $('.elementor-menu-toggle').on('click', function() {
 			/*-- PRIVACY LINK --*/
 			$('.elementor-popup-modal .elementor-form-fields-wrapper > div:nth-last-child(2) .elementor-field-option label').text('Ich akzeptiere die');
 			$('.elementor-popup-modal .elementor-form-fields-wrapper > div:nth-last-child(2) .elementor-field-option label').append('<a class="privacy--link" href="#">Datenschutzbedingungen</a>');
+			// SMOOTHEN THE CLOSE
+			$('.dialog-close-button').on('click', function() {
+				butlerFadeOut();
+			});
 		}
-		// SMOOTHEN THE CLOSE
-		$('.dialog-close-button').on('click', function() {
-			butlerFadeOut();
-		});
 	});
 		
-/* BA SLIDER BUTTON */
+	// BA SLIDER BUTTON
 	$('#ba--sliders .slides li .elementor-button-content-wrapper .elementor-button-icon:first-child svg').remove();
     $('#ba--sliders .slides li .elementor-button-content-wrapper .elementor-button-icon:first-child').append('<img class="btn-replaced" src="/wp-content/uploads/2022/06/contact-mob-icon.png">');
 	
-/* MEDIA CONTROL */
-	
-	if($(window).width() > 769) {
-		
-		
-		// SCROLL EVENT - LOGO
-		$('#stb-logo-wrapper .elementor-widget-wrap').prepend('<div class="logo-blocker">');
-		$(window).scroll(function() {
-		var a = 400;
-		var b = 200;
-		var pos = $(window).scrollTop();
-		if(pos > a) {
-				$('.logo-blocker').css('opacity','1');
-				$('.logo-blocker').addClass('active');
-			} else if(pos < b) {
-				$('.logo-blocker').removeClass('active');
-				$('.logo-blocker').css('opacity','0');
-			} else {
-				$('.logo-blocker').removeClass('active');
-				$('.logo-blocker').css('opacity','0');
-			}
-		});
-		
-	}
+/*=======================================================================================================
+ * HEADER
+ * ====================================================================================================*/
+	$('#stb-logo-wrapper .elementor-widget-wrap').prepend('<div class="logo-blocker">');
+	$(window).scroll(function() {
+	var a = 400;
+	var b = 200;
+	var pos = $(window).scrollTop();
+	if(pos > a) {
+			$('.logo-blocker').css('opacity','1');
+			$('.logo-blocker').addClass('active');
+		} else if(pos < b) {
+			$('.logo-blocker').removeClass('active');
+			$('.logo-blocker').css('opacity','0');
+		} else {
+			$('.logo-blocker').removeClass('active');
+			$('.logo-blocker').css('opacity','0');
+		}
+	});
 	
 /*=======================================================================================================
  * SERVICES SECTION
  * ====================================================================================================*/
-    if($(window).width() > 1200) {
+    function serviceBgChanger() {
 		var timeout = null;
 		var hasClicked = function() { return $('.e-hotspot--active').length };
 		$(window).scroll(function() {
@@ -383,12 +387,6 @@ $('.elementor-menu-toggle').on('click', function() {
 		});
 	});
 	
-	// NON ACTIVE HOTSPOTS
-// 	$('.e-hotspot__button.e-hotspot--soft-beat').on('click', function() {
-// 		$(this).toggleClass('ba--active');
-// 		$('.e-hotspot__button.e-hotspot--soft-beat').not(this).toggleClass('ba--inactive');
-// 	});
-	
 	// Mobile Menu Active Link
 	$('#masthead nav.elementor-nav-menu--dropdown.elementor-nav-menu__container ul li:not(li:last-child)').click(function() {
 		$('#masthead nav.elementor-nav-menu--dropdown.elementor-nav-menu__container ul li:not(li:last-child)').removeClass('active');
@@ -432,14 +430,28 @@ $('.elementor-menu-toggle').on('click', function() {
 		});
 	}
 
+/*===============================================================================
+ *  LAST HOTSPOT SECTION
+ * =============================================================================*/
 	
 	
-});
+	$('.elementor-element-1f7e3d5 img:not(.team-head img)').mouseup(function() {
+		$('.e-hotspot').removeClass('e-hotspot--active');
+	});
+	$('.elementor-element-07e3890').mouseup(function() {
+		$('.e-hotspot').removeClass('e-hotspot--active');
+	});
+
+	// NESTING THE HOTSPOTS
+	$('#pro-team .e-hotspot').wrapAll('<div class="hotspot-container">');
+
+	function centerImage() {
+		var centerPoint = $('#butlerapp-team-container .elementor-widget-hotspot img').width();
+		$('#butlerapp-team-container').scrollLeft(centerPoint/2.9);
+	}
 
 
-
-
-
+}); // THE ENDING...
 
 
 
