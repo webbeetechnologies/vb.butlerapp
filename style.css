@@ -1881,6 +1881,9 @@ body:not(.elementor-editor-active) #casual-team {
 	#mainhero h1 {
 		max-width: 82%;
 	}
+	#ba--sliders .th-slide-content .elementor-section-wrap section:nth-child(2) {
+		display: block;
+	}
 }
 @media (min-width: 468px) and (max-width:1024px) {
 	/*=========================================
@@ -2744,14 +2747,6 @@ body:not(.elementor-editor-active) #casual-team {
 		left: 0;
 		bottom: 50%;
 	}
-	#ba--sliders .slides li:nth-child(2) img:not(.btn-replaced) {
-		top: -445px;
-		left: 10px;
-	}
-	#ba--sliders .slides li:nth-child(3) img:not(.btn-replaced) {
-		top: -445px;
-		left: 10px;
-	}
 }
 @media (max-width: 1201px) and (min-width: 1025px) {
 	#masthead nav {
@@ -2765,6 +2760,10 @@ body:not(.elementor-editor-active) #casual-team {
 	}
 }
 @media (min-width: 468px) and (max-width: 767.98px) {
+	#ba--sliders .th-slide-content .elementor-section-wrap section:first-child > .elementor-container{
+		min-height: 560.5px !important;
+		max-height: 560.5px !important;
+	}
 	#butlerapp-contact .elementor-widget-form {
 		margin-right: 20px;
 		margin-left: 20px;
