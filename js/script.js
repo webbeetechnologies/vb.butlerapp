@@ -144,31 +144,20 @@ butlerMediaQueries.register('desktop', function(e) {
 	});
 
 /*===============================================================================
- *  KUNDEN SLIDER - Section 5
- * =============================================================================*/
-
-/*===============================================================================
  *  WINDOW RESIZE FUNCTION
  * =============================================================================*/
 (function butlerResize() {
 	
 	function handleResize() {
 		var mQ = $(window).width();
-		var ksH = $('#kunden--slider .th-slide-content').height() + 150;
 		var headerHeight = $('#masthead').height();
 		
-		var cI = $('#kunden--slider .th-slide-content > div > div > div > section > div > div > div > div > div > div > div > div.elementor-image');
-		var kS = $('#kunden--slider #main-flex-slider');
 		$('.hero-sec').css('margin-top',-headerHeight);
 		var getBg = $('#butlerapp-contact').css('background-image');
 
 		// LAST HOTSPOT SECTION
 		var ptH = $('#casual-team').outerHeight() + 'px';
 		$('#pro-team, #casual-team').parent().attr('style','position:relative;height:'+ ptH +'');
-		
-		// KUNDEN SLIDER
-		var slideInnerHeight = $('#kunden--slider .th-slide-inner').outerHeight();
-		$('#kunden--slider .slider-bg').css('min-height',slideInnerHeight+'px');
 
 		if(mQ < 767.98) {
 			// Contact Form Section
@@ -181,16 +170,6 @@ butlerMediaQueries.register('desktop', function(e) {
 		} else {
 			$('.removio').hide();
 			$('.ct-girl, .floating-icon').remove();
-		}
-		
-		if(mQ > 468 && mQ < 767.98) {
-			cI.css('width',mQ+'px');
-		} else {
-			cI.css('width','');
-		}
-		
-		if(mQ < 1200 && mQ > 1024) {
-			kS.attr('style','height:'+ksH+''+'px');
 		}
 	}
 	$(window).resize(handleResize);

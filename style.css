@@ -74,8 +74,14 @@ Version: 1.0.0
  * BUTLERAPP TESTIMONIAL 2
  * ===================================================*/
 #kunden--slider #main-flex-slider .flex-control-nav {
-    display: block !important;
-	margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#kunden--slider .slide-points {
+	position: absolute;
+    display: flex;
+    align-items: center;
 }
 
 /*======================================================
@@ -89,8 +95,18 @@ Version: 1.0.0
 .elementor-element-2024070 > .elementor-container {
     margin-left: 0;
 }
-#kunden--slider #main-flex-slider .flex-control-nav {
-	position: relative !important;
+#kunden--slider #main-flex-slider .flex-control-nav,
+#kunden--slider #main-flex-slider .th-slide-wrap {
+	position: relative;
+}
+#kunden--slider .elementor-widget-themo-slider > .elementor-widget-container {
+    margin: 0;
+}
+#kunden--slider #main-flex-slider .slides .slider-bg {
+    min-height: unset;
+}
+#kundenslide .th-slide-content section {
+    padding: 0;
 }
 
 /*======================================================
@@ -1360,6 +1376,9 @@ body:not(.elementor-editor-active) #casual-team {
 	#ba-marq #marquee {
 		padding: 0 !important;
 	}
+	#kunden--slider .flex-control-nav {
+		top: 10px;
+	}
 	.pro-service .elementor-widget-container>img {
 		transform: scale(1.2);
 	}
@@ -1505,10 +1524,6 @@ body:not(.elementor-editor-active) #casual-team {
 	.elementor-1458 .elementor-element.elementor-element-2543b8b0 > .elementor-widget-container,
 	.elementor-1579 .elementor-element.elementor-element-291f8efd > .elementor-widget-container {
 		background-color: rgb(255,255,255,100%) !important;
-	}
-	.elementor-element-291f8efd p {
-		width: 90vw;
-    	margin-left: -5vw;
 	}
 	#kundenslide {
 		background-size: 38%;
@@ -1673,10 +1688,6 @@ body:not(.elementor-editor-active) #casual-team {
 	/*-- Kunden Slider --*/
 	#kunden--slider #main-flex-slider .slides img {
 		border-radius: 50%;
-		box-shadow: none;
-		width: 100% !important;
-		left: 0;
-		top: -350px;
 	}
 	#kunden--slider .elementor-container, #kunden--slider .elementor-widget-wrap,
 	#kunden--slider .elementor-1458 .elementor-element.elementor-element-629f4d98 {
@@ -1690,20 +1701,8 @@ body:not(.elementor-editor-active) #casual-team {
 	#kunden--slider .elementor-element-2024070 {
 		margin-bottom: 25px;
 	}
-	.elementor-element-238ffd5  {
-		position: relative;
-		top: -150px;
-	}
-	#kunden--slider #main-flex-slider .slides img {
-		border-radius: 50%;
-		box-shadow: none;
-		width: 75% !important;
-		left: 15%;
-		top: -280px;
-	}
 	#kunden--slider #main-flex-slider .flex-control-nav {
 		width: 100%;
-		bottom: 80px;
 	}
 	#kunden--slider .elementor-941 .elementor-element.elementor-element-20d9e5a {
 		border-radius: 20px;
@@ -1751,7 +1750,7 @@ body:not(.elementor-editor-active) #casual-team {
 	#ba--sliders .slides .th-slide-inner {
 		padding-right: 0;
 	}
-	#main-flex-slider .flex-control-nav {
+	#ba--sliders #main-flex-slider .flex-control-nav {
 		display: none !important;
 	}
 	#ba-slider-controls {
@@ -1792,7 +1791,7 @@ body:not(.elementor-editor-active) #casual-team {
 		right: 100% !important;
 	}
 	/* SLIDER ARROWS */
-	.ba-slider-arrows {
+	#ba--sliders .ba-slider-arrows {
 		position: absolute;
 		width: 250px;
 		height: 45px;
@@ -1837,15 +1836,23 @@ body:not(.elementor-editor-active) #casual-team {
 	}
 }
 @media (max-width: 467.98px) {
+	.butler-guides-section {
+		padding-bottom: 0 !important;
+	}
+	#kunden--slider .elementor-widget-container {
+		margin: 0 !important;
+	}
+	#kunden--slider .slides li .elementor-widget-image {
+		margin-top: 0;
+	}
+	#kunden--slider .elementor-widget-container > .elementor-image {
+		width: 80%;
+		margin: auto;
+		padding-bottom: 20px;
+	}
 	.mobile-slider-img {
 		position: relative;
 		bottom: -100px;
-	}
-	#kunden--slider #main-flex-slider {
-		padding-top: 200px;
-		position: relative;
-		top: -200px;
-		height: 900px !important;
 	}
 	#ba-marq #marquee {
 		justify-content: center;
@@ -2262,6 +2269,14 @@ body:not(.elementor-editor-active) #casual-team {
 	}
 }
 @media (max-width: 467.98px) {
+	butler-guides-section {
+		padding-bottom: 0;
+	}
+	#kunden--slider h2 {
+		margin-bottom: 0 !important;
+		max-width: 80%;
+		margin: auto;
+	}
 	.mobile-slider-img {
 		display: block !important;
 	}
@@ -2294,8 +2309,6 @@ body:not(.elementor-editor-active) #casual-team {
 		position: absolute;
 		width: 250px;
 		height: 45px;
-		top: -20px;
-		right: -10px;
 	}
 	#pro-team .team-head img {
 		width: 64px !important;
@@ -2338,9 +2351,6 @@ body:not(.elementor-editor-active) #casual-team {
 	.elementor-element-7a0ed129 {
 		margin-top: 60px;
 	}
-	#kunden--slider #main-flex-slider .flex-control-nav {
-		position: relative;
-	}
 	.elementor-2600 .elementor-element.elementor-element-55134ca {
 		padding-bottom: 30px;
 	}
@@ -2348,6 +2358,7 @@ body:not(.elementor-editor-active) #casual-team {
 		height: 238px;
 		border-radius: 20px;
 		padding: 20px;
+		margin-top: 100px;
 	}
 	#ba-marq .marq-container {
 		text-align: center;
@@ -2543,7 +2554,6 @@ body:not(.elementor-editor-active) #casual-team {
 #kunden--slider .flex-control-nav li {
 	position: relative;
 	z-index: 2;
-	left: 10px;
 }
 #kunden--slider .ba-slider-arrows > div {
 	max-width: 200px;
@@ -2761,6 +2771,13 @@ body:not(.elementor-editor-active) #casual-team {
 	}
 }
 @media (min-width: 468px) and (max-width: 767.98px) {
+	#kunden--slider h2 {
+		margin-bottom: 0 !important;
+	}
+	#kunden--slider .slides li .elementor-widget-image > .elementor-widget-container {
+		margin-right: 0;
+		margin-bottom: -50px;
+	}
 	#ba--sliders .th-slide-content .elementor-section-wrap section:first-child > .elementor-container{
 		min-height: 560.5px !important;
 		max-height: 560.5px !important;
@@ -2772,20 +2789,13 @@ body:not(.elementor-editor-active) #casual-team {
 	#butlerapp-services > div > div > div:first-child {
 		order: 1;
 	}
-	#kunden--slider .th-slide-content > div > div > div > section > div > div > div > div > div > div > div > div.elementor-image img {
-		position: absolute;
-		bottom: -45%;
-		margin-left: -7.6%;
-	}
 	#kunden--slider .tst {
 		position: relative;
 		bottom: 30px;
 	}
 	#kunden--slider #main-flex-slider .flex-control-nav {
-		bottom: -80px;
-	}
-	#kunden--slider #main-flex-slider .flex-control-nav {
 		width: 100%;
+		margin-top: 20px;
 	}
 	#ba--sliders .th-slide-content > div > div > div > section > div > div > div > div > div {
 		padding: 40px;
