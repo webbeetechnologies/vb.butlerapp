@@ -1836,6 +1836,12 @@ body:not(.elementor-editor-active) #casual-team {
 	}
 }
 @media (max-width: 467.98px) {
+	.section-service .ba-points {
+		max-width: 100%;
+	}
+	.section-service h2 {
+		line-height: 1.4em !important;
+	}
 	.butler-guides-section {
 		padding-bottom: 0 !important;
 	}
@@ -1877,6 +1883,9 @@ body:not(.elementor-editor-active) #casual-team {
 	}
 }
 @media (min-width: 768px) and (max-width: 1024.98px) {
+	#mainhero {
+		margin-top: -68px;
+	}
 	.hero-img img {
 		margin-left: -6%;
 		max-width: 104%;
@@ -1891,6 +1900,13 @@ body:not(.elementor-editor-active) #casual-team {
 	}
 	#ba--sliders .th-slide-content .elementor-section-wrap section:nth-child(2) {
 		display: block;
+	}
+	#mobile-hero-logos > .elementor-container > .elementor-row > .elementor-column {
+		width: 22%;
+	}
+	#mobile-hero-logos > .elementor-container > .elementor-row {
+		align-items: center;
+		justify-content: center;
 	}
 }
 @media (min-width: 468px) and (max-width:1024px) {
@@ -1912,11 +1928,6 @@ body:not(.elementor-editor-active) #casual-team {
 	}
 	#mainhero > div > div > div > div > div > section > div > div > div {
 		width: 100%;
-	}
-	#mobile-hero-logos > div > div > div {
-		width: 23.5% !important;
-		margin-top: -60px;
-		margin-bottom: -60px;
 	}
 	#mobile-hero-logos > div > div > div:nth-child(3) {
 		position: relative;
@@ -1972,6 +1983,13 @@ body:not(.elementor-editor-active) #casual-team {
 	}
 }
 @media (max-width:767.98px) {
+	#mobile-hero-logos > div > div > div:nth-child(3) {
+		left: unset;
+		margin: unset;
+	}
+	#mobile-hero-logos > .elementor-container > .elementor-row > .elementor-column {
+		width: 50%;
+	}
 	#ba--sliders .mobile-slider-img img {
 		display: block !important;
 	}
@@ -2269,7 +2287,13 @@ body:not(.elementor-editor-active) #casual-team {
 	}
 }
 @media (max-width: 467.98px) {
-	butler-guides-section {
+	#mainhero {
+		margin-top: -52.1797px;
+	}
+	#mobile-hero-logos {
+		margin-top: -70px !important;
+	}
+	.butler-guides-section {
 		padding-bottom: 0;
 	}
 	#kunden--slider h2 {
@@ -2312,13 +2336,6 @@ body:not(.elementor-editor-active) #casual-team {
 	}
 	#pro-team .team-head img {
 		width: 64px !important;
-	}
-	#mobile-hero-logos .elementor-container img:nth-child(2) {
-    	width: 20%;
-	}
-	#mobile-hero-logos .elementor-container img {
-		width: 42%;
-		margin: 10px;
 	}
 	#mobile-hero-logos .elementor-container {
 		margin: 0;
@@ -2531,6 +2548,11 @@ body:not(.elementor-editor-active) #casual-team {
 @media (min-width: 1025px) and (max-width: 1988px) {
 	#mainhero > div {
 		max-width: calc(93% - 20px);
+	}
+}
+@media (min-width: 1025px) {
+	#mainhero {
+		margin-top: -77.0781px;
 	}
 }
 .fadeInDown,
@@ -2771,6 +2793,9 @@ body:not(.elementor-editor-active) #casual-team {
 	}
 }
 @media (min-width: 468px) and (max-width: 767.98px) {
+	#mainhero {
+		margin-top: -52.18px;
+	}
 	#kunden--slider h2 {
 		margin-bottom: 0 !important;
 	}

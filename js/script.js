@@ -37,6 +37,7 @@ butlerMediaQueries.register('mobile', function(e) {
 	if(e.matches) {
 		centerImage();
 		restructureSlider();
+		faqMobile();
 	}
 });
 
@@ -49,6 +50,7 @@ butlerMediaQueries.register('largeMobile', function(e) {
 butlerMediaQueries.register('desktop', function(e) {
 	if(e.matches) {
 		serviceBgChanger();
+		teamBgChanger();
 	}
 });
 
@@ -58,6 +60,15 @@ butlerMediaQueries.register('desktop', function(e) {
 
 	// REMOVES LAZY LOADING
 	$('#butlerapp-team-container .elementor-widget-hotspot .elementor-widget-container > img').removeAttr('loading');
+
+	// TOOLTIPS -- REMOVE EMPTY P TAGS
+	$('.e-hotspot__tooltip .team-body p').each(function() {
+        var txto = $(this).text();
+        var tL = txto.length;
+        if(tL <= 0) {
+            $(this).remove();
+        }
+	});
 
 /*===============================================================================
  * FUTURE SLIDER -- Section 3
@@ -150,17 +161,10 @@ butlerMediaQueries.register('desktop', function(e) {
 	
 	function handleResize() {
 		var mQ = $(window).width();
-		var headerHeight = $('#masthead').height();
-		
-		$('.hero-sec').css('margin-top',-headerHeight);
+
+		// CONTACT FROM SECTION (...NEED TO NORMALIZE)
 		var getBg = $('#butlerapp-contact').css('background-image');
-
-		// LAST HOTSPOT SECTION
-		var ptH = $('#casual-team').outerHeight() + 'px';
-		$('#pro-team, #casual-team').parent().attr('style','position:relative;height:'+ ptH +'');
-
 		if(mQ < 767.98) {
-			// Contact Form Section
 			$('#butlerapp-contact').addClass('nobgimage');
 			if($('.ct-girl').length == 0) {
 				$('#butlerapp-contact').prepend('<div class="ct-girl"><div class="ct-girl-img"></div></div>');
@@ -171,6 +175,11 @@ butlerMediaQueries.register('desktop', function(e) {
 			$('.removio').hide();
 			$('.ct-girl, .floating-icon').remove();
 		}
+
+		// LAST HOTSPOT SECTION
+		var ptH = $('#casual-team').outerHeight() + 'px';
+		$('#pro-team, #casual-team').parent().attr('style','position:relative;height:'+ ptH +'');
+
 	}
 	$(window).resize(handleResize);
 	$(window).trigger("resize");
@@ -261,6 +270,9 @@ $('.elementor-menu-toggle').on('click', function() {
 			}
 		});
 	}
+/*=======================================================================================
+* FAQs Section
+=======================================================================================*/
 	$('.faq').each(function() {
         $(this).on('click', function() {
             if(!$(this).hasClass('faq-active')) {
@@ -277,20 +289,46 @@ $('.elementor-menu-toggle').on('click', function() {
             }
         });
     });
-	
-	// CONTACT SECTION -- CHANGE BG ON INPUT CLICK
-	// /wp-content/uploads/2022/06/Layer.png
-	
+	function faqMobile() {
+		// FAQs Close Button --  Buggy (gotta fix this later...)
+		$('.faq-close-btn').click(function() {
+			if($('#faqs-container .faq').hasClass('faq-active')) {
+				$(this).parent().removeClass('faq-active');
+				$(this).parent().find('.faq-content-area').slideUp();
+				$(this).parent().find('.faq-overlay').css('opacity','0');
+			}
+		});
+		// 	Restructure faq-meta
+		$('#faqs-container .faq-meta').each(function() {
+			$(this).find('h5, span, a').wrapAll('<div>');
+		});
+	}
+/*=======================================================================================
+* CONTACT FORM SECTION 
+=======================================================================================*/
+
+	// CHANGE BG ON INPUT CLICK
 	$('#butlerapp-contact input, .elementor-element-16bc62a').click(function() {
 		var changeTimer = 100;
 		setTimeout(function() {
 			$('#butlerapp-contact, .ct-girl-img').css('background-image','url(/wp-content/uploads/2022/06/contact-2-min.png)');
 		}, changeTimer);
 	});
-	
-	
-	// TEAMS SECTION -- BACKGROUND CHANGER
-	if($(window).width() > 1200 ) {
+
+/*=======================================================================================
+* PERSONLICHER SUPPORT
+=======================================================================================*/
+
+	// NESTING
+	$('.ba-points').each(function() {
+		$(this).find('h3, p').wrapAll('<div class="mobile-wrapper"></div>');
+	});
+
+/*=======================================================================================
+* TEAMS SECTION (LAST SECTION)
+=======================================================================================*/
+	// BACKGROUND CHANGER
+	function teamBgChanger() {
 		var timeover = null;
 		var isClicked = function() {return $('.e-hotspot--active').length };
 		$(window).scroll(function() {
@@ -317,7 +355,7 @@ $('.elementor-menu-toggle').on('click', function() {
 				}
 			});
 		}
-	
+
 // HOTSPOT MOUSE IN & OUT
 	$('.e-hotspot__button').mouseenter(function() {
 		$(this).find('div:last-child').css('padding','9px');
@@ -352,16 +390,6 @@ $('.elementor-menu-toggle').on('click', function() {
 	$('.elementor-element-07e3890').mouseup(function() {
 		$('.e-hotspot').removeClass('e-hotspot--active');
 	});
-
-	
-// TOOLTIPS -- REMOVE EMPTY P TAGS
-	$('.e-hotspot__tooltip .team-body p').each(function() {
-        var txto = $(this).text();
-        var tL = txto.length;
-        if(tL <= 0) {
-            $(this).remove();
-        }
-	});
 	
 	// TEAM CARDS - CLOSE FUNCTION
 	$('.e-hotspot').each(function() {
@@ -369,55 +397,8 @@ $('.elementor-menu-toggle').on('click', function() {
 			$(this).parent().parent().parent().removeClass('e-hotspot--active');
 		});
 	});
-	
-	// Mobile Menu Active Link
-	$('#masthead nav.elementor-nav-menu--dropdown.elementor-nav-menu__container ul li:not(li:last-child)').click(function() {
-		$('#masthead nav.elementor-nav-menu--dropdown.elementor-nav-menu__container ul li:not(li:last-child)').removeClass('active');
-		$(this).addClass('active');
-	});
-	
-	// Append Mobile Footer
-	$('#masthead nav.elementor-nav-menu--dropdown.elementor-nav-menu__container').append("<div class='mobiler-footer'><a href='tel:493031199425'><span class='caller-icon-container'><img class='caller-icon' src='/wp-content/uploads/2022/07/caller-icon-no-bg.png'></span><span>Kostenlose Beratung</span><span>+49 30 311 994 25</span></a><div class='mobile-copyright'><p>Buchungsbutler © 2022 Webbee GmbH</p><div class='footer-links'><a href='#'>Datenschutz</a><a>Impressum</a></div></div>");
-	
-	// Mobile Hero
-	var heroimg1 = $('#mobile-hero-logos .elementor-column:nth-child(1) img').attr('src');
-	var heroimg2 = $('#mobile-hero-logos .elementor-column:nth-child(2) img').attr('src');
-	var heroimg3 = $('#mobile-hero-logos .elementor-column:nth-child(3) img').attr('src');
-	var heroimg4 = $('#mobile-hero-logos .elementor-column:nth-child(4) img').attr('src');
-	
-	if($(window).width() < 468) {
-		$('#mobile-hero-logos .elementor-container .elementor-row').remove();
-		$('#mobile-hero-logos .elementor-container').append('<img src='+heroimg1+'><img src='+heroimg2+'><img src='+heroimg3+'><img src='+heroimg4+'>');
-		$('.elementor-element-2024070').prependTo('.elementor-element-102e249f');
-		$('.elementor-element-3278dce8').prependTo('.elementor-element-46a4917c');
-	// Stopping the scrolling marquee on mobile
-		$('#ba-marq marquee').contents().unwrap();
-		$('#ba-marq .marq-container .marq-content:not(.marq-content:first-child)').remove();
-	// Kompetenter Services
-		$('.elementor-element-b449815').appendTo('.elementor-element-c90273a');
-	// BA Points Section
-		$('.ba-points').each(function() {
-			$(this).find('h3, p').wrapAll('<div class="mobile-wrapper"></div>');
-		});
-	// FAQs Close Button --  Buggy (gotta fix this later...)
-		$('.faq-close-btn').click(function() {
-			if($('#faqs-container .faq').hasClass('faq-active')) {
-				$(this).parent().removeClass('faq-active');
-				$(this).parent().find('.faq-content-area').slideUp();
-				$(this).parent().find('.faq-overlay').css('opacity','0');
-			}
-		});
-	// 	Restructure faq-meta
-		$('#faqs-container .faq-meta').each(function() {
-			$(this).find('h5, span, a').wrapAll('<div>');
-		});
-	}
 
-/*===============================================================================
- *  LAST HOTSPOT SECTION
- * =============================================================================*/
-	
-	
+	// CLICKING OUTSIDE THE CARDS
 	$('.elementor-element-1f7e3d5 img:not(.team-head img)').mouseup(function() {
 		$('.e-hotspot').removeClass('e-hotspot--active');
 	});
@@ -432,6 +413,17 @@ $('.elementor-menu-toggle').on('click', function() {
 		var centerPoint = $('#butlerapp-team-container .elementor-widget-hotspot img').width();
 		$('#butlerapp-team-container').scrollLeft(centerPoint/2.9);
 	}
+	
+	// Mobile Menu Active Link
+	$('#masthead nav.elementor-nav-menu--dropdown.elementor-nav-menu__container ul li:not(li:last-child)').click(function() {
+		$('#masthead nav.elementor-nav-menu--dropdown.elementor-nav-menu__container ul li:not(li:last-child)').removeClass('active');
+		$(this).addClass('active');
+	});
+	
+	// Append Mobile Footer
+	$('#masthead nav.elementor-nav-menu--dropdown.elementor-nav-menu__container').append("<div class='mobiler-footer'><a href='tel:493031199425'><span class='caller-icon-container'><img class='caller-icon' src='/wp-content/uploads/2022/07/caller-icon-no-bg.png'></span><span>Kostenlose Beratung</span><span>+49 30 311 994 25</span></a><div class='mobile-copyright'><p>Buchungsbutler © 2022 Webbee GmbH</p><div class='footer-links'><a href='#'>Datenschutz</a><a>Impressum</a></div></div>");
+	
+
 
 
 }); // THE ENDING...
