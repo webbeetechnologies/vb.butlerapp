@@ -13,12 +13,12 @@ var butlerMediaQueries = (function() {
 	}
 	return {
 		register: function(screenSize, callback) {
-
 			if (!screenSizes[screenSize]) {
 				throw new Error("No handler for screenSize \"" + screenSize + "\". Try " + Object.keys(screenSizes).join(" or "));
 			}
 			var mediaQuery = screenSizes[screenSize];
 			const handleOnChange = function(e) {
+				if (e.matches)
 				callback(e.currentTarget);
 			}
 
@@ -32,6 +32,7 @@ var butlerMediaQueries = (function() {
 		}
 	}
 })();
+
 
 butlerMediaQueries.register('mobile', function(e) {
 	if(e.matches) {
@@ -358,13 +359,13 @@ $('.elementor-menu-toggle').on('click', function() {
 
 // HOTSPOT MOUSE IN & OUT
 	$('.e-hotspot__button').mouseenter(function() {
-		$(this).find('div:last-child').css('padding','9px');
+		// $(this).find('div:last-child').css('padding','9px');
 		setTimeout(function() {
 			$(this).removeClass('ba--inactive');
 		}, 500);
 	});
 	$('.e-hotspot__button').mouseleave(function() {
-		$(this).find('div:last-child').css('padding','6px');
+		// $(this).find('div:last-child').css('padding','6px');
 	});
 
 // HOTSPOT ONCLICK ACTIONS
@@ -383,7 +384,7 @@ $('.elementor-menu-toggle').on('click', function() {
 		}
  	});
 	
-// When clicking outside the card -> card should close
+	// When clicking outside the card -> card should close
 	$('.elementor-element-1f7e3d5 img:not(.team-head img)').mouseup(function() {
 		$('.e-hotspot').removeClass('e-hotspot--active');
 	});
@@ -392,10 +393,8 @@ $('.elementor-menu-toggle').on('click', function() {
 	});
 	
 	// TEAM CARDS - CLOSE FUNCTION
-	$('.e-hotspot').each(function() {
-		$(this).find('.ba-close-icon').click(function() {
+	$('.e-hotspot .ba-close-icon').click(function() {
 			$(this).parent().parent().parent().removeClass('e-hotspot--active');
-		});
 	});
 
 	// CLICKING OUTSIDE THE CARDS
@@ -413,7 +412,13 @@ $('.elementor-menu-toggle').on('click', function() {
 		var centerPoint = $('#butlerapp-team-container .elementor-widget-hotspot img').width();
 		$('#butlerapp-team-container').scrollLeft(centerPoint/2.9);
 	}
-	
+
+	function mediaCenterImage(e) {
+		e.matches && centerImage()
+	}
+
+	butlerMediaQueries.register("mobile", mediaCenterImage)
+
 	// Mobile Menu Active Link
 	$('#masthead nav.elementor-nav-menu--dropdown.elementor-nav-menu__container ul li:not(li:last-child)').click(function() {
 		$('#masthead nav.elementor-nav-menu--dropdown.elementor-nav-menu__container ul li:not(li:last-child)').removeClass('active');
