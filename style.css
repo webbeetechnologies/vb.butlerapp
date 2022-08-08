@@ -1142,7 +1142,7 @@ nav.elementor-nav-menu--dropdown.elementor-nav-menu__container {
 /*-- PLAYING WITH 2 Banners --*/
 body:not(.elementor-editor-active) #pro-team,
 body:not(.elementor-editor-active) #casual-team {
-  position: absolute;
+  position: relative;
   width: 100%;
 }
 body:not(.elementor-editor-active) #casual-team {
@@ -1580,7 +1580,6 @@ body:not(.elementor-editor-active) #casual-team {
   /*== DRAGGABLE HOTSPOT IMAGE ==*/
   .elementor-element-1f7e3d5 {
     margin-top: -55px;
-    height: 100vh;
     overflow-y: hidden;
   }
   .elementor-element-16bc62a {
@@ -1597,7 +1596,7 @@ body:not(.elementor-editor-active) #casual-team {
     max-width: 320%;
   }
   .hotspot-container {
-    height: 100vh;
+    height: 100%;
     width: 320%;
     position: absolute;
     top: 0;
@@ -1645,9 +1644,6 @@ body:not(.elementor-editor-active) #casual-team {
     }
   }
   /*-- SERVICES SECTION --*/
-  .pro-service .elementor-widget-container > img {
-    height: 302px;
-  }
   .butlerapp-services-img-container .e-hotspot {
     transform: scale(0.8) translateX(-25px) translateY(-10px) !important;
   }
@@ -1973,6 +1969,9 @@ body:not(.elementor-editor-active) #casual-team {
   }
 }
 @media (min-width: 468px) {
+  .ba-instructor-parent {
+    display: none;
+  }
   .faq-flipper img {
     top: 25px;
     right: 25px;
@@ -2220,6 +2219,9 @@ body:not(.elementor-editor-active) #casual-team {
   }
 }
 @media (min-width: 768px) {
+  .floating-icon {
+    display: none;
+  }
   .e-hotspot__tooltip {
     width: 400px;
   }
