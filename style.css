@@ -308,6 +308,23 @@ Version: 1.0.0
 }
 
 /*======================================================
+ * FOOTER SECTION
+ * ===================================================*/
+.footer-contact-box figure img {
+  background: conic-gradient(
+    from 90deg at 50% 50%,
+    #2aacd1 0deg,
+    #39b54a 124.68deg,
+    #2aacd1 270deg,
+    #2aacd1 360deg
+  );
+  box-shadow: 0px 20px 30px rgb(11 37 65 / 36%),
+    0px 10px 10px rgb(11 37 65 / 22%);
+  border-radius: 50% !important;
+  padding: 5px;
+}
+
+/*======================================================
  * POP-UPS
  * ===================================================*/
 .elementor-popup-modal .dialog-message {
@@ -470,12 +487,6 @@ Version: 1.0.0
 }
 .footer-contact-area .contact-text > a > span {
   opacity: 0.6;
-}
-.footer-contact-area img {
-  transform: scale(2.3);
-  position: relative;
-  top: 3px;
-  right: -100%;
 }
 .elementor-element-34223cb6 ul li a {
   color: #0b2541 !important;
@@ -1060,13 +1071,15 @@ nav.elementor-nav-menu--dropdown.elementor-nav-menu__container {
 /*======================================================
  * TEAM SECTION WITH HOTSPOT POINTS
  * ===================================================*/
-
+.e-hotspot__button:hover div:last-child {
+  padding: 9px;
+}
 .e-hotspot__button div:last-child {
   background: linear-gradient(180deg, #ffffff 0%, #f5f7f8 100%);
   box-shadow: 1px 1px 1px rgb(255 255 255 / 27%),
     3px 4px 5px rgb(113 21 43 / 51%);
   padding: 6px;
-  transition: all 0.4s ease;
+  transition: all 0.3s ease;
 }
 /*-- INACTIVE INNER TOOLTIPS --*/
 .e-hotspot.hotspot--inactive div:last-child,
@@ -1969,6 +1982,9 @@ body:not(.elementor-editor-active) #casual-team {
   }
 }
 @media (min-width: 468px) {
+  #butlerapp-team-container {
+    overflow-x: hidden;
+  }
   .ba-instructor-parent {
     display: none;
   }
@@ -2229,8 +2245,39 @@ body:not(.elementor-editor-active) #casual-team {
   .mobile-slider-img {
     display: none;
   }
+  .footer-contact-box .elementor-image-box-content {
+    display: flex;
+    width: fit-content;
+  }
+  .footer-contact-box .elementor-image-box-wrapper {
+    justify-content: flex-end;
+  }
+  .footer-contact-box figure {
+    align-self: center;
+  }
+  .footer-contact-box {
+    width: 25% !important;
+  }
 }
 @media (max-width: 767.98px) {
+  #butlerapp-team-container {
+    margin-top: -55px;
+  }
+  .footer-contact-box figure img {
+    width: 50px;
+    padding: 10px;
+  }
+  .footer-contact-box figure {
+    text-align: center;
+    padding: 10px 0;
+  }
+  .footer-contact-box .elementor-image-box-wrapper {
+    justify-content: center;
+    flex-direction: column;
+  }
+  .footer-contact-box .elementor-image-box-wrapper figure {
+    width: 100% !important;
+  }
   #masthead.headhesive--stick {
     background-color: rgba(255, 255, 255, 90%) !important;
   }
@@ -2398,7 +2445,6 @@ body:not(.elementor-editor-active) #casual-team {
   }
   #butlerapp-team-container {
     transition: all 0.4s ease;
-    overflow-x: scroll;
   }
 }
 @media (min-width: 768px) {
@@ -2447,7 +2493,7 @@ body:not(.elementor-editor-active) #casual-team {
   #pro-team {
     display: block !important;
   }
-  #pro-team .team-head img {
+  #butlerapp-team-container .team-head img {
     width: 64px !important;
   }
   /*-- HEADER --*/
@@ -2902,6 +2948,13 @@ body:not(.elementor-editor-active) #casual-team {
 
 /*-- SPECIFICALLY TABS --*/
 @media (max-width: 1200px) and (min-width: 767.98px) {
+  #menu-1-611dff42 li a {
+    font-size: 1.1em !important;
+    padding: 10px;
+  }
+  .contact-text span {
+    font-size: 1.6vw !important;
+  }
   .mobiler-footer:after {
     width: 50%;
   }
@@ -3262,6 +3315,20 @@ body:not(.elementor-editor-active) #casual-team {
   }
 }
 @media (min-width: 468px) and (max-width: 767.98px) {
+  #butlerapp-contact .elementor-widget-form {
+    padding: 40px;
+  }
+  .footer-logo-set {
+    margin: 10px 0;
+    text-align: center;
+  }
+  .footer-logo-set img {
+    width: 27%;
+    padding: 0 15px;
+  }
+  .footer-logo-set img:nth-child(2) {
+    width: 14%;
+  }
   #mainhero {
     margin-top: -52.18px;
   }
@@ -3283,10 +3350,6 @@ body:not(.elementor-editor-active) #casual-team {
     > .elementor-container {
     min-height: 560.5px !important;
     max-height: 560.5px !important;
-  }
-  #butlerapp-contact .elementor-widget-form {
-    margin-right: 20px;
-    margin-left: 20px;
   }
   #butlerapp-services > div > div > div:first-child {
     order: 1;

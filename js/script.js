@@ -372,14 +372,14 @@ jQuery(document).ready(function ($) {
       if (wS > hT + hH - wH - hH / 2) {
         timeover = setTimeout(function () {
           if (isClicked()) return;
-          pT.fadeOut();
-          cT.fadeIn();
+          pT.css("position", "absolute").fadeOut();
+          cT.css("position", "relative").fadeIn();
         }, 2500);
       } else {
         timeover = setTimeout(function () {
           if (isClicked()) return;
-          cT.fadeOut();
-          pT.fadeIn();
+          cT.css("position", "absolute").fadeOut();
+          pT.css("position", "relative").fadeIn();
         }, 2500);
       }
     });
@@ -387,13 +387,9 @@ jQuery(document).ready(function ($) {
 
   // HOTSPOT MOUSE IN & OUT
   $(".e-hotspot__button").mouseenter(function () {
-    // $(this).find('div:last-child').css('padding','9px');
     setTimeout(function () {
       $(this).removeClass("ba--inactive");
     }, 500);
-  });
-  $(".e-hotspot__button").mouseleave(function () {
-    // $(this).find('div:last-child').css('padding','6px');
   });
 
   // HOTSPOT ONCLICK ACTIONS
@@ -435,6 +431,7 @@ jQuery(document).ready(function ($) {
 
   // NESTING THE HOTSPOTS
   $("#pro-team .e-hotspot").wrapAll('<div class="hotspot-container">');
+  $("#casual-team .e-hotspot").wrapAll('<div class="hotspot-container">');
 
   function centerImage() {
     var centerPoint = $(
