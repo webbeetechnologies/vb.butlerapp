@@ -253,6 +253,16 @@ jQuery(document).ready(function ($) {
       $(
         ".elementor-popup-modal .elementor-form-fields-wrapper > div:nth-last-child(2) .elementor-field-option label"
       ).append('<a class="privacy--link" href="#">Datenschutzbedingungen</a>');
+      /*-- POPUP CLOSE BUTTON --*/
+      function closePopup() {
+        $(".dialog-close-button").on("click", function (e) {
+          e.preventDefault();
+          $(this).parent().parent().fadeOut("slow");
+        });
+      }
+      setTimeout(function () {
+        closePopup();
+      }, 200);
     }
   });
 
@@ -525,7 +535,9 @@ jQuery(document).ready(function ($) {
   // Mobile Menu Active Link
   $(
     "#masthead nav.elementor-nav-menu--dropdown.elementor-nav-menu__container ul li:not(li:last-child)"
-  ).click(function () {
+  ).click(function (e) {
+    e.stopPropagation();
+    e.preventDefault();
     $(
       "#masthead nav.elementor-nav-menu--dropdown.elementor-nav-menu__container ul li:not(li:last-child)"
     ).removeClass("active");

@@ -2543,7 +2543,7 @@ body:not(.elementor-editor-active) #casual-team {
 @media (max-width: 1025px) {
   /*-- MOBILE MENU --*/
   #masthead nav.elementor-nav-menu--dropdown.elementor-nav-menu__container {
-    height: calc(100vh - 52px);
+    height: calc(100vh - 52.13px);
     background: rgba(11, 37, 65, 0.8);
     backdrop-filter: blur(38.0559px);
   }
@@ -2615,9 +2615,7 @@ body:not(.elementor-editor-active) #casual-team {
   }
   .mobiler-footer,
   .mobiler-footer > a:first-child {
-    position: fixed;
     flex-direction: column;
-    bottom: 150px;
     display: flex;
     align-items: center;
     justify-content: center;
