@@ -13,7 +13,7 @@ jQuery(document).ready(function ($) {
         "(min-width:1024px) and (max-width:1199.98px)"
       ),
       desktop: window.matchMedia("(min-width:1200px)"),
-      belowTab: window.matchMedia("(max-width: 767.98px)"),
+      belowTab: window.matchMedia("(max-width:767.98px)"),
     };
     return {
       register: function (screenSize, callback) {
@@ -281,29 +281,36 @@ jQuery(document).ready(function ($) {
   /*=======================================================================================
 * FAQs Section
 =======================================================================================*/
-  $(".faq").each(function () {
-    $(this).on("click", function () {
-      if (!$(this).hasClass("faq-active")) {
-        $(this).find(".faq-content-area").slideDown();
-        $(this).addClass("faq-active");
-      } else {
-        $(this).find(".faq-content-area").slideUp();
-        $(this).removeClass("faq-active");
-      }
-      var activo = $(".faq-active").length;
-      if (activo > 1) {
-        $(".faq").not(this).find(".faq-content-area").slideUp();
-        $(".faq").not(this).removeClass("faq-active");
-      }
-    });
+  $(".faq").on("click", function () {
+    $(this).find(".faq-content-area").slideToggle();
+    $(this).toggleClass("faq-active");
+    var activo = $(".faq-active").length;
+    if (activo > 1) {
+      $(".faq").not(this).find(".faq-content-area").slideUp();
+      $(this).removeClass("faq-active");
+    }
+    if (!$(this).hasClass(".faq-active")) {
+      setTimeout(function () {
+        var offset = $(".faq-active").offset().top;
+        var faqHeight = $(".faq-active").outerHeight();
+        var windowHeight = $(window).height();
+        console.log(offset + windowHeight + faqHeight);
+        $("body, html").animate({
+          scrollTop: offset,
+        });
+      }, 1000);
+    }
   });
   function faqMobile() {
     // FAQs Close Button --  Buggy (gotta fix this later...)
     $(".faq-close-btn").click(function () {
       if ($("#faqs-container .faq").hasClass("faq-active")) {
         $(this).parent().removeClass("faq-active");
-        $(this).parent().find(".faq-content-area").slideUp();
-        $(this).parent().find(".faq-overlay").css("opacity", "0");
+        $(this)
+          .parent()
+          .find(".faq-content-area")
+          .slideUp()
+          .css("opacity", "0");
       }
     });
     // 	Restructure faq-meta
