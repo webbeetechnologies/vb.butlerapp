@@ -282,22 +282,28 @@ jQuery(document).ready(function ($) {
 * FAQs Section
 =======================================================================================*/
   $(".faq").on("click", function () {
-    $(this).find(".faq-content-area").slideToggle();
+    $(this).find(".faq-content-area").slideDown();
     $(this).toggleClass("faq-active");
+    $(".faq")
+      .not(this)
+      .find(".faq-content-area")
+      .slideUp()
+      .removeClass("faq-active");
     var activo = $(".faq-active").length;
     if (activo > 1) {
       $(".faq").not(this).find(".faq-content-area").slideUp();
-      $(this).removeClass("faq-active");
+      $(".faq").not(this).removeClass("faq-active");
     }
     if (!$(this).hasClass(".faq-active")) {
       setTimeout(function () {
         var offset = $(".faq-active").offset().top;
-        var faqHeight = $(".faq-active").outerHeight();
-        var windowHeight = $(window).height();
-        console.log(offset + windowHeight + faqHeight);
-        $("body, html").animate({
-          scrollTop: offset,
-        });
+        var headerHeight = $("#masthead").height();
+        $("body, html").animate(
+          {
+            scrollTop: offset - headerHeight,
+          },
+          1000
+        );
       }, 1000);
     }
   });
