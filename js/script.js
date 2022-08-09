@@ -62,6 +62,12 @@ jQuery(document).ready(function ($) {
     }
   });
 
+  butlerMediaQueries.register("belowTab", function (e) {
+    if (e.matches) {
+      scrollToVideo();
+    }
+  });
+
   /*===============================================================================
    *  GENERIC
    * =============================================================================*/
@@ -173,6 +179,23 @@ jQuery(document).ready(function ($) {
       $(this).parent().toggleClass("active");
     }
   });
+
+  // SCROLL TO ACTIVE VIDEO
+  function scrollToVideo() {
+    $(".bm-filter").on("click", function () {
+      setTimeout(function () {
+        var activeOffset = $(".bm-filter.active").offset().top;
+        console.log(activeOffset);
+        var headerHeight = $("#masthead").height();
+        $("body, html").animate(
+          {
+            scrollTop: activeOffset - headerHeight,
+          },
+          1000
+        );
+      }, 1000);
+    });
+  }
 
   /*===============================================================================
    *  POPUPS
