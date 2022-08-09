@@ -282,7 +282,7 @@ jQuery(document).ready(function ($) {
 * FAQs Section
 =======================================================================================*/
   $(".faq").on("click", function () {
-    $(this).find(".faq-content-area").slideDown();
+    $(this).find(".faq-content-area").slideToggle();
     $(this).toggleClass("faq-active");
     $(".faq")
       .not(this)
