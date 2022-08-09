@@ -69,6 +69,34 @@ jQuery(document).ready(function ($) {
   });
 
   /*===============================================================================
+   *  MUTATION OBSERVERS
+   * =============================================================================*/
+  function notWorkingCorrectly() {
+    console.log("paused");
+    var composeObserver = new MutationObserver(function (mutations) {
+      mutations.forEach(function (mutation) {
+        mutation.addedNodes.forEach(function (node) {
+          $(".elementor-popup-modal");
+        });
+      });
+    });
+
+    function addObserverIfDesiredNodeAvailable() {
+      var composeBox = $(".elementor-popup-modal").length > 0;
+      if (!composeBox) {
+        //The node we need does not exist yet.
+        //Wait 500ms and try again
+        window.setTimeout(addObserverIfDesiredNodeAvailable, 500);
+        return;
+      }
+      var config = { childList: true };
+      composeObserver.observe(composeBox, config);
+    }
+
+    addObserverIfDesiredNodeAvailable();
+  }
+
+  /*===============================================================================
    *  GENERIC
    * =============================================================================*/
 
@@ -207,11 +235,6 @@ jQuery(document).ready(function ($) {
     '<img class="popup-icon" src="/wp-content/uploads/2022/06/popup-icon.png">'
   );
 
-  /*-- MOBILE MENU --*/
-  $(".elementor-menu-toggle").on("click", function () {
-    $("body").toggleClass("body-stopper");
-  });
-
   function butlerFadeOut() {
     $(".elementor-popup-modal").fadeOut("slow");
   }
@@ -230,10 +253,6 @@ jQuery(document).ready(function ($) {
       $(
         ".elementor-popup-modal .elementor-form-fields-wrapper > div:nth-last-child(2) .elementor-field-option label"
       ).append('<a class="privacy--link" href="#">Datenschutzbedingungen</a>');
-      // SMOOTHEN THE CLOSE
-      $(".dialog-close-button").on("click", function () {
-        butlerFadeOut();
-      });
     }
   });
 
@@ -250,9 +269,21 @@ jQuery(document).ready(function ($) {
   /*=======================================================================================================
    * HEADER
    * ====================================================================================================*/
+
   $("#stb-logo-wrapper .elementor-widget-wrap").prepend(
     '<div class="logo-blocker">'
   );
+  function hamburgerClick() {
+    $(".elementor-menu-toggle").on("click", function () {
+      $("body").toggleClass("body-stopper");
+      $("html").toggleClass("overflow-controller");
+    });
+  }
+  setTimeout(function () {
+    hamburgerClick();
+  }, 1000);
+
+  // LOGO ANIMATION
   $(window).scroll(function () {
     var a = 400;
     var b = 200;
@@ -260,12 +291,16 @@ jQuery(document).ready(function ($) {
     if (pos > a) {
       $(".logo-blocker").css("opacity", "1");
       $(".logo-blocker").addClass("active");
+      $("body").addClass("scrolled");
+      $("header").eq(1).hide();
     } else if (pos < b) {
       $(".logo-blocker").removeClass("active");
       $(".logo-blocker").css("opacity", "0");
     } else {
       $(".logo-blocker").removeClass("active");
       $(".logo-blocker").css("opacity", "0");
+      $("body").removeClass("scrolled");
+      $("header").eq(1).show();
     }
   });
 
@@ -304,32 +339,37 @@ jQuery(document).ready(function ($) {
   /*=======================================================================================
 * FAQs Section
 =======================================================================================*/
-  $(".faq").on("click", function () {
-    $(this).find(".faq-content-area").slideToggle();
-    $(this).toggleClass("faq-active");
-    $(".faq")
-      .not(this)
-      .find(".faq-content-area")
-      .slideUp()
-      .removeClass("faq-active");
-    var activo = $(".faq-active").length;
-    if (activo > 1) {
-      $(".faq").not(this).find(".faq-content-area").slideUp();
-      $(".faq").not(this).removeClass("faq-active");
-    }
-    if (!$(this).hasClass(".faq-active")) {
-      setTimeout(function () {
-        var offset = $(".faq-active").offset().top;
-        var headerHeight = $("#masthead").height();
-        $("body, html").animate(
-          {
-            scrollTop: offset - headerHeight,
-          },
-          1000
-        );
-      }, 1000);
-    }
-  });
+  (function faqClosure() {
+    var timeout = null;
+    var extraTopSpace = 20;
+    $(".faq").on("click", function () {
+      $(this).find(".faq-content-area").slideToggle();
+      $(this).toggleClass("faq-active");
+      $(".faq")
+        .not(this)
+        .find(".faq-content-area")
+        .slideUp()
+        .removeClass("faq-active");
+      var activo = $(".faq-active").length;
+      if (activo > 1) {
+        $(".faq").not(this).find(".faq-content-area").slideUp();
+        $(".faq").not(this).removeClass("faq-active");
+      }
+      if (!$(this).hasClass(".faq-active")) {
+        clearTimeout(timeout);
+        timeout = setTimeout(function () {
+          var offset = $(".faq-active").offset().top - extraTopSpace;
+          var headerHeight = $("#masthead").height();
+          $("body, html").animate(
+            {
+              scrollTop: offset - headerHeight,
+            },
+            1000
+          );
+        }, 1000);
+      }
+    });
+  })();
   function faqMobile() {
     // FAQs Close Button --  Buggy (gotta fix this later...)
     $(".faq-close-btn").click(function () {

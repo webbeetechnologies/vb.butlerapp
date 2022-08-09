@@ -10,6 +10,12 @@ Version: 1.0.0
 /*======================================================
  * HEADER
  * ===================================================*/
+body.body-stopper header {
+  background: #fff;
+}
+.overflow-controller {
+  overflow: hidden;
+}
 #masthead.headhesive--stick {
   box-shadow: 0 0 7px rgb(0 0 0 / 20%);
 }
@@ -1516,7 +1522,7 @@ body:not(.elementor-editor-active) #casual-team {
     transform: scale(0.5) rotate(180deg);
   }
   .body-stopper {
-    height: 100vh;
+    height: calc(100% - 52.13px);
     overflow: hidden;
   }
   .elementor-popup-modal .eicon-close {
