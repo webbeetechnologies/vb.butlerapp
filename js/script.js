@@ -72,29 +72,21 @@ jQuery(document).ready(function ($) {
   /*===============================================================================
    *  MUTATION OBSERVERS
    * =============================================================================*/
-  function notWorkingCorrectly() {
-    console.log("paused");
-    var composeObserver = new MutationObserver(function (mutations) {
-      mutations.forEach(function (mutation) {
-        mutation.addedNodes.forEach(function (node) {
-          $(".elementor-popup-modal");
+
+  const mutationObserver = new MutationObserver(closePopup);
+  parent = document.querySelector("body");
+  mutationObserver.observe(parent, {
+    childList: true,
+  });
+
+  function closePopup(mutations) {
+    for (let mutation of mutations) {
+      if (mutation.type === "childList") {
+        $(".dialog-close-button").on("click", function () {
+          $(".elementor-popup-modal").fadeOut("slow");
         });
-      });
-    });
-
-    function addObserverIfDesiredNodeAvailable() {
-      var composeBox = $(".elementor-popup-modal").length > 0;
-      if (!composeBox) {
-        //The node we need does not exist yet.
-        //Wait 500ms and try again
-        window.setTimeout(addObserverIfDesiredNodeAvailable, 500);
-        return;
       }
-      var config = { childList: true };
-      composeObserver.observe(composeBox, config);
     }
-
-    addObserverIfDesiredNodeAvailable();
   }
 
   /*===============================================================================
@@ -250,16 +242,6 @@ jQuery(document).ready(function ($) {
       $(
         ".elementor-popup-modal .elementor-form-fields-wrapper > div:nth-last-child(2) .elementor-field-option label"
       ).append('<a class="privacy--link" href="#">Datenschutzbedingungen</a>');
-      /*-- POPUP CLOSE BUTTON --*/
-      function closePopup() {
-        $(".dialog-close-button").on("click", function (e) {
-          e.preventDefault();
-          $(this).parent().parent().fadeOut("slow");
-        });
-      }
-      setTimeout(function () {
-        closePopup();
-      }, 200);
     }
   });
 
