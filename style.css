@@ -123,6 +123,9 @@ body.body-stopper header {
 /*======================================================
  * HOTSPOT TOOLTIPS
  * ===================================================*/
+.e-hotspot--soft-beat {
+  animation-duration: 0.35s !important;
+}
 .e-hotspot--active .eicon-close:before {
   color: #000 !important;
   opacity: 0.5;
@@ -275,6 +278,9 @@ body.body-stopper header {
 /*======================================================
  * LOGO SCROLLER
  * ===================================================*/
+.swiper-container {
+  cursor: pointer;
+}
 .logo-scroll .e-gallery-item {
   background: transparent !important;
   box-shadow: none !important;
@@ -1388,6 +1394,9 @@ body:not(.elementor-editor-active) #casual-team {
   }
 }
 @media (min-width: 1200px) {
+  .swiper-container:not(:last-child) {
+    margin-bottom: 30px !important;
+  }
   .faq:not(.faq-active):hover .faq-flipper img {
     background: linear-gradient(90deg, #fbb03b 0%, #ed1e79 100%);
     border-radius: 50% 5px 50% 50%;
