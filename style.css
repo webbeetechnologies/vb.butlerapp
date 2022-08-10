@@ -1077,6 +1077,15 @@ nav.elementor-nav-menu--dropdown.elementor-nav-menu__container {
 /*======================================================
  * TEAM SECTION WITH HOTSPOT POINTS
  * ===================================================*/
+.team-head img {
+  border-radius: 50%;
+}
+.hotspot-container {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  position: absolute;
+}
 .e-hotspot__button:hover div:last-child {
   padding: 9px;
 }
@@ -1556,6 +1565,14 @@ body:not(.elementor-editor-active) #casual-team {
   }
 }
 @media (max-width: 467.98px) {
+  #butlerapp-team-container
+    .e-hotspot:not(:first-child):not(:last-child)
+    .e-hotspot--tooltip-position {
+    top: calc(100% + 5px) !important;
+    left: initial !important;
+    right: initial !important;
+    bottom: initial !important;
+  }
   #ba-marq #marquee {
     padding: 0 !important;
   }

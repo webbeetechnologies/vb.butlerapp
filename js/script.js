@@ -46,6 +46,7 @@ jQuery(document).ready(function ($) {
       centerImage();
       restructureSlider();
       faqMobile();
+      hotspotScroller();
     }
   });
 
@@ -235,10 +236,6 @@ jQuery(document).ready(function ($) {
     '<img class="popup-icon" src="/wp-content/uploads/2022/06/popup-icon.png">'
   );
 
-  function butlerFadeOut() {
-    $(".elementor-popup-modal").fadeOut("slow");
-  }
-
   $(".elementor-button-link").on("click", function () {
     var thisLink = $(this).attr("href");
     if (thisLink.indexOf("popup") >= 1) {
@@ -336,13 +333,13 @@ jQuery(document).ready(function ($) {
           if (hasClicked()) return;
           bsi1.fadeOut();
           bsi2.css({ left: "0", opacity: "1" });
-        }, 3000);
+        }, 200);
       } else {
         timeout = setTimeout(function () {
           if (hasClicked()) return;
           bsi1.fadeIn();
           bsi2.css({ left: "150%", opacity: "0" });
-        }, 3000);
+        }, 200);
       }
     });
   }
@@ -455,20 +452,60 @@ jQuery(document).ready(function ($) {
         wH = $(window).height(),
         wS = $(this).scrollTop();
       clearTimeout(timeover);
-      if (wS > hT + hH - wH - hH / 2) {
+      if (wS > hT + hH - wH - hH) {
         timeover = setTimeout(function () {
           if (isClicked()) return;
           pT.css("position", "absolute").fadeOut();
           cT.css("position", "relative").fadeIn();
-        }, 2500);
+        }, 200);
       } else {
         timeover = setTimeout(function () {
           if (isClicked()) return;
           cT.css("position", "absolute").fadeOut();
           pT.css("position", "relative").fadeIn();
-        }, 2500);
+        }, 200);
       }
     });
+  }
+  function hotspotScroller() {
+    (function scrollxCloser() {
+      $(".e-hotspot:not(:last-child):not(:first-of-type)").on(
+        "click",
+        function () {
+          var leftOffset = $(this).css("left");
+          var leftOffset = leftOffset.replace("px", "");
+          var halfWindow = $(window).width() / 2;
+          $("#butlerapp-team-container").animate(
+            {
+              scrollLeft: leftOffset - halfWindow,
+            },
+            1000
+          );
+        }
+      );
+
+      $(".e-hotspot:last-child").on("click", function () {
+        var leftOffset = $(this).css("left");
+        var leftOffset = leftOffset.replace("px", "");
+        $("#butlerapp-team-container").animate(
+          {
+            scrollLeft: leftOffset - $(window).width(),
+          },
+          1000
+        );
+      });
+
+      $(".e-hotspot:first-of-type").on("click", function () {
+        var leftOffset = $(this).css("left");
+        var leftOffset = leftOffset.replace("px", "");
+        $("#butlerapp-team-container").animate(
+          {
+            scrollLeft: leftOffset,
+          },
+          1000
+        );
+      });
+    })();
   }
 
   // HOTSPOT MOUSE IN & OUT
@@ -532,6 +569,9 @@ jQuery(document).ready(function ($) {
 
   butlerMediaQueries.register("mobile", mediaCenterImage);
 
+  /*=======================================================================================
+* OTHERS
+=======================================================================================*/
   // Mobile Menu Active Link
   $(
     "#masthead nav.elementor-nav-menu--dropdown.elementor-nav-menu__container ul li:not(li:last-child)"
