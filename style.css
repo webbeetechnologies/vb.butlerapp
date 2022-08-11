@@ -387,7 +387,8 @@ body.body-stopper header {
   line-height: 30px !important;
   margin-top: 10px !important;
 }
-.elementor-popup-modal input {
+.elementor-popup-modal input,
+.elementor-popup-modal textarea {
   background: rgba(237, 241, 243, 0.5) !important;
   border-radius: 8px !important;
   border: none !important;
@@ -877,7 +878,6 @@ nav.elementor-nav-menu--dropdown.elementor-nav-menu__container {
   border-radius: 16px;
   min-height: 100px;
   padding: 0 20px;
-  cursor: pointer;
   margin-bottom: 10px;
 }
 #faqs-container .faq-inner {
@@ -886,6 +886,10 @@ nav.elementor-nav-menu--dropdown.elementor-nav-menu__container {
   justify-content: space-between;
   align-items: center;
   height: 100px;
+  margin-left: -20px;
+  margin-right: -20px;
+  padding: 0 20px;
+  cursor: pointer;
 }
 #faqs-container .faq h3 {
   margin: 0;

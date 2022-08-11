@@ -331,20 +331,21 @@ jQuery(document).ready(function ($) {
   (function faqClosure() {
     var timeout = null;
     var extraTopSpace = 20;
-    $(".faq").on("click", function () {
-      $(this).find(".faq-content-area").slideToggle();
-      $(this).toggleClass("faq-active");
-      $(".faq")
+    $(".faq-inner").on("click", function () {
+      $(this).parent().find(".faq-content-area").slideToggle();
+      $(this).parent().toggleClass("faq-active");
+      $(".faq-inner")
         .not(this)
+        .parent()
         .find(".faq-content-area")
         .slideUp()
         .removeClass("faq-active");
       var activo = $(".faq-active").length;
       if (activo > 1) {
-        $(".faq").not(this).find(".faq-content-area").slideUp();
-        $(".faq").not(this).removeClass("faq-active");
+        $(".faq-inner").not(this).parent().find(".faq-content-area").slideUp();
+        $(".faq-inner").not(this).parent().removeClass("faq-active");
       }
-      if (!$(this).hasClass(".faq-active")) {
+      if (!$(this).parent().hasClass(".faq-active")) {
         clearTimeout(timeout);
         timeout = setTimeout(function () {
           var offset = $(".faq-active").offset().top - extraTopSpace;
