@@ -498,11 +498,15 @@ jQuery(document).ready(function ($) {
     }, 500);
   });
 
+  // When clicking outside the card -> card should close
+  $(document).on("click", function () {
+    $(".e-hotspot").removeClass("e-hotspot--active");
+  });
+
   // HOTSPOT ONCLICK ACTIONS
   $(".e-hotspot__button").on("click", function () {
     var getParent = $(this).parent();
     var isActive = getParent.hasClass("e-hotspot--active");
-    var noActive = getParent.not(".e-hotspot--active");
     if (!isActive) {
       $(".e-hotspot__button.ba--inactive").removeClass("ba--inactive");
       $(".e-hotspot__button").not(this).addClass("ba--inactive");
@@ -514,25 +518,13 @@ jQuery(document).ready(function ($) {
     }
   });
 
-  // When clicking outside the card -> card should close
-  $(".elementor-element-1f7e3d5 img:not(.team-head img)").mouseup(function () {
-    $(".e-hotspot").removeClass("e-hotspot--active");
-  });
-  $(".elementor-element-07e3890").mouseup(function () {
-    $(".e-hotspot").removeClass("e-hotspot--active");
+  $(".e-hotspot").on("click", function (e) {
+    e.stopPropagation();
   });
 
   // TEAM CARDS - CLOSE FUNCTION
   $(".e-hotspot .ba-close-icon").click(function () {
     $(this).parent().parent().parent().removeClass("e-hotspot--active");
-  });
-
-  // CLICKING OUTSIDE THE CARDS
-  $(".elementor-element-1f7e3d5 img:not(.team-head img)").mouseup(function () {
-    $(".e-hotspot").removeClass("e-hotspot--active");
-  });
-  $(".elementor-element-07e3890").mouseup(function () {
-    $(".e-hotspot").removeClass("e-hotspot--active");
   });
 
   // NESTING THE HOTSPOTS
