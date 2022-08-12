@@ -498,9 +498,10 @@ jQuery(document).ready(function ($) {
     }, 500);
   });
 
-  // When clicking outside the card -> card should close
+  // When clicking outside popup and hotspot cards
   $(document).on("click", function () {
     $(".e-hotspot").removeClass("e-hotspot--active");
+    $(".e-hotspot__button").removeClass("ba--inactive");
   });
 
   // HOTSPOT ONCLICK ACTIONS
@@ -525,6 +526,7 @@ jQuery(document).ready(function ($) {
   // TEAM CARDS - CLOSE FUNCTION
   $(".e-hotspot .ba-close-icon").click(function () {
     $(this).parent().parent().parent().removeClass("e-hotspot--active");
+    $(".e-hotspot__button").removeClass("ba--inactive");
   });
 
   // NESTING THE HOTSPOTS
