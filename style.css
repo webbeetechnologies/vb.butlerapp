@@ -3379,6 +3379,22 @@ body:not(.elementor-editor-active) #casual-team {
     left: 0;
     bottom: 50%;
   }
+
+  /* contact form button */
+  .elementor-column.elementor-col-66.elementor-field-type-acceptance {
+    width: 100%;
+  }
+  .elementor-column.elementor-col-66.elementor-field-type-acceptance .elementor-field-subgroup label {
+    font-size: 16px;
+    line-height: 1.2em;
+  }
+  .elementor-field-type-submit.e-form__buttons {
+    display: block;
+    margin-top: 25px;
+  }
+  .elementor-field-type-submit.e-form__buttons #btnSubmit {
+    margin-top: 0;
+  }
 }
 @media (max-width: 1201px) and (min-width: 1025px) {
   #masthead nav {
