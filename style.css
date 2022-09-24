@@ -25,6 +25,16 @@ Version: 1.0.1
   color: #0b2541 !important;
 }
 
+a.default-link {
+  color: #00a0c6 !important;
+}
+
+a.default-link:hover {
+  text-decoration: underline !important;
+}
+.with-underline {
+  text-decoration: underline !important;
+}
 /*======================================================
  * POPUPS
  * ===================================================*/
