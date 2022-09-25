@@ -329,13 +329,13 @@ jQuery(document).ready(function ($) {
           if (hasClicked()) return;
           bsi1.fadeOut();
           bsi2.css({ left: "0", opacity: "1" });
-        }, 200);
+        }, 3000);
       } else {
         timeout = setTimeout(function () {
           if (hasClicked()) return;
           bsi1.fadeIn();
           bsi2.css({ left: "150%", opacity: "0" });
-        }, 200);
+        }, 3000);
       }
     });
   }
@@ -454,13 +454,13 @@ jQuery(document).ready(function ($) {
           if (isClicked()) return;
           pT.css("position", "absolute").fadeOut();
           cT.css("position", "relative").fadeIn();
-        }, 200);
+        }, 3000);
       } else {
         timeover = setTimeout(function () {
           if (isClicked()) return;
           cT.css("position", "absolute").fadeOut();
           pT.css("position", "relative").fadeIn();
-        }, 200);
+        }, 3000);
       }
     });
   }
