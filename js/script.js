@@ -89,6 +89,20 @@ jQuery(document).ready(function ($) {
     }
   }
 
+  // close on outside of popup
+  $("body").on(
+    "click",
+    ".elementor-popup-modal .elementor-background-overlay",
+    function (e) {
+      if (e.target !== this) {
+        // stop propagate in the center
+        e.stopPropagation();
+        return false;
+      }
+
+      $(".dialog-close-button").click();
+    }
+  );
   /*===============================================================================
    *  GENERIC
    * =============================================================================*/

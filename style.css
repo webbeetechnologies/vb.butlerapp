@@ -41,7 +41,12 @@ a.default-link:hover {
 .elementor-popup-modal .elementor-widget-wrap > * {
   text-align: center !important;
 }
-
+.elementor-popup-modal .elementor-background-overlay {
+  background-image: none !important;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
 /*======================================================
  * HEADER
  * ===================================================*/
