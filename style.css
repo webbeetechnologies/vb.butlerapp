@@ -515,6 +515,10 @@ body.body-stopper header {
   border: none !important;
   margin-top: 5px;
 }
+.elementor-popup-modal button:hover { 
+  background-color: #F5F7F8 !important;
+  color: #0B2541 !important;
+}
 .elementor-popup-modal svg * {
   fill: url(#paint0_linear_0_221) !important;
 }
