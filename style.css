@@ -1443,6 +1443,10 @@ body:not(.elementor-editor-active) #casual-team {
 #kunden--slider .flex-control-paging li a:hover {
   background: #0b2541 !important;
 }
+
+#kunden--slider .flexslider {
+  height: initial !important;
+}
 /*=================================================================================
  * Responsive CSS
  * ===============================================================================*/

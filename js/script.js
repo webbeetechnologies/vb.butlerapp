@@ -287,6 +287,107 @@ jQuery(document).ready(function ($) {
       }, 1000);
     });
   }
+  $(".bm-filter.active .bm-guide").attr("style", "display:block");
+  $(".bm-filter:not(.active) .bm-guide").attr("style", "display:none");
+
+  /*===============================================================================
+   *  KUNDEN SLIDER - Section 5
+   * =============================================================================*/
+  /*** create prev next buttons  ***/
+  $("#kunden--slider #main-flex-slider .flex-control-nav").append(
+    '<div class="ba-slider-arrows"><div class="bas-inner"> <div class="bsa-left"> <svg width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg"><mask id="path-1-inside-1_0_351" fill="white"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.99454 0L0 5.99727L6 12"></path></mask><path d="M7.40907 1.41389C8.18994 0.632665 8.18965 -0.633665 7.40843 -1.41454C6.6272 -2.19541 5.36087 -2.19512 4.58 -1.41389L7.40907 1.41389ZM0 5.99727L-1.41454 4.58337C-2.19515 5.36435 -2.19515 6.63018 -1.41454 7.41116L0 5.99727ZM4.58546 13.4139C5.36633 14.1951 6.63267 14.1954 7.41389 13.4145C8.19512 12.6337 8.19541 11.3673 7.41454 10.5861L4.58546 13.4139ZM4.58 -1.41389L-1.41454 4.58337L1.41454 7.41116L7.40907 1.41389L4.58 -1.41389ZM-1.41454 7.41116L4.58546 13.4139L7.41454 10.5861L1.41454 4.58337L-1.41454 7.41116Z" fill="#0B2541" mask="url(#path-1-inside-1_0_351)"></path></svg> </div><div class="bsa-right"> <svg width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg"><mask id="path-1-inside-1_0_354" fill="white"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.00546455 0L6 5.99727L0 12"></path></mask><path d="M-1.40907 1.41389C-2.18994 0.632665 -2.18965 -0.633665 -1.40843 -1.41454C-0.627201 -2.19541 0.63913 -2.19512 1.42 -1.41389L-1.40907 1.41389ZM6 5.99727L7.41454 4.58337C8.19515 5.36435 8.19515 6.63018 7.41454 7.41116L6 5.99727ZM1.41454 13.4139C0.633665 14.1951 -0.632665 14.1954 -1.41389 13.4145C-2.19512 12.6337 -2.19541 11.3673 -1.41454 10.5861L1.41454 13.4139ZM1.42 -1.41389L7.41454 4.58337L4.58546 7.41116L-1.40907 1.41389L1.42 -1.41389ZM7.41454 7.41116L1.41454 13.4139L-1.41454 10.5861L4.58546 4.58337L7.41454 7.41116Z" fill="#0B2541" mask="url(#path-1-inside-1_0_354)"></path></svg> </div></div></div>'
+  );
+
+  /*** autoplay and click events ***/
+  var myTimer = null;
+
+  function kundenprevclick() {
+    var cA = $("#kunden--slider .flex-active").parent(),
+      items = $("#kunden--slider .slide-points li"),
+      cI = items.toArray().indexOf(cA[0]) - 1;
+    items.find("a").removeClass("flex-active");
+    items.eq(cI).find("a").addClass("flex-active");
+    $("#kunden--slider .slides li")
+      .removeClass("flex-active-slide")
+      .animate({ opacity: 0 }, 200)
+      .eq(cI)
+      .addClass("flex-active-slide")
+      .animate({ opacity: 1 }, 200);
+  }
+
+  function kundennextclick() {
+    var cA = $("#kunden--slider .flex-active").parent(),
+      items = $("#kunden--slider .slide-points li"),
+      cI = items.toArray().indexOf(cA[0]) + 1;
+    if (items.length <= cI) {
+      cI = 0;
+    }
+    items.find("a").removeClass("flex-active");
+    items.eq(cI).find("a").addClass("flex-active");
+    $("#kunden--slider .slides li")
+      .removeClass("flex-active-slide")
+      .animate({ opacity: 0 }, 200)
+      .eq(cI)
+      .addClass("flex-active-slide")
+      .animate({ opacity: 1 }, 200);
+  }
+
+  function kundenClickByIdx(idx) {
+    $("#kunden--slider .flex-active").removeClass("flex-active");
+    $("#kunden--slider .slide-points li")
+      .eq(idx)
+      .find("a")
+      .addClass("flex-active");
+
+    $("#kunden--slider .slides li")
+      .removeClass("flex-active-slide")
+      .animate({ opacity: 0 }, 200)
+      .eq(idx)
+      .addClass("flex-active-slide")
+      .animate({ opacity: 1 }, 200);
+  }
+
+  function setAutoplay(timer) {
+    myTimer = setInterval(function () {
+      kundennextclick();
+    }, timer);
+  }
+
+  // WRAPS SLIDE INDICATORS
+  $("#kunden--slider .flex-control-nav li").wrapAll(
+    '<div class="slide-points">'
+  );
+
+  $("#kunden--slider").on("click", ".bsa-right", function () {
+    clearInterval(myTimer);
+    myTimer = null;
+    kundennextclick();
+    setAutoplay(3000);
+  });
+  $("#kunden--slider").on("click", ".bsa-left", function () {
+    clearInterval(myTimer);
+    myTimer = null;
+    kundenprevclick();
+    setAutoplay(3000);
+  });
+  $("#kunden--slider .slide-points").on("click", "li", function () {
+    if ($(this).children(".flex-active").length == 0) {
+      var idx = $(this).index();
+      clearInterval(myTimer);
+      kundenClickByIdx(idx);
+      setAutoplay(3000);
+    }
+  });
+
+  // hover-out
+  $("#kunden--slider .slides").mouseenter(function () {
+    clearInterval(myTimer);
+  });
+  $("#kunden--slider .slides").mouseleave(function () {
+    setAutoplay(3000);
+  });
+
+  setAutoplay(3000);
 
   /*===============================================================================
    *  POPUPS
