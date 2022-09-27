@@ -122,6 +122,62 @@ jQuery(document).ready(function ($) {
   });
 
   /*===============================================================================
+   *  SWIPER: AUTOSCROLLING LOGO
+   * =============================================================================*/
+  var originalTransformProp, originalTransitionDuration;
+
+  function stopTransition(e) {
+    var theThing = e.currentTarget,
+      computedStyle = window.getComputedStyle(theThing),
+      somePause = computedStyle.getPropertyValue("transform");
+
+    originalTransformProp = theThing.style.transform;
+    originalTransitionDuration = theThing.style.transitionDuration;
+
+    theThing.style.transitionDuration = "0ms";
+    theThing.style.transform = somePause;
+    theThing.style.transitionProperty = "none";
+  }
+
+  function releaseTransition(e) {
+    var theThing = e.currentTarget;
+    theThing.style.transitionProperty = "transform";
+    theThing.style.transitionDuration = originalTransitionDuration;
+    theThing.style.transform = originalTransformProp;
+  }
+
+  var speed = 12000;
+
+  window.swipers = [];
+  $(".swiper-container").each(function () {
+    var swiper = new Swiper(this, {
+      spaceBetween: 0,
+      centeredSlides: true,
+      speed: speed,
+      autoplay: {
+        delay: 0,
+        reverseDirection: $(this).data("reverse") === true,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: false,
+      },
+      loop: true,
+      slidesPerView: "auto",
+      allowTouchMove: true,
+    });
+
+    jQuery(swiper.el)
+      .children(".swiper-wrapper")
+      .on("mouseenter", function (e) {
+        stopTransition(e);
+        // swiper.autoplay.stop();
+      })
+      .on("mouseleave", function (e) {
+        releaseTransition(e);
+        // swiper.autoplay.start();
+      });
+  });
+
+  /*===============================================================================
    * FUTURE SLIDER -- Section 3
    * ============================================================================*/
 
@@ -340,8 +396,8 @@ jQuery(document).ready(function ($) {
     });
   }
   /*=======================================================================================
-* FAQs Section
-=======================================================================================*/
+  * FAQs Section
+  =======================================================================================*/
   (function faqClosure() {
     var timeout = null;
     var extraTopSpace = 20;
@@ -392,8 +448,8 @@ jQuery(document).ready(function ($) {
     });
   }
   /*=======================================================================================
-* CONTACT FORM SECTION 
-=======================================================================================*/
+  * CONTACT FORM SECTION 
+  =======================================================================================*/
 
   // CHANGE BG ON INPUT CLICK
   $("#butlerapp-contact input, .elementor-element-16bc62a").click(function () {
@@ -423,8 +479,8 @@ jQuery(document).ready(function ($) {
   });
 
   /*=======================================================================================
-* PERSONLICHER SUPPORT
-=======================================================================================*/
+  * PERSONLICHER SUPPORT
+  =======================================================================================*/
 
   // NESTING
   $(".ba-points").each(function () {
@@ -432,8 +488,8 @@ jQuery(document).ready(function ($) {
   });
 
   /*=======================================================================================
-* TEAMS SECTION (LAST SECTION)
-=======================================================================================*/
+  * TEAMS SECTION (LAST SECTION)
+  =======================================================================================*/
   // BACKGROUND CHANGER
   function teamBgChanger() {
     var timeover = null;
@@ -561,8 +617,8 @@ jQuery(document).ready(function ($) {
   butlerMediaQueries.register("mobile", mediaCenterImage);
 
   /*=======================================================================================
-* OTHERS
-=======================================================================================*/
+  * OTHERS
+  =======================================================================================*/
   // Mobile Menu Active Link
   $(
     "#masthead nav.elementor-nav-menu--dropdown.elementor-nav-menu__container ul li:not(li:last-child)"
