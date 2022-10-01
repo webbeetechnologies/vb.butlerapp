@@ -1970,12 +1970,14 @@ body:not(.elementor-editor-active) #casual-team {
     margin-left: 0 !important;
     padding: 0 !important;
   }
-  #ba--sliders img:not(.ba-image):not(.btn-replaced):not(.mobile-slider-img),
+
+  #ba--sliders img.size-full, 
   #ba--sliders > div > div > div > div > div > div:last-child,
   ol.flex-control-nav.flex-control-paging,
   .elementor-1458 .elementor-element.elementor-element-bcef45d img {
     display: none;
   }
+
   #ba--sliders .elementor-container {
     margin: 0 !important;
     width: 100%;
@@ -2491,6 +2493,10 @@ body:not(.elementor-editor-active) #casual-team {
     > .elementor-column {
     width: 50%;
   }
+  #ba--sliders .elementor-widget-image .elementor-widget-container {
+    margin-top: -59%;
+  }
+
   #ba--sliders .mobile-slider-img img {
     display: block !important;
   }
