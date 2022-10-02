@@ -1959,7 +1959,7 @@ body:not(.elementor-editor-active) #casual-team {
   #kundenslide {
     padding-bottom: 0;
   }
-  #ba--sliders * {
+  #funktionen * {
     position: relative !important;
     opacity: 1 !important;
     height: 100% !important;
@@ -1972,26 +1972,27 @@ body:not(.elementor-editor-active) #casual-team {
   }
 
   #ba--sliders img.size-full, 
-  #ba--sliders > div > div > div > div > div > div:last-child,
+  #funktionen > div > div > div > div > div > div:last-child,
+  #ba--sliders .ba-slider-controls-container,
   ol.flex-control-nav.flex-control-paging,
   .elementor-1458 .elementor-element.elementor-element-bcef45d img {
     display: none;
   }
 
-  #ba--sliders .elementor-container {
+  #funktionen .elementor-container {
     margin: 0 !important;
     width: 100%;
   }
-  #ba--sliders .slides .elementor-widget-wrap:first-child {
+  #funktionen .slides .elementor-widget-wrap:first-child {
     padding: 0;
   }
-  #ba--sliders .slides .elementor-widget-wrap:first-child > div {
+  #funktionen .slides .elementor-widget-wrap:first-child > div {
     padding: 0 18%;
   }
-  #ba--sliders .elementor-widget-heading {
+  #funktionen .elementor-widget-heading {
     padding-top: 40px !important;
   }
-  #ba--sliders .elementor-widget-button a {
+  #funktionen .elementor-widget-button a {
     padding-top: 15px !important;
     padding-bottom: 15px !important;
     font-size: 1em;
@@ -2008,7 +2009,7 @@ body:not(.elementor-editor-active) #casual-team {
     line-height: 1.55em;
     color: #0b2541;
   }
-  #ba--sliders
+  #funktionen
     > .elementor-container
     > .elementor-row
     > .elementor-column
@@ -2055,7 +2056,7 @@ body:not(.elementor-editor-active) #casual-team {
     > div {
     background-position: top right;
   }
-  #ba--sliders .elementor-widget-heading {
+  #funktionen .elementor-widget-heading {
     padding-top: 100px !important;
   }
   #ba--sliders ul li {
@@ -2070,7 +2071,7 @@ body:not(.elementor-editor-active) #casual-team {
   #ba--sliders .slides > li:last-child {
     margin-bottom: 0 !important;
   }
-  #ba--sliders {
+  #funktionen {
     margin-bottom: 0 !important;
   }
   .elementor-2600
@@ -3557,9 +3558,10 @@ body:not(.elementor-editor-active) #casual-team {
     > div {
     padding: 40px;
   }
-  #ba--sliders {
+  #funktionen {
     margin: 0;
-    padding: 400px 0 200px 0;
+    /*padding: 400px 0 200px 0;*/
+    padding: 0;
   }
   #ba--sliders img:not(.btn-replaced) {
     display: none;
