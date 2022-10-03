@@ -3560,8 +3560,7 @@ body:not(.elementor-editor-active) #casual-team {
   }
   #funktionen {
     margin: 0;
-    /*padding: 400px 0 200px 0;*/
-    padding: 0;
+    padding: 400px 0 200px 0;
   }
   #ba--sliders img:not(.btn-replaced) {
     display: none;
