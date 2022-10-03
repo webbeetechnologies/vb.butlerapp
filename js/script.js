@@ -676,22 +676,21 @@ jQuery(document).ready(function ($) {
   });
 
   // HOTSPOT ONCLICK ACTIONS
-  $(".e-hotspot__button").on("click", function () {
+  $(".e-hotspot__button").on("click", function (e) {
+    e.stopPropagation();
     var getParent = $(this).parent();
     var isActive = getParent.hasClass("e-hotspot--active");
+
     if (!isActive) {
       $(".e-hotspot__button.ba--inactive").removeClass("ba--inactive");
       $(".e-hotspot__button").not(this).addClass("ba--inactive");
+      getParent.addClass("e-hotspot--active");
     } else if (isActive) {
       $(".e-hotspot__button.ba--inactive").addClass("ba--inactive");
       $(".e-hotspot__button").not(this).removeClass("ba--inactive");
     } else {
       // WEBOZZA
     }
-  });
-
-  $(".e-hotspot").on("click", function (e) {
-    e.stopPropagation();
   });
 
   // TEAM CARDS - CLOSE FUNCTION
