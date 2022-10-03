@@ -2653,6 +2653,13 @@ body:not(.elementor-editor-active) #casual-team {
   #butlerapp-team-container {
     transition: all 0.4s ease;
   }
+
+  /*======================================================
+ * POP-UPS
+ * ===================================================*/
+  .elementor-popup-modal .dialog-message {
+    overflow: auto;
+  }
 }
 @media (min-width: 768px) {
   .elementor-element-2543b8b0 p,
