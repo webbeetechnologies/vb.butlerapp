@@ -247,6 +247,10 @@ jQuery(document).ready(function ($) {
   $("#butler_guides [data-order-no]").on("click", function (e) {
     e.preventDefault();
     var orderNo = $(this).data("order-no");
+
+    // pause previous active's video if played
+    $(".b-guides .active").find("video").get(0).pause();
+
     $(".b-filters > div").removeClass("active");
     $(this).addClass("active");
     $(this).parent().next().find(".guide").removeClass("active");
@@ -260,6 +264,10 @@ jQuery(document).ready(function ($) {
   // FOR THE MORPHED ACCORDION ON MOBILE DEVICES
   $(".bm-filter .bm-head").on("click", function (e) {
     e.preventDefault();
+
+    // pause previous active's video if played
+    $(".bm-filter.active").find("video").get(0).pause();
+
     $(".bm-filter").removeClass("active");
     $(this).parent().toggleClass("active");
     $(".bm-filter .bm-guide").slideUp();
@@ -676,22 +684,26 @@ jQuery(document).ready(function ($) {
   });
 
   // HOTSPOT ONCLICK ACTIONS
-  $(".e-hotspot__button").on("click", function (e) {
-    e.stopPropagation();
-    var getParent = $(this).parent();
-    var isActive = getParent.hasClass("e-hotspot--active");
-
-    if (!isActive) {
-      $(".e-hotspot__button.ba--inactive").removeClass("ba--inactive");
-      $(".e-hotspot__button").not(this).addClass("ba--inactive");
-      getParent.addClass("e-hotspot--active");
-    } else if (isActive) {
-      $(".e-hotspot__button.ba--inactive").addClass("ba--inactive");
-      $(".e-hotspot__button").not(this).removeClass("ba--inactive");
-    } else {
-      // WEBOZZA
+  $(document).on(
+    "click",
+    ".e-hotspot__button:not(.ba--inactive)",
+    function (e) {
+      e.stopPropagation();
+      var getParent = $(this).parent();
+      var isActive = getParent.hasClass("e-hotspot--active");
+      console.log(isActive);
+      if (!isActive) {
+        $(".e-hotspot__button.ba--inactive").removeClass("ba--inactive");
+        $(".e-hotspot__button").addClass("ba--inactive");
+        getParent.removeClass("ba--inactive").addClass("e-hotspot--active");
+      } else if (isActive) {
+        $(".e-hotspot__button").addClass("ba--inactive");
+        $(".e-hotspot__button").not(this).removeClass("ba--inactive");
+      } else {
+        // WEBOZZA
+      }
     }
-  });
+  );
 
   // TEAM CARDS - CLOSE FUNCTION
   $(".e-hotspot .ba-close-icon").click(function () {
