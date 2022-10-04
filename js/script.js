@@ -716,10 +716,14 @@ jQuery(document).ready(function ($) {
   $("#casual-team .e-hotspot").wrapAll('<div class="hotspot-container">');
 
   function centerImage() {
-    var centerPoint = $(
-      "#butlerapp-team-container .elementor-widget-hotspot img"
-    ).width();
-    $("#butlerapp-team-container").scrollLeft(centerPoint / 2.9);
+    var img = $(
+      "#butlerapp-team-container .elementor-widget-hotspot img.attachment-full"
+    );
+
+    img.on("load", function () {
+      var centerPoint = img.width();
+      $("#butlerapp-team-container").scrollLeft(centerPoint / 2.9);
+    });
   }
 
   function mediaCenterImage(e) {
