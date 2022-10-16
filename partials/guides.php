@@ -27,7 +27,10 @@
 				</video>
 			</div>
 			<div class="the-content"><?php the_content(); ?></div>
+			<?php
+			/*
 			<a class="lmore-link" href="<?php the_permalink(); ?>">Learn More</a>
+			*/ ?>
 		</div>
 		<?php endwhile; wp_reset_postdata(); ?>
 	</div>
