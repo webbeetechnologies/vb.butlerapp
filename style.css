@@ -1447,6 +1447,11 @@ body:not(.elementor-editor-active) #casual-team {
 #kunden--slider .flexslider {
   height: initial !important;
 }
+
+/*-- MATOMO PIXEL EATS SOME SPACES --*/
+img[referrerpolicy="no-referrer-when-downgrade"] {
+  display: none;
+}
 /*=================================================================================
  * Responsive CSS
  * ===============================================================================*/
