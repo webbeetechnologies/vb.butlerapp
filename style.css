@@ -71,7 +71,7 @@ body.body-stopper header {
 }
 .logo-blocker {
   height: 50px;
-  width: 50%;
+  width: 85%;
   position: absolute;
   right: -40px;
   background: #fff;
@@ -81,7 +81,7 @@ body.body-stopper header {
   opacity: 0;
 }
 .logo-blocker.active {
-  right: 35%;
+  left: 55px;
 }
 /*-- CTA --*/
 #target-button-menu-bar {
