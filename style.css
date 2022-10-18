@@ -3666,6 +3666,9 @@ img[referrerpolicy="no-referrer-when-downgrade"] {
     padding-top: 50px !important;
     padding-bottom: 50px !important;
   }
+  .section-service.tablet-layout {
+    padding-top: 0 !important;
+  }
   .section-service > div > .elementor-row > div {
     width: 100% !important;
   }
