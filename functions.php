@@ -1,8 +1,4 @@
 <?php
-remove_filter('template_redirect','redirect_canonical');
-update_option( 'siteurl', 'https://www.schnelltestbutler.com' );
-update_option( 'home', 'https://www.schnelltestbutler.com' );
-
 add_action( "wp_enqueue_scripts", "enqueue_wp_child_theme" );
 function enqueue_wp_child_theme() {
 		// Stylesheets

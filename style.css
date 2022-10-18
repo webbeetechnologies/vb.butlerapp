@@ -52,6 +52,8 @@ a.default-link:hover {
  * ===================================================*/
 #masthead .ba-logo img {
   width: auto !important;
+  position: relative;
+  z-index: 1;
 }
 body.body-stopper header {
   background: #fff;
