@@ -49,7 +49,10 @@
 					<source src="<?= $file['url'] ?>" type="video/mp4">
 				</video>
 				<div class="the-content"><?php the_content(); ?></div>
+				<?php
+				/*
 				<a class="lmore-link" href="<?php the_permalink(); ?>">Learn More</a>
+				*/ ?>
 			</div>
 		</div>
 		<?php endwhile; wp_reset_postdata(); ?>
