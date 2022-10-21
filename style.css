@@ -2425,6 +2425,10 @@ img[referrerpolicy="no-referrer-when-downgrade"] {
   }
 }
 @media (max-width: 767.98px) {
+  /*-- mobile nav --*/
+  .elementor-nav-menu--dropdown.elementor-nav-menu__container {
+    margin-top: 7px;
+  }
   /*-- FAQs Section --*/
   #faqs-container .faq h3 {
     font-size: 15.5px;
@@ -2760,7 +2764,7 @@ img[referrerpolicy="no-referrer-when-downgrade"] {
   /*-- MOBILE MENU --*/
   #masthead nav.elementor-nav-menu--dropdown.elementor-nav-menu__container {
     height: calc(100vh - 52.13px);
-    background: rgba(11, 37, 65, 0.8);
+    background: rgba(11, 37, 65, 1);
     backdrop-filter: blur(38.0559px);
   }
   .casual-service,
