@@ -19,7 +19,7 @@
 	</div>
 	<div class="team-body">
 		<p><?php the_content(); ?></p>
-		<a href="<?php the_field('team_link') ?>">Contact Sales Executive</a>
+		<a href="<?php the_field('team_link') ?>">Kontaktieren</a>
 	</div>
 	<div class="ba-close-icon">
 		<i class="eicon-close"></i>

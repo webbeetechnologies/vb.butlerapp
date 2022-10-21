@@ -18,7 +18,7 @@
 	</div>
 	<div class="team-body">
 		<?php the_content(); ?>
-		<a href="<?php the_field('team_link') ?>">Contact Sales Executive</a>
+		<a href="<?php the_field('team_link') ?>">Kontaktieren</a>
 	</div>
 </div>
 <?php endwhile; 

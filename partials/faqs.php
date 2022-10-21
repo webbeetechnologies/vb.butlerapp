@@ -27,7 +27,7 @@
 				<div class="faq-meta">
 					<h5><?php the_field('faq_name') ?></h5>
 					<span>Erstberatung</span>
-					<a href="<?php the_field('faq_contact_link') ?>">Contact</a>
+					<a href="<?php the_field('faq_contact_link') ?>">Kontaktieren</a>
 				</div>
 			</div>
 		</div>
