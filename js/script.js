@@ -89,6 +89,37 @@ jQuery(document).ready(function ($) {
     }
   }
 
+  // MOBILE MENU CLICK BUG FIX: REMOVE THE HTML CLASS overflow-controller
+  // the fixed header
+  function enableFixedWindow() {
+    $("body").removeClass("body-stopper");
+    $("html").removeClass("overflow-controller");
+  }
+  $("body").on("click", ".elementor-nav-menu--dropdown a", function (e) {
+    enableFixedWindow();
+  });
+  // the top header
+  $("header:nth-child(1)")
+    .find(".elementor-nav-menu--dropdown a")
+    .on("click", function (e) {
+      var url = $(this).attr("href");
+
+      enableFixedWindow();
+
+      if (window.location.hash) {
+        var hash = url.split("#")[1];
+        console.log($("#" + hash).offset().top);
+        $("html, body").animate(
+          {
+            scrollTop: $("#" + hash).offset().top - 90,
+          },
+          1000
+        );
+      } else {
+        location.href = url;
+      }
+    });
+
   // close on outside of popup
   $("body").on(
     "click",
@@ -447,6 +478,7 @@ jQuery(document).ready(function ($) {
       $("html").toggleClass("overflow-controller");
     });
   }
+
   setTimeout(function () {
     hamburgerClick();
   }, 1000);
