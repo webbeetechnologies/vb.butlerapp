@@ -1516,7 +1516,7 @@ img[referrerpolicy="no-referrer-when-downgrade"] {
   .elementor-941
     .elementor-element.elementor-element-b0e0498:not(.elementor-motion-effects-element-type-background)
     > .elementor-column-wrap {
-    background-image: url("https://butlerapp.de/wp-content/uploads/2022/06/lady.png") !important;
+    background-image: url("/wp-content/uploads/2022/06/lady.png") !important;
   }
   .section-service {
     margin-bottom: -50px;
