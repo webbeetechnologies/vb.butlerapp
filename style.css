@@ -83,7 +83,7 @@ body.body-stopper header {
   opacity: 0;
 }
 .logo-blocker.active {
-  left: 55px;
+  left: 50px;
   width: 85%;
 }
 /*-- CTA --*/
