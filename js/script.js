@@ -108,7 +108,7 @@ jQuery(document).ready(function ($) {
 
       if (window.location.hash) {
         var hash = url.split("#")[1];
-        console.log($("#" + hash).offset().top);
+
         $("html, body").animate(
           {
             scrollTop: $("#" + hash).offset().top - 90,
