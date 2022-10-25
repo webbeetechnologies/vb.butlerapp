@@ -484,25 +484,39 @@ jQuery(document).ready(function ($) {
   }, 1000);
 
   // LOGO ANIMATION
-  $(window).scroll(function () {
-    var a = 400;
-    var b = 200;
-    var pos = $(window).scrollTop();
-    if (pos > a) {
-      $(".logo-blocker").css("opacity", "1");
-      $(".logo-blocker").addClass("active");
-      $("body").addClass("scrolled");
-      $("header").eq(1).hide();
-    } else if (pos < b) {
-      $(".logo-blocker").removeClass("active");
-      $(".logo-blocker").css("opacity", "0");
-    } else {
-      $(".logo-blocker").removeClass("active");
-      $(".logo-blocker").css("opacity", "0");
-      $("body").removeClass("scrolled");
-      $("header").eq(1).show();
-    }
-  });
+  function throttle(func, timeFrame) {
+    var lastTime = 0;
+    return function () {
+      var now = Date.now();
+      if (now - lastTime >= timeFrame) {
+        func();
+        lastTime = now;
+      }
+    };
+  }
+
+  $(window).scroll(
+    throttle(function () {
+      var a = 400;
+      var b = 200;
+      var pos = $(document).scrollTop();
+      console.log(pos);
+      if (pos > a) {
+        $(".logo-blocker").css("opacity", "1");
+        $(".logo-blocker").addClass("active");
+        $("body").addClass("scrolled");
+        // $("header").eq(1).css("opacity", 0);
+      } else if (pos < b) {
+        $(".logo-blocker").removeClass("active");
+        $(".logo-blocker").css("opacity", "0");
+      } else {
+        $(".logo-blocker").removeClass("active");
+        $(".logo-blocker").css("opacity", "0");
+        $("body").removeClass("scrolled");
+        // $("header").eq(1).css("opacity", 1);
+      }
+    }, 500)
+  );
 
   /*=======================================================================================================
    * SERVICES SECTION
