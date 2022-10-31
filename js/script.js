@@ -275,12 +275,12 @@ jQuery(document).ready(function ($) {
   $(".bm-container .bm-filter").eq(0).addClass("active");
 
   // ON CLICK STATE
-  $("#butler_guides [data-order-no]").on("click", function (e) {
+  $("#butler_guides [data-order-no]").not(".guide").on("click", function (e) {
     e.preventDefault();
     var orderNo = $(this).data("order-no");
 
     // pause previous active's video if played
-    // $(".b-guides .active").find("video").get(0).pause();
+    $(".b-guides .active").find("video").get(0).pause();
 
     $(".b-filters > div").removeClass("active");
     $(this).addClass("active");
@@ -301,21 +301,16 @@ jQuery(document).ready(function ($) {
     e.preventDefault();
 
     // pause previous active's video if played
-    // $(".bm-filter.active").find("video").get(0).pause();
+    $(".bm-filter.active").find("video").get(0).pause();
 
     $(".bm-filter").removeClass("active");
     $(this).parent().toggleClass("active");
     $(".bm-filter .bm-guide").slideUp();
     if ($(this).parent().find(".bm-guide").css("display") == "none") {
       $(this).parent().find(".bm-guide").slideDown();
-      // play previous active's video if played
-      $(".bm-filter.active").find("video").get(0).play();
     } else {
       $(this).parent().find(".bm-guide").slideUp();
       $(this).parent().toggleClass("active");
-
-      // play previous active's video if played
-      $(".bm-filter.active").find("video").get(0).play();
     }
   });
 
