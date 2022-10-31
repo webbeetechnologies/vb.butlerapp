@@ -280,7 +280,7 @@ jQuery(document).ready(function ($) {
     var orderNo = $(this).data("order-no");
 
     // pause previous active's video if played
-    $(".b-guides .active").find("video").get(0).pause();
+    // $(".b-guides .active").find("video").get(0).pause();
 
     $(".b-filters > div").removeClass("active");
     $(this).addClass("active");
@@ -290,6 +290,10 @@ jQuery(document).ready(function ($) {
       .next()
       .children("[data-order-no=" + orderNo + "]")
       .addClass("active");
+
+
+    // play previous active's video if played
+    $(".b-guides .active").find("video").get(0).play();
   });
 
   // FOR THE MORPHED ACCORDION ON MOBILE DEVICES
@@ -297,16 +301,21 @@ jQuery(document).ready(function ($) {
     e.preventDefault();
 
     // pause previous active's video if played
-    $(".bm-filter.active").find("video").get(0).pause();
+    // $(".bm-filter.active").find("video").get(0).pause();
 
     $(".bm-filter").removeClass("active");
     $(this).parent().toggleClass("active");
     $(".bm-filter .bm-guide").slideUp();
     if ($(this).parent().find(".bm-guide").css("display") == "none") {
       $(this).parent().find(".bm-guide").slideDown();
+      // play previous active's video if played
+      $(".bm-filter.active").find("video").get(0).play();
     } else {
       $(this).parent().find(".bm-guide").slideUp();
       $(this).parent().toggleClass("active");
+
+      // play previous active's video if played
+      $(".bm-filter.active").find("video").get(0).play();
     }
   });
 
