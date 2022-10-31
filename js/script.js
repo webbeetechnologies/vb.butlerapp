@@ -292,8 +292,8 @@ jQuery(document).ready(function ($) {
       .addClass("active");
 
 
-    // play previous active's video if played
-    $(".b-guides .active").find("video").get(0).play();
+    // // play previous active's video if played
+    // $(".b-guides .active").find("video").get(0).play();
   });
 
   // FOR THE MORPHED ACCORDION ON MOBILE DEVICES
