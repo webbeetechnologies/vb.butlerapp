@@ -275,26 +275,27 @@ jQuery(document).ready(function ($) {
   $(".bm-container .bm-filter").eq(0).addClass("active");
 
   // ON CLICK STATE
-  $("#butler_guides [data-order-no]").not(".guide").on("click", function (e) {
-    e.preventDefault();
-    var orderNo = $(this).data("order-no");
+  $("#butler_guides [data-order-no]")
+    .not(".guide")
+    .on("click", function (e) {
+      e.preventDefault();
+      var orderNo = $(this).data("order-no");
 
-    // pause previous active's video if played
-    $(".b-guides .active").find("video").get(0).pause();
+      // pause previous active's video if played
+      $(".b-guides .active").find("video").get(0).pause();
 
-    $(".b-filters > div").removeClass("active");
-    $(this).addClass("active");
-    $(this).parent().next().find(".guide").removeClass("active");
-    $(this)
-      .parent()
-      .next()
-      .children("[data-order-no=" + orderNo + "]")
-      .addClass("active");
+      $(".b-filters > div").removeClass("active");
+      $(this).addClass("active");
+      $(this).parent().next().find(".guide").removeClass("active");
+      $(this)
+        .parent()
+        .next()
+        .children("[data-order-no=" + orderNo + "]")
+        .addClass("active");
 
-
-    // // play previous active's video if played
-    // $(".b-guides .active").find("video").get(0).play();
-  });
+      // // play previous active's video if played
+      // $(".b-guides .active").find("video").get(0).play();
+    });
 
   // FOR THE MORPHED ACCORDION ON MOBILE DEVICES
   $(".bm-filter .bm-head").on("click", function (e) {
@@ -499,6 +500,27 @@ jQuery(document).ready(function ($) {
     };
   }
 
+  $(window).scroll(function () {
+    var a = 400;
+    var b = 200;
+    var pos = $(window).scrollTop();
+    if (pos > a) {
+      $(".logo-blocker").css("opacity", "1");
+      $(".logo-blocker").addClass("active");
+      $("body").addClass("scrolled");
+      $("header").eq(1).css("opacity", 0);
+    } else if (pos < b) {
+      $(".logo-blocker").removeClass("active");
+      $(".logo-blocker").css("opacity", "0");
+    } else {
+      $(".logo-blocker").removeClass("active");
+      $(".logo-blocker").css("opacity", "0");
+      $("body").removeClass("scrolled");
+      $("header").eq(1).css("opacity", 1);
+    }
+  });
+
+  /* THROTTLE GIVES DELAY ON CLOSING THE .logo-blocker
   $(window).scroll(
     throttle(function () {
       var a = 400;
@@ -521,6 +543,7 @@ jQuery(document).ready(function ($) {
       }
     }, 500)
   );
+  */
 
   /*=======================================================================================================
    * SERVICES SECTION
