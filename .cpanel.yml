@@ -2,7 +2,7 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/congress/domains/butlerapp.de/home/wp-content/themes/entrepreneur-child/
+    - export DEPLOYPATH=/home/congress/domains/butlerapp.de/vb/wp-content/themes/entrepreneur-child/
     - /bin/cp -R .vscode $DEPLOYPATH
     - /bin/cp -R assets $DEPLOYPATH
     - /bin/cp -R css $DEPLOYPATH
