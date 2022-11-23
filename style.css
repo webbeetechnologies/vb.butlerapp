@@ -665,11 +665,9 @@ transition-duration: 0ms !important;
 }
 .footer-logo-set img {
   padding-right: 30px;
-  width: 20%;
-}
-.footer-logo-set img:nth-child(2) {
   width: 10%;
 }
+
 /*-- FOOTER MENU ITEMS HOVER STATE --*/
 .elementor-element-1ab2b2eb
   .elementor-item:not(:hover):not(:focus):not(.elementor-item-active):not(.highlighted):before {
