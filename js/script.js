@@ -553,29 +553,31 @@ jQuery(document).ready(function ($) {
     var hasClicked = function () {
       return $(".e-hotspot--active").length;
     };
-    $(window).scroll(function () {
-      if (hasClicked()) return;
-      var hT = $("#butlerapp-services").offset().top,
-        hH = $("#butlerapp-services").outerHeight(),
-        wH = $(window).height(),
-        wS = $(this).scrollTop(),
-        bsi1 = $(".butlerapp-services-img-container .pro-service"),
-        bsi2 = $(".butlerapp-services-img-container .casual-service");
-      clearTimeout(timeout);
-      if (wS > hT + hH - wH - 300) {
-        timeout = setTimeout(function () {
-          if (hasClicked()) return;
-          bsi1.fadeOut();
-          bsi2.css({ left: "0", opacity: "1" });
-        }, 3000);
-      } else {
-        timeout = setTimeout(function () {
-          if (hasClicked()) return;
-          bsi1.fadeIn();
-          bsi2.css({ left: "150%", opacity: "0" });
-        }, 3000);
-      }
-    });
+    if ($("#butlerapp-services").length) {
+      $(window).scroll(function () {
+        if (hasClicked()) return;
+        var hT = $("#butlerapp-services").offset().top,
+          hH = $("#butlerapp-services").outerHeight(),
+          wH = $(window).height(),
+          wS = $(this).scrollTop(),
+          bsi1 = $(".butlerapp-services-img-container .pro-service"),
+          bsi2 = $(".butlerapp-services-img-container .casual-service");
+        clearTimeout(timeout);
+        if (wS > hT + hH - wH - 300) {
+          timeout = setTimeout(function () {
+            if (hasClicked()) return;
+            bsi1.fadeOut();
+            bsi2.css({ left: "0", opacity: "1" });
+          }, 3000);
+        } else {
+          timeout = setTimeout(function () {
+            if (hasClicked()) return;
+            bsi1.fadeIn();
+            bsi2.css({ left: "150%", opacity: "0" });
+          }, 3000);
+        }
+      });
+    }
   }
   /*=======================================================================================
   * FAQs Section
@@ -678,29 +680,32 @@ jQuery(document).ready(function ($) {
     var isClicked = function () {
       return $(".e-hotspot--active").length;
     };
-    $(window).scroll(function () {
-      if (isClicked()) return;
-      var pT = $("#pro-team"),
-        cT = $("#casual-team"),
-        hT = $("#butlerapp-team-container").offset().top,
-        hH = $("#butlerapp-team-container").outerHeight(),
-        wH = $(window).height(),
-        wS = $(this).scrollTop();
-      clearTimeout(timeover);
-      if (wS > hT + hH - wH - hH) {
-        timeover = setTimeout(function () {
-          if (isClicked()) return;
-          pT.css("position", "absolute").fadeOut();
-          cT.css("position", "relative").fadeIn();
-        }, 3000);
-      } else {
-        timeover = setTimeout(function () {
-          if (isClicked()) return;
-          cT.css("position", "absolute").fadeOut();
-          pT.css("position", "relative").fadeIn();
-        }, 3000);
-      }
-    });
+
+    if ($("#pro-team").length) {
+      $(window).scroll(function () {
+        if (isClicked()) return;
+        var pT = $("#pro-team"),
+          cT = $("#casual-team"),
+          hT = $("#butlerapp-team-container").offset().top,
+          hH = $("#butlerapp-team-container").outerHeight(),
+          wH = $(window).height(),
+          wS = $(this).scrollTop();
+        clearTimeout(timeover);
+        if (wS > hT + hH - wH - hH) {
+          timeover = setTimeout(function () {
+            if (isClicked()) return;
+            pT.css("position", "absolute").fadeOut();
+            cT.css("position", "relative").fadeIn();
+          }, 3000);
+        } else {
+          timeover = setTimeout(function () {
+            if (isClicked()) return;
+            cT.css("position", "absolute").fadeOut();
+            pT.css("position", "relative").fadeIn();
+          }, 3000);
+        }
+      });
+    }
   }
   function hotspotScroller() {
     (function scrollxCloser() {
