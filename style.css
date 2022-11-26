@@ -665,7 +665,7 @@ transition-duration: 0ms !important;
 }
 .footer-logo-set img {
   padding-right: 30px;
-  width: 10%;
+  width: 14%;
 }
 
 /*-- FOOTER MENU ITEMS HOVER STATE --*/
@@ -1916,32 +1916,28 @@ img[referrerpolicy="no-referrer-when-downgrade"] {
     font-size: 0.85em !important;
     margin-bottom: 1px;
   }
-  .footer-logo-set img:last-child {
-    margin-top: 20px;
-  }
   .footer-logo-set {
-    display: flex;
-    flex-wrap: wrap;
     width: 100vw;
     margin-left: -55px;
     padding-left: 20px;
     padding-right: 20px;
+    padding-bottom: 15px;
     position: relative;
-    padding-top: 50px;
+    padding-top: 30px;
     background: #f5f7f8;
+    text-align: center;
   }
-  .footer-logo-set img:nth-child(2) {
+ 
+  .footer-logo-set img {
+    padding: 10px;
     width: 20%;
   }
-  .footer-logo-set img {
-    padding-right: 30px;
-    width: 40%;
-  }
   .elementor-element-71cf5fcb {
-    position: absolute;
     bottom: 5px;
-    right: -58px;
-    transform: scale(0.8);
+    background-color: #f5f7f8;
+    margin: 0 -55px;
+    width: 100vw;
+    padding: 20px 55px;
   }
   .elementor-element-e8ff13f .elementor-text-editor {
     flex-wrap: wrap;
@@ -3520,16 +3516,14 @@ img[referrerpolicy="no-referrer-when-downgrade"] {
     padding: 40px;
   }
   .footer-logo-set {
-    margin: 10px 0;
+    margin: 10px 0 40px;
     text-align: center;
   }
   .footer-logo-set img {
-    width: 27%;
+    width: 20%;
     padding: 0 15px;
   }
-  .footer-logo-set img:nth-child(2) {
-    width: 14%;
-  }
+
   #mainhero {
     margin-top: -52.18px;
   }
