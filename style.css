@@ -35,6 +35,15 @@ a.default-link:hover {
 .with-underline {
   text-decoration: underline !important;
 }
+
+input[type=text], 
+input[type=email], 
+input[type=url], 
+input[type=password],
+input[type=number], 
+input[type=tel], textarea {
+  border: 1px solid transparent !important;
+}
 /*======================================================
  * POPUPS
  * ===================================================*/
@@ -508,7 +517,7 @@ transition-duration: 0ms !important;
 .elementor-popup-modal textarea {
   background: rgba(237, 241, 243, 0.5) !important;
   border-radius: 8px !important;
-  border: none !important;
+  border: 2px solid transparent !important;
 }
 .elementor-popup-modal h3 {
   color: #0b2541 !important;
