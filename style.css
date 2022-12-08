@@ -2758,58 +2758,6 @@ img[referrerpolicy="no-referrer-when-downgrade"] {
     max-height: 350px;
   }
 }
-@media (max-width: 767.98px) {
-  .elementor-element-1f7e3d5 {
-    overflow-y: hidden;
-  }
-  /*-- HOTSPOTS --*/
-  #casual-team {
-    display: none !important;
-  }
-  #pro-team {
-    display: block !important;
-  }
-  #butlerapp-team-container .team-head img {
-    width: 64px !important;
-  }
-  /*-- HEADER --*/
-  #masthead img:not(.caller-icon) {
-    max-width: 170px;
-    width: 170px;
-    height: auto;
-    padding-left: 10px;
-  }
-  .elementor-menu-toggle {
-    background: transparent;
-  }
-  #stb-header-cta {
-    display: none;
-  }
-  /*-- First Section --*/
-  .home h1 {
-    line-height: 50px !important;
-  }
-  .hero-sec {
-    background: url(/wp-content/uploads/2022/06/mobile-hero-banner-min.jpg) !important;
-    background-size: cover !important;
-    background-position: top;
-  }
-  #target-button-hero-section {
-    width: 100% !important;
-    border-radius: 20px;
-    font-size: 1.2em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    min-height: 52px;
-    max-width: 468px;
-  }
-  .scrolling-logo-text,
-  .scrolling-logo-images {
-    display: none;
-  }
-}
 @media (max-width: 1025px) {
   /*-- MOBILE MENU --*/
   #masthead nav.elementor-nav-menu--dropdown.elementor-nav-menu__container {
@@ -2916,6 +2864,58 @@ img[referrerpolicy="no-referrer-when-downgrade"] {
   .function-video-container {
     bottom: 0 !important;
     transform: inherit;
+  }
+}
+@media (max-width: 767.98px) {
+  .elementor-element-1f7e3d5 {
+    overflow-y: hidden;
+  }
+  /*-- HOTSPOTS --*/
+  #casual-team {
+    display: none !important;
+  }
+  #pro-team {
+    display: block !important;
+  }
+  #butlerapp-team-container .team-head img {
+    width: 64px !important;
+  }
+  /*-- HEADER --*/
+  #masthead img:not(.caller-icon) {
+    max-width: 170px;
+    width: 170px;
+    height: auto;
+    padding-left: 10px;
+  }
+  .elementor-menu-toggle {
+    background: transparent;
+  }
+  #stb-header-cta {
+    display: none;
+  }
+  /*-- First Section --*/
+  .home h1 {
+    line-height: 50px !important;
+  }
+  .hero-sec {
+    background: url(/wp-content/uploads/2022/06/mobile-hero-banner-min.jpg) !important;
+    background-size: cover !important;
+    background-position: top;
+  }
+  #target-button-hero-section {
+    width: 100% !important;
+    border-radius: 20px;
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    min-height: 52px;
+    max-width: 468px;
+  }
+  .scrolling-logo-text,
+  .scrolling-logo-images {
+    display: none;
   }
 }
 @media (max-width: 467.98px) {
