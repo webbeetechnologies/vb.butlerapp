@@ -266,6 +266,18 @@ jQuery(document).ready(function ($) {
     });
   }
 
+  /*==============================================
+  FUNKTIONEN: VIDEO SLICK SLIDER
+  ================================================*/
+  if ($(".function-video-carousel-container").length) {
+    $(".function-video-carousel-container .elementor-widget-wrap").slick({
+      autoplay: false,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+    });
+  }
+  $;
+
   /*===============================================================================
    *  VIDEO SWITCHER - Section 4
    * =============================================================================*/

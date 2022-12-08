@@ -1462,6 +1462,36 @@ body:not(.elementor-editor-active) #casual-team {
 img[referrerpolicy="no-referrer-when-downgrade"] {
   display: none;
 }
+
+/*******************************************************
+  FUNKTIONEN NEW: 7 DEC 2022
+********************************************************/
+.funktionen-new {
+  margin-bottom: 25px;
+}
+
+.function-video-container {
+  bottom: 50% !important;
+  transform: translateY(50%);
+}
+
+.function-video-carousel-container .elementor-widget {
+  margin: 0;
+}
+
+.function-video-carousel-container .slick-prev {
+  left: 0;
+  z-index: 10;
+}
+.function-video-carousel-container .slick-next {
+  right: 0;
+  z-index: 10;
+}
+
+.slick-prev:before, .slick-next:before {
+  opacity: .25;
+  color: #211e1e;
+}
 /*=================================================================================
  * Responsive CSS
  * ===============================================================================*/
@@ -2675,6 +2705,23 @@ img[referrerpolicy="no-referrer-when-downgrade"] {
   .elementor-popup-modal .dialog-message {
     overflow: auto;
   }
+
+  /*******************************************************
+   FUNKTIONEN NEW: 7 DEC 2022
+  ********************************************************/
+  .funktionen-new {
+    margin-top: 12%;
+  }
+  .funktionen-new .elementor-container {
+    width: 100%;
+  }
+  .funktionen-new .elementor-list-item-link-full_width .elementor-widget-container {
+    margin-left: 15px !important;
+  }
+  .function-video-container {
+    bottom: 0 !important;
+    transform: inherit;
+  }
 }
 @media (min-width: 768px) {
   .elementor-element-2543b8b0 p,
@@ -2859,6 +2906,16 @@ img[referrerpolicy="no-referrer-when-downgrade"] {
   #masthead #stb-menu ul {
     position: relative;
     top: 12%;
+  }
+  /*******************************************************
+   FUNKTIONEN NEW: 7 DEC 2022
+  ********************************************************/
+  .funktionen-new {
+    margin-top: 25%;
+  }
+  .function-video-container {
+    bottom: 0 !important;
+    transform: inherit;
   }
 }
 @media (max-width: 467.98px) {
