@@ -2951,19 +2951,19 @@ img[referrerpolicy="no-referrer-when-downgrade"] {
     width: 34%;
     z-index: 1;
     right: 0;
-    height: initial;
+    height: 220px;
   }
 
   .price-item:nth-child(2) {
     right: 3%;
     width: 36%;
-    height: initial;
+    height: 220px;
   }
 
   .price-item:nth-child(3) {
     right: 0;
     width: 36%;
-    height: initial;
+    height: 220px;
     position: absolute;
   }
 
@@ -3043,6 +3043,7 @@ img[referrerpolicy="no-referrer-when-downgrade"] {
   .price-item:nth-child(1) {
     width: 100%;
     right: 0;
+    height: initial;
     padding-bottom: 40px;
   }
 
