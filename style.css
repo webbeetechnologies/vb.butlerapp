@@ -1473,6 +1473,7 @@ img[referrerpolicy="no-referrer-when-downgrade"] {
 .function-video-container {
   bottom: 50% !important;
   transform: translateY(50%);
+  max-width: 160%;
 }
 
 .function-video-carousel-container .elementor-widget {
