@@ -1473,7 +1473,7 @@ img[referrerpolicy="no-referrer-when-downgrade"] {
 .function-video-container {
   bottom: 50% !important;
   transform: translateY(50%);
-  max-width: 160%;
+  max-width: 160% !important;
 }
 
 .function-video-carousel-container .elementor-widget {
@@ -1492,6 +1492,60 @@ img[referrerpolicy="no-referrer-when-downgrade"] {
 .slick-prev:before, .slick-next:before {
   opacity: .25;
   color: #211e1e;
+}
+
+/**********************************
+ PRICES
+ **********************************/
+.prices-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: end;
+}
+.price-item {
+  padding: 40px;
+  display: flex;
+  border-radius: 12px;
+  position: relative;
+  flex-direction: column;
+}
+.price-item:nth-child(1) {
+  width: 280px;
+  height: 260px;
+  z-index: 1;
+  right: -40px;
+  background: radial-gradient(100% 100% at 0% 0%, #FFFAE3 0%, #FFDCC6 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+}
+
+.price-item:nth-child(2) {
+  width: 300px;
+  height: 280px;
+  z-index: 2;
+  right: -20px;
+  background: radial-gradient(100% 100% at 0% 0%, #EAF0D4 0%, #B6E6BB 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+}
+
+.price-item:nth-child(3) {
+  width: 320px;
+  height: 300px;
+  z-index: 3;
+  background: radial-gradient(100% 100% at 0% 0%, #FFEAEE 0%, #BED8FF 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;  
+}
+
+.price-title {
+  font-size: 56px;
+  line-height: 1.2em;
+}
+.price-subheading {
+  font-size: 17px;
+}
+.price-footer {
+  font-size: 17px;
+  display: flex;
+  align-items: flex-end;
+  flex-grow: 1;
+
 }
 /*=================================================================================
  * Responsive CSS
@@ -2723,6 +2777,8 @@ img[referrerpolicy="no-referrer-when-downgrade"] {
     bottom: 0 !important;
     transform: inherit;
   }
+
+  
 }
 @media (min-width: 768px) {
   .elementor-element-2543b8b0 p,
@@ -2866,6 +2922,49 @@ img[referrerpolicy="no-referrer-when-downgrade"] {
     bottom: 0 !important;
     transform: inherit;
   }
+  /**********************************
+  PRICES
+  **********************************/
+  .prices-container {
+    flex-direction: row;
+    justify-content: stretch;
+    flex-wrap: wrap;
+  }
+  .price-item {
+    padding: 20px;
+    align-items: stretch;
+    border-radius: 8px;
+  }
+  .price-item:nth-child(1) {
+    width: 34%;
+    z-index: 1;
+    right: 0;
+    height: initial;
+  }
+
+  .price-item:nth-child(2) {
+    right: 3%;
+    width: 36%;
+    height: initial;
+  }
+
+  .price-item:nth-child(3) {
+    right: 0;
+    width: 36%;
+    height: initial;
+    position: absolute;
+  }
+
+  .price-title {
+    font-size: 36px;
+  }
+  .price-subheading,
+  .price-footer {
+    font-size: 14px;
+  }
+  .price-footer {
+    margin-top: 30px;
+  }
 }
 @media (max-width: 767.98px) {
   .elementor-element-1f7e3d5 {
@@ -2917,6 +3016,57 @@ img[referrerpolicy="no-referrer-when-downgrade"] {
   .scrolling-logo-text,
   .scrolling-logo-images {
     display: none;
+  }
+
+  /**********************************
+  PRICES
+  **********************************/
+  .prices-container {
+    flex-direction: column;
+  }
+  .price-item {
+    padding: 20px;
+    align-items: stretch;
+  }
+  .price-item:nth-child(1) {
+    width: 100%;
+    right: 0;
+    padding-bottom: 40px;
+  }
+
+  .price-item:nth-child(2) {
+    top: -15px;
+    width: 100%;
+    height: initial;
+    right: initial;
+    padding-bottom: 40px;
+  }
+
+  .price-item:nth-child(3) {
+    top: -30px;
+    width: 100%;
+    height: initial;
+    position: relative;
+  }
+
+  .price-title {
+    order: 2;
+    font-size: 32px;
+    text-align: right;
+  }
+  .price-subheading {
+    order: 1;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  .price-footer {
+    order: 3;
+    margin: 0;
+    font-size: 12px;
+    display: block;
+    text-align: right;
+    width: 165px;
+    margin: 0 0 0 auto;
   }
 }
 @media (max-width: 467.98px) {

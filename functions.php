@@ -46,6 +46,14 @@ function butler_team() {
 }
 add_shortcode('b_team', 'butler_team'); 
 
+// CPT - PRICES
+function butler_prices() {
+	ob_start();
+	get_template_part('partials/prices','page');
+	return ob_get_clean();
+}
+add_shortcode('b_prices', 'butler_prices'); 
+
 // BACKEND - CSS
 function butler_backend_css() {
   echo '<style>
