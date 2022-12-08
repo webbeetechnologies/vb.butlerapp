@@ -269,6 +269,7 @@ jQuery(document).ready(function ($) {
   /*==============================================
   FUNKTIONEN: VIDEO SLICK SLIDER
   ================================================*/
+  /*
   if ($(".function-video-carousel-container").length) {
     $(".function-video-carousel-container .elementor-widget-wrap").slick({
       autoplay: false,
@@ -276,7 +277,17 @@ jQuery(document).ready(function ($) {
       slidesToScroll: 1,
     });
   }
-  $;
+  */
+
+  $(".function-video-carousel-container").each(function (idx, item) {
+    if ($(item).find(".elementor-widget-video").length > 1) {
+      $(item).find(".elementor-widget-wrap").slick({
+        autoplay: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      });
+    }
+  });
 
   /*===============================================================================
    *  VIDEO SWITCHER - Section 4
