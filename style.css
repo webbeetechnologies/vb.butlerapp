@@ -1476,6 +1476,10 @@ img[referrerpolicy="no-referrer-when-downgrade"] {
   max-width: 160% !important;
 }
 
+.function-video-carousel-container .elementor-widget-video .e-hosted-video .elementor-video {
+  object-fit: contain;
+}
+
 .function-video-carousel-container .elementor-widget {
   margin: 0;
 }
