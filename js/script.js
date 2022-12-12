@@ -531,7 +531,7 @@ jQuery(document).ready(function ($) {
       $(".logo-blocker").css("opacity", "1");
       $(".logo-blocker").addClass("active");
       $("body").addClass("scrolled");
-      $("header").eq(1).css("opacity", 0);
+      // $("header").eq(1).css("opacity", 0);
     } else if (pos < b) {
       $(".logo-blocker").removeClass("active");
       $(".logo-blocker").css("opacity", "0");
@@ -539,7 +539,7 @@ jQuery(document).ready(function ($) {
       $(".logo-blocker").removeClass("active");
       $(".logo-blocker").css("opacity", "0");
       $("body").removeClass("scrolled");
-      $("header").eq(1).css("opacity", 1);
+      // $("header").eq(1).css("opacity", 1);
     }
   });
 
