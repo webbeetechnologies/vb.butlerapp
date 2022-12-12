@@ -1476,8 +1476,8 @@ img[referrerpolicy="no-referrer-when-downgrade"] {
   max-width: 160% !important;
 }
 
-.function-video-carousel-container .elementor-widget-video .e-hosted-video .elementor-video {
-  object-fit: contain;
+.function-video-container .elementor-widget-video .e-hosted-video .elementor-video {
+  object-fit: contain !important;
 }
 
 .function-video-carousel-container .elementor-widget {
@@ -1509,6 +1509,42 @@ img[referrerpolicy="no-referrer-when-downgrade"] {
 
 .function-video-carousel-container .slick-track .elementor-widget-video:nth-child(n+2) {
   position: relative;
+}
+
+.slick-dots {
+  bottom: -30px;
+}
+.slick-dots li {
+  width: 40px;
+}
+
+.slick-dots li button {
+  background: rgba(11, 37, 65, 0.163883);
+  width: 40px;
+  height: 4px;
+  padding: 0;
+  border-radius: 4px;
+}
+
+.slick-dots li.slick-active button {
+  background: #0b2541;
+}
+
+.slick-dots li button:before {
+  display: none;
+}
+
+/* fix border: put outside slick */
+.function-video-container .slick-list,
+.function-video-container .elementor-widget-wrap:not(.slick-initialized) {
+  border: 3px solid;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+/* remove elementor border */
+.function-video-container .elementor-widget-container {
+  border: none !important;
 }
 /**********************************
  PRICES
