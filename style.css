@@ -1502,6 +1502,12 @@ img[referrerpolicy="no-referrer-when-downgrade"] {
   color: #211e1e;
 }
 
+.function-video-container .elementor-fit-aspect-ratio {
+  height: auto;
+  line-height: 0;
+  padding-bottom: 0 !important;
+}
+
 /* default state before slick initialised */
 .function-video-carousel-container .elementor-widget-video:nth-child(n+2) {
   position: absolute;
@@ -1537,6 +1543,7 @@ img[referrerpolicy="no-referrer-when-downgrade"] {
 /* fix border: put outside slick */
 .function-video-container .slick-list,
 .function-video-container .elementor-widget-wrap:not(.slick-initialized) {
+  background-color: #030303;
   border: 3px solid;
   border-radius: 6px;
   overflow: hidden;
@@ -1545,6 +1552,7 @@ img[referrerpolicy="no-referrer-when-downgrade"] {
 /* remove elementor border */
 .function-video-container .elementor-widget-container {
   border: none !important;
+  background-color: transparent !important;
 }
 /**********************************
  PRICES
