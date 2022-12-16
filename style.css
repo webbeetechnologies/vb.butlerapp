@@ -1466,6 +1466,10 @@ img[referrerpolicy="no-referrer-when-downgrade"] {
 /*******************************************************
   FUNKTIONEN NEW: 7 DEC 2022
 ********************************************************/
+.elementor-section-boxed .funktionen-new .elementor-container {
+  width: calc(100% - 40px);
+}
+
 .funktionen-new {
   margin-bottom: 25px;
 }
@@ -2828,7 +2832,7 @@ img[referrerpolicy="no-referrer-when-downgrade"] {
     margin-top: 12%;
   }
   .funktionen-new .elementor-container {
-    width: 100%;
+    width: calc(100% - 30px);
   }
   .funktionen-new .elementor-list-item-link-full_width .elementor-widget-container {
     margin-left: 15px !important;
@@ -2976,7 +2980,7 @@ img[referrerpolicy="no-referrer-when-downgrade"] {
    FUNKTIONEN NEW: 7 DEC 2022
   ********************************************************/
   .funktionen-new {
-    margin-top: 25%;
+    margin-top: 30%;
   }
   .function-video-container {
     bottom: 0 !important;
