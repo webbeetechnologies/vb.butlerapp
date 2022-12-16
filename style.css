@@ -3269,6 +3269,10 @@ img[referrerpolicy="no-referrer-when-downgrade"] {
     line-height: 40px;
     color: #0b2541;
   }
+  h2.elementor-heading-title {
+    font-size: 29px !important;
+  }
+
   #butlerapp-services .elementor-element-c90273a {
     display: flex;
     flex-direction: row;
@@ -3970,5 +3974,9 @@ img[referrerpolicy="no-referrer-when-downgrade"] {
     padding-left: 40px;
     margin-bottom: 40px;
     font-size: 2.5em !important;
+  }
+
+  .elementor-heading-title {
+    font-size: 40px !important;
   }
 }
