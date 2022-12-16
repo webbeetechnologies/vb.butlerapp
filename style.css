@@ -1467,7 +1467,7 @@ img[referrerpolicy="no-referrer-when-downgrade"] {
   FUNKTIONEN NEW: 7 DEC 2022
 ********************************************************/
 .elementor-section-boxed .funktionen-new .elementor-container {
-  width: calc(100% - 40px);
+  width: calc(100% - 20px);
 }
 
 .funktionen-new {
@@ -2832,7 +2832,7 @@ img[referrerpolicy="no-referrer-when-downgrade"] {
     margin-top: 12%;
   }
   .funktionen-new .elementor-container {
-    width: calc(100% - 30px);
+    width: calc(100% - 20px);
   }
   .funktionen-new .elementor-list-item-link-full_width .elementor-widget-container {
     margin-left: 15px !important;
