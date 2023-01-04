@@ -431,20 +431,20 @@ jQuery(document).ready(function ($) {
     clearInterval(myTimer);
     myTimer = null;
     kundennextclick();
-    setAutoplay(3000);
+    setAutoplay(10000);
   });
   $("#kunden--slider").on("click", ".bsa-left", function () {
     clearInterval(myTimer);
     myTimer = null;
     kundenprevclick();
-    setAutoplay(3000);
+    setAutoplay(10000);
   });
   $("#kunden--slider .slide-points").on("click", "li", function () {
     if ($(this).children(".flex-active").length == 0) {
       var idx = $(this).index();
       clearInterval(myTimer);
       kundenClickByIdx(idx);
-      setAutoplay(3000);
+      setAutoplay(10000);
     }
   });
 
@@ -453,10 +453,10 @@ jQuery(document).ready(function ($) {
     clearInterval(myTimer);
   });
   $("#kunden--slider .slides").mouseleave(function () {
-    setAutoplay(3000);
+    setAutoplay(10000);
   });
 
-  setAutoplay(3000);
+  setAutoplay(10000);
 
   /*===============================================================================
    *  POPUPS
@@ -834,6 +834,23 @@ jQuery(document).ready(function ($) {
   }
 
   butlerMediaQueries.register("mobile", mediaCenterImage);
+  
+  /*=======================================================================================
+  * INTERCOM INTEGRATION
+  =======================================================================================*/
+  // Chat
+
+<script>
+  window.intercomSettings = {
+    app_id: "tw51gzyl"
+  };
+</script>
+
+<script>
+// We pre-filled your app ID in the widget URL: 'https://widget.intercom.io/widget/tw51gzyl'
+(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/tw51gzyl';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+</script>
+
 
   /*=======================================================================================
   * OTHERS
