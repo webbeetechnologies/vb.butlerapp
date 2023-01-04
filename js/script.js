@@ -431,20 +431,20 @@ jQuery(document).ready(function ($) {
     clearInterval(myTimer);
     myTimer = null;
     kundennextclick();
-    setAutoplay(10000);
+    setAutoplay(9000);
   });
   $("#kunden--slider").on("click", ".bsa-left", function () {
     clearInterval(myTimer);
     myTimer = null;
     kundenprevclick();
-    setAutoplay(10000);
+    setAutoplay(9000);
   });
   $("#kunden--slider .slide-points").on("click", "li", function () {
     if ($(this).children(".flex-active").length == 0) {
       var idx = $(this).index();
       clearInterval(myTimer);
       kundenClickByIdx(idx);
-      setAutoplay(10000);
+      setAutoplay(9000);
     }
   });
 
@@ -453,10 +453,10 @@ jQuery(document).ready(function ($) {
     clearInterval(myTimer);
   });
   $("#kunden--slider .slides").mouseleave(function () {
-    setAutoplay(10000);
+    setAutoplay(9000);
   });
 
-  setAutoplay(10000);
+  setAutoplay(9000);
 
   /*===============================================================================
    *  POPUPS
