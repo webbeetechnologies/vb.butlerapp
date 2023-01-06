@@ -2123,6 +2123,7 @@ img[referrerpolicy="no-referrer-when-downgrade"] {
   #kundenslide {
     padding-bottom: 0;
   }
+  /*
   #funktionen * {
     position: relative !important;
     opacity: 1 !important;
@@ -2134,6 +2135,7 @@ img[referrerpolicy="no-referrer-when-downgrade"] {
     margin-left: 0 !important;
     padding: 0 !important;
   }
+  */
 
   #ba--sliders img.size-full, 
   #funktionen > div > div > div > div > div > div:last-child,
@@ -2173,13 +2175,14 @@ img[referrerpolicy="no-referrer-when-downgrade"] {
     line-height: 1.55em;
     color: #0b2541;
   }
+  
   #funktionen
     > .elementor-container
     > .elementor-row
     > .elementor-column
     > .elementor-column-wrap
     .elementor-widget-wrap {
-    padding: 0 !important;
+    padding: 20px;
   }
   #ba--sliders .slides > li {
     margin: 20px 0 !important;
@@ -2237,6 +2240,7 @@ img[referrerpolicy="no-referrer-when-downgrade"] {
   }
   #funktionen {
     margin-bottom: 0 !important;
+    margin-top: 80px !important;
   }
   .elementor-2600
     .elementor-element.elementor-element-55134ca
