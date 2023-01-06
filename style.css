@@ -615,7 +615,9 @@ transition-duration: 0ms !important;
   position: relative;
   top: 1.3px;
 }
-
+.elementor-acceptance-field ~ label {
+  font-weight: normal;
+}
 /*======================================================
  * FOOTER SECTION
  * ===================================================*/
@@ -3667,11 +3669,19 @@ img[referrerpolicy="no-referrer-when-downgrade"] {
     border-radius: 20px;
     box-shadow: inset 0px 1px 1px #ffffff;
     backdrop-filter: blur(19.028px);
+    padding: 25px;
   }
   #kundenslide .th-slide-content .sld-back > div > div > section {
+    /*
     left: -62%;
     transform: scale(0.8);
     bottom: 280px;
+    */
+    transform: scale(0.8);
+    transform-origin: 0 0;
+  }
+  #kundenslide .th-slide-content .sld-back > div > div > section > div {
+    margin-left: 0;
   }
   #kundenslide .th-slide-content > div > div > div > section > div > div {
     flex-wrap: nowrap;
