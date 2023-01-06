@@ -819,14 +819,9 @@ jQuery(document).ready(function ($) {
   $("#casual-team .e-hotspot").wrapAll('<div class="hotspot-container">');
 
   function centerImage() {
-    var img = $(
-      "#butlerapp-team-container .elementor-widget-hotspot img.attachment-full"
-    );
-
-    img.on("load", function () {
-      var centerPoint = img.width();
-      $("#butlerapp-team-container").scrollLeft(centerPoint / 2.9);
-    });
+    // img width is 320% of screen width..so
+    var centerPoint = window.innerWidth * 3.2;
+    $("#butlerapp-team-container").scrollLeft(centerPoint / 2.9);
   }
 
   function mediaCenterImage(e) {
@@ -834,7 +829,7 @@ jQuery(document).ready(function ($) {
   }
 
   butlerMediaQueries.register("mobile", mediaCenterImage);
-  
+
   /*=======================================================================================
   * OTHERS
   =======================================================================================*/
