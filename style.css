@@ -466,6 +466,7 @@ transition-duration: 0ms !important;
  * POP-UPS
  * ===================================================*/
 .elementor-popup-modal .dialog-message {
+  font-size: 14px;
   overflow: hidden;
 }
 .elementor-popup-modal h2 {
