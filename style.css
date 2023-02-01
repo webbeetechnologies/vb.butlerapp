@@ -2441,7 +2441,7 @@ img[referrerpolicy="no-referrer-when-downgrade"] {
   }
   #ba-marq #marquee {
     justify-content: center;
-    margin-left: -10px;
+    margin-left: -15px;
   }
   .butler-guides-section .elementor-container {
     width: 100%;
@@ -3242,6 +3242,13 @@ img[referrerpolicy="no-referrer-when-downgrade"] {
   #ba-marq .marq-content {
     margin: auto;
   }
+  #ba-marq .elementor-widget-container {
+    margin: 0;
+  }
+  #ba-marq .marq-text p {
+    font-size: 18px;
+  }
+
   .marq-text {
     padding: 0;
   }
