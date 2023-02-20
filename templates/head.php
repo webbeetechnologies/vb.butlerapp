@@ -11,6 +11,6 @@
   <link rel="preload" href="/wp-content/uploads/2022/06/contact-2-min.png" as="image">
   <link rel="preload" href="/wp-content/uploads/2022/06/team-hover-bg-min-scaled.jpg" as="image">
   <!-- Head -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+  <link rel="stylesheet" href="https://butlerapp.de/css/swiper_4.5.0.min.css">
 <?php wp_head(); ?>
 </head>
