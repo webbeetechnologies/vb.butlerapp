@@ -851,4 +851,13 @@ jQuery(document).ready(function ($) {
   ).append(
     "<div class='mobiler-footer'><a href='tel:493031199425'><span class='caller-icon-container'><img class='caller-icon' src='/wp-content/uploads/2022/07/caller-icon-no-bg.png'></span><span>Kostenlose Beratung</span><span>+49 30 311 994 25</span></a><div class='mobile-copyright'><p>Buchungsbutler © 2022 Webbee GmbH</p><div class='footer-links'><a href='#'>Datenschutz</a><a>Impressum</a></div></div>"
   );
+
+  /*=======================================================================================
+  * price features: ALLE FUNCTIONEN CLICKABLE
+  =======================================================================================*/
+  $(".butler-price-features .alle-funktionen").on("click", function (e) {
+    e.preventDefault();
+    $(this).toggleClass("active");
+    $(".more-features-list").slideToggle("slow");
+  });
 }); // THE ENDING...
