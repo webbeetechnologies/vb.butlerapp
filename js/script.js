@@ -137,6 +137,9 @@ jQuery(document).ready(function ($) {
   /*===============================================================================
    *  GENERIC
    * =============================================================================*/
+  // form: referrer url
+  var currentUrl = window.location.href;
+  $("#form-field-referrer").val(currentUrl);
 
   // REMOVES LAZY LOADING
   $(
