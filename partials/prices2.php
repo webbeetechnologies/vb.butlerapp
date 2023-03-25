@@ -1,4 +1,15 @@
 <div id="butler_prices-v2">
+	<div class="container header">
+		<div class="row text-center mb-4">
+			<div class="col-md-12">
+				<div class="heading-container">
+					<h2><strong>Faire Preise</strong> für alle</h2>
+					<div class="subheading">Gestaffelt nach Buchungsvolumen in Ihrem Butler</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<div class="prices-container-v2">
 		<?php $args = array(  
 			'post_type' => 'price',
