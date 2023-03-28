@@ -2,9 +2,9 @@
 	<div class="features-list-table">
 		<div class="d-flex header">
 			<div class="title-container">
-				<h3><strong>Alle Funktionen</strong> im Vergleic</h3>
-				<?php  if ($args['subtitle']): ?>
-					<p><?php echo $args['subtitle']; ?></p>
+				<h3><?php echo $args['content']; ?></h3>
+				<?php  if ($args['atts']['subtitle']): ?>
+					<p><?php echo $args['atts']['subtitle']; ?></p>
 				<?php endif; ?>
 				
 			</div>
@@ -31,10 +31,11 @@
 		</div>
 		<div class="features-container">
 			<?php // GET FIRST 5 POSTS ?>
+			<?php $first_items =  $args['atts']['first_items'] ? $args['atts']['first_items'] : 10; ?>
 			<?php $args = array(  
 				'post_type' => 'price-features',
 				'post_status' => 'publish',
-				'posts_per_page' => '5',
+				'posts_per_page' => $first_items,
 			); ?>
 			<?php $loop = new WP_Query( $args ); ?>
 			<?php $post_idx = 0; while ( $loop->have_posts() ) : $loop->the_post(); ?>
@@ -76,7 +77,7 @@
 		<?php $args2 = array(  
 				'post_type' => 'price-features',
 				'post_status' => 'publish',
-				'offset' => '5',
+				'offset' => $first_items,
 		); ?>
 		<?php $loop2 = new WP_Query( $args2 ); ?>
 		<?php if ($loop2->have_posts()): ?>

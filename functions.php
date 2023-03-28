@@ -63,10 +63,12 @@ function butler_prices2() {
 add_shortcode('b_prices_v2', 'butler_prices2'); 
 
 // CPT - PRICE FEATURES
-function butler_prices_features($atts) {
+function butler_prices_features($atts, $content = null) {
 	ob_start();
 	$subtitle = $atts['subtitle'];
-	get_template_part('partials/price_features','page', array('subtitle' => $subtitle));
+	$first_items = $atts['first_items'];
+
+	get_template_part('partials/price_features','page', array('atts'=>$atts, 'content'=>$content));
 	return ob_get_clean();
 }
 add_shortcode('b_price_features', 'butler_prices_features'); 
