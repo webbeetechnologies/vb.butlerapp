@@ -118,13 +118,4 @@
 			</div>
 		<?php endif; ?>
 	</div>
-	<div class="container text-center">
-		<?php if ($loop2->have_posts()): ?>
-			<a href="#" class="alle-funktionen show-more">
-				<span>Alle Funktionen</span>
-			</a>
-
-			<p>** Wenn du die SMS-Terminerinnerungen nutzen möchtest, gib uns einfach Bescheid und wir schalten die Funktion für dich frei. Der Preis beträgt 0,08€ pro SMS.</p>
-		<?php endif; ?>
-	</div>
 </div>

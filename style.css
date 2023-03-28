@@ -1908,9 +1908,10 @@ PRICE FEATURES
 .butler-price-features .button {
   font-size: 14px;
   height: 44px;
-  padding: 0 25px;
+  padding: 0;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .butler-price-features {
@@ -1960,6 +1961,7 @@ PRICE FEATURES
   padding: 0 10px;
   align-items: center;
   justify-content: center;
+  width: 33%;
 }
 
 .butler-price-features .option-item .heading {
@@ -2001,6 +2003,7 @@ PRICE FEATURES
   background: transparent
     url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjUiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNSAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xMi42NjcgMjFWMjFDNy42OTU5OSAyMSAzLjY2Njk5IDE2Ljk3MSAzLjY2Njk5IDEyVjEyQzMuNjY2OTkgNy4wMjkgNy42OTU5OSAzIDEyLjY2NyAzVjNDMTcuNjM4IDMgMjEuNjY3IDcuMDI5IDIxLjY2NyAxMlYxMkMyMS42NjcgMTYuOTcxIDE3LjYzOCAyMSAxMi42NjcgMjFaIiBzdHJva2U9IiMwQjI1NDEiIHN0cm9rZS13aWR0aD0iMS41IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPHBhdGggZD0iTTE2LjY2NyAxMEwxMS42NjcgMTVMOC42NjY5OSAxMiIgc3Ryb2tlPSIjMEIyNTQxIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+Cjwvc3ZnPgo=")
     center center no-repeat;
+  margin: 0 auto;
 }
 .feature-item .empty {
   width: 25px;

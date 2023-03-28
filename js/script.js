@@ -858,6 +858,11 @@ jQuery(document).ready(function ($) {
   /*=======================================================================================
   * price features: ALLE FUNCTIONEN CLICKABLE
   =======================================================================================*/
+  // hide this link if no any more features
+  if ($(".more-features-list").length == 0) {
+    $(".butler-price-features .alle-funktionen").hide();
+  }
+
   $(".butler-price-features .alle-funktionen").on("click", function (e) {
     e.preventDefault();
     $(this).toggleClass("active");
