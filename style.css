@@ -1813,7 +1813,6 @@ img[referrerpolicy="no-referrer-when-downgrade"] {
 }
 .permonth {
   font-size: 24px;
-  text-transform: lowercase;
   font-weight: 36px;
   color: #0b2541;
   opacity: 0.3;
