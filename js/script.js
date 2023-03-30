@@ -1,3 +1,14 @@
+function equalHeight(group) {
+  tallest = 0;
+  group.each(function () {
+    thisHeight = jQuery(this).height();
+    if (thisHeight > tallest) {
+      tallest = thisHeight;
+    }
+  });
+  group.height(tallest);
+}
+
 jQuery(document).ready(function ($) {
   /*===============================================================================
    *  RESIZE HANDLERS
@@ -854,6 +865,12 @@ jQuery(document).ready(function ($) {
   ).append(
     "<div class='mobiler-footer'><a href='tel:493031199425'><span class='caller-icon-container'><img class='caller-icon' src='/wp-content/uploads/2022/07/caller-icon-no-bg.png'></span><span>Kostenlose Beratung</span><span>+49 30 311 994 25</span></a><div class='mobile-copyright'><p>Buchungsbutler © 2022 Webbee GmbH</p><div class='footer-links'><a href='#'>Datenschutz</a><a>Impressum</a></div></div>"
   );
+
+  /*=======================================================================================
+  * FAIRE PREISE 2
+  =======================================================================================*/
+  // Make same height of description
+  equalHeight($(".price-item-v2 .description"));
 
   /*=======================================================================================
   * price features: ALLE FUNCTIONEN CLICKABLE
