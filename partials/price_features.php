@@ -8,13 +8,36 @@
 				<?php endif; ?>
 				
 			</div>
+			<?php $args_labels = array(  
+				'post_type' => 'price-features-label',
+				'post_status' => 'publish',
+				'posts_per_page' => '3',
+			); 
+			$loop_labels = new WP_Query( $args_labels );
+			$labels = array(
+				array('label' => '', 'content' => ''),
+				array('label' => '', 'content' => ''),
+				array('label' => '', 'content' => '')
+			);
+			$post_idx = 0; 
+			while ( $loop_labels->have_posts() ) {
+				$loop_labels->the_post();
+				$labels[$post_idx]['label'] = get_the_title();
+				$labels[$post_idx]['content'] = get_the_content();
+
+				$post_idx++;
+			}
+			$classname = array('basic', 'plus', 'premium');
+			?>
+
 			<div class="options-container d-flex">
-				<div class="option-item">
-					<div class="heading basic">Basic</div>
-					<a href="#kostenlos-popup" class="button white-button">
-						<span>kostenlos testen</span>
-					</a>
-				</div>
+				<?php for($i=0;$i<3;$i++): ?>
+					<div class="option-item">
+						<div class="heading <?php echo $classname[$i] ?>"><?php echo $labels[$i]['label']?></div>
+						<?php echo $labels[$i]['content'] ?>
+					</div>
+				<?php endfor; ?>
+				<!--
 				<div class="option-item">
 					<div class="heading plus">Plus</div>
 					<a href="#kostenlos-popup" class="button white-button">
@@ -27,6 +50,7 @@
 						<span>kostenlos testen</span>
 					</a>
 				</div>
+				-->
 			</div>
 		</div>
 		<div class="features-container">
