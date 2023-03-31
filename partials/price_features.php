@@ -101,6 +101,7 @@
 		<?php $args2 = array(  
 				'post_type' => 'price-features',
 				'post_status' => 'publish',
+				'posts_per_page' => 200, // get all posts
 				'offset' => $first_items,
 		); ?>
 		<?php $loop2 = new WP_Query( $args2 ); ?>
