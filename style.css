@@ -1917,8 +1917,8 @@ PRICE FEATURES
   font-family: "Open Sans", sans-serif;
 }
 
-.elementor-column-gap-default>.elementor-row>.elementor-column>.elementor-element-populated>.elementor-widget-wrap {
-  padding: 0;
+#butlerapp-services + section.elementor-section + section.elementor-section + section.elementor-section .elementor-widget-wrap {
+  padding: 10px 0;
 }
 
 .butler-price-features h3 {
@@ -2777,7 +2777,6 @@ PRICE FEATURES
   }
 }
 @media (min-width: 468px) {
-  #butlerapp-team-container {}
   .ba-instructor-parent {
     display: none;
   }
@@ -3370,10 +3369,6 @@ PRICE FEATURES
     width: 100%;
     flex-wrap: inherit;
     margin: 20px 0;
-  }
-
-  .elementor-column-gap-default>.elementor-row>.elementor-column>.elementor-element-populated>.elementor-widget-wrap {
-    padding: 10px;
   }
 }
 @media (min-width: 768px) {
