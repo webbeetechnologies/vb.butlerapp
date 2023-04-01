@@ -578,10 +578,6 @@ body.body-stopper header {
   z-index: 1;
   width: 20%;
 }
-.elementor-popup-modal .dialog-close-button {
-  right: 18% !important;
-  top: 11.5% !important;
-}
 .elementor-widget-wrap section.elementor-section .elementor-icon-list-text {
   font-weight: 400;
 }
@@ -1918,7 +1914,7 @@ PRICE FEATURES
 }
 
 #butlerapp-services + section.elementor-section + section.elementor-section + section.elementor-section .elementor-widget-wrap {
-  padding: 10px 0;
+  padding: 10px;
 }
 
 .butler-price-features h3 {
@@ -2291,9 +2287,6 @@ PRICE FEATURES
   }
   .elementor-popup-modal .eicon-close {
     background: transparent !important;
-    position: relative;
-    bottom: 15px;
-    right: -65px;
   }
   .elementor-popup-modal .elementor-widget-form {
     padding-right: 15px;
@@ -2960,9 +2953,6 @@ PRICE FEATURES
   }
 }
 @media (min-width: 1024px) {
-  .elementor-popup-modal .dialog-close-button .eicon-close {
-    position: initial !important;
-  }
 }
 @media (min-width: 495px) and (max-width: 1024px) {
   #mainhero .elementor-icon-list-item {
@@ -3413,6 +3403,7 @@ PRICE FEATURES
     background: rgba(11, 37, 65, 1);
     backdrop-filter: blur(38.0559px);
   }
+
   .casual-service,
   #casual-team {
     display: none !important;
@@ -4560,6 +4551,38 @@ PRICE FEATURES
   display: none !important;
 }
 
-#CookieBoxTextDescription {
-  font-weight: 500;
+
+
+/* ==========================================================================
+   Cookie box
+   ========================================================================== */
+
+#BorlabsCookieBox #CookieBoxTextDescription {
+  font-weight: 400;
+}
+
+#BorlabsCookieBox a {
+  font-weight: 300;
+}
+
+/* ==========================================================================
+   Popup close button
+   ========================================================================== */
+
+.elementor-popup-modal .dialog-close-button {
+  top: 12% !important;
+  right: 20% !important;
+}
+
+@media (max-width: 1025px) {
+  .elementor-popup-modal .dialog-close-button {
+    right: 12% !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .elementor-popup-modal .dialog-close-button {
+    right: 5% !important;
+    top: 10% !important;
+  }
 }
