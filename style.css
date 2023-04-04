@@ -4247,7 +4247,7 @@ PRICE FEATURES
   #kundenslide h2 {
     margin-bottom: -100px !important;
   }
-  #kunden--slider
+  /* #kunden--slider
     .slides
     li:first-child
     .elementor-inner-section
@@ -4255,8 +4255,8 @@ PRICE FEATURES
     > div.elementor-row
     > div:first-child {
     display: none;
-  }
-  #kunden--slider
+  } */
+  /* #kunden--slider
     .slides
     li:last-child
     .elementor-inner-section
@@ -4265,7 +4265,7 @@ PRICE FEATURES
     > div:first-child {
     position: relative;
     top: -30px;
-  }
+  } */
   #butlerapp-services > div > .elementor-row > div {
     width: 100% !important;
   }
