@@ -4315,7 +4315,7 @@ PRICE FEATURES
     margin-bottom: 40px;
   }
   .section-service h2 {
-    padding-left: 40px;
+    padding-left: 30px;
     margin-bottom: 40px;
     font-size: 2.5em !important;
   }
@@ -4369,6 +4369,10 @@ PRICE FEATURES
   .footer-logo-set img {
     width: 20%;
     padding: 0 15px;
+  }
+
+  #colophon section.elementor-section .elementor-row .elementor-column-wrap .elementor-widget-wrap {
+    margin-bottom: 10px;
   }
 
   #mainhero {
@@ -4538,7 +4542,7 @@ PRICE FEATURES
     margin-bottom: 40px;
   }
   .section-service h2 {
-    padding-left: 40px;
+    padding-left: 20px;
     margin-bottom: 40px;
     font-size: 2.5em !important;
   }
@@ -4563,6 +4567,10 @@ PRICE FEATURES
 
 #BorlabsCookieBox a {
   font-weight: 300;
+}
+
+#BorlabsCookieBox ul {
+  font-weight: 400;
 }
 
 /* ==========================================================================
