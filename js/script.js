@@ -94,17 +94,23 @@ jQuery(document).ready(function ($) {
     for (let mutation of mutations) {
       if (mutation.type === "childList") {
         // move element to the top of the popup
-        if (
-          $(
-            ".elementor-popup-modal .elementor-column-wrap .dialog-close-button"
-          ).length == 0
-        ) {
-          $(".dialog-close-button")
-            .clone()
-            .prependTo(
-              ".elementor-popup-modal .elementor-inner-column > .elementor-column-wrap"
-            )
-            .addClass("copy");
+        var newNodes = mutation.addedNodes; // DOM NodeList
+        if (newNodes !== null) {
+          // If there are new nodes added
+          var $nodes = $(newNodes); // jQuery set
+          $nodes.each(function () {
+            var $node = $(this);
+            var $close_button = $node.find(".dialog-close-button");
+            console.log($close_button.length);
+            if ($close_button.length > 0) {
+              $close_button
+                .clone()
+                .prependTo(
+                  $node.find(".elementor-inner-column > .elementor-column-wrap")
+                )
+                .addClass("copy");
+            }
+          });
         }
 
         $(".dialog-close-button").on("click", function () {
