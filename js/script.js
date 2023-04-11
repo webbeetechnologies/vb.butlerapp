@@ -101,7 +101,7 @@ jQuery(document).ready(function ($) {
           $nodes.each(function () {
             var $node = $(this);
             var $close_button = $node.find(".dialog-close-button");
-            console.log($close_button.length);
+
             if ($close_button.length > 0) {
               $close_button
                 .clone()
