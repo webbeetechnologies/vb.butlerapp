@@ -475,8 +475,12 @@ body.body-stopper header {
  * ===================================================*/
 .elementor-popup-modal .dialog-message {
   font-size: 14px;
-  overflow: hidden;
+  overflow: auto;
 }
+.elementor-popup-modal .dialog-message::-webkit-scrollbar {
+  display: none;
+}
+
 .elementor-popup-modal h2 {
   color: #0b2541;
   font-weight: 700;
@@ -552,7 +556,10 @@ body.body-stopper header {
   padding: 50px 0 !important;
 }
 
-.elementor-popup-modal .elementor-element-populated .elementor-background-overlay + .elementor-widget-wrap {
+.elementor-popup-modal
+  .elementor-element-populated
+  .elementor-background-overlay
+  + .elementor-widget-wrap {
   padding: 50px 30px !important;
 }
 .elementor-popup-modal .elementor-column-wrap.elementor-element-populated {
@@ -1913,7 +1920,11 @@ PRICE FEATURES
   font-family: "Open Sans", sans-serif;
 }
 
-#butlerapp-services + section.elementor-section + section.elementor-section + section.elementor-section .elementor-widget-wrap {
+#butlerapp-services
+  + section.elementor-section
+  + section.elementor-section
+  + section.elementor-section
+  .elementor-widget-wrap {
   padding: 10px;
 }
 
@@ -2323,7 +2334,7 @@ PRICE FEATURES
 }
 
 @media (max-width: 998px) {
-    .pro-service
+  .pro-service
     > .elementor-widget-container
     .e-hotspot:nth-child(5)
     .e-hotspot__tooltip {
@@ -3069,11 +3080,10 @@ PRICE FEATURES
     padding: 10px 30px 0;
     font-size: 18px;
   }
-  #kundenslide .flex-direction-nav .flex-nav-prev .flex-prev, 
+  #kundenslide .flex-direction-nav .flex-nav-prev .flex-prev,
   #kundenslide .flex-direction-nav .flex-nav-next .flex-next {
     top: 17%;
   }
-
 
   /*-- mobile nav --*/
   .elementor-nav-menu--dropdown.elementor-nav-menu__container {
@@ -3592,12 +3602,21 @@ PRICE FEATURES
     min-height: 52px;
   }
 
-  #kunden--slider-inner .elementor-inner-section .elementor-row .elementor-widget-container > .elementor-image {
+  #kunden--slider-inner
+    .elementor-inner-section
+    .elementor-row
+    .elementor-widget-container
+    > .elementor-image {
     display: flex;
     justify-content: center;
   }
 
-  #kunden--slider-inner .elementor-inner-section .elementor-row .elementor-widget-container > .elementor-image img { 
+  #kunden--slider-inner
+    .elementor-inner-section
+    .elementor-row
+    .elementor-widget-container
+    > .elementor-image
+    img {
     display: block !important;
   }
 
@@ -3821,7 +3840,11 @@ PRICE FEATURES
     color: #0b2541;
   }
 
-  #kunden--slider-inner .elementor-inner-section .elementor-row .elementor-column-wrap h2.elementor-heading-title {
+  #kunden--slider-inner
+    .elementor-inner-section
+    .elementor-row
+    .elementor-column-wrap
+    h2.elementor-heading-title {
     font-size: 15px !important;
   }
 
@@ -4371,7 +4394,11 @@ PRICE FEATURES
     padding: 0 15px;
   }
 
-  #colophon section.elementor-section .elementor-row .elementor-column-wrap .elementor-widget-wrap {
+  #colophon
+    section.elementor-section
+    .elementor-row
+    .elementor-column-wrap
+    .elementor-widget-wrap {
     margin-bottom: 10px;
   }
 
@@ -4555,8 +4582,6 @@ PRICE FEATURES
   display: none !important;
 }
 
-
-
 /* ==========================================================================
    Cookie box
    ========================================================================== */
@@ -4578,19 +4603,24 @@ PRICE FEATURES
    ========================================================================== */
 
 .elementor-popup-modal .dialog-close-button {
-  top: 12% !important;
-  right: 20% !important;
+  display: none !important;
+}
+
+.elementor-popup-modal .dialog-close-button.copy {
+  display: block !important;
+  top: 20px !important;
+  right: 20px !important;
 }
 
 @media (max-width: 1025px) {
   .elementor-popup-modal .dialog-close-button {
-    right: 12% !important;
+    right: 10px !important;
   }
 }
 
 @media (max-width: 767px) {
   .elementor-popup-modal .dialog-close-button {
-    right: 5% !important;
-    top: 10% !important;
+    right: 10px !important;
+    top: 10px !important;
   }
 }

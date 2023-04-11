@@ -93,6 +93,20 @@ jQuery(document).ready(function ($) {
   function closePopup(mutations) {
     for (let mutation of mutations) {
       if (mutation.type === "childList") {
+        // move element to the top of the popup
+        if (
+          $(
+            ".elementor-popup-modal .elementor-column-wrap .dialog-close-button"
+          ).length == 0
+        ) {
+          $(".dialog-close-button")
+            .clone()
+            .prependTo(
+              ".elementor-popup-modal .elementor-inner-column > .elementor-column-wrap"
+            )
+            .addClass("copy");
+        }
+
         $(".dialog-close-button").on("click", function () {
           $(".elementor-popup-modal").fadeOut("slow");
         });
