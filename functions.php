@@ -55,9 +55,9 @@ function butler_prices() {
 add_shortcode('b_prices', 'butler_prices'); 
 
 // CPT - PRICES v2
-function butler_prices2() {
+function butler_prices2($atts, $content = null) {
 	ob_start();
-	get_template_part('partials/prices2','page');
+	get_template_part('partials/prices2','page', array('atts'=>$atts));
 	return ob_get_clean();
 }
 add_shortcode('b_prices_v2', 'butler_prices2'); 

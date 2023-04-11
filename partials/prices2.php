@@ -1,10 +1,19 @@
 <div id="butler_prices-v2">
 
 	<div class="prices-container-v2">
-		<?php $args = array(  
+		<?php 
+			$cat_name = $args['atts']['category'];
+			$args = array(  
 			'post_type' => 'price',
 			'post_status' => 'publish',
 			'posts_per_page' => '3',
+			'tax_query' => $cat_name != null ? array(
+        array(
+            'taxonomy' => 'price_category',   // taxonomy name
+            'field' => 'name',           			// term_id, slug or name
+            'terms' => $cat_name,      			// term id, term slug or term name
+        )
+    	) : null
 		); ?>
 		<?php $loop = new WP_Query( $args ); ?>
 		<?php $post_idx = 0; while ( $loop->have_posts() ) : $loop->the_post(); ?>
