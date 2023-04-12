@@ -1510,6 +1510,11 @@ img[referrerpolicy="no-referrer-when-downgrade"] {
   object-fit: contain !important;
 }
 
+/* Room for the prev-next button */
+.function-video-carousel-container {
+  padding: 0 30px !important;
+}
+
 .function-video-carousel-container .elementor-widget {
   margin: 0;
 }
@@ -1521,11 +1526,11 @@ img[referrerpolicy="no-referrer-when-downgrade"] {
   width: 100%;
 }
 .function-video-carousel-container .slick-prev {
-  left: 0;
+  left: -25px;
   z-index: 10;
 }
 .function-video-carousel-container .slick-next {
-  right: 0;
+  right: -25px;
   z-index: 10;
 }
 
