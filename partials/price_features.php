@@ -143,4 +143,5 @@
 			</div>
 		<?php endif; ?>
 	</div>
+	<div class="features-list-footer">&nbsp;</div>
 </div>

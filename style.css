@@ -60,6 +60,9 @@ textarea {
 /*======================================================
  * HEADER
  * ===================================================*/
+#masthead {
+  transition: all 0.1s ease;
+}
 #masthead .ba-logo img {
   width: auto !important;
   position: relative;
@@ -137,6 +140,10 @@ body.body-stopper header {
   opacity: 0.5;
 }
 
+/* HEADER HIDDEN WHEN SCROLL TO FIXED OF OTHER EL */
+body.scroll-to-fixed-active #masthead {
+  opacity: 0;
+}
 /*======================================================
  * BUTLERAPP TESTIMONIAL 2
  * ===================================================*/
@@ -1957,7 +1964,13 @@ PRICE FEATURES
   padding-bottom: 30px;
 }
 .butler-price-features .header {
+  background-color: white;
   margin-bottom: 20px;
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+.butler-price-features .header.scroll-to-fixed-fixed {
+  border-bottom: 1px solid #cccccc;
 }
 .butler-price-features .header button {
   margin-top: 10px;

@@ -895,14 +895,55 @@ jQuery(document).ready(function ($) {
   /*=======================================================================================
   * price features: ALLE FUNCTIONEN CLICKABLE
   =======================================================================================*/
+  // fixed position header when scrolled
+  function destroyScrolltoFixed() {
+    // destroy first if any
+    $(".features-list-table .header")
+      .removeClass("scroll-to-fixed-fixed")
+      .removeAttr("style");
+    $(".features-list-table .header").next().remove();
+  }
+
+  function initScrolltoFixed() {
+    var limit = $(".features-list-footer").offset().top - 150;
+    var instance = $(".features-list-table .header").scrollToFixed({
+      limit: limit,
+    });
+  }
+
   // hide this link if no any more features
   if ($(".more-features-list").length == 0) {
     $(".butler-price-features .alle-funktionen").hide();
   }
+  // init fixed header
+  initScrolltoFixed();
 
   $(".butler-price-features .alle-funktionen").on("click", function (e) {
     e.preventDefault();
     $(this).toggleClass("active");
-    $(".more-features-list").slideToggle("slow");
+
+    $(".more-features-list").slideToggle("slow", function () {
+      // recalculate limit for fixed header
+      destroyScrolltoFixed();
+      initScrolltoFixed();
+    });
+
+    if ($(".butler-price-features .alle-funktionen").hasClass("active")) {
+      // scroll to the bottom of the list
+      $("html, body").animate(
+        {
+          scrollTop: $(".features-list-footer").offset().top - 150,
+        },
+        1000
+      );
+    } else {
+      // scroll to the top of the list
+      $("html, body").animate(
+        {
+          scrollTop: $(".features-list-table").offset().top - 150,
+        },
+        1000
+      );
+    }
   });
 }); // THE ENDING...

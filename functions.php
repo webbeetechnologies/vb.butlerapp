@@ -13,9 +13,15 @@ function enqueue_wp_child_theme() {
 // slick slider
 add_action( 'wp_enqueue_scripts', 'slick_register_styles' );
 function slick_register_styles() {
-wp_enqueue_style( 'slick-css', get_stylesheet_directory_uri() . '/js/plugins/slick/slick.css', [], false, 'all' );
-wp_enqueue_style( 'slick-theme-css', get_stylesheet_directory_uri() . '/js/plugins/slick/slick-theme.css', ['slick-css'], false, 'all' );
-wp_enqueue_script( 'carousel-js', get_stylesheet_directory_uri() . '/js/plugins/slick//slick.min.js', ['jquery'], true );
+	wp_enqueue_style( 'slick-css', get_stylesheet_directory_uri() . '/js/plugins/slick/slick.css', [], false, 'all' );
+	wp_enqueue_style( 'slick-theme-css', get_stylesheet_directory_uri() . '/js/plugins/slick/slick-theme.css', ['slick-css'], false, 'all' );
+	wp_enqueue_script( 'carousel-js', get_stylesheet_directory_uri() . '/js/plugins/slick/slick.min.js', ['jquery'], true );
+}
+
+// scrollToFixed
+add_action( 'wp_enqueue_scripts', 'jquery_scroll_to_fixed_scripts' );
+function jquery_scroll_to_fixed_scripts() {
+	wp_enqueue_script( 'scrolltofixed-js', get_stylesheet_directory_uri() . '/js/plugins/scrollToFixed/scrollToFixed.js', ['jquery'], true );
 }
 
 // TEMPORARILY DISABLING ADMIN BAR ON FRONTEND
