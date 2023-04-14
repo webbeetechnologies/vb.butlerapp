@@ -310,7 +310,6 @@
         // If the vertical scroll position, plus the optional margin, would
         // put the target element at the specified limit, set the target
         // element to absolute.
-        console.log(limit);
         if (limit > 0 && y >= limit - getMarginTop()) {
           if (!wasUnfixed && (!isAbsolute() || !wasReset)) {
             postPosition();
