@@ -95,6 +95,7 @@ jQuery(document).ready(function ($) {
       if (mutation.type === "childList") {
         // move element to the top of the popup
         var newNodes = mutation.addedNodes; // DOM NodeList
+
         if (newNodes !== null) {
           // If there are new nodes added
           var $nodes = $(newNodes); // jQuery set
@@ -906,7 +907,7 @@ jQuery(document).ready(function ($) {
 
   function initScrolltoFixed() {
     var limit = $(".features-list-footer").offset().top - 150;
-    var instance = $(".features-list-table .header").scrollToFixed({
+    $(".features-list-table .header").scrollToFixed({
       limit: limit,
     });
   }
@@ -916,7 +917,9 @@ jQuery(document).ready(function ($) {
     $(".butler-price-features .alle-funktionen").hide();
   }
   // init fixed header
-  initScrolltoFixed();
+  if ($(".features-list-table").length > 0) {
+    initScrolltoFixed();
+  }
 
   $(".butler-price-features .alle-funktionen").on("click", function (e) {
     e.preventDefault();
@@ -945,5 +948,19 @@ jQuery(document).ready(function ($) {
         1000
       );
     }
+  });
+
+  /*=======================================================================================
+  * Popup Exit intent: give delay before showing popup
+  =======================================================================================*/
+  var hasTriggered = 0;
+  $(document).mouseleave(function () {
+    if (hasTriggered > 0) return;
+
+    setTimeout(function () {
+      // show exit popup
+      hasTriggered++;
+      elementorProFrontend.modules.popup.showPopup({ id: 897 });
+    }, 3000);
   });
 }); // THE ENDING...
