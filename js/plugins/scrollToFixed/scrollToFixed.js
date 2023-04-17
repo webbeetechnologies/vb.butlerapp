@@ -185,7 +185,7 @@
 
       cssOptions = {
         position: "absolute",
-        top: top,
+        top: 0, // top,
         left: left,
         "margin-left": "0px",
         bottom: "",
@@ -357,7 +357,7 @@
               target.trigger("preUnfixed.ScrollToFixed");
 
               if (originalPosition === "absolute") {
-                // setAbsolute();
+                setAbsolute();
               } else {
                 setUnfixed();
               }
