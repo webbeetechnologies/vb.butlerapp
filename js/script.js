@@ -9,6 +9,14 @@ function equalHeight(group) {
   group.height(tallest);
 }
 
+function debounce(func) {
+  var timer;
+  return function (event) {
+    if (timer) clearTimeout(timer);
+    timer = setTimeout(func, 100, event);
+  };
+}
+
 jQuery(document).ready(function ($) {
   /*===============================================================================
    *  RESIZE HANDLERS
@@ -949,6 +957,17 @@ jQuery(document).ready(function ($) {
       );
     }
   });
+
+  window.addEventListener(
+    "resize",
+    debounce(function (e) {
+      // init fixed header
+      if ($(".features-list-table").length > 0) {
+        destroyScrolltoFixed();
+        initScrolltoFixed();
+      }
+    })
+  );
 
   /*=======================================================================================
   * Popup Exit intent: give delay before showing popup
