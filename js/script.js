@@ -954,6 +954,7 @@ jQuery(document).ready(function ($) {
   * Popup Exit intent: give delay before showing popup
   =======================================================================================*/
   var hasTriggered = 0;
+  var timeout = 20000;
   $(document).mouseleave(function () {
     if (hasTriggered > 0) return;
 
@@ -961,6 +962,6 @@ jQuery(document).ready(function ($) {
       // show exit popup
       hasTriggered++;
       elementorProFrontend.modules.popup.showPopup({ id: 897 });
-    }, 3000);
+    }, timeout);
   });
 }); // THE ENDING...
