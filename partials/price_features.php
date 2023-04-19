@@ -56,10 +56,19 @@
 		<div class="features-container">
 			<?php // GET FIRST 5 POSTS ?>
 			<?php $first_items =  $args['atts']['first_items'] ? $args['atts']['first_items'] : 10; ?>
-			<?php $args = array(  
+			<?php 
+			$cat_name = $args['atts']['category'];
+			$args = array(  
 				'post_type' => 'price-features',
 				'post_status' => 'publish',
 				'posts_per_page' => $first_items,
+				'tax_query' => $cat_name != null ? array(
+					array(
+							'taxonomy' => 'price_category',   // taxonomy name
+							'field' => 'name',           			// term_id, slug or name
+							'terms' => $cat_name,      			// term id, term slug or term name
+					)
+				) : null,
 			); ?>
 			<?php $loop = new WP_Query( $args ); ?>
 			<?php $post_idx = 0; while ( $loop->have_posts() ) : $loop->the_post(); ?>
@@ -102,6 +111,13 @@
 				'post_type' => 'price-features',
 				'post_status' => 'publish',
 				'posts_per_page' => 200, // get all posts
+				'tax_query' => $cat_name != null ? array(
+					array(
+							'taxonomy' => 'price_category',   // taxonomy name
+							'field' => 'name',           			// term_id, slug or name
+							'terms' => $cat_name,      			// term id, term slug or term name
+					)
+				) : null,
 				'offset' => $first_items,
 		); ?>
 		<?php $loop2 = new WP_Query( $args2 ); ?>
