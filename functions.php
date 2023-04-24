@@ -79,6 +79,14 @@ function butler_prices_features($atts, $content = null) {
 }
 add_shortcode('b_price_features', 'butler_prices_features'); 
 
+// danke page: send analytics to trusted
+function phpcode_trusted_api() {
+	ob_start();
+	get_template_part('partials/trusted_api','page');
+	return ob_get_clean();
+}
+add_shortcode('trusted_api', 'phpcode_trusted_api'); 
+
 // BACKEND - CSS
 function butler_backend_css() {
   echo '<style>
