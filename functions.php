@@ -10,9 +10,14 @@ function store_params_to_cookie() {
 
 	// get the params
 	parse_str($_SERVER['QUERY_STRING'], $queryArray);
-	$queryArray['utm_content'] .= "_". $dateTime ."_". $timezone->getName();
-	$qs = http_build_query($queryArray);
 
+	// add dateTime IF empty for now. can problem due to redirect
+	if (!$queryArray['utm_content']) {
+		$queryArray['utm_content'] .= "_". $dateTime ."_". $timezone->getName();
+	}
+	// stringify before store as cookie
+	$qs = http_build_query($queryArray);
+	
 	// cookie setup
 	$cookie_name = "ba_utm";
 	$cookie_value = base64_encode($qs);
@@ -31,6 +36,7 @@ function store_params_to_cookie() {
 		if (count($result) == 0) {
 			// no different..just add new date in utm_content and update cookie
 			parse_str(base64_decode($_COOKIE[$cookie_name]), $queryArrayCookie);
+			
 			// this can be problematic, turn off for now 
 			// $queryArrayCookie['utm_content'] .= "_". $dateTime ."_". $timezone->getName();
 			$qs = http_build_query($queryArrayCookie);
@@ -47,7 +53,7 @@ function store_params_to_cookie() {
 }
 
 /* APPEND PARAMS IN COOKIE TO ALL URL THROUGH WHOLE SITE */
-// add_action('template_redirect', 'wprdcv_param_redirect');
+add_action('template_redirect', 'wprdcv_param_redirect');
 function wprdcv_param_redirect() {
 	$cookie_name = "ba_utm";
 	$qs = base64_decode($_COOKIE[$cookie_name]);
