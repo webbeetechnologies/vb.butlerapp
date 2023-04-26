@@ -11,6 +11,7 @@ function store_params_to_cookie() {
 	// get the params
 	parse_str($_SERVER['QUERY_STRING'], $queryArray);
 
+	echo "<script>console.log('hello ".$_SERVER['QUERY_STRING']."')</script>";
 	// add dateTime IF empty for now. can problem due to redirect
 	if (!$queryArray['utm_content']) {
 		$queryArray['utm_content'] .= "_". $dateTime ."_". $timezone->getName();
