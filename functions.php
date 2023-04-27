@@ -2,65 +2,67 @@
 /*******************************************
  * ONLINE MARKETING: STORE TRACKING CODE TO COOKIE
  *******************************************/
-add_action('wp_head', 'store_params_to_cookie');
+add_action('wp_head', 'store_params_to_cookie', 1);
+
 function store_params_to_cookie() {
-	$dateTime = date("Y-m-d_H-i-s");
-	$date = new DateTime();
-	$timezone = $date->getTimezone();
+	// process if only has query string
+	if (($_SERVER['QUERY_STRING'] != "")) {
+		$dateTime = date("Y-m-d_H-i-s");
+		$date = new DateTime();
+		$timezone = $date->getTimezone();
 
-	// get the params
-	parse_str($_SERVER['QUERY_STRING'], $queryArray);
+		// get the params
+		parse_str($_SERVER['QUERY_STRING'], $queryArray);
 
-	echo "<script>console.log('hello ".$_SERVER['QUERY_STRING']."')</script>";
-	// add dateTime IF empty for now. can problem due to redirect
-	if (!$queryArray['utm_content']) {
-		$queryArray['utm_content'] .= "_". $dateTime ."_". $timezone->getName();
-	}
-	// stringify before store as cookie
-	$qs = http_build_query($queryArray);
-	
-	// cookie setup
-	$cookie_name = "ba_utm";
-	$cookie_value = base64_encode($qs);
-	$expiry_length = 86400 * 365; // 86400 = 1 day
-
-	if(isset($_COOKIE[$cookie_name])) {
-		// check and compare cookie. dont compare utm_content since it has dateTime so will always be different
-		parse_str(base64_decode($_COOKIE[$cookie_name]), $queryArrayCookie); 
-		unset($queryArrayCookie['utm_content']);
-		$queryArrayCopy = $queryArray;
-		unset($queryArrayCopy['utm_content']);
-
-		// find the difference
-		$result = array_merge(array_diff($queryArrayCopy, $queryArrayCookie), array_diff($queryArrayCookie, $queryArrayCopy));
-
-		if (count($result) == 0) {
-			// no different..just add new date in utm_content and update cookie
-			parse_str(base64_decode($_COOKIE[$cookie_name]), $queryArrayCookie);
-			
-			// this can be problematic, turn off for now 
-			// $queryArrayCookie['utm_content'] .= "_". $dateTime ."_". $timezone->getName();
-			$qs = http_build_query($queryArrayCookie);
-
-			setcookie($cookie_name, base64_encode($qs), time() + $expiry_length, "/"); 
-		} else {
-			// update to new cookie
-			setcookie($cookie_name, $cookie_value, time() + $expiry_length, "/"); 
+		// add dateTime IF empty for now. can problem due to redirect
+		if (!$queryArray['utm_content']) {
+			$queryArray['utm_content'] .= "_". $dateTime ."_". $timezone->getName();
 		}
-	} else {
-		// fresh. set new cookie
-		setcookie($cookie_name, $cookie_value, time() + $expiry_length, "/"); 
+
+		// stringify before store as cookie
+		$qs = http_build_query($queryArray);
+		// cookie setup
+		$cookie_name = "ba_utm";
+		$cookie_val = base64_encode($qs);
+		$expiry_length = 86400 * 365; // 86400 = 1 day
+
+		if(isset($_COOKIE[$cookie_name])) {
+			// check and compare cookie. dont compare utm_content since it has dateTime so will always be different
+			parse_str(base64_decode($_COOKIE[$cookie_name]), $queryArrayCookie); 
+			unset($queryArrayCookie['utm_content']);
+			$queryArrayCopy = $queryArray;
+			unset($queryArrayCopy['utm_content']);
+
+			// find the difference
+			$result = array_merge(array_diff($queryArrayCopy, $queryArrayCookie), array_diff($queryArrayCookie, $queryArrayCopy));
+
+			if (count($result) == 0) {
+				// no different..just add new date in utm_content and update cookie
+				parse_str(base64_decode($_COOKIE[$cookie_name]), $queryArrayCookie);
+
+				// this can be problematic, turn off for now 
+				// $queryArrayCookie['utm_content'] .= "_". $dateTime ."_". $timezone->getName();
+				$qs = http_build_query($queryArrayCookie);
+				setcookie($cookie_name, base64_encode($qs), time() + $expiry_length, "/"); 
+			} else {
+				// update to new cookie
+				setcookie($cookie_name, $cookie_val, time() + $expiry_length, "/"); 
+			}
+		} else {
+			// fresh. set new cookie
+			setcookie($cookie_name, $cookie_val, time() + $expiry_length, "/"); 
+		}
 	}
 }
 
 /* APPEND PARAMS IN COOKIE TO ALL URL THROUGH WHOLE SITE */
-// add_action('template_redirect', 'wprdcv_param_redirect');
+add_action('template_redirect', 'wprdcv_param_redirect');
 function wprdcv_param_redirect() {
 	$cookie_name = "ba_utm";
 	$qs = base64_decode($_COOKIE[$cookie_name]);
 	parse_str($qs, $queryArrayCookie); 
 	
-	if(isset($_COOKIE[$cookie_name]) && !$_SERVER['QUERY_STRING']) {
+	if(is_page() && isset($_COOKIE[$cookie_name]) && !$_SERVER['QUERY_STRING']) {
 			$location = add_query_arg($queryArrayCookie);
 			wp_redirect($location);
 			exit;
