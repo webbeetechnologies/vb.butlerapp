@@ -2,8 +2,8 @@
 /*******************************************
  * ONLINE MARKETING: STORE TRACKING CODE TO COOKIE
  *******************************************/
+$has_redirected = false;
 add_action('wp_head', 'store_params_to_cookie', 1);
-
 function store_params_to_cookie() {
 	// process if only has query string
 	if (($_SERVER['QUERY_STRING'] != "")) {
@@ -56,18 +56,28 @@ function store_params_to_cookie() {
 }
 
 /* APPEND PARAMS IN COOKIE TO ALL URL THROUGH WHOLE SITE */
-// add_action('template_redirect', 'wprdcv_param_redirect');
+add_action('template_redirect', 'wprdcv_param_redirect');
 function wprdcv_param_redirect() {
 	$cookie_name = "ba_utm";
 	$qs = base64_decode($_COOKIE[$cookie_name]);
 	parse_str($qs, $queryArrayCookie); 
 	
-	if(is_page() && isset($_COOKIE[$cookie_name]) && !$_SERVER['QUERY_STRING']) {
+	/*
+	var_dump($GLOBALS['has_redirected']);
+	var_dump($_SERVER['QUERY_STRING']);
+	var_dump(isset($_COOKIE[$cookie_name]));
+	var_dump(!$GLOBALS['has_redirected'] && isset($_COOKIE[$cookie_name]) && !$_SERVER['QUERY_STRING']);
+	*/
+	
+	if(!$GLOBALS['has_redirected'] && isset($_COOKIE[$cookie_name]) && !$_SERVER['QUERY_STRING']) {
 			$location = add_query_arg($queryArrayCookie);
+			$GLOBALS['has_redirected'] = true;
+			
 			wp_redirect($location);
 			exit;
 	}
 }
+
 // ONLINE MARKETING END
 
 add_action( "wp_enqueue_scripts", "enqueue_wp_child_theme" );
