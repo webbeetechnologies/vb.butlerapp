@@ -2,57 +2,89 @@
 /*******************************************
  * ONLINE MARKETING: STORE TRACKING CODE TO COOKIE
  *******************************************/
-$has_redirected = false;
+$should_redirect = false;
 add_action('wp_head', 'store_params_to_cookie', 1);
 function store_params_to_cookie() {
-	// process if only has query string
-	if (($_SERVER['QUERY_STRING'] != "")) {
-		$dateTime = date("Y-m-d_H-i-s");
-		$date = new DateTime();
-		$timezone = $date->getTimezone();
+	$force_wp_redirect = false;
+	$datetimeFormat = "Y-m-d--H-i-s";
+	$cookie_name = "ba_utm";
+	$date = new DateTime();
+	$dateTime = $date->format($datetimeFormat);
+	$timezone = $date->getTimezone();
 
-		// get the params
-		parse_str($_SERVER['QUERY_STRING'], $queryArray);
+	// datetime and timezone pattern:
+	// V1_[date]_[timezone]|V2_[date]_[timezone]|V3_[date]_[timezone]
+	// [date] format: "Y-m-d--H-i-s"
 
-		// add dateTime IF empty for now. can problem due to redirect
-		if (!$queryArray['utm_content']) {
-			$queryArray['utm_content'] .= "_". $dateTime ."_". $timezone->getName();
-		}
+	// determine which value we use, query_string vs cookie
+	// prepare $queryArray based on that
+	if ($_SERVER['QUERY_STRING'] && isset($_COOKIE[$cookie_name])) {
+		// check if it's same
+		parse_str($_SERVER['QUERY_STRING'], $queryArrayCopy);
+		parse_str(base64_decode($_COOKIE[$cookie_name]), $queryArrayCookie);
+		// remove all the timestamp from $queryArrayCookie
+		$queryArrayCookieCopy = $queryArrayCookie;
+		$queryArrayCookieCopy['utm_content'] = explode("----", $queryArrayCookieCopy['utm_content'])[0];
 
-		// stringify before store as cookie
-		$qs = http_build_query($queryArray);
-		// cookie setup
-		$cookie_name = "ba_utm";
-		$cookie_val = base64_encode($qs);
-		$expiry_length = 86400 * 365; // 86400 = 1 day
+		// compare
+		$result = array_merge(array_diff($queryArrayCopy, $queryArrayCookieCopy), array_diff($queryArrayCookieCopy, $queryArrayCopy));
 
-		if(isset($_COOKIE[$cookie_name])) {
-			// check and compare cookie. dont compare utm_content since it has dateTime so will always be different
-			parse_str(base64_decode($_COOKIE[$cookie_name]), $queryArrayCookie); 
-			unset($queryArrayCookie['utm_content']);
-			$queryArrayCopy = $queryArray;
-			unset($queryArrayCopy['utm_content']);
-
-			// find the difference
-			$result = array_merge(array_diff($queryArrayCopy, $queryArrayCookie), array_diff($queryArrayCookie, $queryArrayCopy));
-
-			if (count($result) == 0) {
-				// no different..just add new date in utm_content and update cookie
-				parse_str(base64_decode($_COOKIE[$cookie_name]), $queryArrayCookie);
-
-				// this can be problematic, turn off for now 
-				// $queryArrayCookie['utm_content'] .= "_". $dateTime ."_". $timezone->getName();
-				$qs = http_build_query($queryArrayCookie);
-				setcookie($cookie_name, base64_encode($qs), time() + $expiry_length, "/"); 
+		if (count($result) == 0) {
+			// no different..just add new date in utm_content and update cookie
+			$contentArray = explode("|", $queryArrayCookie['utm_content']);
+			$ln = count($contentArray);
+			
+			// get the last version's dateTime
+			$lastTimestamp = explode("_", $contentArray[$ln-1])[1]; // string format Y-m-d--H-i-s
+			$lastTimestampDate = explode("--", $lastTimestamp)[0]; // string eg: 2023-04-28
+			
+			$today = new DateTime();
+			$today_date = $today->format("Y-m-d");
+			
+			// prepare $queryArray
+			$queryArray = $queryArrayCopy;
+			if ($lastTimestampDate != $today_date) {
+				// var_dump('different day same qs. add newstamp in utm_content');
+				$newStamp = "V". $ln+1 ."_". $dateTime ."_". $timezone->getName();
+				array_push($contentArray, $newStamp);
+				// glue again them all as $queryArray['utm_content'];
+				$queryArray['utm_content'] = implode("|", $contentArray);
 			} else {
-				// update to new cookie
-				setcookie($cookie_name, $cookie_val, time() + $expiry_length, "/"); 
+				// same qs with cookie with all the timestamp with today
+				// var_dump('same day, same qs, keep same queryarray');
+				// do nothing, still use exact $queryArray
 			}
 		} else {
-			// fresh. set new cookie
-			setcookie($cookie_name, $cookie_val, time() + $expiry_length, "/"); 
+			// different qs vs cookie, use query string as new value
+			// var_dump('different qs');
+			parse_str($_SERVER['QUERY_STRING'], $queryArray);
+			$cleanUtmContent = explode("----", $queryArray['utm_content'])[0];
+			$queryArray['utm_content'] = $cleanUtmContent ."----V1_". $dateTime ."_". $timezone->getName();
 		}
+	} elseif ($_SERVER['QUERY_STRING'] == "" && $_COOKIE[$cookie_name]) {
+		// var_dump('no qs, yes cookie');
+		$qs = base64_decode($_COOKIE[$cookie_name]);
+		parse_str($qs, $queryArray);
+		$force_wp_redirect = true;
+	} elseif ($_SERVER['QUERY_STRING'] && $_COOKIE[$cookie_name] == "") {
+		// var_dump('yes qs, no cookie');
+		parse_str($_SERVER['QUERY_STRING'], $queryArray);
+		$queryArray['utm_content'] .= "----V1_". $dateTime ."_". $timezone->getName();
+	} else {
+		// var_dump('no qs and no cookie');
+		// prepare empty array
+		$queryArray = array();
+		$force_wp_redirect = true;
 	}
+
+	// stringify before store as cookie
+	$qs = http_build_query($queryArray);
+	// cookie setup
+	$cookie_val = base64_encode($qs);
+	$expiry_length = 86400 * 365; // 86400 = 1 day
+
+	setcookie($cookie_name, $cookie_val, time() + $expiry_length, "/"); 
+	$GLOBALS['should_redirect'] = $force_wp_redirect;
 }
 
 /* APPEND PARAMS IN COOKIE TO ALL URL THROUGH WHOLE SITE */
@@ -61,23 +93,21 @@ function wprdcv_param_redirect() {
 	$cookie_name = "ba_utm";
 	$qs = base64_decode($_COOKIE[$cookie_name]);
 	parse_str($qs, $queryArrayCookie); 
-	
 	/*
-	var_dump($GLOBALS['has_redirected']);
+	var_dump($GLOBALS['should_redirect']);
 	var_dump($_SERVER['QUERY_STRING']);
 	var_dump(isset($_COOKIE[$cookie_name]));
-	var_dump(!$GLOBALS['has_redirected'] && isset($_COOKIE[$cookie_name]) && !$_SERVER['QUERY_STRING']);
+	var_dump(!$GLOBALS['should_redirect'] && isset($_COOKIE[$cookie_name]) && !$_SERVER['QUERY_STRING']);
 	*/
-	
-	if(!$GLOBALS['has_redirected'] && isset($_COOKIE[$cookie_name]) && !$_SERVER['QUERY_STRING']) {
+	if($GLOBALS['should_redirect'] || (isset($_COOKIE[$cookie_name]) && !$_SERVER['QUERY_STRING'])) {
+			var_dump('prepare redirect..');
 			$location = add_query_arg($queryArrayCookie);
-			$GLOBALS['has_redirected'] = true;
+			$GLOBALS['should_redirect'] = false;
 			
 			wp_redirect($location);
 			exit;
 	}
 }
-
 // ONLINE MARKETING END
 
 add_action( "wp_enqueue_scripts", "enqueue_wp_child_theme" );
