@@ -65,6 +65,29 @@ function store_params_to_cookie() {
 		// var_dump('no qs, yes cookie');
 		$qs = base64_decode($_COOKIE[$cookie_name]);
 		parse_str($qs, $queryArray);
+
+		// add timestamp in the cookie queryArray
+		// get the last version's dateTime
+		$contentArray = explode("|", $queryArray['utm_content']);
+		$ln = count($contentArray);
+		
+		$lastTimestamp = explode("_", $contentArray[$ln-1])[1]; // string format Y-m-d--H-i-s
+		$lastTimestampDate = explode("--", $lastTimestamp)[0]; // string eg: 2023-04-28
+		
+		$today = new DateTime();
+		$today_date = $today->format("Y-m-d");
+		
+		// prepare $queryArray
+		if ($lastTimestampDate != $today_date) {
+			// var_dump('different day same qs. add newstamp in utm_content');
+			$newStamp = "V". $ln+1 ."_". $dateTime ."_". $timezone->getName();
+			array_push($contentArray, $newStamp);
+			// glue again them all as $queryArray['utm_content'];
+			$queryArray['utm_content'] = implode("|", $contentArray);
+		} else {
+			// do nothing, date still same
+		}
+
 		$force_wp_redirect = true;
 	} elseif ($_SERVER['QUERY_STRING'] && $_COOKIE[$cookie_name] == "") {
 		// var_dump('yes qs, no cookie');
@@ -74,6 +97,7 @@ function store_params_to_cookie() {
 		// var_dump('no qs and no cookie');
 		// prepare empty array
 		$queryArray = array();
+		$queryArray['utm_content'] = "V1_". $dateTime ."_". $timezone->getName();
 		$force_wp_redirect = true;
 	}
 
