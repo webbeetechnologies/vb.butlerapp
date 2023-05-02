@@ -129,7 +129,7 @@ function store_params_to_cookie() {
 }
 
 /* APPEND PARAMS IN COOKIE TO ALL URL THROUGH WHOLE SITE */
-add_action('template_redirect', 'wprdcv_param_redirect', 2);
+// add_action('template_redirect', 'wprdcv_param_redirect', 2);
 function wprdcv_param_redirect() {
 	$cookie_name = "ba_utm";
 	$qs = base64_decode($_COOKIE[$cookie_name]);
