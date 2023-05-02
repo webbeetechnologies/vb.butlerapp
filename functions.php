@@ -5,7 +5,7 @@
 $should_redirect = false;
 $has_redirected = false;
 
-// add_action('wp', 'store_params_to_cookie', 1);
+add_action('wp', 'store_params_to_cookie', 1);
 function store_params_to_cookie() {
 	$force_wp_redirect = false;
 	$datetimeFormat = "Y-m-d--H-i-s";
