@@ -5,7 +5,7 @@
 $should_redirect = false;
 $has_redirected = false;
 
-add_action('wp', 'store_params_to_cookie', 1);
+// add_action('wp', 'store_params_to_cookie', 1);
 function store_params_to_cookie() {
 	$force_wp_redirect = false;
 	$datetimeFormat = "Y-m-d--H-i-s";
@@ -61,7 +61,7 @@ function store_params_to_cookie() {
 			
 			if ($lastTimestampDate != $today_date) {
 				// var_dump('different day same qs. add newstamp in utm_content');
-				$newStamp = "V". strval($ln+1) ."_". $dateTime;
+				$newStamp = "V". strval($ln+1) ."_". $dateTime ."_". $timezone->getName();
 
 				array_push($contentArray, $newStamp);
 				// glue again them all as $queryArray['utm_content'];
@@ -75,7 +75,7 @@ function store_params_to_cookie() {
 		} else {
 			parse_str($_SERVER['QUERY_STRING'], $queryArray);
 			$cleanUtmContent = explode("----", $queryArray['utm_content'])[0];
-			$queryArray['utm_content'] = $cleanUtmContent ."----V1_". $dateTime;
+			$queryArray['utm_content'] = $cleanUtmContent ."----V1_". $dateTime ."_". $timezone->getName();
 
 			// no need to redirect
 		}
@@ -101,7 +101,7 @@ function store_params_to_cookie() {
 		// prepare $queryArray
 		if ($lastTimestampDate != $today_date) {
 			// var_dump('different day same qs. add newstamp in utm_content');
-			$newStamp = "V". strval($ln+1) ."_". $dateTime;
+			$newStamp = "V". strval($ln+1) ."_". $dateTime  ."_". $timezone->getName();
 			array_push($contentArray, $newStamp);
 			// glue again them all as $queryArray['utm_content'];
 			$timestamps = implode("---", $contentArray);
@@ -115,11 +115,11 @@ function store_params_to_cookie() {
 		// var_dump('yes qs, no cookie');
 		parse_str($_SERVER['QUERY_STRING'], $queryArray);
 		$cleanUtm = explode("----", $queryArray['utm_content'])[0];
-		$queryArray['utm_content'] = $cleanUtm ."----V1_". $dateTime;
+		$queryArray['utm_content'] = $cleanUtm ."----V1_". $dateTime ."_". $timezone->getName();
 	} else {
 		// prepare empty array
 		$queryArray = array();
-		$queryArray['utm_content'] = "----V1_". $dateTime;
+		$queryArray['utm_content'] = "----V1_". $dateTime ."_". $timezone->getName();
 		$force_wp_redirect = true;
 	}
 
