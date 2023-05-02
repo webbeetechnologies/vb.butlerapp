@@ -5,7 +5,7 @@
 $should_redirect = false;
 $has_redirected = false;
 
-add_action('wp', 'store_params_to_cookie', 1);
+// add_action('wp', 'store_params_to_cookie', 1);
 function store_params_to_cookie() {
 	$force_wp_redirect = false;
 	$datetimeFormat = "Y-m-d--H-i-s";
@@ -54,7 +54,7 @@ function store_params_to_cookie() {
 			$queryArray = $queryArrayCopy;
 			if ($lastTimestampDate != $today_date) {
 				// var_dump('different day same qs. add newstamp in utm_content');
-				$newStamp = "V". strval($ln+1) ."_". $dateTime ."_". $timezone->getName();
+				$newStamp = "V". strval($ln+1) ."_". $dateTime;
 
 				array_push($contentArray, $newStamp);
 				// glue again them all as $queryArray['utm_content'];
@@ -70,7 +70,7 @@ function store_params_to_cookie() {
 			// var_dump('different qs');
 			parse_str($_SERVER['QUERY_STRING'], $queryArray);
 			$cleanUtmContent = explode("----", $queryArray['utm_content'])[0];
-			$queryArray['utm_content'] = $cleanUtmContent ."----V1_". $dateTime ."_". $timezone->getName();
+			$queryArray['utm_content'] = $cleanUtmContent ."----V1_". $dateTime;
 
 			// no need to redirect
 		}
@@ -96,7 +96,7 @@ function store_params_to_cookie() {
 		// prepare $queryArray
 		if ($lastTimestampDate != $today_date) {
 			// var_dump('different day same qs. add newstamp in utm_content');
-			$newStamp = "V". strval($ln+1) ."_". $dateTime ."_". $timezone->getName();
+			$newStamp = "V". strval($ln+1) ."_". $dateTime;
 			array_push($contentArray, $newStamp);
 			// glue again them all as $queryArray['utm_content'];
 			$timestamps = implode("---", $contentArray);
@@ -110,11 +110,11 @@ function store_params_to_cookie() {
 		// var_dump('yes qs, no cookie');
 		parse_str($_SERVER['QUERY_STRING'], $queryArray);
 		$cleanUtm = explode("----", $queryArray['utm_content'])[0];
-		$queryArray['utm_content'] = $cleanUtm ."----V1_". $dateTime ."_". $timezone->getName();
+		$queryArray['utm_content'] = $cleanUtm ."----V1_". $dateTime;
 	} else {
 		// prepare empty array
 		$queryArray = array();
-		$queryArray['utm_content'] = "----V1_". $dateTime ."_". $timezone->getName();
+		$queryArray['utm_content'] = "----V1_". $dateTime;
 		$force_wp_redirect = true;
 	}
 
@@ -124,7 +124,7 @@ function store_params_to_cookie() {
 	$cookie_val = base64_encode($qs);
 	$expiry_length = 86400 * 365; // 86400 = 1 day
 
-	setcookie($cookie_name, $cookie_val, time() + $expiry_length, "/"); 
+	// setcookie($cookie_name, $cookie_val, time() + $expiry_length, "/"); 
 	$GLOBALS['should_redirect'] = $force_wp_redirect;
 }
 
