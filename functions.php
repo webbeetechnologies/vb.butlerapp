@@ -212,7 +212,7 @@ function store_params_to_cookie() {
 }
 
 /* APPEND PARAMS IN COOKIE TO ALL URL THROUGH WHOLE SITE */
-add_action('template_redirect', 'wprdcv_param_redirect', 2);
+// add_action('template_redirect', 'wprdcv_param_redirect', 2);
 function wprdcv_param_redirect() {
 	if($GLOBALS['should_redirect']) {
 			$location = add_query_arg($GLOBALS['query_array']);
