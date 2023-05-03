@@ -47,31 +47,36 @@ function store_params_to_cookie() {
 		// assumption: the longest timestamps, the latest one
 		$timestamps = strlen($qsTimestamps) > strlen($cookieTimestamps) ? $qsTimestamps : $cookieTimestamps;
 		$timestampsArray = explode("---", $timestamps);
-		
+
 		$ln = $timestamps == "" ? 0 : count($timestampsArray);
-		
-		$lastTimestamp = $timestampsArray[$ln-1]; // V1_2023-05-03--06-20_UTC
-		$lastTimestampDateTime = explode("_", $lastTimestamp)[1]; // 2023-05-03--06-20
-		$lastTimestampDate = explode("--", $lastTimestampDateTime)[0]; // 2023-05-03
 
-		$today = new DateTime();
-		$today_date = $today->format("Y-m-d");
+		$cleanUtm = $cookieArrayUtmAndTimestamps[0];
 
-		// prepare $queryArray
-		if ($lastTimestampDate != $today_date) {
-			// var_dump('different day same qs. add newstamp in utm_content');
-			$cleanUtm = $cookieArrayUtmAndTimestamps[0];
-
-			$newStamp = "V". strval($ln+1) ."_". $dateTime  ."_". $timezone->getName();
-			array_push($timestampsArray, $newStamp);
-
-			// glue again them all as $queryArray['utm_content'];
-			$timestamps = utf8_encode(implode("---", $timestampsArray));
-
-			$cookieArray['utm_content'] = $cleanUtm ."----".$timestamps;
-
+		if ($ln == 0) {
+			$cookieArray['utm_content'] = $cleanUtm ."----V1_". $dateTime  ."_". $timezone->getName();
 		} else {
-			// use current cookie as qs
+			$lastTimestamp = $timestampsArray[$ln-1]; // V1_2023-05-03--06-20_UTC
+			$lastTimestampDateTime = explode("_", $lastTimestamp)[1]; // 2023-05-03--06-20
+			$lastTimestampDate = explode("--", $lastTimestampDateTime)[0]; // 2023-05-03
+
+			$today = new DateTime();
+			$today_date = $today->format("Y-m-d");
+
+			// prepare $queryArray
+
+			if ($lastTimestampDate != $today_date) {
+				// var_dump('different day same qs. add newstamp in utm_content');
+				$newStamp = "V". strval($ln+1) ."_". $dateTime  ."_". $timezone->getName();
+				array_push($timestampsArray, $newStamp);
+
+				// glue again them all as $queryArray['utm_content'];
+				$timestamps = utf8_encode(implode("---", $timestampsArray));
+
+				$cookieArray['utm_content'] = $cleanUtm ."----".$timestamps;
+
+			} else {
+				// use current cookie as qs
+			}
 		}
 		$queryArray = $cookieArray;
 		$force_wp_redirect = true;
@@ -86,7 +91,7 @@ function store_params_to_cookie() {
 			$timestamps = $qsTimestamps;
 			$timestampsArray = explode("---", $timestamps);
 			$ln = $timestamps == "" ? 0 : count($timestampsArray);
-
+			
 			if ($ln == 0) {
 				$qsArray['utm_content'] = $cleanUtm ."----V1_". $dateTime  ."_". $timezone->getName();
 			} else {
@@ -117,11 +122,12 @@ function store_params_to_cookie() {
 			$queryArray = $qsArray;
 			$force_wp_redirect = true;
 		} elseif ($qs == "" && $cookie != "") {
-			$cookieTimestamps = $cookieArrayUtmAndTimestamps[1];
+			$cookieTimestamps = $cookieArrayUtmAndTimestamps[1] == null ? "" : $cookieArrayUtmAndTimestamps[1];
 
 			$timestamps = $cookieTimestamps;
 			$timestampsArray = explode("---", $timestamps);
 
+			$ln = $timestamps == "" ? 0 : count($timestampsArray);
 			$ln = count($timestampsArray);
 
 			$lastTimestamp = $timestampsArray[$ln-1]; // V1_2023-05-03--06-20_UTC		
@@ -190,7 +196,9 @@ function store_params_to_cookie() {
 	************************************/
 	if ($force_wp_redirect) {
 		// set new cookie, encode the val
-		$qs = http_build_query($queryArray);
+		$location = add_query_arg($GLOBALS['query_array']);
+		$qs = explode('?', $location)[1];
+
 		// cookie setup
 		$cookie_val = base64_encode($qs);
 		$expiry_length = 86400 * 365; // 86400 = 1 day
@@ -204,18 +212,12 @@ function store_params_to_cookie() {
 }
 
 /* APPEND PARAMS IN COOKIE TO ALL URL THROUGH WHOLE SITE */
-// add_action('template_redirect', 'wprdcv_param_redirect', 2);
+add_action('template_redirect', 'wprdcv_param_redirect', 2);
 function wprdcv_param_redirect() {
-	// cookie set is late here. use global $query_array instead
-	/*
-	$cookie_name = "ba_utm";
-	$qs = base64_decode($_COOKIE[$cookie_name]);
-	parse_str($qs, $cookieArray); 
-	*/
 	if($GLOBALS['should_redirect']) {
 			$location = add_query_arg($GLOBALS['query_array']);
 			$GLOBALS['should_redirect'] = false;
-			
+
 			wp_redirect($location);
 			exit;
 	}
