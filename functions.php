@@ -201,7 +201,7 @@ function store_params_to_cookie() {
 	************************************/
 	if ($force_wp_redirect) {
 		// set new cookie, encode the val
-		$location = add_query_arg($GLOBALS['query_array']);
+		$location = add_query_arg($queryArray);
 		$qs = explode('?', $location)[1];
 
 		// cookie setup
