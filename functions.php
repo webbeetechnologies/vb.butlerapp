@@ -25,8 +25,13 @@ function store_params_to_cookie() {
 	
 	// ***********************************
 	// basis: QUERY STRING === COOKIE.
+	// or, COOKIE['ba_redir'] > 3
 	// redirect will be stop here
-	if ($qs != "" && $cookie != "" && $qs == $cookie) return;
+	if (($qs != "" && $cookie != "" && $qs == $cookie) || $_COOKIE['ba_redir'] > 3) {
+		//reset redirect number to 0 and make it expired
+		setcookie('ba_redir', 0, time() - 100, "/"); 
+		return;
+	} 
 	// ***********************************
 
 	parse_str($qs, $qsArray);
@@ -213,11 +218,18 @@ function store_params_to_cookie() {
 		// redirect will then happen
 		$GLOBALS['should_redirect'] = $force_wp_redirect;
 		$GLOBALS['query_array'] = $queryArray;
+		
+		// count how many redirect. max is 3
+		$redirect_num = $_COOKIE['ba_redir'] ?  $_COOKIE['ba_redir'] : 0;
+		$redirect_num += 1;
+		setcookie('ba_redir', $redirect_num, time() + $expiry_length, "/"); 
+		
+		wprdcv_param_redirect();
 	}
 }
 
 /* APPEND PARAMS IN COOKIE TO ALL URL THROUGH WHOLE SITE */
-// add_action('template_redirect', 'wprdcv_param_redirect', 2);
+add_action('template_redirect', 'wprdcv_param_redirect', 2);
 function wprdcv_param_redirect() {
 	if($GLOBALS['should_redirect']) {
 			$location = add_query_arg($GLOBALS['query_array']);
