@@ -976,10 +976,9 @@ jQuery(document).ready(function ($) {
   var timeout = 20000;
   $(document).mouseleave(function () {
     if (hasTriggered > 0) return;
-
+    hasTriggered++;
     setTimeout(function () {
       // show exit popup
-      hasTriggered++;
       elementorProFrontend.modules.popup.showPopup({ id: 897 });
     }, timeout);
   });

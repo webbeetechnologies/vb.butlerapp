@@ -227,7 +227,7 @@ function store_params_to_cookie() {
 }
 
 /* APPEND PARAMS IN COOKIE TO ALL URL THROUGH WHOLE SITE */
-add_action('template_redirect', 'wprdcv_param_redirect', 2);
+// add_action('template_redirect', 'wprdcv_param_redirect', 2);
 function wprdcv_param_redirect() {
 	// make sure the redirect only happen on page and forced by cookie creation function above
 	if(is_page() && $GLOBALS['should_redirect']) {
