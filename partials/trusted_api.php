@@ -1,8 +1,11 @@
 <?php 
 $url = 'https://api.trusted.net/v1/conversions';
+$ACTION_ID = '0fd5c3de-0648-4c48-9b2c-3ec4f385ad19';
+
 $conversionDto = array(
   'clickId' => $_GET["tclid"],
   // 'referenceId' => 'myReferenceId',
+  'actionId'=> $ACTION_ID,
   'dateTime' => date('Y-m-d h:i:s'),
   'isTest' => 0,
 );
