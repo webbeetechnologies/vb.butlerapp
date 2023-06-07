@@ -74,7 +74,7 @@ body.body-stopper header {
 .overflow-controller {
   overflow: hidden;
 }
-#masthead.headhesive--stick {
+#masthead.headhesive--clone.headhesive--stick {
   box-shadow: 0 0 7px rgb(0 0 0 / 20%);
 }
 #mainhero h1 {

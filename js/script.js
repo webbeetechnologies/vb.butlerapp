@@ -176,17 +176,6 @@ jQuery(document).ready(function ($) {
   );
 
   /*===============================================================================
-   *  HEADER FIXED BY HEADHESSIVE
-   * =============================================================================*/
-  // manually check headhesive. check enterpreneurx js
-  var $height = $(window).scrollTop();
-  if ($height > 125) {
-    jQuery(
-      "body.ehf-header.th-sticky-header header#masthead.headhesive--clone"
-    ).addClass("headhesive--stick");
-  }
-
-  /*===============================================================================
    *  GENERIC
    * =============================================================================*/
   // form: referrer url
