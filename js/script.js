@@ -174,6 +174,18 @@ jQuery(document).ready(function ($) {
       $(".dialog-close-button").click();
     }
   );
+
+  /*===============================================================================
+   *  HEADER FIXED BY HEADHESSIVE
+   * =============================================================================*/
+  // manually check headhesive. check enterpreneurx js
+  var $height = $(window).scrollTop();
+  if ($height > 125) {
+    jQuery(
+      "body.ehf-header.th-sticky-header header#masthead.headhesive--clone"
+    ).addClass("headhesive--stick");
+  }
+
   /*===============================================================================
    *  GENERIC
    * =============================================================================*/
