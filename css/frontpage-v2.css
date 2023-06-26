@@ -3,6 +3,7 @@
     display: none;
 }
 .e-form__indicators__indicator {
+    padding: 0!important;
     display: none;
 }
 
@@ -12,45 +13,95 @@
 
 .e-form__indicators__indicator__number {
     border-color: #0B2541;
-    background-color: #0B2541;
+    background-color: #0B2541 !important;
     color: white;
     width: 56px;
     height: 56px;
     border-radius: 50%;
+    font-size: 20px;
+    font-weight: 500;
     align-items: center;
     justify-content: center;
 }
 
+.quiz2-container.e-form__indicators__indicator__label {
+    display: none !important;
+}
+
 .quiz2-container form label.elementor-field-label {
     color: #0B2541;
-    font-size: 42px;
+    font-size: 36px;
     font-weight: 500;
+    line-height: 1.4em;
 }
 
 .quiz2-container form .elementor-field-option {
-    border: 1px solid #cccccc;
+    background-color: #cccccc;
     border-radius: 32px;
-    padding: 0 48px;
-    height: 96px;
-    margin: 0 6px;
+    padding: 0 38px !important;
+    height: 76px;
+    margin: 6px;
+    width: auto;
+    max-width: inherit;
+    font-weight: normal;
+    align-items: center;
+    display: flex;
+    position: relative;
+}
+
+.quiz2-container form .elementor-field-option:after {
+    position: absolute;
+    content: "";
+    top: 1px;
+    right: 1px;
+    left: 1px;
+    bottom: 1px;
+    background: white;
+    border-radius: 31px;
+    z-index: 0;
+}
+
+/* ACTIVE STATE */
+.quiz2-container form .elementor-field-option.active {
+    background: rgb(237,33,119);
+    background: linear-gradient(90deg, rgba(237,33,119,1) 0%, rgba(253,208,58,1) 100%);
+}
+.quiz2-container form .elementor-field-option.active:after {
+    top: 3px;
+    right: 3px;
+    left: 3px;
+    bottom: 3px;
+    border-radius: 29px;
 }
 
 .quiz2-container form .elementor-field-option input {
-    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 3;
 }
 
+.quiz2-container form .elementor-field-option label {
+     margin: 0;
+     font-weight: normal;
+     position: relative;
+     z-index: 2;
+}
 .quiz2-container form button {
     height: 64px;
-    border: 22px;
+    border-radius: 22px;
     padding: 0 32px;
     color: white;
     margin-top: 40px;
 }
 
-.quiz2-container form button.e-form__buttons__wrapper__button-next {
+.quiz2-container form button.e-form__buttons__wrapper__button-previous {
     background-color: #ffffff;
     border: 1px solid #0B2541;
-    color: #0B2541;
+    color: #0B2541 !important;
 }
 
 .quiz2-container form button.e-form__buttons__wrapper__button-next {

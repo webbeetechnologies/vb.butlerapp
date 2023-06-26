@@ -32,4 +32,12 @@ $(document).ready(function () {
         // SHOW PAGINATION
         $('.paginator-contaainer').show();
     });
+
+    $('.quiz2-container form .elementor-field-option input').change(function() {
+        if ($(this).is(':checked')) {
+            $(this).parent().addClass('active');
+        } else {
+            $(this).parent().removeClass('active');
+        }
+    });
 });
