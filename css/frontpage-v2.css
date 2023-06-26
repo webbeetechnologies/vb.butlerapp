@@ -33,8 +33,13 @@
     font-size: 36px;
     font-weight: 500;
     line-height: 1.4em;
+    margin-bottom: 25px;
 }
 
+/* THE OPTIONS AND CONTAINER */
+.quiz2-container form .elementor-field-subgroup {
+    margin: 0 -6px;
+}
 .quiz2-container form .elementor-field-option {
     background-color: #cccccc;
     border-radius: 32px;
@@ -108,4 +113,11 @@
     background-color: #0B2541;
     border: 1px solid #0B2541;
     color: white;
+}
+.quiz2-container form button {
+    transition: all 0.3s;
+}
+
+.quiz2-container form button:hover {
+    opacity: 0.8;
 }
