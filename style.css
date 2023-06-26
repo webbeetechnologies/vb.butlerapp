@@ -532,7 +532,7 @@ img.litespeed-loaded {
   overflow: visible;
   margin-top: 18px;
 }
-.elementor-popup-modal .elementor-widget-container .elementor-motion-effects-element .elementor-image img {
+.elementor-popup-modal .elementor-widget-container.elementor-motion-effects-element .elementor-image img {
   visibility: hidden;
   z-index: -1;
 }
