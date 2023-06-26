@@ -1,17 +1,17 @@
 /* QUESTIONNAIRE FORM */
-.e-form__indicators__indicator__separator {
+.quiz2-container .e-form__indicators__indicator__separator {
     display: none;
 }
-.e-form__indicators__indicator {
+.quiz2-container .e-form__indicators__indicator {
     padding: 0!important;
     display: none;
 }
 
-.e-form__indicators__indicator.e-form__indicators__indicator--state-active {
+.quiz2-container .e-form__indicators__indicator.e-form__indicators__indicator--state-active {
     display: block;
 }
 
-.e-form__indicators__indicator__number {
+.quiz2-container .e-form__indicators__indicator__number {
     border-color: #0B2541;
     background-color: #0B2541 !important;
     color: white;
@@ -24,7 +24,7 @@
     justify-content: center;
 }
 
-.quiz2-container.e-form__indicators__indicator__label {
+.quiz2-container .e-form__indicators__indicator__label {
     display: none !important;
 }
 

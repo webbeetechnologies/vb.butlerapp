@@ -34,6 +34,8 @@ $(document).ready(function () {
     });
 
     $('.quiz2-container form .elementor-field-option input').change(function() {
+        $('.quiz2-container form .elementor-field-option').removeClass('active');
+        
         if ($(this).is(':checked')) {
             $(this).parent().addClass('active');
         } else {
