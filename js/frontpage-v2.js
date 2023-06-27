@@ -25,8 +25,8 @@ $(document).ready(function () {
         
     $('.button-take-quiz a').on('click', function(e) {
         e.preventDefault();
-        $('.quiz2-container').show();
-        $('.quiz1-container').hide();
+        $('.quiz2-container').fadeIn('fast');
+        $('.quiz1-container').fadeOut('fast');
         // HIDE BUTTON
         $('.button-take-quiz').hide();
         // SHOW PAGINATION
