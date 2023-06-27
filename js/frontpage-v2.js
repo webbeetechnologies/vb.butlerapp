@@ -1,32 +1,10 @@
 var $ = jQuery;
 
-function buildPaginationQuiz() {
-    var $container = $('.quiz-section');
-
-    // el, clone and move
-    $('.quiz2-container .e-form__indicators').clone().appendTo('.quiz1-container .paginator-container');
-
-    // count pagination
-    /*
-    var ln = $container.find('.quiz2-container:hidden .e-form__indicators__indicator').length;
-    var active_idx = $('.quiz2-container:hidden .e-form__indicators__indicator--state-active .e-form__indicators__indicator__number').text();
-    var percentage = active_idx / ln * 100;
-
-    var el = "<div class='quiz-pagination'>";
-    el += "  <div class='pagination-number'>Step "+ active_idx+"/"+ln+"</div>";
-    el += "  <div class='pagination-rail'>";
-    el += "    <div class='progress-bar' style='width: "+percentage+"%'></div>"
-    el += "  </div>";
-    el += "</div>";
-
-    $('.paginator-container').append(el);
-    */
-}
 $(document).ready(function () {
     // QUESTIONNAIRE SECTION
     // hide form 
     $('.quiz2-container').hide();
-    buildPaginationQuiz();
+    $('.paginator-container').hide();
         
     $('.button-take-quiz a').on('click', function(e) {
         e.preventDefault();
