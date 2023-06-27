@@ -3,7 +3,11 @@ var $ = jQuery;
 function buildPaginationQuiz() {
     var $container = $('.quiz-section');
 
+    // el, clone and move
+    $('.quiz2-container .e-form__indicators').clone().appendTo('.quiz1-container .paginator-container');
+
     // count pagination
+    /*
     var ln = $container.find('.quiz2-container:hidden .e-form__indicators__indicator').length;
     var active_idx = $('.quiz2-container:hidden .e-form__indicators__indicator--state-active .e-form__indicators__indicator__number').text();
     var percentage = active_idx / ln * 100;
@@ -15,7 +19,8 @@ function buildPaginationQuiz() {
     el += "  </div>";
     el += "</div>";
 
-    $('.paginator-contaainer').append(el);
+    $('.paginator-container').append(el);
+    */
 }
 $(document).ready(function () {
     // QUESTIONNAIRE SECTION
