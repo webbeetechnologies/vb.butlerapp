@@ -30,7 +30,7 @@ $(document).ready(function () {
         // HIDE BUTTON
         $('.button-take-quiz').hide();
         // SHOW PAGINATION
-        $('.paginator-contaainer').show();
+        $('.paginator-container').show();
     });
 
     $('.quiz2-container form .elementor-field-option input').change(function() {

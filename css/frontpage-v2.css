@@ -109,11 +109,18 @@
     color: #0B2541 !important;
 }
 
-.quiz2-container form button.e-form__buttons__wrapper__button-next {
+.quiz2-container form button.e-form__buttons__wrapper__button-next,
+.quiz2-container form .elementor-button[type="submit"]  {
     background-color: #0B2541;
     border: 1px solid #0B2541;
     color: white;
 }
+
+#button-quiz-submit .elementor-button-icon {
+    display: flex;
+    align-items: center;
+}
+
 .quiz2-container form button {
     transition: all 0.3s;
 }
