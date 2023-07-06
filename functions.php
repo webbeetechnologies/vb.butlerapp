@@ -322,6 +322,14 @@ function butler_prices_features($atts, $content = null) {
 }
 add_shortcode('b_price_features', 'butler_prices_features'); 
 
+// CPT - TESTIMONIELS CAROUSEL
+function testimonials_carousel_v2() {
+	ob_start();
+	get_template_part('partials/testimonials_carousel_v2','page');
+	return ob_get_clean();
+}
+add_shortcode('testimonials_carousel_v2', 'testimonials_carousel_v2'); 
+
 // danke page: send analytics to trusted
 function phpcode_trusted_api() {
 	ob_start();

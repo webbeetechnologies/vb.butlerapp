@@ -25,4 +25,26 @@ $(document).ready(function () {
             $(this).parent().removeClass('active');
         }
     });
+
+    // CUSTOMERS TESTIMONIALS
+    $('.testimonials-carousel-container .slider-nav').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        asNavFor: '.slider-for',
+        focusOnSelect: true,
+        centerMode: true,
+        centerPadding: 0,
+        variableWidth: true,
+        autoplay: true,
+    });
+    
+    $('.testimonials-carousel-container .slider-for').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        fade: true,
+        dots: true,
+        asNavFor: '.slider-nav'
+    });
+    
 });

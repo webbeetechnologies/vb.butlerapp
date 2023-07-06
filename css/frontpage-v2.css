@@ -1,3 +1,6 @@
+body > * {
+    color: #0B2541;
+}
 /* QUESTIONNAIRE FORM */
 .quiz2-container .e-form__indicators__indicator__separator {
     display: none;
@@ -144,4 +147,117 @@
 .quiz-pagination .pagination-rail .progress-bar {
     background: rgb(237,33,119);
     background: linear-gradient(90deg, rgba(237,33,119,1) 0%, rgba(253,208,58,1) 100%);
+}
+
+/* TESTIMONIALS SLICK */
+/* hide first */
+.testimonials-carousel-container > div {
+    display: none;
+}
+
+.testimonials-carousel-container > .slick-initialized {
+    display: block;
+}
+
+.testimonials-carousel-container .item.photo {
+    border-radius: 18px;
+    width: 205px !important;
+    height: 160px;
+    object-fit: cover;
+    overflow: hidden;
+    margin: 0 6px;
+}
+
+.testimonials-carousel-container .photos .slick-arrow {
+    display: none !important;
+}
+
+.testimonials-carousel-container .item.photo.slick-slide {
+    opacity: 0.3;
+    transition: all 0.3s;
+}
+
+.testimonials-carousel-container .item.photo.slick-slide.slick-current {
+    opacity: 1;
+}
+
+.testimonials-carousel-container .slider.texts {
+    max-width: 620px;
+    margin: 45px auto;
+    padding: 0 30px;
+    text-align: center;
+}
+
+.testimonials-carousel-container .slider.texts .item h3 {
+    color: #0B2541;
+    font-size: 26px;
+    margin: 0 0 5px;
+    font-weight: 500;
+}
+
+.testimonials-carousel-container .slider.texts .item .position {
+    font-size: 14px;
+    color: #8592A0;
+}
+
+.testimonials-carousel-container .slider.texts .item .testimonial {
+    margin: 20px 0;
+}
+
+.testimonials-carousel-container .slick-arrow {
+    width: 32px;
+    background: white;
+    height: 32px;
+    border: 1px solid #0B2541;
+    color: #0B2541;
+    border-radius: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+.testimonials-carousel-container .slick-arrow:hover {
+    color: white;
+    background-color: #0B2541;;
+}
+
+.testimonials-carousel-container .slick-prev:before,
+.testimonials-carousel-container .slick-next:before {
+    font-family: "icomoon";
+    opacity: 1;
+    color: #0B2541;
+}
+
+.testimonials-carousel-container .slick-prev:hover:before,
+.testimonials-carousel-container .slick-next:hover:before {
+    color: white;
+}
+
+.testimonials-carousel-container .slick-prev:before {
+    content: "\e905";
+    font-size: 14px;
+}
+
+.testimonials-carousel-container .slick-next:before {
+    content: "\e904";
+    font-size: 14px;
+}
+
+.testimonials-carousel-container .slick-dots {
+    position: relative;
+}
+
+.testimonials-carousel-container .slick-dots li {
+    width: auto;
+}
+
+.testimonials-carousel-container .slick-dots li button {
+    width: 8px;
+    height: 8px;
+    border-radius: 8px;
+}
+
+.testimonials-carousel-container .slick-dots li.slick-active button {
+    background-color: #29ABDC;
 }
