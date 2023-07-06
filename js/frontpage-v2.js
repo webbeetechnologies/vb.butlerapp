@@ -1,6 +1,12 @@
 var $ = jQuery;
 
-$(document).ready(function () {
+$(document).ready(function () { 
+    // POPUP: PREVENT JUMPING TO TOP WHEN CLOSE
+    $('.dialog-widget .dialog-close-button').click(function(e){
+        // Cancel the default action
+        e.preventDefault();
+    });
+
     // QUESTIONNAIRE SECTION
     // hide form 
     $('.quiz2-container').hide();
