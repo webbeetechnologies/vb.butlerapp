@@ -172,12 +172,12 @@ body > * {
     display: none !important;
 }
 
-.testimonials-carousel-container .item.photo.slick-slide {
+.testimonials-carousel-container .photos .slick-slide {
     opacity: 0.3;
     transition: all 0.3s;
 }
 
-.testimonials-carousel-container .item.photo.slick-slide.slick-current {
+.testimonials-carousel-container .photos .slick-slide.slick-current {
     opacity: 1;
 }
 
