@@ -399,30 +399,30 @@ img.litespeed-loaded {
   animation-play-state: paused !important;
 }
 
-/*** SPECIFY SWIPER STYLE ***/
-.swiper-container {
+/*** LOGO SWIPER: SPECIFY SWIPER STYLE ***/
+.logo-swiper .swiper-container {
   width: 100%;
   height: 100%;
   position: relative;
 }
 
-.swiper-container:not(:last-child) {
+.logo-swiper .swiper-container:not(:last-child) {
   margin-bottom: 20px;
 }
 
-.swiper-container.swiper--bottom:after {
+.logo-swiper .swiper-container.swiper--bottom:after {
   animation-direction: reverse;
 }
 
-.swiper-wrapper {
+.logo-swiper .swiper-wrapper {
   transition-timing-function: linear !important;
   position: relative;
 }
 
-.swiper-wrapper.stop {
+.logo-swiper .swiper-wrapper.stop {
   transition-duration: 0ms !important;
 }
-.swiper-slide {
+.logo-swiper .swiper-slide {
   text-align: center;
   font-size: 33px;
   background: #fff;
@@ -435,7 +435,7 @@ img.litespeed-loaded {
   padding: 0 20px;
 }
 
-.swiper-slide img {
+.logo-swiper .swiper-slide img {
   max-height: 45px;
 }
 

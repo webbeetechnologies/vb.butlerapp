@@ -261,6 +261,13 @@ function slick_register_styles() {
 	wp_enqueue_script( 'carousel-js', get_stylesheet_directory_uri() . '/js/plugins/slick/slick.min.js', ['jquery'], true );
 }
 
+// coverflow swiper
+add_action( 'wp_enqueue_scripts', 'coverflow_register' );
+function coverflow_register() {
+	wp_enqueue_style( 'coverflow-css', get_stylesheet_directory_uri() . '/js/plugins/coverflow-swiper/style.css', [], false, 'all' );
+	// wp_enqueue_script( 'swiper', get_stylesheet_directory_uri() . '/js/plugins/coverflow-swiper/swiper.js', ['jquery'], true );
+}
+
 // scrollToFixed
 add_action( 'wp_enqueue_scripts', 'jquery_scroll_to_fixed_scripts' );
 function jquery_scroll_to_fixed_scripts() {
@@ -321,6 +328,16 @@ function butler_prices_features($atts, $content = null) {
 	return ob_get_clean();
 }
 add_shortcode('b_price_features', 'butler_prices_features'); 
+
+// CPT - PRODUCT COVERFLOW CAROUSEL
+// params:
+// category: string
+function coverflow_carousel($atts) {
+	ob_start();
+	get_template_part('partials/coverflow_swiper','page', array('atts'=>$atts));
+	return ob_get_clean();
+}
+add_shortcode('coverflow_carousel', 'coverflow_carousel'); 
 
 // CPT - TESTIMONIELS CAROUSEL
 function testimonials_carousel_v2() {
