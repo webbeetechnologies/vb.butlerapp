@@ -99,6 +99,15 @@ body.body-stopper header {
   left: 55px;
   width: 85%;
 }
+
+.header-v2 .logo-blocker {
+  height: 36px;
+}
+
+.header-v2 .logo-blocker.active {
+  left: 38px;
+  width: 130px;
+}
 /*-- CTA --*/
 #target-button-menu-bar-new {
   font-weight: 500;
