@@ -269,7 +269,7 @@ TESTIMONIALS SLICK
 /***********************************
 MEGAMENU
 ************************************/
-.premium-mega-content-container > .elementor-inner > .elementor-section-wrap > .elementor-element {
+.premium-mega-content-container > div > .elementor-inner > .elementor-section-wrap > .elementor-element {
     padding-left: 30px;
     padding-right: 30px;
 }
