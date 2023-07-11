@@ -1,7 +1,9 @@
 body > * {
     color: #0B2541;
 }
-/* QUESTIONNAIRE FORM */
+/***********************************
+QUESTIONNAIRE FORM 
+************************************/
 .quiz2-container .e-form__indicators__indicator__separator {
     display: none;
 }
@@ -149,7 +151,9 @@ body > * {
     background: linear-gradient(90deg, rgba(237,33,119,1) 0%, rgba(253,208,58,1) 100%);
 }
 
-/* TESTIMONIALS SLICK */
+/***********************************
+TESTIMONIALS SLICK
+************************************/
 /* hide first */
 .testimonials-carousel-container > div {
     display: none;
@@ -260,4 +264,16 @@ body > * {
 
 .testimonials-carousel-container .slick-dots li.slick-active button {
     background-color: #29ABDC;
+}
+
+/***********************************
+MEGAMENU
+************************************/
+.premium-mega-content-container > .elementor-inner > .elementor-section-wrap > .elementor-element {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.premium-mega-content-container a:hover {
+    text-decoration: none;
 }
