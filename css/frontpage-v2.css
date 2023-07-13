@@ -281,3 +281,7 @@ MEGAMENU
 .premium-mega-content-container a:hover {
     text-decoration: none;
 }
+
+.premium-button .premium-drawable-icon {
+    display: flex;
+}
