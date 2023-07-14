@@ -250,6 +250,7 @@ function enqueue_wp_child_theme() {
 		// Scripts
 		wp_enqueue_script("child-js", get_stylesheet_directory_uri() . "/js/script.js", array( "jquery" ), "1.0", true );
 		wp_enqueue_script("child-js2", get_stylesheet_directory_uri() . "/js/frontpage-v2.js", array( "jquery" ));
+		wp_enqueue_script("interactive-map", get_stylesheet_directory_uri() . "/js/interactive-map.js", array( "jquery" ));
 		wp_enqueue_script('tweenmax', get_stylesheet_directory_uri() . '/js/TweenMax.min.js');
 }
  
@@ -346,6 +347,14 @@ function testimonials_carousel_v2() {
 	return ob_get_clean();
 }
 add_shortcode('testimonials_carousel_v2', 'testimonials_carousel_v2'); 
+
+// INTERACTIVE MAP: [render_interactive_map countrycode="de"] // de, at, ch
+function render_interactive_map($atts) {
+	ob_start();
+	get_template_part('partials/interactive_map','page', array('atts'=>$atts));
+	return ob_get_clean();
+}
+add_shortcode('render_interactive_map', 'render_interactive_map'); 
 
 // danke page: send analytics to trusted
 function phpcode_trusted_api() {
