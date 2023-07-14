@@ -135,5 +135,22 @@ $(document).ready(function () {
         dots: true,
         asNavFor: '.slider-nav'
     });
-    
+
+    // INTERACTIVE MAP: TOGGLE ACTIVE BASED ON INDEX
+    // SET IDX 0 AS ACTIVE
+    $('.country-buttons-container .button-border-rainbow').removeClass('active');
+    $('.country-buttons-container .button-border-rainbow').eq(0).addClass('active');
+
+    $('.maps-supercontainer .container-interactive-map').removeClass('active');
+    $('.maps-supercontainer .container-interactive-map').eq(0).addClass('active');
+
+    $('.country-buttons-container .button-border-rainbow').on('click', function() {
+        var idx = $(this).index();
+        $('.country-buttons-container .button-border-rainbow').removeClass('active');
+        $('.maps-supercontainer .container-interactive-map').removeClass('active');
+
+        $('.country-buttons-container .button-border-rainbow').eq(idx).addClass('active');
+        $('.maps-supercontainer .container-interactive-map').eq(idx).addClass('active');
+    });
+
 });
