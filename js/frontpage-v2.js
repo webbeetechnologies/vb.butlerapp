@@ -138,6 +138,10 @@ $(document).ready(function () {
 
     // INTERACTIVE MAP: TOGGLE ACTIVE BASED ON INDEX
     // SET IDX 0 AS ACTIVE
+    $('.country-buttons-container a').click(function(e) {
+        e.preventDefault();
+    });
+
     $('.country-buttons-container .button-border-rainbow').removeClass('active');
     $('.country-buttons-container .button-border-rainbow').eq(0).addClass('active');
 
