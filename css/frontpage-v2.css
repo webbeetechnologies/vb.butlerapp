@@ -136,6 +136,7 @@ QUESTIONNAIRE FORM
 
 .quiz-pagination {
     color: white;
+    overflow: hidden;
 }
 
 .quiz-pagination .pagination-rail {

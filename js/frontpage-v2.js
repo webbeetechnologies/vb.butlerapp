@@ -1,5 +1,24 @@
 var $ = jQuery;
 
+function buildPaginationSection() {
+    $('.quiz2-container .e-form__indicators').clone().appendTo('.quiz-section .paginator-container'); 
+     $('.quiz-section .paginator-container .e-form__indicators').hide();
+ 
+    // count pagination
+    var ln = $('.quiz-section .paginator-container .e-form__indicators__indicator').length;
+    var active_idx = $('.quiz-section .paginator-container .e-form__indicators__indicator--state-active .e-form__indicators__indicator__number').text();
+    var percentage = active_idx / ln * 100;
+
+    var el = '<div class="quiz-pagination">';
+    el += '  <div class="pagination-number">Step <span class="current">'+ active_idx+'</span>/'+ln+'</div>';
+    el += '  <div class="pagination-rail">';
+    el += '    <div class="progress-bar" style="width: '+percentage+'%"></div>';
+    el += '  </div>';
+    el += '</div>';
+
+    $('.paginator-container').append(el);
+}
+
 $(document).ready(function () { 
     // POPUP: PREVENT JUMPING TO TOP WHEN CLOSE
     $('.dialog-widget .dialog-close-button').click(function(e){
@@ -97,12 +116,29 @@ $(document).ready(function () {
         
     $('.button-take-quiz a').on('click', function(e) {
         e.preventDefault();
+        $("html, body").animate({ scrollTop: $('.quiz-section').offset().top }, 500);
+
+        $('.quiz1-container').hide().fadeOut('fast');
         $('.quiz2-container').fadeIn('fast');
-        $('.quiz1-container').fadeOut('fast');
         // HIDE BUTTON
         $('.button-take-quiz').hide();
         // SHOW PAGINATION
         $('.paginator-container').show();
+        
+        // set first label
+        buildPaginationSection();
+        var ln = $('.quiz-section .paginator-container .e-form__indicators__indicator').length;
+        var active_idx = $('.quiz2-container .e-form__indicators__indicator:visible .e-form__indicators__indicator__number').text();
+
+        $('.quiz2-container .e-form__buttons button').on('click', function() {
+            // update pagination container
+            active_idx = $( ".quiz2-container .e-form__indicators__indicator:visible .e-form__indicators__indicator__number").text();
+			var percentage = active_idx / ln * 100;
+
+            $('.quiz-section .pagination-number .current').text(active_idx);
+            $('.quiz-section .quiz-pagination .progress-bar').css('width', percentage+"%");
+
+        });
     });
 
     $('.quiz2-container form .elementor-field-option input').change(function() {
