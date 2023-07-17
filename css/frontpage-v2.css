@@ -134,9 +134,13 @@ QUESTIONNAIRE FORM
     opacity: 0.8;
 }
 
+.paginator-container {
+    padding-right: 0;
+}
 .quiz-pagination {
     color: white;
     overflow: hidden;
+    margin-right: -30px;
 }
 
 .quiz-pagination .pagination-rail {
