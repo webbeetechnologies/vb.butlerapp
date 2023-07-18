@@ -78,7 +78,7 @@ body.body-stopper header {
   box-shadow: 0 0 7px rgb(0 0 0 / 20%);
 }
 #mainhero h1 {
-  max-width: 75%;
+  /*max-width: 75%;*/
 }
 .hero-tab {
   position: absolute;
@@ -2125,7 +2125,7 @@ PRICE FEATURES
  * ===============================================================================*/
 @media (min-width: 1024px) and (max-width: 1200px) {
   #mainhero h1 {
-    max-width: 85%;
+    /*max-width: 85%;*/
   }
   #butlerapp-services > div > .elementor-row > div:first-child {
     order: unset !important;
@@ -2997,7 +2997,7 @@ PRICE FEATURES
     background-size: 75%;
   }
   #mainhero h1 {
-    max-width: 82%;
+    /*max-width: 82%;*/
   }
   #ba--sliders .th-slide-content .elementor-section-wrap section:nth-child(2) {
     display: block;
