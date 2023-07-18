@@ -35,6 +35,7 @@
     background-size: cover;
     border-radius: 16px;
     border: 6px solid #0B2541;
+    background-repeat: no-repeat;
 }
 .swiper-coverflow-container .swiper-slide .entity-img {
     display: none;
