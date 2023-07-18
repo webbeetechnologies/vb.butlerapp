@@ -836,7 +836,7 @@ jQuery(document).ready(function ($) {
     ".e-hotspot__button:not(.ba--inactive)",
     function (e) {
       e.stopPropagation();
-      var getParent = $(this).parents('body'); // $(this).parent();
+      var getParent = $(this).parent();
       var isActive = getParent.hasClass("e-hotspot--active");
       console.log(isActive);
       if (!isActive) {
