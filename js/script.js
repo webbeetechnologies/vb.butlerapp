@@ -830,6 +830,11 @@ jQuery(document).ready(function ($) {
     $(".e-hotspot__button").removeClass("ba--inactive");
   });
 
+  $('.personal-services-section .elementor-widget-hotspot').click(function() {
+      // close if any
+      $('.personal-services-section').find('.e-hotspot--active:first-child').removeClass('e-hotspot--active');
+  });
+  
   // HOTSPOT ONCLICK ACTIONS
   $(document).on(
     "click",
