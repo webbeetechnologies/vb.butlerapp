@@ -446,11 +446,17 @@ INTERACTIVE MAP
     }
 
     #footer-v2 .elementor-widget {
+        /*
         max-width: 100%;
         width: 100%;
+        */
     }
 
     #footer-v2 .footer-upper-container {
+        margin-bottom: 30px;
+    }
+    #footer-v2 .footer-upper-container,
+    #footer-v2 .footer-upper-container .elementor-widget-wrap {
         justify-content: left;
     }
 
@@ -461,7 +467,7 @@ INTERACTIVE MAP
         width: 100%;
     }
 
-    #footer-v2 .footer-menu-container > .elementor-column-wrap > .elementor-widget-wrap > .e-con.e-flex {
+    #footer-v2 .footer-menu-container > .elementor-column-wrap > .elementor-widget-wrap > div > .e-con.e-flex {
         width: 50%;
     }
 
