@@ -1,6 +1,21 @@
 body > * {
     color: #0B2541;
 }
+
+/***********************************
+HERO
+************************************/
+.premium-fancy-text-wrapper {
+    letter-spacing: -3px;
+}
+
+.premium-fancy-text {
+    margin-right: 10px;
+}
+
+.industries-section > .e-con-inner {
+    align-items: center;
+}
 /***********************************
 QUESTIONNAIRE FORM 
 ************************************/
@@ -398,6 +413,10 @@ INTERACTIVE MAP
 }
 
 @media (min-width: 768px) and (max-width: 1200px) {
+    #footer-v2 .footer-logo-set img {
+        width: 70px;
+    }
+
     #footer-v2 .elementor-widget-wrap > section:first-child .elementor-row > div:first-child {
         width: 100%;
     }
@@ -408,6 +427,39 @@ INTERACTIVE MAP
 }
 
 @media (max-width: 768px) {
+    .eq-height {
+        min-height: inherit !important;
+    }
+
+    /* HERO V2 */
+    .hero-sec-v2 .premium-fancy-text, 
+    .hero-sec-v2 .premium-prefix-text, 
+    .hero-sec-v2 .premium-suffix-text {
+        font-size: 40px !important;
+        line-height: 1em !important;
+    }
+    .hero-sec-v2 .hero-container .elementor-row {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .hero-sec-v2 .hero-container {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .hero-sec-v2 .hero-container .hero-tab {
+        display: block;
+        position: relative;
+    }
+
+    /* SWIPER COVERFLOW */
+    .swiper-coverflow-container .swiper-button-prev {
+        left: 35px;
+    }
+    .swiper-coverflow-container .swiper-button-next {
+        right: 35px;
+    }
+
     /* TESTIMONIALS */
     .testimonials-carousel-container .slick-arrow {
         display: none;
@@ -451,7 +503,7 @@ INTERACTIVE MAP
     }
 
     #footer-v2 {
-        padding: 50px 0;
+        padding: 50px 0 0;
         margin: 0 -20px;
     }
 
@@ -484,5 +536,9 @@ INTERACTIVE MAP
     #footer-v2 .footer-bottom .elementor-row {
         display: flex;
         flex-direction: column-reverse;
+    }
+
+    #footer-v2 .european-commision {
+        margin: 20px 0;
     }
 }
