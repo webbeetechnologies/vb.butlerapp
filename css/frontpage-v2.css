@@ -397,6 +397,16 @@ INTERACTIVE MAP
     font-weight: 500;
 }
 
+@media (min-width: 768px) and (max-width: 1200px) {
+    #footer-v2 .elementor-widget-wrap > section:first-child .elementor-row > div:first-child {
+        width: 100%;
+    }
+
+    #footer-v2 .elementor-widget-wrap > section:first-child .elementor-row > div:first-child .elementor-widget-wrap {
+        justify-content: left;
+    }
+}
+
 @media (max-width: 768px) {
     /* TESTIMONIALS */
     .testimonials-carousel-container .slick-arrow {
