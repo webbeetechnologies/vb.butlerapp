@@ -454,7 +454,7 @@ INTERACTIVE MAP
 
     /* TESTIMONIALS */
     .testimonials-carousel-container .slick-arrow {
-        display: none;
+        display: none !important;
     }
 
     /* PAYMENT */
@@ -463,8 +463,8 @@ INTERACTIVE MAP
         padding: 0;
         margin-bottom: 40px;
     }
-    #payment-methods > .e-con-inner > .e-con-boxed:first-child {
-        margin-bottom: 2px;
+    #payment-methods > .e-con-inner > .e-con-boxed:first-child > .e-con-inner > div.e-con-boxed {
+        margin-bottom: 10px;
     }
     /* text section */
     #payment-methods > .e-con-inner > .e-con-boxed:nth-child(2) {
