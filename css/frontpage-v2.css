@@ -448,20 +448,20 @@ INTERACTIVE MAP
     #footer-v2 .elementor-widget {
         max-width: 100%;
         width: 100%;
-        padding: 0;
-        margin: 0;
     }
 
     #footer-v2 .footer-upper-container {
         justify-content: left;
     }
-    
+
     #footer-v2 .footer-logo-set {
         background: none;
-        text-align: center;
+        text-align: center !important;
+        margin: 0;
+        width: 100%;
     }
 
-    #footer-v2 .footer-menu-container > .elementor-column-wrap .e-con.e-flex {
+    #footer-v2 .footer-menu-container > .elementor-column-wrap > .elementor-widget-wrap > .e-con.e-flex {
         width: 50%;
     }
 
