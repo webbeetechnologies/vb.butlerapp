@@ -445,16 +445,27 @@ INTERACTIVE MAP
         margin: 0 -20px;
     }
 
+    #footer-v2 .elementor-widget {
+        max-width: 100%;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    #footer-v2 .footer-upper-container {
+        justify-content: left;
+    }
+    
     #footer-v2 .footer-logo-set {
         background: none;
         text-align: center;
     }
 
-    #footer-v2 .footer-menu-container > .elementor-column-wrap > .elementor-widget-wrap > .e-con-boxed.e-con {
+    #footer-v2 .footer-menu-container > .elementor-column-wrap .e-con.e-flex {
         width: 50%;
     }
-    
-    #footer-v2 .footer-bottom {
+
+    #footer-v2 .footer-bottom .elementor-row {
         display: flex;
         flex-direction: column-reverse;
     }
