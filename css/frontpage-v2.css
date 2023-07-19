@@ -452,14 +452,6 @@ INTERACTIVE MAP
         position: relative;
     }
 
-    /* SWIPER COVERFLOW */
-    .swiper-coverflow-container .swiper-button-prev {
-        left: 35px;
-    }
-    .swiper-coverflow-container .swiper-button-next {
-        right: 35px;
-    }
-
     /* TESTIMONIALS */
     .testimonials-carousel-container .slick-arrow {
         display: none;

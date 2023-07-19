@@ -148,3 +148,13 @@
         padding-top: 0;
    }
 }
+
+@media (max-width: 768px) {
+    /* SWIPER COVERFLOW */
+    .swiper-coverflow-container .swiper-button-prev {
+        left: 35px;
+    }
+    .swiper-coverflow-container .swiper-button-next {
+        right: 35px;
+    }
+}
