@@ -396,4 +396,66 @@ INTERACTIVE MAP
     font-size: 32px;
     font-weight: 500;
 }
-  
+
+@media (max-width: 768px) {
+    /* TESTIMONIALS */
+    .testimonials-carousel-container .slick-arrow {
+        display: none;
+    }
+
+    /* PAYMENT */
+    /* logos section */
+    #payment-methods > .e-con-inner > .e-con-boxed:first-child > .e-con-inner {
+        padding: 0;
+        margin-bottom: 40px;
+    }
+    #payment-methods > .e-con-inner > .e-con-boxed:first-child {
+        margin-bottom: 2px;
+    }
+    /* text section */
+    #payment-methods > .e-con-inner > .e-con-boxed:nth-child(2) {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    /* PERSONAL SERVICES */
+    /* photos section */
+    .personal-services-section > .e-con-inner > .e-con:nth-child(2) {
+        max-height: inherit !important;
+        margin-top: 0 !important;
+    }
+
+    .personal-services-section .e-hotspot__tooltip {
+        left: 50%!important;
+        right: 0 !important;
+        margin: 0 auto;
+        transform: translate(-45%, 0) !important;
+    }
+    
+    #vision-mission {
+        background-size: cover;
+    }
+
+    #butlerapp-team-container.v2 {
+        margin-top: -25px;
+    }
+
+    #footer-v2 {
+        padding: 50px 0;
+        margin: 0 -20px;
+    }
+
+    #footer-v2 .footer-logo-set {
+        background: none;
+        text-align: center;
+    }
+
+    #footer-v2 .footer-menu-container > .elementor-column-wrap > .elementor-widget-wrap > .e-con-boxed.e-con {
+        width: 50%;
+    }
+    
+    #footer-v2 .footer-bottom {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}
