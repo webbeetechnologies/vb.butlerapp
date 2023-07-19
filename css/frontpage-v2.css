@@ -486,6 +486,21 @@ INTERACTIVE MAP
         transform: translate(-45%, 0) !important;
     }
     
+    /* QUIZ */
+    .quiz2-container .e-form__indicators__indicator__number {
+        width: 46px;
+        height: 46px;
+    }
+    
+    .quiz2-container form label.elementor-field-label {
+        font-size: 22px;
+        line-height: 1.2em;
+    }
+
+    .quiz2-container form .elementor-field-option {
+        height: 56px;
+        padding: 0 26px !important;
+    }
     #vision-mission {
         background-size: cover;
     }
