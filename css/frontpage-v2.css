@@ -14,7 +14,7 @@ HERO
 }
 
 .industries-section > .e-con-inner {
-    align-items: center;
+    align-items: center !important;
 }
 /***********************************
 QUESTIONNAIRE FORM 
