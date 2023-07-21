@@ -438,7 +438,7 @@ INTERACTIVE MAP
         transition: all 0.3s;
     }
     body.mobile-menu-open .header-v2 .premium-mobile-menu-container {
-        height: 100vh;
+        height: calc(100vh - 52px);
     }
     .header-v2 .premium-mobile-menu-container .premium-mobile-menu {
         padding-top: 40px;
@@ -456,7 +456,7 @@ INTERACTIVE MAP
         position: absolute;
         right: 20px;
     }
-    
+
     .premium-hamburger-toggle {
         right: -5px;
         position: relative;
@@ -464,16 +464,16 @@ INTERACTIVE MAP
     
     /* CTA buttons container */
     .premium-mobile-menu-container > div {
-        position: fixed;
+        position: absolute;
         bottom: 0;
         padding: 20px;
     }
 
-    .premium-mobile-menu-container > div > .elementor-widget-wrap > div.elementor-element {
+    .premium-mobile-menu-container .cta-container > .elementor-widget-wrap > div.elementor-element {
         width: 50%;
     }
 
-    .premium-mobile-menu-container > div > .elementor-widget-wrap .elementor-button {
+    .premium-mobile-menu-container .cta-container > .elementor-widget-wrap .elementor-button {
         width: 100%;
     }
 }
