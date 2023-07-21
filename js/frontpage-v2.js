@@ -35,7 +35,9 @@ $(document).ready(function () {
             $('body').addClass('mobile-menu-open');
         }
     });
-
+    // copy cta in header to mobile nav
+    $('.header-v2 #stb-header-cta > div').clone().appendTo('.premium-mobile-menu-container').addClass('cta-container');
+    
     // SWIPER COVERFLOW
     // https://codepen.io/digistate/pen/KZWYwo
     // Params

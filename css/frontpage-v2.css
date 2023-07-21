@@ -450,7 +450,19 @@ INTERACTIVE MAP
         padding: 10px 30px;
     }
 
-    /* button container */
+    .header-v2 .premium-mobile-menu-container .premium-mobile-menu li.menu-item a .premium-dropdown-icon {
+        transform: rotate(-90deg);
+        font-size: 22px;
+        position: absolute;
+        right: 20px;
+    }
+    
+    .premium-hamburger-toggle {
+        right: -5px;
+        position: relative;
+    }
+    
+    /* CTA buttons container */
     .premium-mobile-menu-container > div {
         position: fixed;
         bottom: 0;
