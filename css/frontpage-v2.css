@@ -426,19 +426,24 @@ INTERACTIVE MAP
         width: 100%;
     }
     .header-v2 .premium-mobile-menu-container {
+        background-color: white;
         position: fixed;
         width: 100vw;
         left: 0px;
         top: 52px;
+        height: 0;
+        transition: all 0.3s;
     }
-
+    body.mobile-menu-open .header-v2 .premium-mobile-menu-container {
+        height: 100vh;
+    }
     .header-v2 .premium-mobile-menu-container .premium-mobile-menu {
         padding-top: 40px;
         background-color: white;
     }
 
     .header-v2 .premium-mobile-menu-container .premium-mobile-menu li.menu-item a {
-        font-size: 18px;
+        font-size: 18px !important;
         padding: 10px 30px;
     }
 }
