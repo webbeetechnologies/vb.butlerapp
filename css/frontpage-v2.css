@@ -412,6 +412,12 @@ INTERACTIVE MAP
     font-weight: 500;
 }
 
+@media (max-width: 1200px) {
+    .header-v2 .caller-icon-container.header-phone-icon {
+        margin-top: 9px;
+    }
+}
+
 @media (min-width: 768px) and (max-width: 1200px) {
     #footer-v2 .footer-logo-set img {
         width: 70px;
@@ -432,6 +438,11 @@ INTERACTIVE MAP
     }
 
     /* HERO V2 */
+    #mainhero.hero-sec-v2  .elementor-widget-button > div {
+        padding: 0;
+    }
+
+
     .hero-sec-v2 .premium-fancy-text, 
     .hero-sec-v2 .premium-prefix-text, 
     .hero-sec-v2 .premium-suffix-text {
