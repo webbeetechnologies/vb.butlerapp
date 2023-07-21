@@ -30,9 +30,9 @@ $(document).ready(function () {
     $('.premium-hamburger-toggle').on('click', function() {
         if ($(this).hasClass('premium-toggle-opened')) {
             // close
-            $(body).removeClass('mobile-menu-open');
+            $('body').removeClass('mobile-menu-open');
         } else {
-            $(body).addClass('mobile-menu-open');
+            $('body').addClass('mobile-menu-open');
         }
     });
 
