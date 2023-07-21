@@ -416,6 +416,9 @@ INTERACTIVE MAP
     .header-v2 .caller-icon-container.header-phone-icon {
         margin-top: 9px;
     }
+    .premium-hamburger-toggle {
+        width: 35px;
+    }
 
     /**************************************************
     PREMIUM MOBILE MENU
@@ -446,6 +449,21 @@ INTERACTIVE MAP
         font-size: 18px !important;
         padding: 10px 30px;
     }
+
+    /* button container */
+    .premium-mobile-menu-container > div {
+        position: fixed;
+        bottom: 0;
+        padding: 20px;
+    }
+
+    .premium-mobile-menu-container > div > .elementor-widget-wrap > div.elementor-element {
+        width: 50%;
+    }
+
+    .premium-mobile-menu-container > div > .elementor-widget-wrap .elementor-button {
+        width: 100%;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 1200px) {
@@ -467,11 +485,23 @@ INTERACTIVE MAP
         min-height: inherit !important;
     }
 
+    /********************************
+    PREMIUM MOBILE MENU
+    *********************************/
+    /* button container */
+    .premium-mobile-menu-container > div > .elementor-widget-wrap > div.elementor-element {
+        width: 100%;
+    }
+
+    .premium-mobile-menu-container > div > .elementor-widget-wrap .elementor-button {
+        width: 100%;
+        margin-top: 15px;
+    }
+
     /* HERO V2 */
     #mainhero.hero-sec-v2  .elementor-widget-button > div {
         padding: 0;
     }
-
 
     .hero-sec-v2 .premium-fancy-text, 
     .hero-sec-v2 .premium-prefix-text, 
@@ -493,6 +523,10 @@ INTERACTIVE MAP
         position: relative;
     }
 
+    /* POPUP */
+    .elementor-popup-modal .dialog-message .elementor-section {
+        padding: 0 3em !important;
+    }
     /* TESTIMONIALS */
     .testimonials-carousel-container .slick-arrow {
         display: none !important;
