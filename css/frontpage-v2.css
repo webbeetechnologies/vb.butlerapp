@@ -436,6 +436,7 @@ INTERACTIVE MAP
         top: 52px;
         height: 0;
         transition: all 0.3s;
+        overflow: hidden;
     }
     body.mobile-menu-open .header-v2 .premium-mobile-menu-container {
         height: calc(100vh - 52px);
@@ -502,7 +503,7 @@ INTERACTIVE MAP
     *********************************/
     /* button container */
     .premium-mobile-menu-container > div > .elementor-widget-wrap > div.elementor-element {
-        width: 100%;
+        width: 100% !important;
     }
 
     .premium-mobile-menu-container > div > .elementor-widget-wrap .elementor-button {
@@ -537,7 +538,7 @@ INTERACTIVE MAP
 
     /* POPUP */
     .elementor-popup-modal .dialog-message .elementor-section {
-        padding: 0 3em !important;
+        padding: 0 20px !important;
     }
     /* TESTIMONIALS */
     .testimonials-carousel-container .slick-arrow {
