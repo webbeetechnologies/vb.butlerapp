@@ -26,6 +26,16 @@ $(document).ready(function () {
         e.preventDefault();
     });
 
+    // PREMIUM MOBILE NAV
+    $('.premium-hamburger-toggle').on('click', function() {
+        if ($(this).hasClass('premium-toggle-opened')) {
+            // close
+            $(body).removeClass('mobile-menu-open');
+        } else {
+            $(body).addClass('mobile-menu-open');
+        }
+    });
+
     // SWIPER COVERFLOW
     // https://codepen.io/digistate/pen/KZWYwo
     // Params

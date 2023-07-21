@@ -416,6 +416,31 @@ INTERACTIVE MAP
     .header-v2 .caller-icon-container.header-phone-icon {
         margin-top: 9px;
     }
+
+    /**************************************************
+    PREMIUM MOBILE MENU
+    ***************************************************/
+    body.mobile-menu-open .header-v2 {
+        background-color: white;
+        position: fixed;
+        width: 100%;
+    }
+    .header-v2 .premium-mobile-menu-container {
+        position: fixed;
+        width: 100vw;
+        left: 0px;
+        top: 52px;
+    }
+
+    .header-v2 .premium-mobile-menu-container .premium-mobile-menu {
+        padding-top: 40px;
+        background-color: white;
+    }
+
+    .header-v2 .premium-mobile-menu-container .premium-mobile-menu li.menu-item a {
+        font-size: 18px;
+        padding: 10px 30px;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 1200px) {
