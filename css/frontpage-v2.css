@@ -435,7 +435,6 @@ INTERACTIVE MAP
     }
     .mobile-menu-open .header-v2 {
         background-color: white;
-        position: fixed;
         width: 100%;
     }
     .header-v2 .premium-mobile-menu-container {

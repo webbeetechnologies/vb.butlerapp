@@ -29,12 +29,13 @@ $(document).ready(function () {
     // PREMIUM MOBILE NAV
     $('body').on('click', '.premium-hamburger-toggle', function() {
         if ($(this).hasClass('premium-toggle-opened')) {
+            // class premium-toggle-opened already added. it's open
+            $('html').addClass('mobile-menu-open');
+            $(this).parent().addClass('opened');
+        } else {
             // close
             $('html').removeClass('mobile-menu-open');
             $(this).parent().removeClass('opened');
-        } else {
-            $('html').addClass('mobile-menu-open');
-            $(this).parent().addClass('opened');
         }
     });
 
