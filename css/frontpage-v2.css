@@ -413,9 +413,6 @@ INTERACTIVE MAP
 }
 
 @media (max-width: 1200px) {
-    .header-v2 .caller-icon-container.header-phone-icon {
-        margin-top: 9px;
-    }
     .premium-hamburger-toggle {
         width: 35px;
     }
@@ -423,7 +420,10 @@ INTERACTIVE MAP
     /**************************************************
     PREMIUM MOBILE MENU
     ***************************************************/
-    body.mobile-menu-open .header-v2 {
+    html.mobile-menu-open {
+        overflow: hidden;
+    }
+    .mobile-menu-open .header-v2 {
         background-color: white;
         position: fixed;
         width: 100%;
@@ -438,7 +438,7 @@ INTERACTIVE MAP
         transition: all 0.3s;
         overflow: hidden;
     }
-    body.mobile-menu-open .header-v2 .premium-mobile-menu-container {
+    .mobile-menu-open .header-v2 .premium-mobile-menu-container {
         height: calc(100vh - 52px);
     }
     .header-v2 .premium-mobile-menu-container .premium-mobile-menu {
@@ -449,6 +449,10 @@ INTERACTIVE MAP
     .header-v2 .premium-mobile-menu-container .premium-mobile-menu li.menu-item a {
         font-size: 18px !important;
         padding: 10px 30px;
+    }
+
+    .header-v2 .premium-mobile-menu-container .premium-mobile-menu li.menu-item.menu-item-has-children a {
+        padding-right: 45px;
     }
 
     .header-v2 .premium-mobile-menu-container .premium-mobile-menu li.menu-item a .premium-dropdown-icon {
@@ -464,7 +468,7 @@ INTERACTIVE MAP
     }
     
     /* CTA buttons container */
-    .premium-mobile-menu-container > div {
+    .premium-mobile-menu-container .cta-container {
         position: absolute;
         bottom: 0;
         padding: 20px;
@@ -480,6 +484,9 @@ INTERACTIVE MAP
 }
 
 @media (min-width: 768px) and (max-width: 1200px) {
+    .header-v2 .caller-icon-container.header-phone-icon {
+        margin-top: 12px;
+    }
     #footer-v2 .footer-logo-set img {
         width: 70px;
     }
@@ -501,12 +508,19 @@ INTERACTIVE MAP
     /********************************
     PREMIUM MOBILE MENU
     *********************************/
+    .header-v2 .caller-icon-container.header-phone-icon {
+        margin-top: 9px;
+    }
     /* button container */
-    .premium-mobile-menu-container > div > .elementor-widget-wrap > div.elementor-element {
+    .premium-mobile-menu-container .cta-container > .elementor-widget-wrap {
+        flex-direction: column-reverse;
+    }
+    
+    .premium-mobile-menu-container  .cta-container > .elementor-widget-wrap > div.elementor-element {
         width: 100% !important;
     }
 
-    .premium-mobile-menu-container > div > .elementor-widget-wrap .elementor-button {
+    .premium-mobile-menu-container .cta-container > .elementor-widget-wrap .elementor-button {
         width: 100%;
         margin-top: 15px;
     }

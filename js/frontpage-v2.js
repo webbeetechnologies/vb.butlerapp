@@ -30,14 +30,14 @@ $(document).ready(function () {
     $('.premium-hamburger-toggle').on('click', function() {
         if ($(this).hasClass('premium-toggle-opened')) {
             // close
-            $('body').removeClass('mobile-menu-open');
+            $('html').removeClass('mobile-menu-open');
         } else {
-            $('body').addClass('mobile-menu-open');
+            $('html').addClass('mobile-menu-open');
         }
     });
     // copy cta in header to mobile nav
     $('.header-v2 #stb-header-cta > div').clone().appendTo('.premium-mobile-menu-container').addClass('cta-container');
-    
+
     // SWIPER COVERFLOW
     // https://codepen.io/digistate/pen/KZWYwo
     // Params
