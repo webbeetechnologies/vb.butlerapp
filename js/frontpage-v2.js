@@ -27,14 +27,17 @@ $(document).ready(function () {
     });
 
     // PREMIUM MOBILE NAV
-    $('.premium-hamburger-toggle').on('click', function() {
+    $('body').on('click', '.premium-hamburger-toggle', function() {
         if ($(this).hasClass('premium-toggle-opened')) {
             // close
             $('html').removeClass('mobile-menu-open');
+            $(this).parent().find('.premium-mobile-menu-container').removeClass('opened');
         } else {
             $('html').addClass('mobile-menu-open');
+            $(this).parent().find('.premium-mobile-menu-container').addClass('opened');
         }
     });
+
     // copy cta in header to mobile nav
     $('.header-v2 #stb-header-cta > div').clone().appendTo('.premium-mobile-menu-container').addClass('cta-container');
 

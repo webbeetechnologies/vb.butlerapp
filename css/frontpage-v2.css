@@ -448,7 +448,7 @@ INTERACTIVE MAP
         transition: all 0.3s;
         overflow: hidden;
     }
-    .mobile-menu-open .header-v2 .premium-mobile-menu-container {
+    .header-v2 .premium-mobile-menu-container.opened {
         height: calc(100vh - 52px);
     }
     .header-v2 .premium-mobile-menu-container .premium-mobile-menu {
