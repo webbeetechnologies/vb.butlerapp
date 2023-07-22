@@ -3,6 +3,16 @@ body > * {
 }
 
 /***********************************
+MENU AND NAV
+************************************/
+.header-v2 .premium-mobile-menu-container {
+    overflow: hidden;
+}
+
+.premium-mobile-menu-container .cta-container {
+    display: none;
+}
+/***********************************
 HERO
 ************************************/
 .premium-fancy-text-wrapper {
@@ -469,6 +479,7 @@ INTERACTIVE MAP
     
     /* CTA buttons container */
     .premium-mobile-menu-container .cta-container {
+        display: flex;
         position: absolute;
         bottom: 0;
         padding: 20px;
@@ -480,6 +491,11 @@ INTERACTIVE MAP
 
     .premium-mobile-menu-container .cta-container > .elementor-widget-wrap .elementor-button {
         width: 100%;
+    }
+
+    /* SERVICE/QUIZ */
+    .quiz-section .right-container > .e-con-inner {
+        padding-bottom: 0;
     }
 }
 
