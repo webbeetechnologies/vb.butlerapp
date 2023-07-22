@@ -515,7 +515,7 @@ INTERACTIVE MAP
     .premium-mobile-menu-container .cta-container > .elementor-widget-wrap {
         flex-direction: column-reverse;
     }
-    
+
     .premium-mobile-menu-container  .cta-container > .elementor-widget-wrap > div.elementor-element {
         width: 100% !important;
     }
@@ -550,6 +550,13 @@ INTERACTIVE MAP
         position: relative;
     }
 
+    .hero-sec-v2 .logo-ssl-container > .e-con-inner {
+        gap: 0;
+    }
+
+    .hero-sec-v2 .logo-ssl-container .logo-image {
+        max-width: 25%;
+    }
     /* POPUP */
     .elementor-popup-modal .dialog-message .elementor-section {
         padding: 0 20px !important;
