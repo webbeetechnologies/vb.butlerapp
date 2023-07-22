@@ -31,10 +31,10 @@ $(document).ready(function () {
         if ($(this).hasClass('premium-toggle-opened')) {
             // close
             $('html').removeClass('mobile-menu-open');
-            $(this).parent().find('.premium-mobile-menu-container').removeClass('opened');
+            $(this).parent().removeClass('opened');
         } else {
             $('html').addClass('mobile-menu-open');
-            $(this).parent().find('.premium-mobile-menu-container').addClass('opened');
+            $(this).parent().addClass('opened');
         }
     });
 

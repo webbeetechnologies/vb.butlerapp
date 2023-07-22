@@ -448,9 +448,15 @@ INTERACTIVE MAP
         transition: all 0.3s;
         overflow: hidden;
     }
-    .header-v2 .premium-mobile-menu-container.opened {
+    /* OPENED STATE */
+    .header-v2 .premium-ver-inner-container.opened .premium-mobile-menu-container {
         height: calc(100vh - 52px);
     }
+    .header-v2 .premium-ver-inner-container.opened .premium-mobile-menu-container .premium-mobile-menu, 
+    .header-v2 .premium-ver-inner-container.opened .premium-mobile-menu-container .premium-sub-menu {
+        display: flex;
+    }
+
     .header-v2 .premium-mobile-menu-container .premium-mobile-menu {
         padding-top: 40px;
         background-color: white;
