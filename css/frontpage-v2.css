@@ -496,8 +496,10 @@ INTERACTIVE MAP
         filter: none;
         position: absolute !important;
         overflow-y: scroll;
+        height: 100vh;
+        background: white;
     }
-    
+
     .submenu-button-back img {
         width: auto !important;
     }

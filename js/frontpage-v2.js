@@ -43,11 +43,13 @@ $(document).ready(function () {
     $('.header-v2 #stb-header-cta > div').clone().appendTo('.premium-mobile-menu-container').addClass('cta-container');
 
     // megamenu back button in mobile
-    $('.submenu-button-back').on('click', function() {
+    $('body').on('click', '.submenu-button-back', function() {
+        // var parentLi = $(this).parents('li.menu-item');
+        // parentLi.removeClass('premium-active-menu');
         var parentLink = $(this).parents('li.menu-item').find('.premium-menu-link-parent');
         parentLink.click();
     });
-    
+
     // SWIPER COVERFLOW
     // https://codepen.io/digistate/pen/KZWYwo
     // Params
