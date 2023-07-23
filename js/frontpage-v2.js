@@ -42,6 +42,12 @@ $(document).ready(function () {
     // copy cta in header to mobile nav
     $('.header-v2 #stb-header-cta > div').clone().appendTo('.premium-mobile-menu-container').addClass('cta-container');
 
+    // megamenu back button in mobile
+    $('.submenu-button-back').on('click', function() {
+        var parentLink = $(this).parents('li.menu-item').find('.premium-menu-link-parent');
+        parentLink.click();
+    });
+    
     // SWIPER COVERFLOW
     // https://codepen.io/digistate/pen/KZWYwo
     // Params

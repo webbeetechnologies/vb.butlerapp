@@ -461,7 +461,7 @@ INTERACTIVE MAP
         background-color: white;
     }
 
-    .header-v2 .premium-mobile-menu-container .premium-mobile-menu li.menu-item a {
+    .header-v2 .premium-mobile-menu-container .premium-mobile-menu li.menu-item > a {
         font-size: 18px !important;
         padding: 10px 30px;
     }
@@ -482,6 +482,16 @@ INTERACTIVE MAP
         position: relative;
     }
     
+    /* PREMIUM MOBILE MENU: SUBMENU/MEGAMENU */
+    .premium-mega-content-container {
+        position: absolute;
+        top: 0;
+    }
+    .premium-mega-content-container > div > .elementor-inner > .elementor-section-wrap > .elementor-element {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
     /* CTA buttons container */
     .premium-mobile-menu-container .cta-container {
         display: flex;
@@ -493,7 +503,9 @@ INTERACTIVE MAP
     .premium-mobile-menu-container .cta-container > .elementor-widget-wrap > div.elementor-element {
         width: 50%;
     }
-
+    .premium-mobile-menu-container .cta-container > .elementor-widget-wrap > div.elementor-element .elementor-widget-container {
+        margin: 0;
+    }
     .premium-mobile-menu-container .cta-container > .elementor-widget-wrap .elementor-button {
         width: 100%;
     }
