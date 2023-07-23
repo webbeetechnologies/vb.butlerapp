@@ -491,7 +491,16 @@ INTERACTIVE MAP
         padding-left: 0;
         padding-right: 0;
     }
-
+    .premium-mega-content-container {
+        top: 0;
+        filter: none;
+        position: absolute !important;
+        overflow-y: scroll;
+    }
+    
+    .submenu-button-back img {
+        width: auto !important;
+    }
     /* CTA buttons container */
     .premium-mobile-menu-container .cta-container {
         display: flex;
