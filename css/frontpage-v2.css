@@ -461,6 +461,10 @@ INTERACTIVE MAP
         background-color: white;
     }
 
+    .header-v2 .premium-mobile-menu-container .premium-mobile-menu li.menu-item.premium-active-menu {
+        position: static;
+    }
+    
     .header-v2 .premium-mobile-menu-container .premium-mobile-menu li.menu-item > a {
         font-size: 18px !important;
         padding: 10px 30px;
@@ -484,20 +488,16 @@ INTERACTIVE MAP
     
     /* PREMIUM MOBILE MENU: SUBMENU/MEGAMENU */
     .premium-mega-content-container {
-        position: absolute;
-        top: 0;
-    }
-    .premium-mega-content-container > div > .elementor-inner > .elementor-section-wrap > .elementor-element {
-        padding-left: 0;
-        padding-right: 0;
-    }
-    .premium-mega-content-container {
         top: 0;
         filter: none;
         position: absolute !important;
         overflow-y: scroll;
         height: 100vh;
         background: white;
+    }
+    .premium-mega-content-container > div > .elementor-inner > .elementor-section-wrap > .elementor-element {
+        padding-left: 0;
+        padding-right: 0;
     }
 
     .submenu-button-back img {
