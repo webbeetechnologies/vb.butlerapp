@@ -372,8 +372,7 @@ use border-radius 22px in the elementor btn
 PERSONAL SERVICES: HOTSPOT V2
 ************************************/
 .support-cards-container {
-    flex-shrink: 1;
-    overflow: hidden;
+    flex-shrink: 1 !important;
 }
 
 .personal-services-section .hotspot-v2 > .elementor-widget-container {
@@ -611,6 +610,7 @@ INTERACTIVE MAP
         max-height: inherit !important;
         margin-top: 0 !important;
         max-width: 500px !important;
+        overflow-y: hidden;
     }
 }
 
