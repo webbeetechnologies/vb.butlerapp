@@ -371,6 +371,11 @@ use border-radius 22px in the elementor btn
 /***********************************
 PERSONAL SERVICES: HOTSPOT V2
 ************************************/
+.support-cards-container {
+    flex-shrink: 1;
+    overflow: hidden;
+}
+
 .personal-services-section .hotspot-v2 > .elementor-widget-container {
     width: 100%;
 }
@@ -755,7 +760,8 @@ INTERACTIVE MAP
     }
 
     .personal-services-section .support-cards-container {
-        width: 300%;
+        width: 100%;
+        max-width: 100%;
         overflow-x: auto;
         overflow-y: hidden;
     }
@@ -764,7 +770,7 @@ INTERACTIVE MAP
         flex-wrap: inherit;
     }
     .personal-services-section .support-cards-container  .elementor-motion-effects-element .e-con-inner > .elementor-element {
-        min-height: 250px;
+        min-height: 310px;
     }
     /* photos section */
     .personal-services-section > .e-con-inner > .e-con:nth-child(2) {
@@ -812,6 +818,11 @@ INTERACTIVE MAP
 
     #butlerapp-team-container.v2 {
         margin-top: -25px;
+    }
+
+    .country-buttons-container a {
+        width: 215px;
+        display: block;
     }
 
     #footer-v2 {
