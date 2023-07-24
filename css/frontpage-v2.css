@@ -398,6 +398,11 @@ PERSONAL SERVICES: HOTSPOT V2
     position: relative;
 }
 /* HIDE THE BUTTON'S SVG ICON. we use the e-hotspot above */
+.personal-services-section a.premium-button {
+    display: inline-block;
+    position: absolute;
+    left: 0;
+}
 .personal-services-section a.premium-button .premium-svg-nodraw {
     opacity: 0;
     width: 26px;
