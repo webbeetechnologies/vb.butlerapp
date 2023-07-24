@@ -21,7 +21,8 @@ function buildPaginationSection() {
 
 $(document).ready(function () { 
     // POPUP: PREVENT JUMPING TO TOP WHEN CLOSE
-    $('.dialog-widget .dialog-close-button').click(function(e){
+    $("body").on("click", ".dialog-widget .dialog-close-button", "a[href='#']", function(e) {
+        console.log('a href #');
         // Cancel the default action
         e.preventDefault();
     });
