@@ -439,6 +439,7 @@ INTERACTIVE MAP
     }
     .header-v2 .premium-mobile-menu-container {
         background-color: white;
+        flex-direction: column;
         position: fixed;
         width: 100vw;
         left: 0px;
@@ -507,8 +508,8 @@ INTERACTIVE MAP
     .premium-mobile-menu-container .cta-container {
         display: flex;
         position: absolute;
-        bottom: 0;
-        padding: 20px;
+        bottom: env(safe-area-inset-bottom);
+        padding: 20px 20px 70px;
     }
 
     .premium-mobile-menu-container .cta-container > .elementor-widget-wrap > div.elementor-element {
