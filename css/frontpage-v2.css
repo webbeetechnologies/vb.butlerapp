@@ -746,11 +746,26 @@ INTERACTIVE MAP
     }
 
     /* PERSONAL SERVICES */
+    .personal-services-section {
+        padding: 0;
+    }
     .personal-services-section #target-button-menu-bar-new,
     .personal-services-section .elementor-button  {
         padding: 18px 24px;
     }
 
+    .personal-services-section .support-cards-container {
+        width: 300%;
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+
+    .personal-services-section .support-cards-container .elementor-motion-effects-parent {
+        flex-wrap: inherit;
+    }
+    .personal-services-section .support-cards-container  .elementor-motion-effects-element .e-con-inner > .elementor-element {
+        min-height: 250px;
+    }
     /* photos section */
     .personal-services-section > .e-con-inner > .e-con:nth-child(2) {
         max-height: inherit !important;
@@ -761,7 +776,7 @@ INTERACTIVE MAP
         left: 50%!important;
         right: 0 !important;
         margin: 0 auto;
-        transform: translate(-45%, 0) !important;
+        /*transform: translate(-45%, 0) !important;*/
     }
     
     /* QUIZ */
