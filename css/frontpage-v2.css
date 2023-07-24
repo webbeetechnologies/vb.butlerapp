@@ -12,6 +12,13 @@ MENU AND NAV
 .premium-mobile-menu-container .cta-container {
     display: none;
 }
+
+/***********************************
+HEADING OVERRIDING
+************************************/
+.elementor-heading-title {
+    line-height: 1.2em;
+}
 /***********************************
 HERO
 ************************************/
@@ -378,6 +385,9 @@ HOTSPOT V2
     content: url(/wp-content/uploads/2023/07/arrow-right-dark.png);
 }
 
+.hotspot-v2  .e-hotspot__button.ba--inactive:hover div:first-child {
+    background: #ED2177;
+}
 /***********************************
 INTERACTIVE MAP
 ************************************/
@@ -588,7 +598,19 @@ INTERACTIVE MAP
         margin-top: 15px;
     }
 
+    .premium-mega-content-container .menu-items-container > .e-con-inner {
+        gap: 0;
+    }
+
+    .premium-mega-content-container .menu-items-container > .e-con-inner > .elementor-element > .e-con-inner {
+        padding-bottom: 0;
+    }
+
     /* HERO V2 */
+    #mainhero.hero-sec-v2 {
+        margin-bottom: 0;
+    }
+
     #mainhero.hero-sec-v2  .elementor-widget-button > div {
         padding: 0;
     }
@@ -638,11 +660,31 @@ INTERACTIVE MAP
     }
 
     /* PAYMENT */
+    #payment-methods > .e-con-inner {
+        flex-direction: column-reverse;
+    }
+    #payment-methods .payment-items-container {
+        width: 100%;
+        overflow: hidden;
+        overflow-x: auto;
+        padding: 20px 10px;
+        position: relative;
+    }
+
     /* logos section */
+    #payment-methods .payment-items-col {
+        width: 25%;
+        padding: 0 5px;
+    }
+    #payment-methods .payment-item {
+        background-size: 70% auto;
+    }
+
     #payment-methods > .e-con-inner > .e-con-boxed:first-child > .e-con-inner {
         padding: 0;
-        margin-bottom: 40px;
+        margin-top: 40px;
     }
+
     #payment-methods > .e-con-inner > .e-con-boxed:first-child > .e-con-inner > div.e-con-boxed {
         margin-bottom: 10px;
     }
