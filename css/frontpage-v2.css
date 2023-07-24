@@ -738,6 +738,11 @@ INTERACTIVE MAP
         padding: 18px 24px;
     }
 
+    .personal-services-section .support-cards-container {
+        max-height: inherit !important;
+        margin-top: 0 !important;
+        max-width: 500px !important;
+    }
     /* photos section */
     .personal-services-section > .e-con-inner > .e-con:nth-child(2) {
         max-height: inherit !important;
@@ -827,12 +832,18 @@ INTERACTIVE MAP
     }
 }
 
-@media (max-width: 520px) {
+@media (max-width: 640px) {
     body .interactive-map-container .map-container.ch {
         font-size: 6px;
     }
     body .interactive-map-container .map-container.de,
     body .interactive-map-container .map-container.at {
         font-size: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    body .interactive-map-container .map-container.de {
+        font-size: 4px !important;
     }
 }
