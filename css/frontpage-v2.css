@@ -595,6 +595,10 @@ INTERACTIVE MAP
         padding-bottom: 0;
     }
 
+}
+
+/* ELEMENTOR TABLET  BREAKPOINT */
+@media (max-width: 1024px) {
     /**************************************************
     PERSONAL SERVICES: CARDS RIGHT SECTION
     ***************************************************/
