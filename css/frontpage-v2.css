@@ -375,18 +375,32 @@ PERSONAL SERVICES: HOTSPOT V2
     width: 100%;
 }
 .personal-services-section .hotspot-v2 .e-hotspot {
-    left: auto;
+    left: auto !important;
     right: auto;
-    top: 8px;
-    margin-left: 10px;
+    top: 12px !important;
+    margin-left: 12px;
+    --hotspot-translate-x: 0 !important;
 }
 .personal-services-section .hotspot-v2 .e-hotspot__outer-circle {
     box-shadow: none !important;
 }
+
+.personal-services-section .hotspot-v2 .e-hotspot__outer-circle {
+    width: 10px;
+    height: 10px;
+}
+
+.personal-services-section .hotspot-v2 .e-hotspot__button:hover div:last-child {
+    padding: 8px;
+}
+
+.personal-services-section .service-button-container {
+    position: relative;
+}
 /* HIDE THE BUTTON'S SVG ICON. we use the e-hotspot above */
-.personal-services-section .hotspot-v2 .service-button-container .button-service a.premium-button .premium-svg-nodraw {
+.personal-services-section a.premium-button .premium-svg-nodraw {
     opacity: 0;
-    width: 32px;
+    width: 26px;
 }
 /***********************************
 HOTSPOT V2
@@ -686,7 +700,6 @@ INTERACTIVE MAP
     }
     #payment-methods .payment-items-container {
         width: 100%;
-        overflow-x: auto;
         padding: 20px 10px;
         position: relative;
     }
@@ -810,11 +823,11 @@ INTERACTIVE MAP
 }
 
 @media (max-width: 520px) {
-    .interactive-map-container .map-container.ch {
+    body .interactive-map-container .map-container.ch {
         font-size: 6px;
     }
-    .interactive-map-container .map-container.de,
-    .interactive-map-container .map-container.at {
+    body .interactive-map-container .map-container.de,
+    body .interactive-map-container .map-container.at {
         font-size: 5px;
     }
 }
