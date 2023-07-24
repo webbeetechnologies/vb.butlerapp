@@ -594,6 +594,15 @@ INTERACTIVE MAP
     .quiz-section .right-container > .e-con-inner {
         padding-bottom: 0;
     }
+
+    /**************************************************
+    PERSONAL SERVICES: CARDS RIGHT SECTION
+    ***************************************************/
+    .personal-services-section .support-cards-container {
+        max-height: inherit !important;
+        margin-top: 0 !important;
+        max-width: 500px !important;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 1200px) {
@@ -738,11 +747,6 @@ INTERACTIVE MAP
         padding: 18px 24px;
     }
 
-    .personal-services-section .support-cards-container {
-        max-height: inherit !important;
-        margin-top: 0 !important;
-        max-width: 500px !important;
-    }
     /* photos section */
     .personal-services-section > .e-con-inner > .e-con:nth-child(2) {
         max-height: inherit !important;
