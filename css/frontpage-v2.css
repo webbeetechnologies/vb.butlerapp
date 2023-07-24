@@ -360,6 +360,24 @@ use border-radius 22px in the elementor btn
     background: linear-gradient(90deg, rgba(237,33,119,1) 0%, rgba(253,208,58,1) 100%);
     border-radius: 25px;
 }
+
+/***********************************
+HOTSPOT V2
+************************************/
+.hotspot-v2 .e-hotspot__button div:first-child, 
+.hotspot-v2 .e-hotspot__button.ba--active div:first-child, 
+.hotspot-v2 .e-hotspot__button.ba--default div:first-child{
+    background: #ED2177;
+}
+
+.hotspot-v2 .team-body a {
+    color: #0B2541;
+}
+
+.hotspot-v2 .team-body a:after {
+    content: url(/wp-content/uploads/2023/07/arrow-right-dark.png);
+}
+
 /***********************************
 INTERACTIVE MAP
 ************************************/
@@ -605,6 +623,14 @@ INTERACTIVE MAP
     /* POPUP */
     .elementor-popup-modal .dialog-message .elementor-section {
         padding: 0 20px !important;
+    }
+
+    /* CUSTOMERS STATIC SECTION */
+    .customers-static-section .logo-item {
+        width: 45%;
+    }
+    .customers-static-section .logo-item .elementor-widget-container {
+        margin: 0 auto;
     }
     /* TESTIMONIALS */
     .testimonials-carousel-container .slick-arrow {
