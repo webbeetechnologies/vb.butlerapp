@@ -432,6 +432,53 @@ HOTSPOT V2
 .hotspot-v2  .e-hotspot__button.ba--inactive:hover div:first-child {
     background: #ED2177;
 }
+
+.video-carousel-v2 .function-video-carousel-container {
+    padding: 0 !important;
+}
+
+.video-carousel-v2 .slick-list {
+    border-radius: 8px;
+    border: 3px solid;
+}
+
+.video-carousel-v2 .slick-dots li {
+    width: 8px;
+}
+
+.video-carousel-v2 .slick-dots li button {
+    width: 8px;
+    height: 8px;
+}
+
+.video-carousel-v2 .slick-dots li.slick-active button {
+    background-color: #29ABDC;
+}
+
+.video-carousel-v2 .slick-prev, 
+.video-carousel-v2 .slick-next {
+    width: 64px;
+    /* opacity: 0; */
+    /* visibility: hidden; */
+    height: 64px;
+    background-color: #0B2541;
+    border-radius: 22px;
+    background-size: 11px;
+    margin-top: -32px;
+    transition: all 0.3s;
+}
+
+.video-carousel-v2 .slick-prev {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 44'%3E%3Cpath d='M0 22L22 0l2.1 2.1L4.2 22l19.9 19.9L22 44 0 22z' fill='%23fff'/%3E%3C/svg%3E")
+}
+
+.video-carousel-v2 .slick-next {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 44'%3E%3Cpath d='M27 22L5 44l-2.1-2.1L22.8 22 2.9 2.1 5 0l22 22z' fill='%23fff'/%3E%3C/svg%3E")
+}
+
+.video-carousel-v2  .slick-prev:before, .video-carousel-v2  .slick-next:before {
+    display: none;
+}
 /***********************************
 INTERACTIVE MAP
 ************************************/
