@@ -10,7 +10,7 @@ function buildPaginationSection() {
     var percentage = active_idx / ln * 100;
 
     var el = '<div class="quiz-pagination">';
-    el += '  <div class="pagination-number">Step <span class="current">'+ active_idx+'</span>/'+ln+'</div>';
+    el += '  <div class="pagination-number">Schritt <span class="current">'+ active_idx+'</span>/'+ln+'</div>';
     el += '  <div class="pagination-rail">';
     el += '    <div class="progress-bar" style="width: '+percentage+'%"></div>';
     el += '  </div>';
