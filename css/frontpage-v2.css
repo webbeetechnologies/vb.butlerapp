@@ -439,7 +439,7 @@ HOTSPOT V2
 
 .video-carousel-v2 .slick-list {
     border-radius: 8px;
-    border: 3px solid;
+    border: 4px solid;
 }
 
 .video-carousel-v2 .slick-dots li {
@@ -456,7 +456,9 @@ HOTSPOT V2
 }
 
 .video-carousel-v2 .slick-prev, 
-.video-carousel-v2 .slick-next {
+.video-carousel-v2 .slick-next,
+.video-carousel-v2 .slick-prev:hover, 
+.video-carousel-v2 .slick-next:hover {
     width: 64px;
     /* opacity: 0; */
     /* visibility: hidden; */
@@ -466,13 +468,22 @@ HOTSPOT V2
     background-size: 11px;
     margin-top: -32px;
     transition: all 0.3s;
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 60%;
+}
+.video-carousel-v2 .slick-prev:hover, 
+.video-carousel-v2 .slick-next:hover {
+    opacity: 0.8;
 }
 
 .video-carousel-v2 .slick-prev {
+    left: -20px;
     background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 44'%3E%3Cpath d='M0 22L22 0l2.1 2.1L4.2 22l19.9 19.9L22 44 0 22z' fill='%23fff'/%3E%3C/svg%3E")
 }
 
 .video-carousel-v2 .slick-next {
+    right: -20px;
     background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 44'%3E%3Cpath d='M27 22L5 44l-2.1-2.1L22.8 22 2.9 2.1 5 0l22 22z' fill='%23fff'/%3E%3C/svg%3E")
 }
 
