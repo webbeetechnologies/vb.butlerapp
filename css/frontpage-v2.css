@@ -599,6 +599,13 @@ INTERACTIVE MAP
         padding-bottom: 0;
     }
 
+    /* PERSONAL SERVICE: POPUP POSITION */
+    .service-button-container .e-hotspot__tooltip {
+        position: fixed;
+        left: inherit !important;
+        right: inherit !important;
+        transform: translate(-50%, 0);
+    }
 }
 
 /* ELEMENTOR TABLET  BREAKPOINT */
@@ -762,8 +769,7 @@ INTERACTIVE MAP
     .personal-services-section .support-cards-container {
         width: 100%;
         max-width: 100%;
-        overflow-x: auto;
-        overflow-y: hidden;
+        overflow: hidden;
     }
 
     .personal-services-section .support-cards-container .elementor-motion-effects-parent {
@@ -779,7 +785,7 @@ INTERACTIVE MAP
     }
 
     .personal-services-section .e-hotspot__tooltip {
-        left: 50%!important;
+        left: inherit !important;
         right: 0 !important;
         margin: 0 auto;
         /*transform: translate(-45%, 0) !important;*/
