@@ -2,7 +2,7 @@
 
 	<div class="prices-container-v2">
 		<?php 
-			$cat_name = $args['atts']['category'];
+			$cat_name = $args['atts'] ? $args['atts']['category'] : null;
 			$args = array(  
 			'post_type' => 'price',
 			'post_status' => 'publish',
