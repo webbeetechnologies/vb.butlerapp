@@ -1603,7 +1603,7 @@
   }
   
   .slick-dots li.slick-active button {
-    background: #0b2541;
+    /*background: #0b2541;*/
   }
   
   .slick-dots li button:before {
