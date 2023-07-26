@@ -22,7 +22,7 @@
 							<div class="faq-meta">
 								<h5><?php the_field('faq_name') ?></h5>
 								<span><?php the_field('faq_position') ?></span>
-								<a href="<?php the_field('faq_contact_link') ?>">Kontaktieren <i class="fas fa-arrow-right"></i></a>
+								<a href="<?php the_field('faq_contact_link') ?>">Kontaktieren </a>
 							</div>
 						</div>
 					</div>
