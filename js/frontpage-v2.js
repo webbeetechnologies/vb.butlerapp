@@ -218,4 +218,11 @@ $(document).ready(function () {
         $('.maps-supercontainer .container-interactive-map').eq(idx).fadeIn('fast').addClass('active');
     });
 
+    // FAQ-V2: HOVER SHOW POPUP
+    $('.faq-v2 .faq-flipper').hover(function() {
+        var $parent = $(this).parents('.faq-v2').addClass('hover');
+        $parent.addClass('hover');
+    }, function() {
+        $('.faq-v2').removeClass('hover');
+    });
 });

@@ -566,7 +566,13 @@ FAQ V2 (override FAQ style in style.css
 #faqs-container .faq.faq-v2 {
     min-height: 90px;
     padding: 20px;
+    position: relative;
 }
+
+#faqs-container .faq.faq-v2.hover {
+    z-index: 1;
+}
+
 #faqs-container .faq.faq-v2 .faq-inner {
     align-items: flex-start;
     justify-content: left;
@@ -582,8 +588,13 @@ FAQ V2 (override FAQ style in style.css
     height: inherit;
     position: relative;
 }
+
+.faq.faq-v2 .faq-flipper .image-popup-container {
+    position: relative;
+}
+
 .faq.faq-v2 .faq-flipper img {
-    position: absolute;
+    position: relative;
     top: -4px;
     left: 0;
 }
@@ -647,6 +658,10 @@ FAQ V2 (override FAQ style in style.css
     padding: 0 15px;
 }
 
+.faq.faq-v2 .faq-flipper img {
+    padding: 0;
+}
+
 .faq.faq-v2 .faq-arrow-flipper .fas {
     font-size: 22px;
     transition: all 0.3s;
@@ -657,6 +672,53 @@ FAQ V2 (override FAQ style in style.css
     border-radius: 50%;
 }
 
+.faq.faq-v2 .image-popup-container {
+    width: 100%;
+    height: 50px;
+}
+
+/* POPUP */
+.faq.faq-v2 .faq-popup-area {
+    background: white;
+    box-shadow: 0px 2px 4px -1px rgb(11 37 65 / 9%), inset 0px 1px 0px rgb(255 255 255 / 70%);
+    border-radius: 12px;
+    opacity: 0;
+    padding: 15px;
+    text-align: left;
+    width: 170px;
+    transition: opacity 0.3s;
+    position: absolute;
+    top: 58px;
+    z-index: -1;
+}
+
+#faqs-container .faq.faq-v2.hover .faq-popup-area {
+    height: auto;
+    opacity: 1;
+    z-index: 1;
+}
+
+#faqs-container .faq.faq-v2.faq-active .faq-popup-area {
+    display: none;
+    opacity: 0;
+}
+
+.faq.faq-v2 .faq-popup-area .faq-meta {
+    align-items: start;
+    margin: 0;
+}
+.faq.faq-v2 .faq-meta h5 {
+    margin: 0 0 5px;
+    font-size: 22px;
+}
+
+.faq.faq-v2 .faq-meta a {
+    font-size: 16px;
+    margin-top: 10px;
+}
+.faq.faq-v2 .faq-meta a i.fas {
+    margin-left: 10px;
+}
 
 @media (max-width: 1200px) {
     .premium-hamburger-toggle {

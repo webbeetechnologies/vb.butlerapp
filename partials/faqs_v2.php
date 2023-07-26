@@ -15,7 +15,17 @@
 			<div class="faq-inner">
 				<?php $default = get_field('faq_icon'); ?>
 				<div class="faq-flipper">
-					<img class="faq-icon-switcher" src="<?php echo $default["url"] ?>">
+					<div class="image-popup-container">
+						<img class="faq-icon-switcher" src="<?php echo $default["url"] ?>">
+						<!-- POPUP AREA -->
+						<div class="faq-popup-area">
+							<div class="faq-meta">
+								<h5><?php the_field('faq_name') ?></h5>
+								<span><?php the_field('faq_position') ?></span>
+								<a href="<?php the_field('faq_contact_link') ?>">Kontaktieren <i class="fas fa-arrow-right"></i></a>
+							</div>
+						</div>
+					</div>
 				</div>
 				<div class="heading-content-area">
 					<h3><?php the_title(); ?></h3>
@@ -38,14 +48,6 @@
 
 				<div class="faq-arrow-flipper">
 					<i class="fas fa-chevron-down"></i> 
-				</div>
-			</div>
-			<!-- POPUP AREA -->
-			<div style="display:none" class="faq-popup-area">
-				<div class="faq-meta">
-					<h5><?php the_field('faq_name') ?></h5>
-					<span><?php the_field('faq_position') ?></span>
-					<a href="<?php the_field('faq_contact_link') ?>">Kontaktieren <i class="fas fa-arrow-right"></i></a>
 				</div>
 			</div>
 		</div>
