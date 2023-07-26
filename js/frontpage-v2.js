@@ -219,7 +219,7 @@ $(document).ready(function () {
     });
 
     // FAQ-V2: HOVER SHOW POPUP
-    $('.faq-v2 .faq-flipper').hover(function() {
+    $('.faq-v2 .faq-flipper .image-popup-container').hover(function() {
         var $parent = $(this).parents('.faq-v2').addClass('hover');
         $parent.addClass('hover');
     }, function() {

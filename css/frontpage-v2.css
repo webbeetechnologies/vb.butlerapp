@@ -589,14 +589,18 @@ FAQ V2 (override FAQ style in style.css
     position: relative;
 }
 
+/* hover area for popup */
 .faq.faq-v2 .faq-flipper .image-popup-container {
-    position: relative;
+    position: absolute;
+    top: -4px;
+    height: 58px;
 }
 
 .faq.faq-v2 .faq-flipper img {
     position: relative;
-    top: -4px;
+    top: 0;
     left: 0;
+    z-index: 2;
 }
 #faqs-container .faq.faq-v2 .faq-inner .heading-content-area {
     border-left: 1px solid #e2e3e3;
@@ -671,7 +675,9 @@ FAQ V2 (override FAQ style in style.css
 .faq.faq-active .faq-flipper img {
     border-radius: 50%;
 }
-
+.faq.faq-active .faq-flipper img {
+    background: none;
+}
 .faq.faq-v2 .image-popup-container {
     width: 100%;
     height: 50px;
@@ -688,7 +694,7 @@ FAQ V2 (override FAQ style in style.css
     width: 170px;
     transition: opacity 0.3s;
     position: absolute;
-    top: 58px;
+    top: 55px;
     z-index: -1;
 }
 
