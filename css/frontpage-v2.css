@@ -457,6 +457,7 @@ HOTSPOT V2
 .video-carousel-v2 .slick-dots li button {
     width: 8px;
     height: 8px;
+    background-color: white;
 }
 
 .video-carousel-v2 .slick-dots li.slick-active button {
@@ -466,7 +467,9 @@ HOTSPOT V2
 .video-carousel-v2 .slick-prev, 
 .video-carousel-v2 .slick-next,
 .video-carousel-v2 .slick-prev:hover, 
-.video-carousel-v2 .slick-next:hover {
+.video-carousel-v2 .slick-next:hover,
+.video-carousel-v2 .slick-prev:focus, 
+.video-carousel-v2 .slick-next:focus {
     width: 64px;
     /* opacity: 0; */
     /* visibility: hidden; */
