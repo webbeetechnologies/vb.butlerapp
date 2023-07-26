@@ -2,6 +2,14 @@ body > * {
     color: #0B2541;
 }
 
+body, h1, h2, h3, h4, h5, h6 {
+    font-family: "+Jakarta Sans", Sans-serif;
+    font-weight: 500;
+}
+
+p, li, a {
+    font-family: "+Jakarta Sans", Sans-serif;
+}
 /***********************************
 MENU AND NAV
 ************************************/
@@ -474,13 +482,15 @@ HOTSPOT V2
 }
 
 .video-carousel-v2 .function-video-carousel-container .slick-prev,
-.video-carousel-v2 .function-video-carousel-container .slick-prev:hover {
+.video-carousel-v2 .function-video-carousel-container .slick-prev:hover,
+.video-carousel-v2 .function-video-carousel-container .slick-prev:focus {
     left: -20px;
     background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 44'%3E%3Cpath d='M0 22L22 0l2.1 2.1L4.2 22l19.9 19.9L22 44 0 22z' fill='%23fff'/%3E%3C/svg%3E")
 }
 
 .video-carousel-v2 .function-video-carousel-container  .slick-next,
-.video-carousel-v2 .function-video-carousel-container  .slick-next:hover {
+.video-carousel-v2 .function-video-carousel-container  .slick-next:hover,
+.video-carousel-v2 .function-video-carousel-container  .slick-next:focus  {
     right: -20px;
     background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 44'%3E%3Cpath d='M27 22L5 44l-2.1-2.1L22.8 22 2.9 2.1 5 0l22 22z' fill='%23fff'/%3E%3C/svg%3E")
 }
@@ -549,6 +559,104 @@ INTERACTIVE MAP
     font-size: 32px;
     font-weight: 500;
 }
+
+/****************************************
+FAQ V2 (override FAQ style in style.css
+*****************************************/
+#faqs-container .faq.faq-v2 {
+    min-height: 90px;
+    padding: 20px;
+}
+#faqs-container .faq.faq-v2 .faq-inner {
+    align-items: flex-start;
+    justify-content: left;
+    gap: 10px;
+}
+#faqs-container .faq.faq-v2 .faq-inner h3 {
+    padding: 0;
+}
+
+.faq.faq-v2 .faq-flipper {
+    flex-shrink: 0;
+    width: 70px;
+    height: inherit;
+    position: relative;
+}
+.faq.faq-v2 .faq-flipper img {
+    position: absolute;
+    top: -4px;
+    left: 0;
+}
+#faqs-container .faq.faq-v2 .faq-inner .heading-content-area {
+    border-left: 1px solid #e2e3e3;
+    min-height: 50px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding-left: 20px;
+}
+
+.faq.faq-v2  .faq-content-area {
+    margin-top: 25px;
+    padding-bottom: 0;
+    flex-direction: column;
+}
+
+.faq-content-area .faq-content-v2 {
+    opacity: 0.6;
+    margin-bottom: 20px;
+}
+.faq-content-area .faq-footer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: end;
+}
+.faq-content-area .faq-footer h5 {
+    font-size: 18px;
+    margin: 0;
+}
+.faq-content-area .faq-footer .position {
+    opacity: 0.6;
+    font-size: 16px;
+}
+
+.faq-content-area .faq-footer a {
+    color: #29abdc;
+}
+.faq-content-area .faq-footer a i.fas {
+    margin-left: 5px;
+}
+
+.faq-content-area .faq-footer > div:first-child {
+    flex-grow: 1;
+}
+
+.faq.faq-v2.faq-active .faq-icon-switcher {
+    transform: none;
+}
+.faq.faq-v2.faq-active .faq-arrow-flipper .fas {
+    transform: rotate(180deg);
+}
+
+.faq.faq-v2 .faq-arrow-flipper {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.faq.faq-v2 .faq-arrow-flipper .fas {
+    font-size: 22px;
+    transition: all 0.3s;
+}
+/* HOVER AND ACTIVE */
+.faq.faq-v2:not(.faq-active):hover .faq-flipper img,
+.faq.faq-active .faq-flipper img {
+    border-radius: 50%;
+}
+
 
 @media (max-width: 1200px) {
     .premium-hamburger-toggle {

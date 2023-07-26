@@ -245,7 +245,8 @@ function enqueue_wp_child_theme() {
 		// Stylesheets
 		// wp_enqueue_style( 'custom-google-fonts', 'https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap', false );
 		wp_enqueue_style("parent-css", get_template_directory_uri()."/style.css" );
-		wp_enqueue_style("parent-css2", get_stylesheet_directory_uri()."/css/frontpage-v2.css" );
+		wp_enqueue_style("theme-css", get_stylesheet_directory_uri()."/css/style-v1.css" );
+		wp_enqueue_style("theme-css2", get_stylesheet_directory_uri()."/css/frontpage-v2.css", 99 );
 
 		// Scripts
 		wp_enqueue_script("child-js", get_stylesheet_directory_uri() . "/js/script.js", array( "jquery" ), "1.0", true );
@@ -288,9 +289,21 @@ function butler_guides() {
 add_shortcode('b_guides', 'butler_guides'); 
 
 // CPT - FAQs
-function butler_faqs() {
+function butler_faqs($atts = null) {
 	ob_start();
-	get_template_part('partials/faqs','page');
+	$ver = ($atts && $atts['ver']) ? $atts['ver'] : '1';
+
+	switch ($ver) {
+		case "2":
+			$template = "partials/faqs_v2";
+			break;
+		case "1":
+		default:
+			$template = "partials/faqs";
+			break;
+
+	}
+	get_template_part($template,'page');
 	return ob_get_clean();
 }
 add_shortcode('b_faqs', 'butler_faqs'); 
