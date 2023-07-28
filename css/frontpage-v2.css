@@ -446,6 +446,11 @@ HOTSPOT V2
     background: #ED2177;
 }
 
+#mobile-popup-container {
+    position: absolute;
+    top: 44%;
+    width: 100%;
+}
 #mobile-popup-container .e-hotspot__tooltip {
     color: black;
     opacity: 0;
