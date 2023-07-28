@@ -248,7 +248,7 @@ $(document).ready(function () {
         }
     });
 
-    $('#mobile-popup-container .e-hotspot__tooltip .ba-close-icon').on('click', function() {
+    $('body').on('click', '#mobile-popup-container .e-hotspot__tooltip .ba-close-icon', function() {
         $(this).parents('.e-hotspot__tooltip').removeClass('active');
-    })
+    });
 });
