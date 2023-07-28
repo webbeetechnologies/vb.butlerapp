@@ -458,6 +458,7 @@ HOTSPOT V2
 #mobile-popup-container .e-hotspot__tooltip.active {
     opacity: 1;
     z-index: 2;
+    pointer-events: inherit;
 }
 
 .video-carousel-v2 .function-video-carousel-container {

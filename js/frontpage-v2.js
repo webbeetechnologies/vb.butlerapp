@@ -230,6 +230,7 @@ $(document).ready(function () {
      * MOBILE LAYOUT
      ***********************************/
     // PERSONAL SERVICES
+    $('.support-cards-container').append('<div id="mobile-popup-container" />');
     $('.support-cards-container .e-hotspot__tooltip').clone().appendTo($('#mobile-popup-container'));
     $('.support-cards-container .e-hotspot__button').on('click', function() {
         if( $(window).width() < 1024 ) {
@@ -249,6 +250,7 @@ $(document).ready(function () {
     });
 
     $('body').on('click', '#mobile-popup-container .e-hotspot__tooltip .ba-close-icon', function() {
+        console.log('hi');
         $(this).parents('.e-hotspot__tooltip').removeClass('active');
     });
 });
