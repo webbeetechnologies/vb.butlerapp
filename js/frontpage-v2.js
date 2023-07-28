@@ -225,4 +225,15 @@ $(document).ready(function () {
     }, function() {
         $('.faq-v2').removeClass('hover');
     });
+
+    /***********************************
+     * MOBILE LAYOUT
+     ***********************************/
+    // PERSONAL SERVICES
+    $('.support-cards-container .e-hotspot__tooltip').clone().appendTo($('#mobile-popup-container'));
+    $('.support-cards-container .e-hotspot__button').on('click', function() {
+        if( $(window).width() < 1024 ) {
+            console.log('HELLO E HOTSPOT');
+        }
+    });
 });

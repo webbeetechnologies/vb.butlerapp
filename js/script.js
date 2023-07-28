@@ -843,7 +843,7 @@ jQuery(document).ready(function ($) {
       e.stopPropagation();
       var getParent = $(this).parent();
       var isActive = getParent.hasClass("e-hotspot--active");
-      console.log(isActive);
+
       if (!isActive) {
         $(".e-hotspot__button.ba--inactive").removeClass("ba--inactive");
         $(".e-hotspot__button").addClass("ba--inactive");

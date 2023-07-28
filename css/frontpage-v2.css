@@ -27,6 +27,7 @@ HEADING OVERRIDING
 .elementor-heading-title {
     line-height: 1.2em;
 }
+
 /***********************************
 HERO
 ************************************/
@@ -429,6 +430,10 @@ HOTSPOT V2
     background: #ED2177;
 }
 
+.e-hotspot--fade-in-out.active {
+    opacity: 1;
+}
+
 .hotspot-v2 .team-body a {
     color: #0B2541;
 }
@@ -437,8 +442,21 @@ HOTSPOT V2
     content: url(/wp-content/uploads/2023/07/arrow-right-dark.png);
 }
 
-.hotspot-v2  .e-hotspot__button.ba--inactive:hover div:first-child {
+.hotspot-v2 .e-hotspot__button.ba--inactive:hover div:first-child {
     background: #ED2177;
+}
+
+#mobile-popup-container .e-hotspot__tooltip {
+    color: black;
+    opacity: 1;
+    left: 50%;
+    margin-left: -160px;
+    width: 320px;
+    z-index: -1;
+}
+
+#mobile-popup-container .e-hotspot__tooltip.active {
+    z-index: 2;
 }
 
 .video-carousel-v2 .function-video-carousel-container {
@@ -689,7 +707,8 @@ FAQ V2 (override FAQ style in style.css
 /* POPUP */
 .faq.faq-v2 .faq-popup-area {
     background: white;
-    box-shadow: 0px 2px 4px -1px rgb(11 37 65 / 9%), inset 0px 1px 0px rgb(255 255 255 / 70%);
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.47); 
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.47);
     border-radius: 12px;
     opacity: 0;
     padding: 15px;
@@ -721,10 +740,18 @@ FAQ V2 (override FAQ style in style.css
     font-size: 22px;
 }
 
-.faq.faq-v2 .faq-meta a {
+.faq.faq-v2 .faq-meta a,
+.faq.faq-v2 .faq-meta a:hover,
+.faq.faq-v2 .faq-meta a:focus {
     font-size: 16px;
     margin-top: 10px;
+    color: #29abdc;
 }
+
+.faq.faq-v2 .faq-meta a:hover {
+    text-decoration: underline;
+}
+
 .faq.faq-v2 .faq-meta a i.fas {
     margin-left: 10px;
 }
@@ -853,6 +880,13 @@ FAQ V2 (override FAQ style in style.css
         margin-top: 0 !important;
         max-width: 500px !important;
         overflow-y: hidden;
+    }
+
+    /**********************************************************
+    PERSONAL SERVICES CARD'S HOTSPOT TOOLTIP: HIDE THE DEFAULT
+    ***********************************************************/
+    .personal-services-section  .hotspot-v2 .e-hotspot .e-hotspot__tooltip {
+        display: none;
     }
 }
 
