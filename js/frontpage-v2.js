@@ -233,7 +233,22 @@ $(document).ready(function () {
     $('.support-cards-container .e-hotspot__tooltip').clone().appendTo($('#mobile-popup-container'));
     $('.support-cards-container .e-hotspot__button').on('click', function() {
         if( $(window).width() < 1024 ) {
-            console.log('HELLO E HOTSPOT');
+            var $parent = $(this).parents('.hotspot-v2');
+            var idx = parseInt($parent.data('idx')) - 1;
+            
+            if ($('#mobile-popup-container .e-hotspot__tooltip').eq(idx).hasClass('active')) {
+                $('#mobile-popup-container .e-hotspot__tooltip').eq(idx).removeClass('active');
+            } else {
+                $('#mobile-popup-container .e-hotspot__tooltip').removeClass('active');
+                $('#mobile-popup-container .e-hotspot__tooltip').eq(idx).addClass('active');
+            }
+            
+        } else {
+          // DESKTOP  
         }
     });
+
+    $('#mobile-popup-container .e-hotspot__tooltip .ba-close-icon').on('click', function() {
+        $(this).parents('.e-hotspot__tooltip').removeClass('active');
+    })
 });
