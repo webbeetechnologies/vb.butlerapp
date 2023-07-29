@@ -1061,9 +1061,6 @@ FAQ V2 (override FAQ style in style.css
     }
 
     .personal-services-section .e-hotspot__tooltip {
-        left: inherit !important;
-        right: 0 !important;
-        margin: 0 auto;
         /*transform: translate(-45%, 0) !important;*/
     }
     
