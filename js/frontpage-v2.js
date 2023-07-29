@@ -232,8 +232,9 @@ $(document).ready(function () {
     // PERSONAL SERVICES
     $('.support-cards-container').append('<div id="mobile-popup-container" />');
     $('.support-cards-container .e-hotspot__tooltip').clone().appendTo($('#mobile-popup-container'));
-    $('.support-cards-container .e-hotspot__button').on('click', function() {
+    $('.support-cards-container .e-hotspot__button').on('click', function(e) {
         if( $(window).width() < 1024 ) {
+            e.stopPropagation();
             var $parent = $(this).parents('.hotspot-v2');
             var idx = parseInt($parent.data('idx')) - 1;
             
@@ -252,5 +253,16 @@ $(document).ready(function () {
     $('body').on('click', '#mobile-popup-container .e-hotspot__tooltip .ba-close-icon', function() {
         console.log('hi');
         $(this).parents('.e-hotspot__tooltip').removeClass('active');
+    });
+
+    // click outside
+    $('html').on('click', function() {
+        if( $(window).width() < 1024 ) {
+            $('#mobile-popup-container .e-hotspot__tooltip.active').removeClass('active');
+        }
+    });
+
+    $('#mobile-popup-container .e-hotspot__tooltip.active').click(function(event){
+        event.stopPropagation();
     });
 });
