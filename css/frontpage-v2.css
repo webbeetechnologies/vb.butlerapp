@@ -306,6 +306,7 @@ TESTIMONIALS SLICK
     width: 8px;
     height: 8px;
     border-radius: 8px;
+    background-color: #E2E5E8;
 }
 
 .testimonials-carousel-container .slick-dots li.slick-active button {
@@ -425,11 +426,12 @@ HOTSPOT V2
 ************************************/
 .hotspot-v2 .e-hotspot__button div:first-child, 
 .hotspot-v2 .e-hotspot__button.ba--active div:first-child, 
-.hotspot-v2 .e-hotspot__button.ba--default div:first-child,
-.hotspot-v2 .e-hotspot__button.ba--inactive div:last-child {
+.hotspot-v2 .e-hotspot__button.ba--default div:first-child {
     background: #ED2177;
 }
-
+.hotspot-v2 .e-hotspot__button.ba--inactive div:last-child {
+    background: white;
+}
 .e-hotspot--fade-in-out.active {
     opacity: 1;
 }
