@@ -1,15 +1,3 @@
-body > * {
-    color: #0B2541;
-}
-
-body, h1, h2, h3, h4, h5, h6 {
-    font-family: "+Jakarta Sans", Sans-serif;
-    font-weight: 500;
-}
-
-p, li, a {
-    font-family: "+Jakarta Sans", Sans-serif;
-}
 /***********************************
 MENU AND NAV
 ************************************/
@@ -484,7 +472,7 @@ HOTSPOT V2
 .video-carousel-v2 .slick-dots li button {
     width: 8px;
     height: 8px;
-    background-color: white;
+    background-color: #E2E5E8;
 }
 
 .video-carousel-v2 .slick-dots li.slick-active button {
@@ -763,6 +751,14 @@ FAQ V2 (override FAQ style in style.css
 
 .faq.faq-v2 .faq-meta a i.fas {
     margin-left: 10px;
+}
+
+/****************************************
+OVERRIDE ELEMENTOR ELEMENTS (LAST RESORT)
+*****************************************/
+.premium-bullet-list-wrapper {
+    align-self: start !important;
+    margin-top: 10px;
 }
 
 @media (max-width: 1200px) {

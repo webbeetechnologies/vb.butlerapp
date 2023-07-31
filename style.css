@@ -12,3 +12,16 @@ Version: 1.0.2
  * ===================================================*/
 
  /* STYLE.CSS is moved to css/style-v1.css and controlled by functions.js */
+
+ body > * {
+  color: #0B2541;
+}
+
+body, h1, h2, h3, h4, h5, h6 {
+  font-family: "+Jakarta Sans", Sans-serif;
+  font-weight: 500;
+}
+
+p, li, a {
+  font-family: "+Jakarta Sans", Sans-serif;
+}
