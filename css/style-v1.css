@@ -284,6 +284,10 @@
     display: flex;
     align-items: center;
   }
+  #ba-marq .swiper-slide {
+    display: flex;
+    width: auto;
+  }
   .marq-container {
     display: flex;
     flex-direction: row;
@@ -374,6 +378,25 @@
     border-radius: 0 5px 5px 0;
   }
   
+  #kundenslide .slick-dots li {
+    width: 40px;
+  }
+  #kundenslide .slick-dots li i {
+    width: 40px;
+    height: 4px;
+    display: block;
+    background: rgba(11, 37, 65, 0.163883);
+    border-radius: 4px;
+  }
+
+  #kundenslide .slick-dots li.slick-active i {
+    background: #0b2541;
+  }
+  
+  #kundenslide .slick-dots li i:before {
+    display: none;
+  }
+
   /*======================================================
    * LOGO SCROLLER
    * ===================================================*/
