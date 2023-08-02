@@ -13,14 +13,16 @@ MENU AND NAV
     background-color: white;
     z-index: 100 !important;
 }
+
+.headhesive--clone .hide-clone {
+    display: none !important;
+}
 /***********************************
 HEADING OVERRIDING
 ************************************/
 .elementor-heading-title {
     line-height: 1.2em;
 }
-
-
 
 /***********************************
 HERO
