@@ -974,6 +974,16 @@ OVERRIDE ELEMENTOR ELEMENTS (LAST RESORT)
     margin-top: 8px !important;
 }
 
+.elementor-button-icon {
+    display: flex;
+    align-items: center;
+}
+
+body .slick-dots {
+    position: absolute;
+    left: 0;
+    right: 0;
+}
 @media (max-width: 1200px) {
     .premium-hamburger-toggle {
         width: 35px;
@@ -1064,6 +1074,11 @@ OVERRIDE ELEMENTOR ELEMENTS (LAST RESORT)
         padding: 20px 20px 70px;
     }
 
+    .premium-mobile-menu-container .cta-container .elementor-button {
+        font-size: 16px;
+        padding: 20px;
+    }
+
     .premium-mobile-menu-container .cta-container > .elementor-widget-wrap > div.elementor-element {
         width: 50%;
     }
@@ -1105,6 +1120,24 @@ OVERRIDE ELEMENTOR ELEMENTS (LAST RESORT)
     ***********************************************************/
     .personal-services-section  .hotspot-v2 .e-hotspot .e-hotspot__tooltip {
         display: none;
+    }
+
+    .video-carousel-v2 .slick-prev, 
+    .video-carousel-v2 .slick-next, 
+    .video-carousel-v2 .slick-prev:hover, 
+    .video-carousel-v2 .slick-next:hover, 
+    .video-carousel-v2 .slick-prev:focus, 
+    .video-carousel-v2 .slick-next:focus {
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+    }
+
+    .swiper-coverflow-container [class^="swiper-button-"] {
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+        margin-top: -20px;
     }
 }
 

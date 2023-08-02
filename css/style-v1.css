@@ -3027,9 +3027,11 @@
     }
   }
   @media (min-width: 768px) and (max-width: 1024.98px) {
-    #mainhero,
-    #mainhero-2 {
+    #mainhero {
       margin-top: -68px;
+    }
+    #mainhero-2 {
+      margin-top: -85px;
     }
     .hero-img img {
       margin-left: -6%;
@@ -3795,9 +3797,11 @@
     #faqs-container .faq.faq-active h3 {
       width: 74%;
     }
-    #mainhero,
-    #mainhero-2 {
+    #mainhero {
       margin-top: -52.1797px;
+    }
+    #mainhero-2 {
+      margin-top: 0;
     }
     #mobile-hero-logos {
       margin-top: -70px !important;
@@ -4035,8 +4039,11 @@
     }
   }
   @media (min-width: 1025px) {
-    #mainhero, #mainhero-2 {
+    #mainhero {
       margin-top: -77.0781px;
+    }
+    #mainhero-2 {
+      margin-top: -65px;
     }
   }
   .fadeInDown,
