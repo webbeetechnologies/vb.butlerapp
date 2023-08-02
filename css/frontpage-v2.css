@@ -11,6 +11,7 @@ MENU AND NAV
 
 .elementor-sticky.elementor-sticky--active {
     background-color: white;
+    z-index: 10;
 }
 /***********************************
 HEADING OVERRIDING
