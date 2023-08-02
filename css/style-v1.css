@@ -4028,8 +4028,10 @@
     }
   }
   @media (min-width: 1025px) and (max-width: 1988px) {
-    #mainhero > div {
+    #mainhero > div,
+    #mainhero-2 .hero-sec-v2 {
       max-width: calc(93% - 20px);
+      margin: 0 auto;
     }
   }
   @media (min-width: 1025px) {
