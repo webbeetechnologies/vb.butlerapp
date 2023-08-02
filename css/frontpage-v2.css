@@ -9,12 +9,17 @@ MENU AND NAV
     display: none;
 }
 
+.elementor-sticky.elementor-sticky--active {
+    background-color: white;
+}
 /***********************************
 HEADING OVERRIDING
 ************************************/
 .elementor-heading-title {
     line-height: 1.2em;
 }
+
+
 
 /***********************************
 HERO
@@ -963,7 +968,7 @@ OVERRIDE ELEMENTOR ELEMENTS (LAST RESORT)
 *****************************************/
 .premium-bullet-list-wrapper {
     align-self: start !important;
-    margin-top: 10px !important;
+    margin-top: 8px !important;
 }
 
 @media (max-width: 1200px) {
