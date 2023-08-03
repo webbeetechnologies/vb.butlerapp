@@ -270,6 +270,13 @@ function coverflow_register() {
 	// wp_enqueue_script( 'swiper', get_stylesheet_directory_uri() . '/js/plugins/coverflow-swiper/swiper.js', ['jquery'], true );
 }
 
+// CUSTOM SCROLLBAR
+add_action( 'wp_enqueue_scripts', 'customscroll_register' );
+function customscroll_register() {
+	wp_enqueue_style( 'customscroll-css', get_stylesheet_directory_uri() . '/js/plugins/custom-scrollbar/jquery.mCustomScrollbar.css', [], false, 'all' );
+	wp_enqueue_script( 'customscroll-js', get_stylesheet_directory_uri() . '/js/plugins/custom-scrollbar/jquery.mCustomScrollbar.concat.min.js', ['jquery'], true );
+}
+
 // scrollToFixed
 add_action( 'wp_enqueue_scripts', 'jquery_scroll_to_fixed_scripts' );
 function jquery_scroll_to_fixed_scripts() {
@@ -376,6 +383,14 @@ function phpcode_trusted_api() {
 	return ob_get_clean();
 }
 add_shortcode('trusted_api', 'phpcode_trusted_api'); 
+
+// CPT - TIMELINE
+function ba_timeline() {
+	ob_start();
+	get_template_part('partials/timeline','page');
+	return ob_get_clean();
+}
+add_shortcode('ba_timeline', 'ba_timeline'); 
 
 // BACKEND - CSS
 function butler_backend_css() {
