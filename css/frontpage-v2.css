@@ -1127,12 +1127,7 @@ body .slick-dots {
     .video-carousel-v2 .slick-prev:hover, 
     .video-carousel-v2 .slick-next:hover, 
     .video-carousel-v2 .slick-prev:focus, 
-    .video-carousel-v2 .slick-next:focus {
-        width: 40px;
-        height: 40px;
-        border-radius: 10px;
-    }
-
+    .video-carousel-v2 .slick-next:focus,
     .swiper-coverflow-container [class^="swiper-button-"] {
         width: 40px;
         height: 40px;
