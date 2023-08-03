@@ -335,6 +335,18 @@ jQuery(document).ready(function ($) {
     }
   });
 
+  $(".image-carousel-v2").each(function (idx, item) {
+    if ($(item).find(".elementor-widget-wrap").length > 1) {
+      $(item).find(".elementor-widget-wrap").slick({
+        autoplay: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: true,
+        arrows: true,
+      });
+    }
+  });
+
   /*===============================================================================
    *  VIDEO SWITCHER - Section 4
    * =============================================================================*/
