@@ -507,6 +507,7 @@ HOTSPOT V2
     background-repeat: no-repeat;
     background-position: center;
     top: 60%;
+    z-index: 10;
 }
 
 .image-carousel-v2 .slick-prev,
