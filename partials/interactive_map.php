@@ -9,7 +9,7 @@ if (!in_array($country_code, $options)) {
     <?php if ($country_code == 'DE'): ?>
         <div class="map-container germany de">
         <img
-            src="https://butlerapp.de/wp-content/uploads/2023/07/map-de.svg"
+            src="https://butlerapp.de/wp-content/uploads/2023/08/map-de.png"
             loading="lazy"
             alt
             class="map-image"
