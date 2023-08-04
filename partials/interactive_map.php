@@ -10,7 +10,6 @@ if (!in_array($country_code, $options)) {
         <div class="map-container germany de">
         <img
             src="https://butlerapp.de/wp-content/uploads/2023/08/map-de.png"
-            loading="lazy"
             alt
             class="map-image"
         />
@@ -249,7 +248,6 @@ if (!in_array($country_code, $options)) {
         <div class="map-container austria at">
           <img
             src="https://butlerapp.de/wp-content/uploads/2023/07/map-at.svg"
-            loading="lazy"
             alt
             class="map-image"
           />
@@ -291,7 +289,6 @@ if (!in_array($country_code, $options)) {
         <div class="map-container swiss ch">
           <img
             src="https://butlerapp.de/wp-content/uploads/2023/07/map-ch.svg"
-            loading="lazy"
             alt
             class="map-image"
           />
