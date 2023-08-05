@@ -11,7 +11,7 @@ if (!in_array($country_code, $options)) {
         <img
             src="https://butlerapp.de/wp-content/uploads/2023/08/map-de.png"
             alt
-            no-lazy-load
+            data-no-lazy="1"
             class="map-image"
         />
         <a href="#" class="map-state bb w-inline-block">
@@ -250,7 +250,7 @@ if (!in_array($country_code, $options)) {
           <img
             src="https://butlerapp.de/wp-content/uploads/2023/07/map-at.svg"
             alt
-            no-lazy-load
+            data-no-lazy="1"
             class="map-image"
           />
           <a href="#" class="map-state at-ni w-inline-block">
@@ -292,7 +292,7 @@ if (!in_array($country_code, $options)) {
           <img
             src="https://butlerapp.de/wp-content/uploads/2023/07/map-ch.svg"
             alt
-            no-lazy-load
+            data-no-lazy="1"
             class="map-image"
           />
           <a href="#" class="map-state ch-lu w-inline-block">
