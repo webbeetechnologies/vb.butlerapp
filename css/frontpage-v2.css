@@ -15,7 +15,7 @@ MENU AND NAV
 }
 
 .headhesive--clone .hide-clone {
-    display: none !important;
+    display: none;
 }
 /***********************************
 HEADING OVERRIDING
@@ -1115,6 +1115,9 @@ body .slick-dots {
 
 /* ELEMENTOR TABLET  BREAKPOINT */
 @media (max-width: 1024px) {
+    .headhesive--clone .hide-clone {
+        display: inherit;
+    }
     /**************************************************
     PERSONAL SERVICES: CARDS RIGHT SECTION
     ***************************************************/
