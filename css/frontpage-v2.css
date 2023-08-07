@@ -14,6 +14,8 @@ MENU AND NAV
     z-index: 100 !important;
 }
 
+/* THIS IS FOR PRODUCT PAGE THAT HAS SECOND MENU BAR */
+/* THE SECOND MENU IS FIXED SET BY ELEMENTOR, AND THIS FIRST MENU FORCED TO DISPLAY NONE IN DESKTOP */
 .headhesive--clone .hide-clone {
     display: none;
 }
@@ -1115,8 +1117,22 @@ body .slick-dots {
 
 /* ELEMENTOR TABLET  BREAKPOINT */
 @media (max-width: 1024px) {
+    /**************************************************************************************
+    PRODUCT PAGE WITH SECOND BAR MENU, THE FIRST MENU WHICH HAS .hide-clone WILL SHOW AGAIN
+    ***************************************************************************************/
     .headhesive--clone .hide-clone {
         display: inherit;
+    }
+    /* and the second bar will showing too when it's showing */
+    body #mainhero-2 .product-menu-container {
+        transition: all 0.3s;
+        background-color: transparent;
+    }
+    body.headhesive-stick #mainhero-2 .product-menu-container {
+        background: rgb(255,255,255,0.9);
+        opacity: 1;
+        position: fixed;
+        top: 52px;
     }
     /**************************************************
     PERSONAL SERVICES: CARDS RIGHT SECTION
