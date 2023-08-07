@@ -4511,10 +4511,14 @@
       margin-bottom: 10px;
     }
   
-    #mainhero,
-    #mainhero-2 {
+    #mainhero {
       margin-top: -52.18px;
     }
+
+    #mainhero-2 {
+      margin-top: -90px;
+    }
+    
     #kunden--slider h2 {
       margin-bottom: 0 !important;
     }
