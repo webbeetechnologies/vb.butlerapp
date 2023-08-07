@@ -1145,6 +1145,25 @@ body .slick-dots {
         height: 40px;
         border-radius: 10px;
         margin-top: -20px;
+        top: 56%;
+    }
+
+    .image-carousel-v2 .slick-prev, 
+    .image-carousel-v2 .slick-prev:hover, 
+    .image-carousel-v2 .slick-prev:focus, 
+    .video-carousel-v2 .function-video-carousel-container .slick-prev, 
+    .video-carousel-v2 .function-video-carousel-container .slick-prev:hover, 
+    .video-carousel-v2 .function-video-carousel-container .slick-prev:focus  {
+        left: -10px;
+    }
+
+    .image-carousel-v2 .slick-next,
+    .image-carousel-v2 .slick-next:hover, 
+    .image-carousel-v2 .slick-next:focus, 
+    .video-carousel-v2 .function-video-carousel-container .slick-next, 
+    .video-carousel-v2 .function-video-carousel-container .slick-next:hover, 
+    .video-carousel-v2 .function-video-carousel-container .slick-next:focus  {
+        right: -10px;
     }
 }
 
