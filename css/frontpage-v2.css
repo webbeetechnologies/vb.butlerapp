@@ -1133,6 +1133,7 @@ body .slick-dots {
         opacity: 1;
         position: fixed;
         top: 52px;
+        z-index: 100;
     }
     /**************************************************
     PERSONAL SERVICES: CARDS RIGHT SECTION
@@ -1203,7 +1204,7 @@ body .slick-dots {
     }
 
     .product-nav-container nav.hfe-dropdown li a.hfe-menu-item {
-        padding: 20px !important;
+        padding: 20px 30px !important;
     }
 }
 
