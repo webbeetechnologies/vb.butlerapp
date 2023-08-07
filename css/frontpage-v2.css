@@ -1165,6 +1165,22 @@ body .slick-dots {
     .video-carousel-v2 .function-video-carousel-container .slick-next:focus  {
         right: -10px;
     }
+
+    /********************************************
+    PRODUCT SECOND MENU
+    *********************************************/
+    .product-nav-container nav.hfe-dropdown {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        z-index: 20;
+        height: calc(100vh-50px);
+        display: block;
+    }
+
+    .product-nav-container nav.hfe-dropdown li {
+        border: none;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 1200px) {
