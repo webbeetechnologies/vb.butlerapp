@@ -248,7 +248,7 @@ if (!in_array($country_code, $options)) {
     <?php if ($country_code == 'AT'): ?>
         <div class="map-container austria at">
           <img
-            src="https://butlerapp.de/wp-content/uploads/2023/07/map-at.svg"
+            src="https://butlerapp.de/wp-content/uploads/2023/08/map-at.png"
             alt
             data-no-lazy="1"
             class="map-image"
@@ -290,7 +290,7 @@ if (!in_array($country_code, $options)) {
     <?php if ($country_code == 'CH'): ?>
         <div class="map-container swiss ch">
           <img
-            src="https://butlerapp.de/wp-content/uploads/2023/07/map-ch.svg"
+            src="https://butlerapp.de/wp-content/uploads/2023/08/map-ch.png"
             alt
             data-no-lazy="1"
             class="map-image"
