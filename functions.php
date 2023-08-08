@@ -361,9 +361,9 @@ function coverflow_carousel($atts) {
 add_shortcode('coverflow_carousel', 'coverflow_carousel'); 
 
 // CPT - TESTIMONIELS CAROUSEL
-function testimonials_carousel_v2() {
+function testimonials_carousel_v2($atts) {
 	ob_start();
-	get_template_part('partials/testimonials_carousel_v2','page');
+	get_template_part('partials/testimonials_carousel_v2','page', array('atts'=>$atts));
 	return ob_get_clean();
 }
 add_shortcode('testimonials_carousel_v2', 'testimonials_carousel_v2'); 

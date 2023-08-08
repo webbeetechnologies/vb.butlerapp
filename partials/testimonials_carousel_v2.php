@@ -1,5 +1,8 @@
 <div class="testimonials-carousel-container">
-	<?php $args = array(  
+	<?php 
+	// category can be 'customer' or 'employee'
+	$cat_name = $args['atts'] ? strtolower($args['atts']['category']) : null;
+	$args = array(  
 			'post_type' => 'testimonials',
 			'post_status' => 'publish',
 	); 
@@ -8,6 +11,7 @@
 	// create array, so it's easier to call twice
 	$post_idx = 0;
 	$testimonials = array();
+
 	while ( $loop->have_posts() ) {
 		$loop->the_post();
 		$item = array(
@@ -17,8 +21,12 @@
 			'organisation_name' => get_field('organisation_name'),
 			'organisation_url' => get_field('organisation_url'),
 			'content' => get_the_content(),
+			'testimonial_group' => get_field('testimonial_group'),
 		);
-		$testimonials[] = $item;
+		$filter = in_array($cat_name, $item['testimonial_group']);
+		if ($filter) {
+			$testimonials[] = $item;
+		}
 	};
 	wp_reset_postdata();
 	?>
