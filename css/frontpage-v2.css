@@ -10,8 +10,10 @@ MENU AND NAV
 }
 
 .elementor-sticky.elementor-sticky--active {
+    /*
     background-color: white;
     z-index: 90 !important;
+    */
 }
 
 /* THIS IS FOR PRODUCT PAGE THAT HAS SECOND MENU BAR */
