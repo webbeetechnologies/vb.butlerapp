@@ -1,6 +1,9 @@
 /***********************************
 MENU AND NAV
 ************************************/
+body.ehf-header #masthead {
+    z-index: 100;
+}
 .header-v2 .premium-mobile-menu-container {
     overflow: hidden;
 }
@@ -9,11 +12,8 @@ MENU AND NAV
     display: none;
 }
 
-.elementor-sticky.elementor-sticky--active {
-    /*
+.elementor-sticky.elementor-sticky--active .product-menu-container {
     background-color: white;
-    z-index: 90 !important;
-    */
 }
 
 /* THIS IS FOR PRODUCT PAGE THAT HAS SECOND MENU BAR */
