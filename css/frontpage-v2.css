@@ -1232,6 +1232,9 @@ body .slick-dots {
         min-height: inherit !important;
     }
 
+    body.headhesive-stick #mainhero-2 .product-menu-container {
+        top: 58px;
+    }
     /********************************
     PREMIUM MOBILE MENU
     *********************************/
