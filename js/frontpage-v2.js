@@ -44,7 +44,7 @@ $(document).ready(function () {
     $('.header-v2 #stb-header-cta > div').clone().appendTo('.premium-mobile-menu-container').addClass('cta-container');
 
     // copy cta in second row nav (product page) to mobile nav
-    $('.product-menu-container .cta-container .elementor-button-wrapper').clone().appendTo('.product-nav-container nav.hfe-dropdown').addClass('cta-container');
+    $('.product-menu-container .cta-container .elementor-button-wrapper').clone().appendTo('.product-nav-container nav').addClass('cta-container');
 
     // megamenu back button in mobile
     $('body').on('click', '.submenu-button-back', function() {
