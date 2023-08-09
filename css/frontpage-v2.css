@@ -1338,6 +1338,11 @@ body .slick-dots {
     .testimonials-carousel-container .slick-arrow {
         display: none !important;
     }
+    /* FAQ */
+    .faq-content-area .faq-footer {
+        flex-direction: column;
+        align-items: start;
+    }
 
     /* PAYMENT */
     #payment-methods > .e-con-inner {
