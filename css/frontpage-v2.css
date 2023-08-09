@@ -1196,9 +1196,15 @@ body .slick-dots {
         left: 0;
         width: 100% !important;
         z-index: 20 !important;
-        height: calc(100vh - 50px) !important;
-        display: block;
+        height: calc(100vh - 58px - 50px) !important;
+        display: flex;
+        flex-direction: column;
         transition: all 0.3s;
+    }
+
+    .product-nav-container .cta-container {
+        margin-top: auto;
+        padding: 20px 30px;
     }
 
     .product-nav-container nav.hfe-dropdown li {
@@ -1232,9 +1238,17 @@ body .slick-dots {
         min-height: inherit !important;
     }
 
+    /********************************************
+    PRODUCT SECOND MENU
+    *********************************************/
     body.headhesive-stick #mainhero-2 .product-menu-container {
         top: 52px;
     }
+
+    .product-nav-container nav.hfe-dropdown {
+        height: calc(100vh - 52px - 50px) !important;
+    }
+    
     /********************************
     PREMIUM MOBILE MENU
     *********************************/
