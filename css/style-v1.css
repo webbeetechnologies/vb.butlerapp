@@ -149,7 +149,8 @@
   
   /* HEADER HIDDEN WHEN SCROLL TO FIXED OF OTHER EL */
   body.scroll-to-fixed-active #masthead {
-    opacity: 0;
+    /* it's using top offset now */
+    /*opacity: 0;*/
   }
   
   /*======================================================
