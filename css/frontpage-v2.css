@@ -1134,7 +1134,7 @@ body .slick-dots {
         background: rgb(255,255,255,0.9);
         opacity: 1;
         position: fixed;
-        top: 52px;
+        top: 58px;
         z-index: 90;
     }
     /**************************************************
@@ -1233,7 +1233,7 @@ body .slick-dots {
     }
 
     body.headhesive-stick #mainhero-2 .product-menu-container {
-        top: 58px;
+        top: 52px;
     }
     /********************************
     PREMIUM MOBILE MENU
