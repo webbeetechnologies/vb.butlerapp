@@ -931,8 +931,10 @@ jQuery(document).ready(function ($) {
     $(".features-list-table .header").next().remove();
   }
 
-  function initScrolltoFixed(offsetTop = 0) {
+  function initScrolltoFixed() {
     var limit = $(".features-list-footer").offset().top - 150;
+    var offsetTop = (parseInt($('#masthead').height()) || 0)+ (parseInt($('.product-menu-container').height()) || 0);
+    
     $(".features-list-table .header").scrollToFixed({
       limit: limit,
       marginTop: offsetTop,
@@ -945,11 +947,9 @@ jQuery(document).ready(function ($) {
     $(".butler-price-features .alle-funktionen").hide();
   }
   // init fixed header
-  var offsetTop = (parseInt($('#masthead').height()) || 0)+ (parseInt($('.product-menu-container').height()) || 0);
-
   if ($(".features-list-table").length > 0) {
     // calculate offset top
-    initScrolltoFixed(offsetTop);
+    initScrolltoFixed();
   }
 
   $(".butler-price-features .alle-funktionen").on("click", function (e) {
@@ -959,7 +959,7 @@ jQuery(document).ready(function ($) {
     $(".more-features-list").slideToggle("slow", function () {
       // recalculate limit for fixed header
       destroyScrolltoFixed();
-      initScrolltoFixed(offsetTop);
+      initScrolltoFixed();
     });
 
     if ($(".butler-price-features .alle-funktionen").hasClass("active")) {
@@ -987,7 +987,7 @@ jQuery(document).ready(function ($) {
       // init fixed header
       if ($(".features-list-table").length > 0) {
         destroyScrolltoFixed();
-        initScrolltoFixed(offsetTop);
+        initScrolltoFixed();
       }
     })
   );
