@@ -181,14 +181,14 @@ $(document).ready(function () {
 
     // CUSTOMERS TESTIMONIALS
     $('.testimonials-carousel-container .slider-nav').slick({
-        slidesToShow: 1,
+        slidesToShow: 3,
         slidesToScroll: 1,
         asNavFor: '.slider-for',
         focusOnSelect: true,
         centerMode: true,
         centerPadding: 0,
         variableWidth: true,
-        autoplay: true,
+        autoplay: true
     });
     
     $('.testimonials-carousel-container .slider-for').slick({
