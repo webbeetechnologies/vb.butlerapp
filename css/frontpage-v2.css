@@ -491,6 +491,8 @@ HOTSPOT V2
     background-color: #29ABDC;
 }
 
+.slick-container-v2 .slick-prev,
+.slick-container-v2 .slick-next,
 .image-carousel-v2 .slick-prev,
 .image-carousel-v2 .slick-next,
 .video-carousel-v2 .slick-prev, 
@@ -514,6 +516,9 @@ HOTSPOT V2
     z-index: 10;
 }
 
+.slick-container-v2 .slick-prev,
+.slick-container-v2 .slick-prev:hover,
+.slick-container-v2 .slick-prev:focus,
 .image-carousel-v2 .slick-prev,
 .image-carousel-v2 .slick-prev:hover,
 .image-carousel-v2 .slick-prev:focus,
@@ -524,6 +529,9 @@ HOTSPOT V2
     background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 44'%3E%3Cpath d='M0 22L22 0l2.1 2.1L4.2 22l19.9 19.9L22 44 0 22z' fill='%23fff'/%3E%3C/svg%3E")
 }
 
+.slick-container-v2 .slick-next,
+.slick-container-v2 .slick-next:hover,
+.slick-container-v2 .slick-next:focus,
 .image-carousel-v2 .slick-next,
 .image-carousel-v2 .slick-next:hover,
 .image-carousel-v2 .slick-next:focus,
@@ -537,6 +545,15 @@ HOTSPOT V2
 .image-carousel-v2  .slick-prev:before, .image-carousel-v2  .slick-next:before,
 .video-carousel-v2  .slick-prev:before, .video-carousel-v2  .slick-next:before {
     display: none;
+}
+
+.image-carousel-gallery-v2 .gallery .gallery-item {
+    margin: 0 !important;
+    float: none;
+}
+
+.image-carousel-gallery-v2 .gallery .gallery-item img {
+    border: none !important;
 }
 /***********************************
 INTERACTIVE MAP
