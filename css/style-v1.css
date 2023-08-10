@@ -2042,6 +2042,7 @@
     padding-bottom: 30px;
   }
   .butler-price-features .header {
+    border-bottom: 1px solid transparent;
     background-color: white;
     margin-bottom: 20px;
     padding-bottom: 15px;

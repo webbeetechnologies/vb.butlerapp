@@ -275,6 +275,7 @@ add_action( 'wp_enqueue_scripts', 'customscroll_register' );
 function customscroll_register() {
 	wp_enqueue_style( 'customscroll-css', get_stylesheet_directory_uri() . '/js/plugins/custom-scrollbar/jquery.mCustomScrollbar.css', [], false, 'all' );
 	wp_enqueue_script( 'customscroll-js', get_stylesheet_directory_uri() . '/js/plugins/custom-scrollbar/jquery.mCustomScrollbar.concat.min.js', ['jquery'], true );
+	wp_enqueue_script( 'inviewport-js', get_stylesheet_directory_uri() . '/js/plugins/in-viewport/jquery.exopiteinviewport.light.min.js', ['jquery'], true );
 }
 
 // scrollToFixed

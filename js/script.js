@@ -933,7 +933,12 @@ jQuery(document).ready(function ($) {
 
   function initScrolltoFixed() {
     var limit = $(".features-list-footer").offset().top - 150;
-    var offsetTop = (parseInt($('#masthead').height()) || 0)+ (parseInt($('.product-menu-container').height()) || 0);
+
+    // calculate the offsetTop
+    // offsetTop is the height of masthead clone and the product-menu-container (if any)
+    var mastheadHeight = $('#masthead.headhesive--clone.headhesive--stick').height() || 0;
+    var productMenuHeadHeight = $('.product-menu-container').height() || 0;
+    var offsetTop = parseInt(mastheadHeight) + parseInt(productMenuHeadHeight);
     
     $(".features-list-table .header").scrollToFixed({
       limit: limit,
@@ -946,11 +951,33 @@ jQuery(document).ready(function ($) {
   if ($(".more-features-list").length == 0) {
     $(".butler-price-features .alle-funktionen").hide();
   }
+
+  /******************************************************
+   * INIT FIXED HEADER
+   * since it has calculation of offsetTop,
+   * do the init when the element is showing in viewport
+   * and do it one time only
+   * ****************************************************/
   // init fixed header
-  if ($(".features-list-table").length > 0) {
-    // calculate offset top
-    initScrolltoFixed();
+  if ($( '.features-list-table').length) {
+    var isInit = 0;
+    $( '.features-list-table').exopiteInViewPort({
+      onEnter: function(element, inViewport) {
+        if (isInit) return;
+        
+        initScrolltoFixed();
+        isInit = 1;
+        
+      },
+      onWholeInside: function(element, inViewport) {
+        if (isInit) return;
+        
+        initScrolltoFixed();
+        isInit = 1;
+      }
+    });
   }
+  
 
   $(".butler-price-features .alle-funktionen").on("click", function (e) {
     e.preventDefault();
