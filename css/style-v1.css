@@ -1507,7 +1507,8 @@
       0px 10px 10px -7px rgb(11 37 65 / 22%);
   }
 
-  .elementor-form .elementor-field-type-submit .elementor-button[type="submit"] svg {
+  .elementor-form .elementor-field-type-submit .elementor-button[type="submit"] svg,
+  .elementor-form .elementor-field-type-submit .elementor-button[type="submit"] .elementor-button-icon {
     display: none;
   }
   
