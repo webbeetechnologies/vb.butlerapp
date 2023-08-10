@@ -1505,6 +1505,8 @@
     align-items: center;
     box-shadow: 0px 20px 30px -10px rgb(11 37 65 / 36%),
       0px 10px 10px -7px rgb(11 37 65 / 22%);
+    padding-top: 15px;
+    padding-bottom: 15px;
   }
 
   .elementor-form .elementor-field-type-submit .elementor-button[type="submit"] svg,
@@ -1518,7 +1520,6 @@
     .elementor-form .elementor-field-type-submit .elementor-button[type="submit"]:after {
     content: url(/wp-content/uploads/2022/06/arrow-right.svg);
     margin-left: 7px;
-    padding: 15px 0;
   }
   .elementor-field-group-field_cd8fe50 > .elementor-field-subgroup span a {
     margin-left: 4px;
