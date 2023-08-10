@@ -347,6 +347,20 @@ jQuery(document).ready(function ($) {
     }
   });
 
+  // this is using elementor gallery because it has linked-lightbox in it
+  $(".image-carousel-gallery-v2").each(function (idx, item) {
+    if ($(item).find(".gallery .gallery-item").length > 1) {
+      $(item).find(".gallery").slick({
+        autoplay: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: true,
+        arrows: true,
+      });
+    }
+  });
+  
+
   /*===============================================================================
    *  VIDEO SWITCHER - Section 4
    * =============================================================================*/
