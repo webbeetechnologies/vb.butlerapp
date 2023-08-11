@@ -222,11 +222,10 @@ $(document).ready(function () {
     });
 
     // FAQ-V2: HOVER SHOW POPUP
-    $('.faq-v2 .faq-flipper .image-popup-container').hover(function() {
-        var $parent = $(this).parents('.faq-v2').addClass('hover');
-        $parent.addClass('hover');
+    $('.faq-v2:not(".faq-active")').hover(function() {
+       $(this).addClass('hover');
     }, function() {
-        $('.faq-v2').removeClass('hover');
+        $(this).removeClass('hover');
     });
 
     /***********************************
@@ -254,7 +253,6 @@ $(document).ready(function () {
     });
 
     $('body').on('click', '#mobile-popup-container .e-hotspot__tooltip .ba-close-icon', function() {
-        console.log('hi');
         $(this).parents('.e-hotspot__tooltip').removeClass('active');
     });
 
