@@ -542,6 +542,7 @@ HOTSPOT V2
     background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 44'%3E%3Cpath d='M27 22L5 44l-2.1-2.1L22.8 22 2.9 2.1 5 0l22 22z' fill='%23fff'/%3E%3C/svg%3E")
 }
 
+.slick-container-v2 .slick-prev:before, .slick-container-v2 .slick-next:before, 
 .image-carousel-v2  .slick-prev:before, .image-carousel-v2  .slick-next:before,
 .video-carousel-v2  .slick-prev:before, .video-carousel-v2  .slick-next:before {
     display: none;
@@ -1044,6 +1045,7 @@ body .slick-dots {
     /* OPENED STATE */
     .header-v2 .premium-ver-inner-container.opened .premium-mobile-menu-container {
         height: calc(100vh - 52px);
+        display: flex;
     }
     .header-v2 .premium-ver-inner-container.opened .premium-mobile-menu-container .premium-mobile-menu, 
     .header-v2 .premium-ver-inner-container.opened .premium-mobile-menu-container .premium-sub-menu {
@@ -1103,6 +1105,13 @@ body .slick-dots {
         /*position: absolute;*/
         bottom: env(safe-area-inset-bottom);
         padding: 20px 20px 70px;
+    }
+
+    .premium-mobile-menu-container .cta-container > div {
+        display: flex;
+        gap: 20px;
+        flex-direction: row;
+        width: 100%;
     }
 
     .premium-mobile-menu-container .cta-container .elementor-button {

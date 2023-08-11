@@ -229,6 +229,11 @@ function store_params_to_cookie_OLD() {
 	}
 }
 
+function my_excerpt_length($length){ 
+	return 200; 
+} 
+add_filter('excerpt_length', 'my_excerpt_length');
+
 /* APPEND PARAMS IN COOKIE TO ALL URL THROUGH WHOLE SITE */
 // add_action('template_redirect', 'wprdcv_param_redirect', 2);
 function wprdcv_param_redirect() {

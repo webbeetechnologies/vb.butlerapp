@@ -181,7 +181,7 @@ $(document).ready(function () {
 
     // CUSTOMERS TESTIMONIALS
     $('.testimonials-carousel-container .slider-nav').slick({
-        slidesToShow: 3,
+        slidesToShow: 1,
         slidesToScroll: 1,
         asNavFor: '.slider-for',
         focusOnSelect: true,
