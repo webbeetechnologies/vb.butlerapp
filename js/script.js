@@ -542,7 +542,7 @@ jQuery(document).ready(function ($) {
   );
   */
   $(
-    ".elementor-location-popup .elementor-container > .elementor-column > .elementor-widget-wrap"
+    ".elementor-location-popup > .elementor-section > .elementor-container > .elementor-column > .elementor-widget-wrap"
   ).prepend(
     '<img class="popup-icon" src="/wp-content/uploads/2022/06/popup-icon.png">'
   );
