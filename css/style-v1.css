@@ -4636,10 +4636,16 @@
       line-height: 1.7em;
       padding: 80px 30px 30px 30px;
     }
+
+    #kunden--slider .elementor-widget-container {
+      max-width: 100%;
+    }
+    
     #kunden--slider img.attachment-full {
       box-shadow: 0 0 27px rgb(0 0 0 / 30%);
       border-radius: 50%;
       width: 200px;
+      margin: 0 auto;
     }
     #kundenslide .elementor-section-boxed .elementor-container {
       width: 130% !important;
