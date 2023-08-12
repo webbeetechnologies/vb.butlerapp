@@ -534,8 +534,15 @@ jQuery(document).ready(function ($) {
    *  POPUPS
    * =============================================================================*/
 
+  /*
   $(
     ".elementor-location-popup > div > section > .elementor-container > .elementor-row > .elementor-column > .elementor-column-wrap > .elementor-widget-wrap"
+  ).prepend(
+    '<img class="popup-icon" src="/wp-content/uploads/2022/06/popup-icon.png">'
+  );
+  */
+  $(
+    ".elementor-location-popup .elementor-container > .elementor-column > .elementor-widget-wrap"
   ).prepend(
     '<img class="popup-icon" src="/wp-content/uploads/2022/06/popup-icon.png">'
   );
