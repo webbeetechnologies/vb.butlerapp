@@ -1598,7 +1598,7 @@
     FUNKTIONEN NEW: 7 DEC 2022
   ********************************************************/
   .elementor-section-boxed .funktionen-new .elementor-container {
-    width: calc(100% - 20px);
+    /*width: calc(100% - 20px); */
   }
   
   .funktionen-new {

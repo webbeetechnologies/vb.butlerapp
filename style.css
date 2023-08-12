@@ -13,7 +13,9 @@ Version: 1.0.2
 
  /* STYLE.CSS is moved to css/style-v1.css and controlled by functions.js */
 
-/*
+/***********************
+THIS IS FOR HOMEPAGE V2
+************************
 body > * {
   color: #0B2541;
 }
@@ -28,3 +30,20 @@ p, li, a {
   font-family: "+Jakarta Sans", Sans-serif;
 }
 */
+
+/* QUICK FIX: NEW ELEMENTOR REMOVE */
+body .elementor-section.elementor-section-boxed > .elementor-container {
+  max-width: 1160px;
+}
+
+elementor-text-editor p, .elementor-text-editor ul li, .elementor-text-editor ol li {
+  font-size: inherit;
+}
+
+.elementor-text-editor, .elementor-text-editor h1, .elementor-text-editor h2, .elementor-text-editor h3, .elementor-text-editor h4, .elementor-text-editor h5, .elementor-text-editor h6, .elementor-text-editor p, .elementor-text-editor ul li, .elementor-text-editor ol li {
+  font-family: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  color: inherit;
+  line-height: inherit;
+}
