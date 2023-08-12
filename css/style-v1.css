@@ -1599,6 +1599,7 @@
   ********************************************************/
   .elementor-section-boxed .funktionen-new .elementor-container {
     /*width: calc(100% - 20px); */
+    width: 100%;
   }
   
   .funktionen-new {
