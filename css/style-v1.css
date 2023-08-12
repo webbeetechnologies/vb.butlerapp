@@ -600,7 +600,9 @@
     overflow: visible;
     margin-top: 18px;
   }
-  .elementor-popup-modal .elementor-widget-container.elementor-motion-effects-element .elementor-image img {
+
+  .elementor-popup-modal .elementor-widget-container.elementor-motion-effects-element .elementor-image img,
+  .elementor-popup-modal .elementor-widget-container.elementor-motion-effects-element img {
     visibility: hidden;
     z-index: -1;
   }
@@ -647,7 +649,8 @@
   .elementor-popup-modal
     .elementor-element-populated
     .elementor-background-overlay
-    + .elementor-widget-wrap {
+    + .elementor-widget-wrap,
+  .elementor-popup-modal .elementor-widget-wrap {
     padding: 50px 30px !important;
   }
   .elementor-popup-modal .elementor-column-wrap.elementor-element-populated {
