@@ -569,6 +569,11 @@
   .elementor-popup-modal .dialog-message::-webkit-scrollbar {
     display: none;
   }
+  .elementor-popup-modal .elementor-container > .elementor-column {
+    width: calc(100% + 20px);
+    margin-left: -10px;
+    margin-right: -10px;
+  }
   .elementor-popup-modal h2 {
     color: #0b2541;
     font-weight: 700;

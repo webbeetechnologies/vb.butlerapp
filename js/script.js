@@ -115,7 +115,7 @@ jQuery(document).ready(function ($) {
               $close_button
                 .clone()
                 .prependTo(
-                  $node.find(".elementor-inner-column > .elementor-column-wrap")
+                  $node.find(".elementor-inner-column > .elementor-widget-wrap")
                 )
                 .addClass("copy");
             }
