@@ -34,6 +34,7 @@ p, li, a {
 /* QUICK FIX: NEW ELEMENTOR REMOVE */
 body .elementor-section.elementor-section-boxed > .elementor-container {
   max-width: 1160px;
+  width: calc(100% - 20px);
 }
 
 elementor-text-editor p, .elementor-text-editor ul li, .elementor-text-editor ol li {
