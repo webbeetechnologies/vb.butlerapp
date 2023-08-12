@@ -419,12 +419,12 @@
   }
 
   #kundenslide .carousel-prev.slick-arrow {
-    left: -40px;
+    left: -50px;
     border-radius: 5px 0 0 5px;
   }
 
   #kundenslide .carousel-next.slick-arrow {
-    right: -40px;
+    right: -50px;
     border-radius: 0 5px 5px 0;
   }
   
