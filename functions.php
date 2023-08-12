@@ -275,7 +275,7 @@ function slick_register_styles() {
 add_action( 'wp_enqueue_scripts', 'coverflow_register' );
 function coverflow_register() {
 	wp_enqueue_style( 'coverflow-css', get_stylesheet_directory_uri() . '/js/plugins/coverflow-swiper/style.css', [], false, 'all' );
-	// wp_enqueue_script( 'swiper', get_stylesheet_directory_uri() . '/js/plugins/coverflow-swiper/swiper.js', ['jquery'], true );
+	wp_enqueue_script( 'swiper', get_stylesheet_directory_uri() . '/js/plugins/coverflow-swiper/swiper.js', ['jquery'], true );
 }
 
 // CUSTOM SCROLLBAR
