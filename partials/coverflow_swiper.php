@@ -64,4 +64,4 @@
     </div>
   </div>
   <?php endif; // (count($swiper_items) > 0) ?>
-</div>
+</section>
