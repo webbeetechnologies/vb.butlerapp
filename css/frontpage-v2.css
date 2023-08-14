@@ -1042,6 +1042,7 @@ body .slick-dots {
         transition: all 0.3s;
         overflow: hidden;
     }
+
     /* OPENED STATE */
     .header-v2 .premium-ver-inner-container.opened .premium-mobile-menu-container {
         height: calc(100vh - 52px);
@@ -1055,6 +1056,7 @@ body .slick-dots {
     .header-v2 .premium-mobile-menu-container .premium-mobile-menu {
         padding-top: 40px;
         background-color: white;
+        overflow: scroll;
     }
 
     .header-v2 .premium-mobile-menu-container .premium-mobile-menu li.menu-item.premium-active-menu {
@@ -1107,11 +1109,13 @@ body .slick-dots {
         padding: 20px 20px 70px;
     }
 
-    .elementor .premium-mobile-menu-container .cta-container > div {
+    /* TWEAK NEW ELEMENTOR'S HTML STRUCTURE */
+    .elementor .premium-mobile-menu-container .cta-container {
         display: flex;
         gap: 20px;
         flex-direction: row;
         width: 100%;
+        flex-wrap: nowrap;
     }
 
     .elementor .premium-mobile-menu-container .cta-container .elementor-button {
@@ -1125,7 +1129,7 @@ body .slick-dots {
     .elementor .premium-mobile-menu-container .cta-container > .elementor-widget-wrap > div.elementor-element .elementor-widget-container {
         margin: 0;
     }
-    .elementor .premium-mobile-menu-container .cta-container > .elementor-widget-wrap .elementor-button {
+    .elementor .premium-mobile-menu-container .cta-container .elementor-button {
         width: 100%;
     }
 
@@ -1291,7 +1295,7 @@ body .slick-dots {
         margin-top: 9px;
     }
     /* button container */
-    .elementor .premium-mobile-menu-container .cta-container > .elementor-widget-wrap {
+    .elementor .premium-mobile-menu-container .cta-container {
         flex-direction: column-reverse;
     }
 
