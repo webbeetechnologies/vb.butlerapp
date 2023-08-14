@@ -8,7 +8,7 @@ body.ehf-header #masthead {
     overflow: hidden;
 }
 
-.premium-mobile-menu-container .cta-container {
+.elementor .premium-mobile-menu-container .cta-container {
     display: none;
 }
 
@@ -1100,32 +1100,32 @@ body .slick-dots {
         width: auto !important;
     }
     /* CTA buttons container */
-    .premium-mobile-menu-container .cta-container {
+    .elementor .premium-mobile-menu-container .cta-container {
         display: flex;
         /*position: absolute;*/
         bottom: env(safe-area-inset-bottom);
         padding: 20px 20px 70px;
     }
 
-    .premium-mobile-menu-container .cta-container > div {
+    .elementor .premium-mobile-menu-container .cta-container > div {
         display: flex;
         gap: 20px;
         flex-direction: row;
         width: 100%;
     }
 
-    .premium-mobile-menu-container .cta-container .elementor-button {
+    .elementor .premium-mobile-menu-container .cta-container .elementor-button {
         font-size: 16px;
         padding: 20px;
     }
 
-    .premium-mobile-menu-container .cta-container > .elementor-widget-wrap > div.elementor-element {
+    .elementor .premium-mobile-menu-container .cta-container > .elementor-widget-wrap > div.elementor-element {
         width: 50%;
     }
-    .premium-mobile-menu-container .cta-container > .elementor-widget-wrap > div.elementor-element .elementor-widget-container {
+    .elementor .premium-mobile-menu-container .cta-container > .elementor-widget-wrap > div.elementor-element .elementor-widget-container {
         margin: 0;
     }
-    .premium-mobile-menu-container .cta-container > .elementor-widget-wrap .elementor-button {
+    .elementor .premium-mobile-menu-container .cta-container > .elementor-widget-wrap .elementor-button {
         width: 100%;
     }
 
@@ -1291,7 +1291,7 @@ body .slick-dots {
         margin-top: 9px;
     }
     /* button container */
-    .premium-mobile-menu-container .cta-container > .elementor-widget-wrap {
+    .elementor .premium-mobile-menu-container .cta-container > .elementor-widget-wrap {
         flex-direction: column-reverse;
     }
 
@@ -1299,7 +1299,7 @@ body .slick-dots {
         width: 100% !important;
     }
 
-    .premium-mobile-menu-container .cta-container > .elementor-widget-wrap .elementor-button {
+    .elementor .premium-mobile-menu-container .cta-container > .elementor-widget-wrap .elementor-button {
         width: 100%;
         margin-top: 15px;
     }
