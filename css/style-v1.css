@@ -2500,7 +2500,7 @@
       font-size: 18px;
     }
 
-    .elementor-popup-modal .dialog-message > div > section > .elementor-container {
+    .elementor-popup-modal .elementor-container > .elementor-column {
       margin-left: 0 !important;
       margin-right: 0 !important;
     }
