@@ -162,11 +162,6 @@ QUESTIONNAIRE FORM
     color: white;
 }
 
-#button-quiz-submit .elementor-button-icon {
-    display: flex;
-    align-items: center;
-}
-
 .quiz2-container form button {
     transition: all 0.3s;
 }
@@ -1360,7 +1355,14 @@ body .slick-dots {
     }
     /* POPUP */
     .elementor-popup-modal .dialog-message .elementor-section {
-        padding: 0 20px !important;
+        padding: 0 10px !important;
+    }
+
+    .elementor-popup-modal .eicon-close {
+        padding: 0 !important;
+    }
+    .elementor-popup-modal  .popup-icon {
+        top: 25px;
     }
 
     /* CUSTOMERS STATIC SECTION */
