@@ -11,22 +11,27 @@ Version: 1.0.2
  * GENERIC
  * ===================================================*/
 
- /* STYLE.CSS is moved to css/style-v1.css and controlled by functions.js */
+/* STYLE.CSS is moved to css/style-v1.css and controlled by functions.js */
 
-/***********************
-THIS IS FOR HOMEPAGE V2
-************************
-body > * {
+body.website-v2 > * {
   color: #0B2541;
 }
 
-body, h1, h2, h3, h4, h5, h6 {
+body.website-v2, 
+.website-v2 h1, 
+.website-v2 h2, 
+.website-v2 h3, 
+.website-v2 h4, 
+.website-v2 h5, 
+.website-v2 h6 {
   font-family: "+Jakarta Sans", Sans-serif;
   font-weight: 500;
   color: #0B2541;
 }
 
-p, li, a {
+.website-v2 p, 
+.website-v2 li, 
+.website-v2 a {
   font-family: "+Jakarta Sans", Sans-serif;
 }
-*/
+
