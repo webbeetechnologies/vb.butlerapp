@@ -1130,7 +1130,7 @@ body .slick-dots {
     .elementor .premium-mobile-menu-container .cta-container > .elementor-widget-wrap > div.elementor-element .elementor-widget-container {
         margin: 0;
     }
-    
+
     .elementor .premium-mobile-menu-container .cta-container .elementor-button {
         width: 100%;
     }
@@ -1294,7 +1294,11 @@ body .slick-dots {
     PREMIUM MOBILE MENU
     *********************************/
     .header-v2 .caller-icon-container.header-phone-icon {
-        margin-top: 9px;
+        margin-top: 0;
+    }
+
+    .header-v2 .phone-button-container .elementor-widget-html {
+        right: 0 !important;
     }
     /* button container */
     .elementor .premium-mobile-menu-container .cta-container {
