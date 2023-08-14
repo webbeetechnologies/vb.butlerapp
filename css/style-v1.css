@@ -2499,7 +2499,12 @@
     .elementor-element-7990123 h4 {
       font-size: 18px;
     }
-    .elementor-popup-modal .elementor-widget-wrap {
+
+    .elementor-popup-modal .dialog-message > div > section > .elementor-container {
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+    .elementor-popup-modal .dialog-message > div > section > .elementor-container > .elementor-column > .elementor-widget-wrap {
       padding-right: 0 !important;
       padding-left: 0 !important;
     }
