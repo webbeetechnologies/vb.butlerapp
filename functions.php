@@ -234,6 +234,28 @@ function my_excerpt_length($length){
 } 
 add_filter('excerpt_length', 'my_excerpt_length');
 
+/***********************************************
+ * PAGE CUSTOM BODY CLASS
+ ***********************************************/
+add_filter( 'body_class', 'custom_body_class' );
+/**
+ * Add custom field body class(es) to the body classes.
+ *
+ * It accepts values from a per-page custom field, and only outputs when viewing a singular static Page.
+ *
+ * @param array $classes Existing body classes.
+ * @return array Amended body classes.
+ */
+function custom_body_class( array $classes ) {
+	$new_class = is_page() ? get_post_meta( get_the_ID(), 'body_class', true ) : null;
+
+	if ( $new_class ) {
+		$classes[] = $new_class;
+	}
+
+	return $classes;
+}
+
 /* APPEND PARAMS IN COOKIE TO ALL URL THROUGH WHOLE SITE */
 // add_action('template_redirect', 'wprdcv_param_redirect', 2);
 function wprdcv_param_redirect() {
