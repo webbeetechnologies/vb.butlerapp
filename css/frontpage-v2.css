@@ -1123,12 +1123,14 @@ body .slick-dots {
         padding: 20px;
     }
 
-    .elementor .premium-mobile-menu-container .cta-container > .elementor-widget-wrap > div.elementor-element {
-        width: 50%;
+    .elementor .premium-mobile-menu-container .cta-container > div {
+        width: 100%;
     }
+
     .elementor .premium-mobile-menu-container .cta-container > .elementor-widget-wrap > div.elementor-element .elementor-widget-container {
         margin: 0;
     }
+    
     .elementor .premium-mobile-menu-container .cta-container .elementor-button {
         width: 100%;
     }
