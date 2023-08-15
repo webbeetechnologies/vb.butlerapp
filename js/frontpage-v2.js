@@ -57,6 +57,8 @@ $(document).ready(function () {
     // SWIPER COVERFLOW
     // https://codepen.io/digistate/pen/KZWYwo
     // Params
+    var effect = $(window).width() > 768 ? 'coverflow' : 'fade';
+
     if ($('.swiper-coverflow-container').length) {
         var sliderSelector = '.swiper-coverflow-container';
         var options = {
@@ -66,7 +68,7 @@ $(document).ready(function () {
             slidesPerView: 2, // or 'auto'
             // spaceBetween: 10,
             centeredSlides : true,
-            effect: 'coverflow', // 'cube', 'fade', 'coverflow',
+            effect: effect, // 'cube', 'fade', 'coverflow',
             coverflowEffect: {
                 rotate: 50, // Slide rotate in degrees
                 stretch: 0, // Stretch space between slides (in px)

@@ -1380,6 +1380,25 @@ body .slick-dots {
         top: 25px;
     }
 
+    .swiper-coverflow-container {
+        padding: 20px;
+    }
+
+    .swiper-coverflow-container [class^="swiper-button-"] {
+        width: 32px;
+        height: 32px;
+        border-radius: 8px;
+        top: 0;
+        margin-top: 15px;
+    }
+
+    .swiper-coverflow-container .swiper-button-next {
+        right: 10px;
+    }
+
+    .swiper-coverflow-container .swiper-button-prev {
+        left: 10px;
+    }
     /* CUSTOMERS STATIC SECTION */
     .customers-static-section .logo-item {
         width: 45%;
