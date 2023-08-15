@@ -1380,24 +1380,26 @@ body .slick-dots {
         top: 25px;
     }
 
-    .swiper-coverflow-container {
-        padding: 20px;
+    .coverflow-container {
+        padding: 0 20px;
     }
-
+    .swiper-coverflow-container {
+        height: 55vw;
+    }
     .swiper-coverflow-container [class^="swiper-button-"] {
         width: 32px;
         height: 32px;
         border-radius: 8px;
         top: 0;
-        margin-top: 15px;
+        margin-top: 22%;
     }
 
     .swiper-coverflow-container .swiper-button-next {
-        right: 10px;
+        right: 5px;
     }
 
     .swiper-coverflow-container .swiper-button-prev {
-        left: 10px;
+        left: 5px;
     }
     /* CUSTOMERS STATIC SECTION */
     .customers-static-section .logo-item {
