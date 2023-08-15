@@ -1085,6 +1085,11 @@ body .slick-dots {
         right: -5px;
         position: relative;
     }
+
+    /* POPUP */
+    .elementor-popup-modal .popup-icon {
+        width: 90px;
+    }
     
     /* PREMIUM MOBILE MENU: SUBMENU/MEGAMENU */
     .premium-mega-content-container {
