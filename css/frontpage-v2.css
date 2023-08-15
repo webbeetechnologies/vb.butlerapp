@@ -1012,6 +1012,13 @@ body .slick-dots {
     right: 0;
 }
 @media (max-width: 1200px) {
+    body header .elementor-section.elementor-section-boxed > .elementor-container {
+        width: calc(100% - 20px);
+    }
+
+    body .elementor-section.elementor-section-boxed > .elementor-container {
+        width: calc(100% - 40px);
+    }
     .premium-hamburger-toggle {
         width: 35px;
     }

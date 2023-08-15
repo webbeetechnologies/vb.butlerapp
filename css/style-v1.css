@@ -3499,6 +3499,10 @@
       width: 100%;
       flex-wrap: inherit;
       margin: 20px 0;
+      gap: 10px;
+    }
+    .butler-price-features .options-container .option-item {
+      padding: 0;
     }
   }
   @media (min-width: 768px) {
