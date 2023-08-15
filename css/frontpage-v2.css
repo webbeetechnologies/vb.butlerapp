@@ -1407,7 +1407,7 @@ body .slick-dots {
         display: none;
     }
 
-    #faqs-container .faq.faq-v2 .heading-content-area {
+    #faqs-container .faq.faq-v2 .faq-inner .heading-content-area {
         padding: 0;
         border: none;
     }
