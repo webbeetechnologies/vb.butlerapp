@@ -1163,6 +1163,12 @@ body .slick-dots {
         position: fixed;
         top: 58px;
         z-index: 90;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .product-menu-container > div > .elementor-element {
+        padding-left: 0;
+        margin-left: 0;
     }
     /**************************************************
     PERSONAL SERVICES: CARDS RIGHT SECTION
