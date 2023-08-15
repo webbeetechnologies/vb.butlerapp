@@ -269,22 +269,6 @@ function wprdcv_param_redirect() {
 	}
 }
 // ONLINE MARKETING END
-
-add_action( "wp_enqueue_scripts", "enqueue_wp_child_theme" );
-function enqueue_wp_child_theme() {
-		// Stylesheets
-		// wp_enqueue_style( 'custom-google-fonts', 'https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap', false );
-		wp_enqueue_style("parent-css", get_template_directory_uri()."/style.css" );
-		wp_enqueue_style("theme-css-rev", get_stylesheet_directory_uri()."/css/style-v1-rev.css" );
-		wp_enqueue_style("theme-css", get_stylesheet_directory_uri()."/css/style-v1.css" );
-		wp_enqueue_style("theme-css2", get_stylesheet_directory_uri()."/css/frontpage-v2.css", 99 );
-
-		// Scripts
-		wp_enqueue_script("child-js", get_stylesheet_directory_uri() . "/js/script.js", array( "jquery" ), "1.0", true );
-		wp_enqueue_script("child-js2", get_stylesheet_directory_uri() . "/js/frontpage-v2.js", array( "jquery" ));
-		wp_enqueue_script("interactive-map", get_stylesheet_directory_uri() . "/js/interactive-map.js", array( "jquery" ));
-		wp_enqueue_script('tweenmax', get_stylesheet_directory_uri() . '/js/TweenMax.min.js');
-}
  
 // slick slider
 add_action( 'wp_enqueue_scripts', 'slick_register_styles' );
@@ -313,6 +297,22 @@ function customscroll_register() {
 add_action( 'wp_enqueue_scripts', 'jquery_scroll_to_fixed_scripts' );
 function jquery_scroll_to_fixed_scripts() {
 	wp_enqueue_script( 'scrolltofixed-js', get_stylesheet_directory_uri() . '/js/plugins/scrollToFixed/scrollToFixed.js', ['jquery'], true );
+}
+
+add_action( "wp_enqueue_scripts", "enqueue_wp_child_theme" );
+function enqueue_wp_child_theme() {
+		// Stylesheets
+		// wp_enqueue_style( 'custom-google-fonts', 'https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap', false );
+		wp_enqueue_style("parent-css", get_template_directory_uri()."/style.css" );
+		wp_enqueue_style("theme-css-rev", get_stylesheet_directory_uri()."/css/style-v1-rev.css" );
+		wp_enqueue_style("theme-css", get_stylesheet_directory_uri()."/css/style-v1.css" );
+		wp_enqueue_style("theme-css2", get_stylesheet_directory_uri()."/css/frontpage-v2.css", 99 );
+
+		// Scripts
+		wp_enqueue_script("child-js", get_stylesheet_directory_uri() . "/js/script.js", array( "jquery" ), "1.0", true );
+		wp_enqueue_script("child-js2", get_stylesheet_directory_uri() . "/js/frontpage-v2.js", array( "jquery" ));
+		wp_enqueue_script("interactive-map", get_stylesheet_directory_uri() . "/js/interactive-map.js", array( "jquery" ));
+		wp_enqueue_script('tweenmax', get_stylesheet_directory_uri() . '/js/TweenMax.min.js');
 }
 
 // TEMPORARILY DISABLING ADMIN BAR ON FRONTEND
