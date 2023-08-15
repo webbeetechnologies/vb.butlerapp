@@ -1,7 +1,13 @@
 <div class="butler-price-features">
+	<div class="text-center elementor-hidden-tablet elementor-hidden-desktop">
+		<h3><?php echo $args['content']; ?></h3>
+		<?php  if ($args['atts']['subtitle']): ?>
+			<p><?php echo $args['atts']['subtitle']; ?></p>
+		<?php endif; ?>
+	</div>
 	<div class="features-list-table">
 		<div class="d-flex header">
-			<div class="title-container">
+			<div class="title-container elementor-hidden-mobile">
 				<h3><?php echo $args['content']; ?></h3>
 				<?php  if ($args['atts']['subtitle']): ?>
 					<p><?php echo $args['atts']['subtitle']; ?></p>

@@ -1397,6 +1397,7 @@ body .slick-dots {
         border-bottom: 1px solid #cccccc;
         border-radius: 0;
         margin-bottom: 10px;
+        min-height: inherit;
     }
 
     #faqs-container .faq.faq-v2 .faq-inner {
