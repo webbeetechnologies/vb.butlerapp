@@ -1390,7 +1390,7 @@ body .slick-dots {
         align-items: start;
     }
 
-    .faq.faq-v2 {
+    #faqs-container .faq.faq-v2 {
         background: none;
         box-shadow: none;
         padding: 0;
@@ -1399,20 +1399,20 @@ body .slick-dots {
         margin-bottom: 10px;
     }
 
-    .faq.faq-v2 .faq-inner {
+    #faqs-container .faq.faq-v2 .faq-inner {
         padding-bottom: 20px;
     }
 
-    .faq.faq-v2 .faq-flipper {
+    #faqs-container .faq.faq-v2 .faq-flipper {
         display: none;
     }
 
-    .faq.faq-v2 .heading-content-area {
+    #faqs-container .faq.faq-v2 .heading-content-area {
         padding: 0;
         border: none;
     }
 
-    .faq.faq-v2  .faq-arrow-flipper {
+    #faqs-container .faq.faq-v2  .faq-arrow-flipper {
         padding: 0;
     }
     /* PAYMENT */
