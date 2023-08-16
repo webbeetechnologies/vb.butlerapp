@@ -1090,7 +1090,7 @@ body .slick-dots {
     .elementor-popup-modal .popup-icon {
         width: 90px;
     }
-    
+
     /* PREMIUM MOBILE MENU: SUBMENU/MEGAMENU */
     .premium-mega-content-container {
         top: 0;
@@ -1557,6 +1557,13 @@ body .slick-dots {
     .country-buttons-container a {
         width: 215px;
         display: block;
+    }
+
+    /* INTERACTIVE MAP POPUP */
+    .interactivemap.popover-content {
+        left: 50% !important;
+        right: auto !important;
+        transform: translateX(-50%);
     }
 
     #footer-v2 {
