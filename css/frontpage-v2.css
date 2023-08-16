@@ -1129,6 +1129,7 @@ body .slick-dots {
     .product-nav-container .cta-container a.elementor-button {
         font-size: 16px;
         padding: 20px;
+        border-radius: 16px;
     }
 
     .elementor .premium-mobile-menu-container .cta-container > div {
