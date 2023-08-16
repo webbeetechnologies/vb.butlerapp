@@ -1170,7 +1170,7 @@ body .slick-dots {
         background-color: transparent;
     }
     body.headhesive-stick #mainhero-2 .product-menu-container {
-        background-color: rgb(255,255,255,0.9);
+        background-color: rgba(255,255,255,0.9);
         opacity: 1;
         position: fixed;
         top: 58px;
