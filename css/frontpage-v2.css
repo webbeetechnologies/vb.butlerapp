@@ -1625,6 +1625,28 @@ body .slick-dots {
     body .interactive-map-container .map-container.at {
         font-size: 5px;
     }
+
+    /* VISION MISSION TWEAK */
+    .horay img {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .bewertung img {
+        width: 150px;
+        height: auto
+    }
+
+    .thumb {
+        left: inherit;
+        right: 10px;
+    }
+
+    .thumb img {
+        width: 70px;
+        height: 70px;
+    }
+
 }
 
 @media (max-width: 480px) {
