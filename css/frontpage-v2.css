@@ -1608,6 +1608,13 @@ body .slick-dots {
 }
 
 @media (max-width: 640px) {
+    body.website-v2 #masthead {
+        box-shadow: 0 0 7px rgb(0 0 0 / 20%);
+    } 
+    body #mainhero-2 .product-menu-container {
+        background-color: white;
+        padding: 5px 20px;
+    }
     body .interactive-map-container .map-container.ch {
         font-size: 6px;
     }
