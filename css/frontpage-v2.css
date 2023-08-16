@@ -1126,7 +1126,7 @@ body .slick-dots {
     }
 
     .elementor .premium-mobile-menu-container .cta-container .elementor-button,
-    .product-nav-container .elementor-button .hfe-nav-menu .cta-container .elementor-button {
+    .product-nav-container.hfe-nav-menu .cta-container .elementor-button {
         font-size: 16px;
         padding: 20px;
     }
