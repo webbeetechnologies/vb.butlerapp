@@ -28,7 +28,7 @@ function buildPaginationSection() {
 $(document).ready(function () { 
     // POPUP: PREVENT JUMPING TO TOP WHEN CLOSE
     $("body").on("click", ".dialog-widget .dialog-close-button", "a[href='#']", function(e) {
-        console.log('a href #');
+        // console.log('a href #');
         // Cancel the default action
         e.preventDefault();
     });
@@ -44,6 +44,11 @@ $(document).ready(function () {
             $('html').removeClass('mobile-menu-open');
             $(this).parent().removeClass('opened');
         }
+    });
+
+    // menu clicked, close nav
+    $('body').on('click','.premium-mobile-menu-container li.menu-item:not(.menu-item-has-children)',function() {
+        $('.premium-toggle-close:visible').click();
     });
 
     // copy cta in header to mobile nav
