@@ -1284,6 +1284,13 @@ body .slick-dots {
     .header-v2 .caller-icon-container.header-phone-icon {
         margin-top: 12px;
     }
+    
+    /* VISION MISSION TWEAK */
+    .thumb {
+        left: inherit;
+        right: 10px;
+    }
+
     #footer-v2 .footer-logo-set img {
         width: 70px;
     }

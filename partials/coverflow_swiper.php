@@ -36,7 +36,7 @@
     <div class="swiper-wrapper">
       <?php foreach ( $swiper_items as $item ) :?>
         <div class="swiper-slide" style="background-image:url(<?php echo $item['swiper_image']['url']; ?>">
-          <img src="<?php echo $item['swiper_image']['url']; ?>" alt="<?php echo $title; ?>" class="entity-img" />
+          <img src="<?php echo $item['swiper_image']['url']; ?>" alt="<?php echo $item['title']; ?>" class="entity-img" />
         </div>
       <?php endforeach; ?>
     </div>

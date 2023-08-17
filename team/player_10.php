@@ -11,7 +11,9 @@
 <div id="<?php echo get_the_ID() ?>" class="team-card-container">
 	<div class="team-head">
 		<?php $ti = get_field('team_img') ?>
-		<img src="<?php echo $ti['url'] ?>">
+		<?php if ($ti): ?>
+			<img src="<?php echo $ti['url'] ?>">
+		<?php endif; ?>
 		<div class="th-right">
 			<h3 class="t-name"><?php the_title(); ?></h3>
 			<span class="t-designation"><?php the_field('team_designation'); ?></span>
