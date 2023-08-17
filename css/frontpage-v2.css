@@ -1459,6 +1459,21 @@ body .slick-dots {
     #faqs-container .faq.faq-v2  .faq-arrow-flipper {
         padding: 0;
     }
+
+    /* PRICE */
+    .butler-price-features .button {
+        display: none;
+    }
+
+    .butler-price-features .options-container {
+        margin-bottom: 0;
+    }
+
+    .butler-price-features .test-button-container {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
     /* PAYMENT */
     #payment-methods > .e-con-inner {
         flex-direction: column-reverse;
