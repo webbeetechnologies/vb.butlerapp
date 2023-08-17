@@ -1408,8 +1408,12 @@ body .slick-dots {
     }
 
     .elementor-popup-modal .elementor-heading-title {
-        font-size: 16px !important;
+        font-size: 20px !important;
         padding: 0 10px;
+    }
+    .elementor-popup-modal p.elementor-heading-title,
+    .elementor-popup-modal p {
+        font-size: 16px !important;
     }
     .elementor-popup-modal .elementor-field-group .elementor-field {
         font-size: 16px !important;
