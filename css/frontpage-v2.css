@@ -1668,10 +1668,36 @@ body .slick-dots {
         height: 70px;
     }
 
+    /* PERSONAL SERVICE CARD SLIDER */
+    .personal-services-section 
+    .support-cards-container 
+    .elementor-motion-effects-element 
+    .e-con-inner > .elementor-element {
+        min-height: 320px;
+    }
+
 }
 
 @media (max-width: 480px) {
     body .interactive-map-container .map-container.de {
         font-size: 4px !important;
+    }
+
+    /* PERSONAL SERVICE CARD SLIDER */
+    .personal-services-section 
+    .support-cards-container 
+    .elementor-motion-effects-element 
+    .e-con-inner > .elementor-element {
+        min-height: 285px;
+    }
+
+    .personal-services-section 
+    .support-cards-container 
+    .elementor-motion-effects-element .e-con-inner > .elementor-element:first-child, 
+    .personal-services-section 
+    .support-cards-container 
+    .elementor-motion-effects-element .e-con-inner > .elementor-element:last-child {
+        min-height: 160px;
+        height: 58px;
     }
 }
