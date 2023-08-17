@@ -689,7 +689,7 @@ jQuery(document).ready(function ($) {
   (function faqClosure() {
     var timeout = null;
     var extraTopSpace = 20;
-    $(".faq:not(.faq-v2) faq-inner").on("click", function () {
+    $(".faq:not(.faq-v2) .faq-inner").on("click", function () {
       $(this).parent().find(".faq-content-area").slideToggle();
       $(this).parent().toggleClass("faq-active");
       $(".faq-inner")
