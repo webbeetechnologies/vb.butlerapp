@@ -1,4 +1,10 @@
 var $ = jQuery;
+var breakpoint = {
+    'small': 640,
+    'medium': 768,
+    'large': 1024,
+    'extraLarge': 1200
+}
 
 function buildPaginationSection() {
     $('.quiz2-container .e-form__indicators').clone().appendTo('.quiz-section .paginator-container'); 
@@ -57,7 +63,7 @@ $(document).ready(function () {
     // SWIPER COVERFLOW
     // https://codepen.io/digistate/pen/KZWYwo
     // Params
-    var effect = $(window).width() > 768 ? 'coverflow' : 'fade';
+    var effect = $(window).width() > breakpoint.medium ? 'coverflow' : 'fade';
 
     if ($('.swiper-coverflow-container').length) {
         var sliderSelector = '.swiper-coverflow-container';
@@ -222,6 +228,44 @@ $(document).ready(function () {
         $('.maps-supercontainer .container-interactive-map').hide().removeClass('active');
         $('.maps-supercontainer .container-interactive-map').eq(idx).fadeIn('fast').addClass('active');
     });
+
+    /*=======================================================================================
+  * FAQs Section
+  =======================================================================================*/
+  (function faqClosure() {
+        var timeout = null;
+        var extraTopSpace = 20;
+        $(".faq-v2 .faq-inner").on("click", function () {
+            $(this).parent().find(".faq-content-area").slideToggle();
+            $(this).parent().toggleClass("faq-active");
+            $(".faq-v2 .faq-inner")
+                .not(this)
+                .parent()
+                .find(".faq-content-area")
+                .slideUp()
+                .removeClass("faq-active");
+            var activo = $(".faq-active").length;
+            if (activo > 1) {
+                $(".faq-inner").not(this).parent().find(".faq-content-area").slideUp();
+                $(".faq-inner").not(this).parent().removeClass("faq-active");
+            }
+
+            // scroll to opened faq only in desktop
+            if (!$(this).parent().hasClass(".faq-active") && $(window).width() > breakpoint.medium) {
+                clearTimeout(timeout);
+                timeout = setTimeout(function () {
+                var offset = $(".faq-active").offset().top - extraTopSpace;
+                var headerHeight = $("#masthead").height();
+                $("body, html").animate(
+                    {
+                    scrollTop: offset - headerHeight,
+                    },
+                    1000
+                );
+                }, 1000);
+            }
+        });
+    })();
 
     // FAQ-V2: HOVER SHOW POPUP
     $('.faq-v2:not(".faq-active")').hover(function() {
