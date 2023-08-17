@@ -1461,7 +1461,7 @@ body .slick-dots {
     }
 
     /* PRICE */
-    .butler-price-features .button {
+    .butler-price-features .option-item .button {
         display: none;
     }
 
@@ -1472,7 +1472,6 @@ body .slick-dots {
     .butler-price-features .test-button-container {
         width: 100%;
         display: block;
-        margin-bottom: 20px;
     }
     /* PAYMENT */
     #payment-methods > .e-con-inner {
