@@ -1399,7 +1399,22 @@ body .slick-dots {
     .elementor-popup-modal  .popup-icon {
         top: 25px;
     }
+    .elementor-popup-modal .elementor-widget-wrap {
+        padding: 50px 10px !important;
+    }
 
+    .elementor-popup-modal h2 {
+        font-size: 20px;
+    }
+
+    .elementor-popup-modal .elementor-heading-title {
+        font-size: 16px !important;
+        padding: 0 10px;
+    }
+    .elementor-popup-modal .elementor-field-group .elementor-field {
+        font-size: 16px !important;
+    }
+    /* COVERFLOW */
     .coverflow-container {
         padding: 0 20px;
     }
