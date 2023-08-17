@@ -526,7 +526,7 @@
   }
 
   #mainhero-2 {
-    padding-bottom: 80px;
+    padding-bottom: 0;
   }
 
   .hero-sec ul li {
@@ -2424,7 +2424,7 @@
     #mainhero,
     #mainhero-2 {
       padding-bottom: 40px !important;
-      margin-bottom: 80px;
+      margin-bottom: 0;
     }
     .elementor-element-8386e41 {
       padding-top: 0 !important;
