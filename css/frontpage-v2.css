@@ -1609,15 +1609,18 @@ body .slick-dots {
         transform: translateX(-50%);
     }
 
-     /* PERSONAL SERVICE CARD SLIDER */
-     .personal-services-section 
-     .support-cards-container 
-     .elementor-motion-effects-element .e-con-inner > .elementor-element:first-child, 
-     .personal-services-section 
-     .support-cards-container 
-     .elementor-motion-effects-element .e-con-inner > .elementor-element:last-child {
-         min-height: 160px;
-         height: 58px;
+    .funktionen-slider-container .elementor-shortcode .image-carousel-gallery-v2 > .elementor-container {
+        width: 100%;
+    }
+    /* PERSONAL SERVICE CARD SLIDER */
+    .personal-services-section 
+    .support-cards-container 
+    .elementor-motion-effects-element .e-con-inner > .elementor-element:first-child, 
+    .personal-services-section 
+    .support-cards-container 
+    .elementor-motion-effects-element .e-con-inner > .elementor-element:last-child {
+        min-height: 160px;
+        height: 58px;
      }
 
     #footer-v2 {
@@ -1729,5 +1732,15 @@ body .slick-dots {
     .elementor-motion-effects-element 
     .e-con-inner > .elementor-element {
         min-height: 285px;
+    }
+}
+
+@media (max-width: 420px) {
+    /* PERSONAL SERVICE CARD SLIDER */
+    .personal-services-section 
+    .support-cards-container 
+    .elementor-motion-effects-element 
+    .e-con-inner > .elementor-element {
+        min-height: 260px;
     }
 }
