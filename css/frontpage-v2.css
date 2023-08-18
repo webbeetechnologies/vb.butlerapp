@@ -560,6 +560,10 @@ HOTSPOT V2
 .image-carousel-gallery-v2 .gallery .gallery-item img {
     border: none !important;
 }
+
+.slick-slide .elementor-widget-image a {
+    display: block;
+}
 /***********************************
 INTERACTIVE MAP
 ************************************/
