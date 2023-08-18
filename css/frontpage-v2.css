@@ -1009,6 +1009,10 @@ FAQ V2 (override FAQ style in style.css
 /****************************************
 OVERRIDE ELEMENTOR ELEMENTS (LAST RESORT)
 *****************************************/
+.elementor-button {
+    transition: all 0.3s;
+}
+
 .premium-bullet-list-wrapper {
     align-self: start !important;
     margin-top: 8px !important;
