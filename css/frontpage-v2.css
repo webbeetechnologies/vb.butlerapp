@@ -14,6 +14,7 @@ body.ehf-header #masthead {
 
 .elementor-sticky.elementor-sticky--active .product-menu-container {
     background-color: white;
+    box-shadow: 0 0 7px rgb(0 0 0 / 20%);
 }
 
 /* THIS IS FOR PRODUCT PAGE THAT HAS SECOND MENU BAR */
@@ -1197,7 +1198,10 @@ body .slick-dots {
     }
     */
     /* make it right aligned with the top nav */
-
+    .product-menu-container > div > .elementor-element {
+        margin-left: 0;
+        padding-left: 5px;
+    }
     /**************************************************
     PERSONAL SERVICES: CARDS RIGHT SECTION
     ***************************************************/
@@ -1257,10 +1261,19 @@ body .slick-dots {
         left: 0;
         width: 100% !important;
         z-index: 20 !important;
-        height: calc(100vh - 50px - 50px) !important;
+        height: calc(100vh - 50px) !important;
         display: flex;
         flex-direction: column;
         transition: all 0.3s;
+    }
+
+     /* WHEN MAIN MENU STILL EXIST */
+     .product-nav-container nav.hfe-dropdown {
+        height: calc(100vh - 40px - 50px) !important;
+    }
+    /* WHEN MAIN MENU ALREADY HIDDEN */
+    .headhesive-stick .product-nav-container nav.hfe-dropdown {
+        height: calc(100vh - 50px) !important;
     }
 
     .product-nav-container .cta-container {
@@ -1338,6 +1351,11 @@ body .slick-dots {
         height: calc(100vh - 40px) !important;
     }
 
+    /* alignment left with main menu */
+    .product-menu-container > div > .elementor-element {
+        margin-left: 0;
+        padding-left: 0;
+    }
     /********************************
     PREMIUM MOBILE MENU
     *********************************/
@@ -1470,7 +1488,7 @@ body .slick-dots {
         display: none !important;
     }
     #butlerapp-team-container {
-        margin-top: 0;
+        margin-top: -30px;
     }
     /* FAQ */
     #faqs-container .faq.faq-v2 {

@@ -46,6 +46,17 @@ $(document).ready(function () {
         }
     });
 
+    // PRODUCT MENU OPENED
+    $('body').on('click', '.product-nav-container .hfe-nav-menu-layout .hfe-nav-menu__toggle', function() {
+        if ($(this).hasClass('hfe-active-menu')) {
+            // class  hfe-active-menu already added. it's open
+            $('html').addClass('mobile-product-menu-open');
+        } else {
+            // close
+            $('html').removeClass('mobile-product-menu-open');
+        }
+    });
+
     // menu clicked, close nav
     $('body').on('click','.premium-mobile-menu-container li.menu-item:not(.menu-item-has-children)',function() {
         $('.premium-toggle-close:visible').click();
