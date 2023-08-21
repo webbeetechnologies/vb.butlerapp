@@ -1293,7 +1293,7 @@ body .slick-dots {
 
     .product-nav-container .cta-container {
         margin-top: auto;
-        padding: 20px 30px 80px;
+        padding: 20px 20px 80px;
     }
 
     .product-nav-container .cta-container a.elementor-button {
@@ -1309,7 +1309,7 @@ body .slick-dots {
     }
 
     .product-nav-container nav.hfe-dropdown li a.hfe-menu-item {
-        padding: 20px 30px !important;
+        padding: 20px 20px !important;
         font-weight: bold;
     }
 

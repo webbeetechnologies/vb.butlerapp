@@ -47,8 +47,10 @@ $(document).ready(function () {
     });
 
     // PRODUCT MENU OPENED
-    $('body').on('click', '.product-nav-container .hfe-nav-menu-layout .hfe-nav-menu__toggle', function() {
-        if ($(this).hasClass('hfe-active-menu')) {
+    var $children = $('.product-menu-container .hfe-nav-menu .hfe-dropdown');
+    
+    $('.product-menu-container .hfe-nav-menu').on('click', function() {
+        if ($children.hasClass('menu-is-active')) {
             // class  hfe-active-menu already added. it's open
             $('html').addClass('mobile-product-menu-open');
         } else {
