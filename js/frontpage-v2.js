@@ -32,13 +32,12 @@ $(document).ready(function () {
         // Cancel the default action
         e.preventDefault();
     });
-    
+
     // PREMIUM MOBILE NAV
     $('.premium-hamburger-toggle').on('click', function(e) {
-        e.stopPropagation();
-        console.log('CLICKED');
+        e.preventDefault();
+        // class premium-toggle-opened havent been added. it's opening..
         if (!$(this).hasClass('premium-toggle-opened')) {
-            // class premium-toggle-opened already added. it's open
             $('html').addClass('mobile-menu-open');
             $(this).parent().addClass('opened');
         } else {
@@ -51,7 +50,7 @@ $(document).ready(function () {
     // PRODUCT MENU OPENED
     $('.product-menu-container .hfe-nav-menu').on('click', function() {
         var $children = $('.product-menu-container .hfe-nav-menu .hfe-dropdown');
-
+        
         if ($children.hasClass('menu-is-active')) {
             // class  hfe-active-menu already added. it's open
             $('html').addClass('mobile-product-menu-open');
