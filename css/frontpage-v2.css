@@ -1313,6 +1313,11 @@ body .slick-dots {
         font-weight: bold;
     }
 
+    /* active state */
+    html.mobile-product-menu-open .header-v2,
+    html.mobile-product-menu-open .product-menu-container {
+        background-color: white;
+    }
      /* FAQ */
      .faq-content-area .faq-footer {
         flex-direction: column;
