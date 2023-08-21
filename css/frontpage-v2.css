@@ -1680,7 +1680,18 @@ body .slick-dots {
     .elementor-motion-effects-element .e-con-inner > .elementor-element:last-child {
         min-height: 160px;
         height: 58px;
-     }
+    }
+
+    /****************************************
+    BLOG AND ARTICLE PAGES
+    *****************************************/
+    .blog-detail-container .elementor-author-box__name span {
+        display: none;
+    }
+
+    .blog-detail-container .header-container .elementor-widget-share-buttons {
+        margin-left: -10px;
+    }
 
     #footer-v2 {
         padding: 50px 0 0;
