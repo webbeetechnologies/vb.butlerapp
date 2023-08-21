@@ -1265,6 +1265,8 @@ body .slick-dots {
     PRODUCT SECOND MENU
     *********************************************/
     .product-nav-container nav.hfe-dropdown {
+        background: transparent url(https://butlerapp.de/wp-content/uploads/2023/07/bg-blueish_2x-scaled.webp) center bottom no-repeat;
+        background-size: contain;
         position: absolute;
         left: 0;
         width: 100% !important;
@@ -1273,6 +1275,10 @@ body .slick-dots {
         display: flex;
         flex-direction: column;
         transition: all 0.3s;
+    }
+    nav.hfe-dropdown li a {
+        font-size: 16px;
+        font-weight: 500;
     }
 
      /* WHEN MAIN MENU STILL EXIST */
