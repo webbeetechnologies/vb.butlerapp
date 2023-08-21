@@ -1265,8 +1265,8 @@ body .slick-dots {
     PRODUCT SECOND MENU
     *********************************************/
     .product-nav-container nav.hfe-dropdown {
-        background: transparent url(https://butlerapp.de/wp-content/uploads/2023/07/bg-blueish_2x-scaled.webp) center bottom no-repeat;
-        background-size: contain;
+        background: white url(https://butlerapp.de/wp-content/uploads/2023/07/bg-blueish_2x-scaled.webp) center bottom no-repeat;
+        background-size: cover;
         position: absolute;
         left: 0;
         width: 100% !important;
@@ -1277,8 +1277,9 @@ body .slick-dots {
         transition: all 0.3s;
     }
     nav.hfe-dropdown li a {
-        font-size: 16px;
-        font-weight: 500;
+        background-color: transparent !important;
+        font-size: 16px !important;
+        font-weight: 500 !important;
     }
 
      /* WHEN MAIN MENU STILL EXIST */
