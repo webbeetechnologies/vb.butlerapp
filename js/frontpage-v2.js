@@ -47,9 +47,9 @@ $(document).ready(function () {
     });
 
     // PRODUCT MENU OPENED
-    var $children = $('.product-menu-container .hfe-nav-menu .hfe-dropdown');
-    
     $('.product-menu-container .hfe-nav-menu').on('click', function() {
+        var $children = $('.product-menu-container .hfe-nav-menu .hfe-dropdown');
+        
         if ($children.hasClass('menu-is-active')) {
             // class  hfe-active-menu already added. it's open
             $('html').addClass('mobile-product-menu-open');
