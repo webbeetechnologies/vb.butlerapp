@@ -1698,6 +1698,9 @@ body .slick-dots {
         margin-left: -10px;
     }
 
+    /****************************************
+    FOOTER
+    *****************************************/
     #footer-v2 {
         padding: 50px 0 0;
         margin: 0 -20px;
@@ -1737,6 +1740,13 @@ body .slick-dots {
 
     #footer-v2 .european-commision {
         margin: 20px 0;
+    }
+
+    .footer-bottom > div {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 20px;
+        padding: 20px 0;
     }
 }
 
