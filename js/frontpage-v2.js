@@ -288,10 +288,11 @@ $(document).ready(function () {
 
     // FAQ-V2: HOVER SHOW POPUP
     var delay=1000, setTimeoutConst;
-    $('.faq-v2:not(".faq-active")').on('hover', function() {
+    $('.faq-v2:not(".faq-active")').hover(function() {
+        var $that = $(this);
         setTimeoutConst = setTimeout(function() {
-        $(this).addClass('hover');
-    }, delay);
+            $that.addClass('hover');
+        }, delay);
     }, function() {
         clearTimeout(setTimeoutConst);
         $(this).removeClass('hover');
