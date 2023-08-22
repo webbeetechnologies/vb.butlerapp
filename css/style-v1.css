@@ -3002,6 +3002,29 @@
       position: relative;
       top: 70px;
     }
+
+    /* footer */
+    .footer-width-fixer {
+      position: relative;
+      width: 100%;
+    }
+
+    .footer-width-fixer > div {
+      z-index: 10;
+      position: relative;
+    }
+      
+    .footer-width-fixer:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      height: 42%;
+      display: block;
+      width: 100%;
+      background: #f5f7f8;
+      left: 0;
+    }
+
   }
   @media (max-width: 500px) {
     #ba--sliders #ba-slider-controls,

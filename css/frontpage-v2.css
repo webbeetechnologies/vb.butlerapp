@@ -1209,7 +1209,7 @@ body .slick-dots {
     html.mobile-product-menu-open {
         overflow: hidden;
     }
-    
+
     /* make it right aligned with the top nav */
     .product-menu-container > div > .elementor-element {
         margin-left: 0;
@@ -1723,6 +1723,7 @@ body .slick-dots {
         text-align: center !important;
         margin: 0;
         width: 100%;
+        padding: 30px 0 0;
     }
 
     #footer-v2 .footer-menu-container > .elementor-column-wrap > .elementor-widget-wrap > div > .e-con.e-flex {
