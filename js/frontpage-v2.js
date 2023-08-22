@@ -34,10 +34,10 @@ $(document).ready(function () {
     });
 
     // PREMIUM MOBILE NAV
-    $('.premium-hamburger-toggle').on('click', function(e) {
+    $('body').on('click', '.premium-hamburger-toggle', function(e) {
         e.preventDefault();
         // class premium-toggle-opened havent been added. it's opening..
-        if (!$(this).hasClass('premium-toggle-opened')) {
+        if (!$(this).parent().hasClass('opened')) {
             $('html').addClass('mobile-menu-open');
             $(this).parent().addClass('opened');
         } else {
