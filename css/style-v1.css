@@ -3068,7 +3068,7 @@
       position: relative;
     }
     
-    .footer-width-fixer:after {
+    .footer-v1:after {
       content: "";
       position: absolute;
       bottom: 0;
@@ -3077,6 +3077,7 @@
       width: 100%;
       background: #f5f7f8;
       left: 0;
+      z-index: -1;
     }
     
     .footer-copyright-area p {
