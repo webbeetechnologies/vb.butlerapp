@@ -68,7 +68,7 @@ $(document).ready(function () {
     // product menu clicked
     $('body').on('click','.hfe-dropdown li.menu-item:not(.menu-item-has-children)',function() {
         // make sure the active state will close by click it
-        $('.product-menu-container .hfe-nav-menu').click();
+        $('.hfe-active-menu .hfe-nav-menu-icon').click();
         $('html').removeClass('mobile-product-menu-open');
     });
     // copy cta in header to mobile nav
