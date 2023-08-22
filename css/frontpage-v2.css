@@ -1328,17 +1328,17 @@ body .slick-dots {
         flex-direction: column;
         align-items: start;
     }
+
+    /* VISION MISSION TWEAK */
+    .thumb {
+        left: inherit !important;
+        right: 10px;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 1200px) {
     .header-v2 .caller-icon-container.header-phone-icon {
         margin-top: 12px;
-    }
-    
-    /* VISION MISSION TWEAK */
-    .thumb {
-        left: inherit;
-        right: 10px;
     }
 
     #footer-v2 .footer-logo-set img {
@@ -1779,13 +1779,12 @@ body .slick-dots {
     }
 
     .thumb {
-        left: inherit;
+        left: inherit !important;
         right: 10px;
     }
 
     .thumb img {
         width: 70px;
-        height: 70px;
     }
 
     /* PERSONAL SERVICE CARD SLIDER */
@@ -1806,6 +1805,9 @@ body .slick-dots {
         height: 58px;
     }
 
+    footer .elementor-section-boxed .elementor-container {
+        width: calc(100% - 40px);
+    }
 }
 
 @media (max-width: 480px) {
@@ -1819,6 +1821,15 @@ body .slick-dots {
     .elementor-motion-effects-element 
     .e-con-inner > .elementor-element {
         min-height: 285px;
+    }
+
+    #footer-v2 .footer-logo-set {
+        padding: 0;
+    }
+    
+    #footer-v2 .footer-logo-set img {
+        padding: 5px;
+        width: 24%;
     }
 }
 
