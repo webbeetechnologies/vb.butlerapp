@@ -571,8 +571,8 @@
   }
   .elementor-popup-modal .elementor-container > .elementor-column {
     width: calc(100% + 20px);
-    margin-left: -10px !important;
-    margin-right: -10px !important;
+    max-width: 550px;
+    margin: 0 auto;
   }
   .elementor-popup-modal h2 {
     color: #0b2541;
