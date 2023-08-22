@@ -3067,7 +3067,8 @@
       z-index: 10;
       position: relative;
     }
-      
+    
+    /*
     .footer-width-fixer:after {
       content: "";
       position: absolute;
@@ -3078,7 +3079,7 @@
       background: #f5f7f8;
       left: 0;
     }
-
+    */
     .footer-copyright-area p {
       display: flex;
       flex-direction: column-reverse;
