@@ -2677,7 +2677,7 @@
     }
     .footer-logo-set {
       width: 100vw;
-      margin-left: -55px;
+      margin-left: -65px;
       padding-left: 20px;
       padding-right: 20px;
       padding-bottom: 15px;
@@ -2708,8 +2708,8 @@
       width: 100vw;
       background: #f5f7f8;
       overflow: visible !important;
-      margin-left: -55px !important;
-      margin-top: -40px !important;
+      /*margin-left: -55px !important;*/
+      /*margin-top: -40px !important;*/
       margin-bottom: -10px !important;
       padding-top: 30px;
       padding-bottom: 20px;
@@ -3068,7 +3068,6 @@
       position: relative;
     }
     
-    /*
     .footer-width-fixer:after {
       content: "";
       position: absolute;
@@ -3079,7 +3078,7 @@
       background: #f5f7f8;
       left: 0;
     }
-    */
+    
     .footer-copyright-area p {
       display: flex;
       flex-direction: column-reverse;
