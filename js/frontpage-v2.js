@@ -287,9 +287,13 @@ $(document).ready(function () {
     })();
 
     // FAQ-V2: HOVER SHOW POPUP
-    $('.faq-v2:not(".faq-active")').hover(function() {
-       $(this).addClass('hover');
+    var delay=1000, setTimeoutConst;
+    $('.faq-v2:not(".faq-active")').on('hover', function() {
+        setTimeoutConst = setTimeout(function() {
+        $(this).addClass('hover');
+    }, delay);
     }, function() {
+        clearTimeout(setTimeoutConst);
         $(this).removeClass('hover');
     });
 
