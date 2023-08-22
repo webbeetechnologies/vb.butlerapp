@@ -65,6 +65,12 @@ $(document).ready(function () {
         $('.premium-toggle-close:visible').click();
     });
 
+    // product menu clicked
+    $('body').on('click','.hfe-dropdown li.menu-item:not(.menu-item-has-children)',function() {
+        // make sure the active state will close by click it
+        console.log('click');
+        $('.hfe-active-menu .hfe-nav-menu-icon').click();
+    });
     // copy cta in header to mobile nav
     $('.header-v2 #stb-header-cta > div').clone().appendTo('.premium-mobile-menu-container').addClass('cta-container');
 
