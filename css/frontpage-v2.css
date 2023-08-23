@@ -402,7 +402,18 @@ use border-radius 22px in the elementor btn
 }
 
 .button-rainbow .elementor-button:hover {
-    background-size: 200% 200%;
+    background-size: 400% 400%;
+    background-position: 0 center;
+}
+
+.bg-rainbow .elementor-button {
+    background-size: 100% 100%;
+    transition: all 0.3s;
+}
+
+.bg-rainbow .elementor-button:hover {
+    background-size: 400% 400%;
+    background-position: 0 center;
 }
 /***********************************
 PERSONAL SERVICES: HOTSPOT V2
