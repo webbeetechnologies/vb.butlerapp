@@ -66,7 +66,7 @@
 		</div>
 		<div class="features-container">
 			<?php // GET FIRST 5 POSTS ?>
-			<?php $first_items =  $args['atts']['first_items'] ? $args['atts']['first_items'] : 10; ?>
+			<?php $first_items =  $args['atts']['first_items'] ? (int)$args['atts']['first_items'] : 10; ?>
 			<?php 
 			$cat_name = $args['atts']['category'];
 			$args = array(  
