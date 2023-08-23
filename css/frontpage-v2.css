@@ -374,6 +374,14 @@ use border-radius 22px in the elementor btn
     border-radius: 25px;
 }
 
+.button-rainbow {
+    background-size: 100% 100%;
+    transition: all 0.3s;
+}
+
+.button-rainbow:hover {
+    background-size: 200% 200%;
+}
 /***********************************
 PERSONAL SERVICES: HOTSPOT V2
 ************************************/
@@ -1491,7 +1499,7 @@ body .slick-dots {
         height: 32px;
         border-radius: 8px;
         top: 0;
-        margin-top: 22%;
+        margin-top: 23%;
     }
 
     .swiper-coverflow-container .swiper-button-next {
@@ -1826,7 +1834,7 @@ body .slick-dots {
     #footer-v2 .footer-logo-set {
         padding: 0;
     }
-    
+
     #footer-v2 .footer-logo-set img {
         padding: 5px;
         width: 24%;
