@@ -1088,6 +1088,12 @@ body .slick-dots {
     .hero-sec-v2:before {
         background-position: right center !important;
     }
+
+    /* FOR 1024px IMAGE CONTAINER forgot to set padding in ELEMENTOR */
+    .hero-container .e-con-inner > div:nth-child(2) {
+        padding: 0 20px;
+    }
+    
     /**************************************************
     PREMIUM MOBILE MENU
     ***************************************************/
