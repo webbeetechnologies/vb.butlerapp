@@ -52,6 +52,10 @@ HERO
 .industries-section > .e-con-inner {
     align-items: center !important;
 }
+
+.hero-sec-v2:before {
+    background-position: right 30px center !important;
+}
 /***********************************
 QUESTIONNAIRE FORM 
 ************************************/
@@ -1081,6 +1085,9 @@ body .slick-dots {
         width: 35px;
     }
 
+    .hero-sec-v2:before {
+        background-position: right center !important;
+    }
     /**************************************************
     PREMIUM MOBILE MENU
     ***************************************************/
