@@ -427,6 +427,10 @@ use border-radius 22px in the elementor btn
 /***********************************
 PERSONAL SERVICES: HOTSPOT V2
 ************************************/
+.e-hotspot-active .e-hotspot--fade-in-out {
+    opacity: 1;
+}
+
 .support-cards-container {
     flex-shrink: 1 !important;
 }
@@ -1287,10 +1291,6 @@ body .slick-dots {
     /**********************************************************
     PERSONAL SERVICES CARD'S HOTSPOT TOOLTIP: HIDE THE DEFAULT
     ***********************************************************/
-    .e-hotspot-active .e-hotspot--fade-in-out {
-        opacity: 1;
-    }
-
     .personal-services-section  .hotspot-v2 .e-hotspot .e-hotspot__tooltip {
         display: none;
     }
