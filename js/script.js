@@ -876,6 +876,8 @@ jQuery(document).ready(function ($) {
     ".e-hotspot__button:not(.ba--inactive)",
     function (e) {
       e.stopPropagation();
+      if ($(this).parents().hasClass('support-cards-container')) return;
+
       var getParent = $(this).parent();
       var isActive = getParent.hasClass("e-hotspot--active");
 
@@ -893,8 +895,10 @@ jQuery(document).ready(function ($) {
   );
 
   // TEAM CARDS - CLOSE FUNCTION
-  $(".e-hotspot .ba-close-icon").click(function () {
+  $(".e-hotspot .ba-close-icon").click(function (e) {
+    e.preventDefault();
     $(this).parent().parent().parent().removeClass("e-hotspot--active");
+    $('.e-hotspot-active').removeClass('e-hotspot-active');
     $(".e-hotspot__button").removeClass("ba--inactive");
   });
 

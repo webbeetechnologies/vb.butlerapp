@@ -324,7 +324,21 @@ $(document).ready(function () {
             }
             
         } else {
-          // DESKTOP  
+            // DESKTOP  
+            var $parent = $(this).parent('.e-hotspot');
+    
+            if ($parent.hasClass('e-hotspot-active')) {
+                $parent.removeClass('e-hotspot-active');
+                $(this).removeClass('ba--inactive');
+            } else {
+                $('.support-cards-container .e-hotspot-active').removeClass('e-hotspot-active');
+                $('.support-cards-container .ba--inactive').removeClass('ba--inactive');
+
+                $parent.addClass('e-hotspot-active');
+                $(this).addClass('ba--inactive');
+                return;
+            }
+            
         }
     });
 

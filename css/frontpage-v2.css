@@ -1287,6 +1287,10 @@ body .slick-dots {
     /**********************************************************
     PERSONAL SERVICES CARD'S HOTSPOT TOOLTIP: HIDE THE DEFAULT
     ***********************************************************/
+    .e-hotspot-active .e-hotspot--fade-in-out {
+        opacity: 1;
+    }
+
     .personal-services-section  .hotspot-v2 .e-hotspot .e-hotspot__tooltip {
         display: none;
     }
