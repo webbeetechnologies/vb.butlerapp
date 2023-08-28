@@ -62,7 +62,7 @@ QUESTIONNAIRE FORM
 /* blue section is using eq-height, but eq-height calculation always behind of the lazy load image on the right hand side.
 so, we set it min-height 100vh from here? */
 .blue-section {
-    min-height: 100vh !important;
+    /*min-height: 100vh !important;*/
 }
 .quiz2-container .e-form__indicators__indicator__separator {
     display: none;
@@ -394,13 +394,13 @@ use border-radius 22px in the elementor btn
 
 .button-rainbow .elementor-button {
     /* Auto layout */
-    display: flex;
+    display: inline-flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     padding: 0px 32px;
     gap: 10px;
-    width: 206px;
+    /*width: 206px;*/
     height: 64px;
     /* Gradient/Accent */
     background: linear-gradient(90deg, #ED2177 0%, #FDD03A 100%);
