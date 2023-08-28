@@ -7,8 +7,10 @@
   <meta charset="<?php bloginfo( 'charset' ); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="alternate" type="application/rss+xml" title="<?php echo sanitize_text_field(get_bloginfo('name')); ?> Feed" href="<?php echo esc_url(home_url('/')); ?>/feed/">
-  <link rel="preload" href="/wp-content/uploads/2023/07/Kristina_quiz_bg.webp" as="image">
-  <link rel="preload" href="/wp-content/uploads/2022/06/team-hover-bg-min-scaled.jpg" as="image">
+  <?php if (is_front_page()) : ?>
+    <link rel="preload" href="/wp-content/uploads/2023/07/Kristina_quiz_bg.webp" as="image">
+  <?php endif; ?>
+  <link rel="preload" href="/wp-content/uploads/2023/07/butlerapp_team_2-scaled.webp" as="image">
   <!-- Head -->
   <link rel="stylesheet" href="https://butlerapp.de/css/swiper_4.5.0.min.css">
 <?php wp_head(); ?>
