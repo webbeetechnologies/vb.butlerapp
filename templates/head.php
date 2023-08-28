@@ -7,8 +7,7 @@
   <meta charset="<?php bloginfo( 'charset' ); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="alternate" type="application/rss+xml" title="<?php echo sanitize_text_field(get_bloginfo('name')); ?> Feed" href="<?php echo esc_url(home_url('/')); ?>/feed/">
-  <link rel="preload" href="/wp-content/uploads/2022/06/butler-services-2-min.png" as="image">
-  <link rel="preload" href="/wp-content/uploads/2022/06/contact-2-min.png" as="image">
+  <link rel="preload" href="/wp-content/uploads/2023/07/Kristina_quiz_bg.webp" as="image">
   <link rel="preload" href="/wp-content/uploads/2022/06/team-hover-bg-min-scaled.jpg" as="image">
   <!-- Head -->
   <link rel="stylesheet" href="https://butlerapp.de/css/swiper_4.5.0.min.css">
