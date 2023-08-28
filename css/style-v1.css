@@ -93,8 +93,12 @@
   }
   
   .header-v2 .logo-blocker.active {
+    /* NO BLOCKER */
+    /*
     left: 38px;
     width: 130px;
+    */
+    display: none;
   }
   /*-- CTA --*/
   #target-button-menu-bar-new {
