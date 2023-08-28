@@ -711,7 +711,7 @@
     background-color: #f5f7f8 !important;
     color: #0b2541 !important;
   }
-  .elementor-popup-modal svg * {
+  .elementor-popup-modal button svg * {
     fill: url(#paint0_linear_0_221) !important;
   }
   /*-- POPUP CHECK BOX --*/
