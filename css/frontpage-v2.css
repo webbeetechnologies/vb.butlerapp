@@ -1063,6 +1063,9 @@ FAQ V2 (override FAQ style in style.css
 /****************************************
 OVERRIDE ELEMENTOR ELEMENTS (LAST RESORT)
 *****************************************/
+#preise .elementor-heading-title {
+    text-align: center;
+}
 .elementor-button {
     transition: all 0.3s;
 }

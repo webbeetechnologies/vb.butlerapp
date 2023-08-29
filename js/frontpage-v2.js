@@ -25,6 +25,30 @@ function buildPaginationSection() {
     $('.paginator-container').append(el);
 }
 
+function switchToQuizGirl() {
+    console.log('switch to quiz girl called');
+    $('.quiz2-container').fadeOut('fast');
+    $('.quiz1-container').fadeIn('fast');
+    // HIDE BUTTON
+    $('.button-take-quiz').hide(); // keep the button hide to prevent multiple submit
+    // HIDE PAGINATION
+    $('.paginator-container').hide();
+}
+
+function populateFormVal() { 
+    var $inputs = $('#quiz-form :input');
+    var values = {};
+    $inputs.each(function() {
+        // ONLY RADIO FOR NOW IN QUIZ
+        if ($(this).is(':radio') && $(this).is(':checked')) {
+            values[this.name] = $(this).val();
+        } 
+    });
+    return values;
+}
+// global quiz values
+var values;
+
 $(document).ready(function () { 
     // POPUP: PREVENT JUMPING TO TOP WHEN CLOSE
     $("body").on("click", ".dialog-widget .dialog-close-button", "a[href='#']", function(e) {
@@ -211,6 +235,24 @@ $(document).ready(function () {
             $(this).parent().removeClass('active');
         }
     });
+
+    //populate the form data and send to popup form
+    $('#quiz-form').submit(function() {
+        values = populateFormVal();
+    });
+ 
+     // on submit_success event triggered on my specific form
+    $(document).on('submit_success', '#quiz-form',function() {
+          // set quiz values in the popup
+          var strValues = JSON.stringify(values);
+            $('#get-special-offer-form #form-field-quiz_result').val(strValues);
+            // hide all fields in this form
+            $('#quiz-form').find('.elementor-form-fields-wrapper').hide();
+            $('#quiz-form').find('.e-form__indicators').hide();
+            
+            setTimeout(switchToQuizGirl, 5000);
+    });
+
 
     // CUSTOMERS TESTIMONIALS
     $('.testimonials-carousel-container .slider-nav').slick({
