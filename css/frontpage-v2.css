@@ -627,6 +627,19 @@ HOTSPOT V2
 }
 
 /***********************************
+INDUSTRIES/SCHUNGEN SECTION
+************************************/
+.industries-section .slick-slide {
+    min-height: 475px;
+}
+
+.industries-section .slick-slide .elementor-button-wrapper {
+    /* */
+}
+.industries-section .slick-slide a.elementor-button {
+    margin-top: 20px;
+}
+/***********************************
 DIALOG
 ************************************/
 .dialog-close-button svg {
@@ -1704,7 +1717,7 @@ body .slick-dots {
     .quiz-section > .e-con-inner > div {
         display: block;
     }
-    
+
     .quiz2-container .e-form__indicators__indicator__number {
         width: 46px;
         height: 46px;
