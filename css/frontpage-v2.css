@@ -1701,6 +1701,10 @@ body .slick-dots {
     }
     
     /* QUIZ */
+    .quiz-section > .e-con-inner > div {
+        display: block;
+    }
+    
     .quiz2-container .e-form__indicators__indicator__number {
         width: 46px;
         height: 46px;
