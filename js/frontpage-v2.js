@@ -26,7 +26,7 @@ function buildPaginationSection() {
 }
 
 function switchToQuizGirl() {
-    console.log('switch to quiz girl called');
+    // console.log('switch to quiz girl called');
     $('.quiz2-container').fadeOut('fast');
     $('.quiz1-container').fadeIn('fast');
     // HIDE BUTTON
