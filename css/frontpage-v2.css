@@ -61,9 +61,16 @@ QUESTIONNAIRE FORM
 ************************************/
 /* blue section is using eq-height, but eq-height calculation always behind of the lazy load image on the right hand side.
 so, we set it min-height 100vh from here? */
-.blue-section {
-    /*min-height: 100vh !important;*/
+/* OLD SCHOOL TAKING OVER */
+.quiz-section > .e-con-inner {
+    display: table;
 }
+
+.quiz-section > .e-con-inner > div {
+    display: table-cell;
+    vertical-align: middle;
+}
+
 .quiz2-container .e-form__indicators__indicator__separator {
     display: none;
 }
@@ -617,6 +624,13 @@ HOTSPOT V2
 
 .slick-slide .elementor-widget-image a {
     display: block;
+}
+
+/***********************************
+DIALOG
+************************************/
+.dialog-close-button svg {
+    fill: #0b2541 !important;
 }
 /***********************************
 INTERACTIVE MAP
