@@ -12,6 +12,11 @@
   <?php endif; ?>
   <link rel="preload" href="/wp-content/uploads/2023/07/butlerapp_team_2-scaled.webp" as="image">
   <!-- Head -->
-  <link rel="stylesheet" href="https://butlerapp.de/css/swiper_4.5.0.min.css">
+  <link
+    rel="stylesheet"
+    href="/css/swiper_4.5.0.min.css"
+    media="print"
+    onload="this.media='all'; this.onload = null"
+  >
 <?php wp_head(); ?>
 </head>
