@@ -627,6 +627,12 @@ HOTSPOT V2
 }
 
 /***********************************
+PRO TEAM
+************************************/
+#pro-team .elementor-widget-hotspot > .elementor-widget-container {
+    width: 100%;
+}
+/***********************************
 INDUSTRIES/SCHUNGEN SECTION
 ************************************/
 .industries-section .slick-slide {
