@@ -629,9 +629,7 @@ HOTSPOT V2
 /***********************************
 PRO TEAM
 ************************************/
-#pro-team .elementor-widget-hotspot > .elementor-widget-container,
 #butlerapp-team-container .elementor-widget-hotspot .elementor-widget-container,
-#pro-team .elementor-widget-hotspot > .elementor-widget-container img, 
 #butlerapp-team-container .elementor-widget-hotspot .elementor-widget-container img {
     width: 100%;
 }

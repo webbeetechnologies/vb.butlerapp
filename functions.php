@@ -258,7 +258,7 @@ function custom_body_class( array $classes ) {
 
 /* APPEND PARAMS IN COOKIE TO ALL URL THROUGH WHOLE SITE */
 // add_action('template_redirect', 'wprdcv_param_redirect', 2);
-function wprdcv_param_redirect() {
+function wprdcv_param_redirect_OLD() {
 	// make sure the redirect only happen on page and forced by cookie creation function above
 	if(is_page() && $GLOBALS['should_redirect']) {
 			$location = add_query_arg($GLOBALS['query_array']);
@@ -269,7 +269,20 @@ function wprdcv_param_redirect() {
 	}
 }
 // ONLINE MARKETING END
- 
+
+/********************************************
+ * OPTIMISATION: DEFER ALL JS EXCEPT JQUERY
+ * https://kinsta.com/blog/defer-parsing-of-javascript/
+ ********************************************/
+function defer_parsing_of_js( $url ) {
+    if ( is_user_logged_in() ) return $url; //don't break WP Admin
+    if ( FALSE === strpos( $url, '.js' ) ) return $url;
+    if ( strpos( $url, 'jquery.js' ) ) return $url;
+	
+    return str_replace( ' src', ' defer src', $url );
+}
+add_filter( 'script_loader_tag', 'defer_parsing_of_js', 10 );
+
 // slick slider
 add_action( 'wp_enqueue_scripts', 'slick_register_styles' );
 function slick_register_styles() {
