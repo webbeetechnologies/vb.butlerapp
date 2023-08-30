@@ -9,8 +9,9 @@
   <link rel="alternate" type="application/rss+xml" title="<?php echo sanitize_text_field(get_bloginfo('name')); ?> Feed" href="<?php echo esc_url(home_url('/')); ?>/feed/">
   <?php if (is_front_page()) : ?>
     <link rel="preload" href="/wp-content/uploads/2023/07/Kristina_quiz_bg.webp" as="image">
+    <link rel="preload" href="/wp-content/uploads/2023/07/butlerapp_team_2-scaled.webp" as="image">
   <?php endif; ?>
-  <link rel="preload" href="/wp-content/uploads/2023/07/butlerapp_team_2-scaled.webp" as="image">
+
   <!-- Head -->
   <link
     rel="stylesheet"
