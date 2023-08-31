@@ -1517,6 +1517,7 @@ body .slick-dots {
 
     .premium-mega-content-container .menu-items-container > .e-con-inner {
         gap: 0;
+        padding-bottom: 80px;
     }
 
     .premium-mega-content-container .menu-items-container > .e-con-inner > .elementor-element > .e-con-inner {
