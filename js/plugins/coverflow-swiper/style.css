@@ -113,9 +113,8 @@
 }
 
 .swiper-text-container {
-    margin-top: 50px;
-    margin-bottom: 50px;
     text-align: center;
+    margin: 50px -20px;
 }
 
 .swiper-text-container .swiper-slide {
@@ -129,6 +128,7 @@
 .swiper-text-container .content .inner {
     max-width: 650px;
     margin: 0 auto;
+    padding: 0 20px;
 }
 .swiper-text-container .title {
     font-size: 26px;
