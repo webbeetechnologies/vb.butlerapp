@@ -201,7 +201,7 @@ $(document).ready(function () {
         
     $('.button-take-quiz a').on('click', function(e) {
         e.preventDefault();
-        $("html, body").animate({ scrollTop: $('.quiz-section').offset().top }, 500);
+        $("html, body").animate({ scrollTop: $('.quiz-section .right-container').offset().top }, 500);
 
         $('.quiz1-container').hide().fadeOut('fast');
         $('.quiz2-container').fadeIn('fast');
