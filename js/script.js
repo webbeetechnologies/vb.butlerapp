@@ -1056,7 +1056,7 @@ jQuery(document).ready(function ($) {
     hasTriggered++;
     setTimeout(function () {
       // show exit popup
-      elementorProFrontend.modules.popup.showPopup({ id: 897 });
+      // elementorProFrontend.modules.popup.showPopup({ id: 897 });
     }, timeout);
   });
 }); // THE ENDING...
