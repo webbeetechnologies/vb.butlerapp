@@ -56,6 +56,10 @@ HERO
 .hero-sec-v2:before {
     background-position: right 30px center !important;
 }
+
+.logo-ssl-container .e-con-inner {
+    justify-content: start;
+}
 /***********************************
 QUESTIONNAIRE FORM 
 ************************************/
@@ -1536,6 +1540,7 @@ body .slick-dots {
     }
 
     .hero-sec-v2 .logo-ssl-container > .e-con-inner {
+        justify-content: center;
         gap: 0;
     }
 
