@@ -322,4 +322,8 @@ $('.interactive-map-container .map-container a').click(function(e) {
 $('.interactive-map-container img.map-image').on('load', function() {
   $('.interactive-map-container svg').addClass('loaded');
 });
+
+setTimeout(() => {
+    $('.interactive-map-container svg').addClass('loaded');
+}, 1000);
 </script>
