@@ -628,6 +628,14 @@ HOTSPOT V2
     display: none;
 }
 
+.image-carousel-gallery-v2 .gallery {
+    display: none;
+}
+
+.image-carousel-gallery-v2 .gallery.slick-initialized {
+    display: block;
+} 
+
 .image-carousel-gallery-v2 .gallery .gallery-item {
     margin: 0 !important;
     float: none;
