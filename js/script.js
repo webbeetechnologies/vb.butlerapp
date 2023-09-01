@@ -967,7 +967,7 @@ jQuery(document).ready(function ($) {
     var productMenuHeadHeight = $('.product-menu-container').height() || 0;
     var offsetTop = parseInt(mastheadHeight) + parseInt(productMenuHeadHeight);
     
-    $(".features-list-table .header").scrollToFixed({
+    $(".features-list-table-fixed .header").scrollToFixed({
       limit: limit,
       marginTop: offsetTop,
       zIndex: 10
