@@ -5,6 +5,7 @@
 			<p><?php echo $args['atts']['subtitle']; ?></p>
 		<?php endif; ?>
 	</div>
+
 	<div class="features-list-table">
 		<div class="d-flex header">
 			<div class="title-container elementor-hidden-mobile">
@@ -64,6 +65,8 @@
 				</a>
 			</div>
 		</div>
+	</div>
+	<div class="features-list-table2">
 		<div class="features-container">
 			<?php // GET FIRST 5 POSTS ?>
 			<?php $first_items =  $args['atts']['first_items'] ? (int)$args['atts']['first_items'] : 10; ?>
