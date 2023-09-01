@@ -1342,6 +1342,12 @@ body .slick-dots {
         display: none;
     }
 
+    .slick-container-v2 .slick-prev,
+    .slick-container-v2 .slick-next,
+    .slick-container-v2 .slick-prev:hover,
+    .slick-container-v2 .slick-next:hover,
+    .slick-container-v2 .slick-prev:focus,
+    .slick-container-v2 .slick-next:focus,
     .image-carousel-v2 .slick-prev,
     .image-carousel-v2 .slick-next,
     .video-carousel-v2 .slick-prev, 
@@ -1358,6 +1364,9 @@ body .slick-dots {
         top: 40%;
     }
 
+    .slick-container-v2 .slick-prev,
+    .slick-container-v2 .slick-prev:hover,
+    .slick-container-v2 .slick-prev:focus,
     .image-carousel-v2 .slick-prev, 
     .image-carousel-v2 .slick-prev:hover, 
     .image-carousel-v2 .slick-prev:focus, 
@@ -1370,6 +1379,9 @@ body .slick-dots {
         left: -20px;
     }
 
+    .slick-container-v2 .slick-next,
+    .slick-container-v2 .slick-next:hover,
+    .slick-container-v2 .slick-next:focus,
     .image-carousel-v2 .slick-next,
     .image-carousel-v2 .slick-next:hover, 
     .image-carousel-v2 .slick-next:focus, 
