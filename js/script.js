@@ -952,10 +952,10 @@ jQuery(document).ready(function ($) {
   // fixed position header when scrolled
   function destroyScrolltoFixed() {
     // destroy first if any
-    $(".features-list-table .header")
+    $(".features-list-table-fixed .header")
       .removeClass("scroll-to-fixed-fixed")
       .removeAttr("style");
-    $(".features-list-table .header").next().remove();
+    $(".features-list-table-fixed .header").next().remove();
   }
 
   function initScrolltoFixed() {
