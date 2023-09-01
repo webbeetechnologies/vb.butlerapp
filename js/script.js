@@ -949,8 +949,10 @@ jQuery(document).ready(function ($) {
   /*=======================================================================================
   * price features: ALLE FUNCTIONEN CLICKABLE
   =======================================================================================*/
-  // fixed position header when scrolled
+  // fixed position header when scrolled. only 1024 above..smaller device a bit buggy
   function destroyScrolltoFixed() {
+    if ( $(window).width() < 1024) return;
+
     // destroy first if any
     $(".features-list-table-fixed .header")
       .removeClass("scroll-to-fixed-fixed")
@@ -959,6 +961,8 @@ jQuery(document).ready(function ($) {
   }
 
   function initScrolltoFixed() {
+    if ( $(window).width() < 1024) return;
+
     var limit = $(".features-list-footer").offset().top - 150;
 
     // calculate the offsetTop
