@@ -3,7 +3,7 @@ body .elementor-section.elementor-section-boxed > .elementor-container {
     max-width: 1160px;
     width: calc(100% - 20px);
 }
-
+/*
 .elementor-widget-text-editor p, .elementor-widget-text-editor ul li, .elementor-widget-text-editor ol li {
     font-size: inherit;
 }
@@ -15,4 +15,4 @@ body .elementor-section.elementor-section-boxed > .elementor-container {
     color: inherit;
     line-height: inherit;
 }
-  
+*/
