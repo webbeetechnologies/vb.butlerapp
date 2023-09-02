@@ -13,26 +13,28 @@ Version: 1.0.2
 
 /* STYLE.CSS is moved to css/style-v1.css and controlled by functions.js */
 
-body.website-v2 > * {
+body > * {
   color: #0B2541;
 }
 
-body.website-v2, 
-.website-v2 h1, 
-.website-v2 h2, 
-.website-v2 h3, 
-.website-v2 h4, 
-.website-v2 h5, 
-.website-v2 h6 {
+body, 
+body h1, 
+body h2, 
+body h3, 
+body h4, 
+body h5, 
+body h6 {
   font-family: "+Jakarta Sans", Sans-serif;
   font-weight: 500;
   color: #0B2541;
   line-height: 1.4em;
 }
 
-.website-v2 p, 
-.website-v2 li, 
-.website-v2 a {
+body p, 
+body li, 
+body a {
   font-family: "+Jakarta Sans", Sans-serif;
+  font-size: 16px;
+  color: #0B2541;
 }
 
