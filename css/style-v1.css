@@ -1785,7 +1785,6 @@
   }
   .prices-container-v2 {
     display: grid;
-    font-family: "Open Sans", sans-serif;
     grid-template-columns: auto auto auto;
     gap: 20px;
   }
@@ -2033,7 +2032,7 @@
   .butler-price-features h4,
   .butler-price-features h5,
   .butler-price-features h6 {
-    font-family: "Open Sans", sans-serif;
+    /*font-family: "Open Sans", sans-serif;*/
   }
   
   #butlerapp-services
