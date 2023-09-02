@@ -34,7 +34,7 @@ body p,
 body li, 
 body a {
   font-family: "+Jakarta Sans", Sans-serif;
-  font-size: 16px;
+  /*font-size: 16px;*/
   color: #0B2541;
 }
 
