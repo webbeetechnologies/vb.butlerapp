@@ -659,7 +659,7 @@ INDUSTRIES/SCHUNGEN SECTION
 /***********************************
 DIALOG
 ************************************/
-.dialog-close-button svg {
+.elementor-popup-modal .dialog-close-button svg {
     fill: #0b2541 !important;
 }
 /***********************************

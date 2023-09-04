@@ -320,7 +320,6 @@ $('.interactive-map-container .map-container a').click(function(e) {
 });
 
 $('.interactive-map-container img.map-image').on('load', function() {
-    console.log('basemap loaded');
   $('.interactive-map-container svg').addClass('loaded');
 });
 </script>
