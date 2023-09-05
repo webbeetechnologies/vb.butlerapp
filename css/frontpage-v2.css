@@ -1925,6 +1925,17 @@ body .slick-dots {
         font-size: 5px;
     }
 
+    /* product page menu: the arrow */
+    #stb-menu-wrapper {
+        width: 45px;
+    }
+    .hfe-nav-menu-icon {
+        padding-right: 0;
+        padding-left: 0;
+    }
+    .premium-hamburger-toggle {
+        right: 0;
+    }
     /* VISION MISSION TWEAK */
     .horay img {
         width: 70px;
