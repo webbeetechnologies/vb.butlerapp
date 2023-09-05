@@ -1,18 +1,1 @@
-/* QUICK FIX: NEW ELEMENTOR REMOVE */
-body .elementor-section.elementor-section-boxed > .elementor-container {
-    max-width: 1160px;
-    width: calc(100% - 20px);
-}
-/*
-.elementor-widget-text-editor p, .elementor-widget-text-editor ul li, .elementor-widget-text-editor ol li {
-    font-size: inherit;
-}
 
-.elementor-widget-text-editor, .elementor-widget-text-editor h1, .elementor-widget-text-editor h2, .elementor-widget-text-editor h3, .elementor-widget-text-editor h4, .elementor-widget-text-editor h5, .elementor-widget-text-editor h6, .elementor-widget-text-editor p, .elementor-widget-text-editor ul li, .elementor-widget-text-editor ol li {
-    font-family: inherit;
-    font-weight: inherit;
-    font-style: inherit;
-    color: inherit;
-    line-height: inherit;
-}
-*/
