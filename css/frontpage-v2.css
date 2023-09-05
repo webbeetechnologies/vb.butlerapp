@@ -1224,23 +1224,6 @@ body .slick-dots {
         width: 90px;
     }
 
-    /* PREMIUM MOBILE MENU: SUBMENU/MEGAMENU */
-    .premium-mega-content-container {
-        top: 0;
-        filter: none;
-        position: absolute !important;
-        overflow-y: scroll;
-        height: 100vh;
-        background: white;
-    }
-    .premium-mega-content-container > div > .elementor-inner > .elementor-section-wrap > .elementor-element {
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-    .submenu-button-back img {
-        width: auto !important;
-    }
     /* CTA buttons container */
     .elementor .premium-mobile-menu-container .cta-container {
         display: flex;
@@ -1321,6 +1304,24 @@ body .slick-dots {
         margin-left: 0;
     }
     */
+
+    /* PREMIUM MOBILE MENU: SUBMENU/MEGAMENU */
+    .premium-mega-content-container {
+        top: 0;
+        filter: none;
+        position: absolute !important;
+        overflow-y: scroll;
+        height: 100vh;
+        background: white;
+    }
+    .premium-mega-content-container > div > .elementor-inner > .elementor-section-wrap > .elementor-element {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .submenu-button-back img {
+        width: auto !important;
+    }
 
     html.mobile-product-menu-open {
         overflow: hidden;
