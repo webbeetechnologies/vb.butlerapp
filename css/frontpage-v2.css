@@ -510,6 +510,7 @@ HOTSPOT V2
 
 .hotspot-v2 .team-body a {
     color: #0B2541;
+    pointer-events: initial;
 }
 
 .hotspot-v2 .team-body a:after {
