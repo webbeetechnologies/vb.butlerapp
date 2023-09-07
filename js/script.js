@@ -63,7 +63,7 @@ jQuery(document).ready(function ($) {
   butlerMediaQueries.register("mobile", function (e) {
     if (e.matches) {
       centerImage();
-      restructureSlider();
+      // restructureSlider();
       faqMobile();
       hotspotScroller();
     }
@@ -71,20 +71,13 @@ jQuery(document).ready(function ($) {
 
   butlerMediaQueries.register("largeMobile", function (e) {
     if (e.matches) {
-      restructureSlider();
+      // restructureSlider();
     }
   });
 
   butlerMediaQueries.register("desktop", function (e) {
     if (e.matches) {
-      serviceBgChanger();
       teamBgChanger();
-    }
-  });
-
-  butlerMediaQueries.register("belowTab", function (e) {
-    if (e.matches) {
-      scrollToVideo();
     }
   });
 
@@ -199,6 +192,7 @@ jQuery(document).ready(function ($) {
   /*===============================================================================
    *  SWIPER: AUTOSCROLLING LOGO
    * =============================================================================*/
+  /*
   var originalTransformProp, originalTransitionDuration;
 
   function stopTransition(e) {
@@ -251,76 +245,6 @@ jQuery(document).ready(function ($) {
         // swiper.autoplay.start();
       });
   });
-
-  /*===============================================================================
-   * FUTURE SLIDER -- Section 3
-   * ============================================================================*/
-
-  // MAKES THE FIRST SLIDE ACTIVE ON LOAD
-  $("#ba--sliders .slides > li").eq(0).addClass("active");
-
-  // ALL SLIDES
-  var slides = $("#ba--sliders .slides > li");
-
-  // REMOVES ELEMENTOR'S ACTIVE STATE
-  slides.removeClass("flex-active-slide");
-  $("#ba-slider-controls li").on("click", function () {
-    $("#ba-slider-controls li").removeClass("active");
-    $(this).addClass("active");
-    var activePoint = $("#ba-slider-controls li.active").index();
-    slides.removeClass("active");
-    slides.eq(activePoint).addClass("active");
-  });
-
-  // SLIDER CONTROLS
-  function slideToIndex(nextIndex) {
-    $("#ba-slider-controls li").removeClass("active");
-    $("#ba-slider-controls li").eq(nextIndex).addClass("active");
-    slides.removeClass("active");
-    slides.eq(nextIndex).addClass("active");
-  }
-  function handlenextclick() {
-    var activeLiner = $("#ba-slider-controls li.active");
-    var nextIndex = activeLiner.index() + 1;
-    if (!$("#ba-slider-controls li").eq(nextIndex).length) {
-      nextIndex = 0;
-    }
-    slideToIndex.call(this, nextIndex);
-  }
-  function prevClick() {
-    var activeLiner = $("#ba-slider-controls li.active");
-    var prevIndex = activeLiner.index() - 1;
-    slideToIndex.call(this, prevIndex);
-  }
-
-  // INITIATES CONTROL FUNCTIONS ON CLICK
-  $(".bsa-right").on("click", handlenextclick);
-  $(".bsa-left").on("click", prevClick);
-
-  // RESTRUCTURES MOBILE IMAGE CONTAINER
-  function restructureSlider() {
-    $("#ba--sliders .slides li").each(function () {
-      var eachImage = $(this).find(".mobile-slider-img");
-      var prependArea = eachImage
-        .closest("section")
-        .prev()
-        .find(".elementor-widget-wrap")
-        .eq(0);
-      eachImage.prependTo(prependArea);
-    });
-  }
-
-  /*==============================================
-  FUNKTIONEN: VIDEO SLICK SLIDER
-  ================================================*/
-  /*
-  if ($(".function-video-carousel-container").length) {
-    $(".function-video-carousel-container .elementor-widget-wrap").slick({
-      autoplay: false,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-    });
-  }
   */
 
   $(".function-video-carousel-container").each(function (idx, item) {
@@ -349,6 +273,7 @@ jQuery(document).ready(function ($) {
 
   // this is using elementor gallery because it has linked-lightbox in it
   $(".image-carousel-gallery-v2").each(function (idx, item) {
+    console.log($(item).find(".gallery .gallery-item").length > 1);
     if ($(item).find(".gallery .gallery-item").length > 1) {
       $('.gallery br').remove();
       
@@ -361,186 +286,11 @@ jQuery(document).ready(function ($) {
       });
     }
   });
-  
-
-  /*===============================================================================
-   *  VIDEO SWITCHER - Section 4
-   * =============================================================================*/
-
-  // MAKES THE FIRST VIDEO ACTIVE ON LOAD
-  $("#butler_guides [data-order-no]:first-of-type").addClass("active");
-  $(".bm-container .bm-filter").eq(0).addClass("active");
-
-  // ON CLICK STATE
-  $("#butler_guides [data-order-no]")
-    .not(".guide")
-    .on("click", function (e) {
-      e.preventDefault();
-      var orderNo = $(this).data("order-no");
-
-      // pause previous active's video if played
-      $(".b-guides .active").find("video").get(0).pause();
-
-      $(".b-filters > div").removeClass("active");
-      $(this).addClass("active");
-      $(this).parent().next().find(".guide").removeClass("active");
-      $(this)
-        .parent()
-        .next()
-        .children("[data-order-no=" + orderNo + "]")
-        .addClass("active");
-
-      // // play previous active's video if played
-      // $(".b-guides .active").find("video").get(0).play();
-    });
-
-  // FOR THE MORPHED ACCORDION ON MOBILE DEVICES
-  $(".bm-filter .bm-head").on("click", function (e) {
-    e.preventDefault();
-
-    // pause previous active's video if played
-    $(".bm-filter.active").find("video").get(0).pause();
-
-    $(".bm-filter").removeClass("active");
-    $(this).parent().toggleClass("active");
-    $(".bm-filter .bm-guide").slideUp();
-    if ($(this).parent().find(".bm-guide").css("display") == "none") {
-      $(this).parent().find(".bm-guide").slideDown();
-    } else {
-      $(this).parent().find(".bm-guide").slideUp();
-      $(this).parent().toggleClass("active");
-    }
-  });
-
-  // SCROLL TO ACTIVE VIDEO
-  function scrollToVideo() {
-    $(".bm-filter").on("click", function () {
-      setTimeout(function () {
-        var activeOffset = $(".bm-filter.active").offset().top;
-        console.log(activeOffset);
-        var headerHeight = $("#masthead").height();
-        $("body, html").animate(
-          {
-            scrollTop: activeOffset - headerHeight,
-          },
-          1000
-        );
-      }, 1000);
-    });
-  }
-  $(".bm-filter.active .bm-guide").attr("style", "display:block");
-  $(".bm-filter:not(.active) .bm-guide").attr("style", "display:none");
-
-  /*===============================================================================
-   *  KUNDEN SLIDER - Section 5
-   * =============================================================================*/
-  /*** create prev next buttons  ***/
-  $("#kunden--slider #main-flex-slider .flex-control-nav").append(
-    '<div class="ba-slider-arrows"><div class="bas-inner"> <div class="bsa-left"> <svg width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg"><mask id="path-1-inside-1_0_351" fill="white"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.99454 0L0 5.99727L6 12"></path></mask><path d="M7.40907 1.41389C8.18994 0.632665 8.18965 -0.633665 7.40843 -1.41454C6.6272 -2.19541 5.36087 -2.19512 4.58 -1.41389L7.40907 1.41389ZM0 5.99727L-1.41454 4.58337C-2.19515 5.36435 -2.19515 6.63018 -1.41454 7.41116L0 5.99727ZM4.58546 13.4139C5.36633 14.1951 6.63267 14.1954 7.41389 13.4145C8.19512 12.6337 8.19541 11.3673 7.41454 10.5861L4.58546 13.4139ZM4.58 -1.41389L-1.41454 4.58337L1.41454 7.41116L7.40907 1.41389L4.58 -1.41389ZM-1.41454 7.41116L4.58546 13.4139L7.41454 10.5861L1.41454 4.58337L-1.41454 7.41116Z" fill="#0B2541" mask="url(#path-1-inside-1_0_351)"></path></svg> </div><div class="bsa-right"> <svg width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg"><mask id="path-1-inside-1_0_354" fill="white"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.00546455 0L6 5.99727L0 12"></path></mask><path d="M-1.40907 1.41389C-2.18994 0.632665 -2.18965 -0.633665 -1.40843 -1.41454C-0.627201 -2.19541 0.63913 -2.19512 1.42 -1.41389L-1.40907 1.41389ZM6 5.99727L7.41454 4.58337C8.19515 5.36435 8.19515 6.63018 7.41454 7.41116L6 5.99727ZM1.41454 13.4139C0.633665 14.1951 -0.632665 14.1954 -1.41389 13.4145C-2.19512 12.6337 -2.19541 11.3673 -1.41454 10.5861L1.41454 13.4139ZM1.42 -1.41389L7.41454 4.58337L4.58546 7.41116L-1.40907 1.41389L1.42 -1.41389ZM7.41454 7.41116L1.41454 13.4139L-1.41454 10.5861L4.58546 4.58337L7.41454 7.41116Z" fill="#0B2541" mask="url(#path-1-inside-1_0_354)"></path></svg> </div></div></div>'
-  );
-
-  /*** autoplay and click events ***/
-  var myTimer = null;
-
-  function kundenprevclick() {
-    var cA = $("#kunden--slider .flex-active").parent(),
-      items = $("#kunden--slider .slide-points li"),
-      cI = items.toArray().indexOf(cA[0]) - 1;
-    items.find("a").removeClass("flex-active");
-    items.eq(cI).find("a").addClass("flex-active");
-    $("#kunden--slider .slides li")
-      .removeClass("flex-active-slide")
-      .animate({ opacity: 0 }, 200)
-      .eq(cI)
-      .addClass("flex-active-slide")
-      .animate({ opacity: 1 }, 200);
-  }
-
-  function kundennextclick() {
-    var cA = $("#kunden--slider .flex-active").parent(),
-      items = $("#kunden--slider .slide-points li"),
-      cI = items.toArray().indexOf(cA[0]) + 1;
-    if (items.length <= cI) {
-      cI = 0;
-    }
-    items.find("a").removeClass("flex-active");
-    items.eq(cI).find("a").addClass("flex-active");
-    $("#kunden--slider .slides li")
-      .removeClass("flex-active-slide")
-      .animate({ opacity: 0 }, 200)
-      .eq(cI)
-      .addClass("flex-active-slide")
-      .animate({ opacity: 1 }, 200);
-  }
-
-  function kundenClickByIdx(idx) {
-    $("#kunden--slider .flex-active").removeClass("flex-active");
-    $("#kunden--slider .slide-points li")
-      .eq(idx)
-      .find("a")
-      .addClass("flex-active");
-
-    $("#kunden--slider .slides li")
-      .removeClass("flex-active-slide")
-      .animate({ opacity: 0 }, 200)
-      .eq(idx)
-      .addClass("flex-active-slide")
-      .animate({ opacity: 1 }, 200);
-  }
-
-  function setAutoplay(timer) {
-    myTimer = setInterval(function () {
-      kundennextclick();
-    }, timer);
-  }
-
-  // WRAPS SLIDE INDICATORS
-  $("#kunden--slider .flex-control-nav li").wrapAll(
-    '<div class="slide-points">'
-  );
-
-  $("#kunden--slider").on("click", ".bsa-right", function () {
-    clearInterval(myTimer);
-    myTimer = null;
-    kundennextclick();
-    setAutoplay(9000);
-  });
-  $("#kunden--slider").on("click", ".bsa-left", function () {
-    clearInterval(myTimer);
-    myTimer = null;
-    kundenprevclick();
-    setAutoplay(9000);
-  });
-  $("#kunden--slider .slide-points").on("click", "li", function () {
-    if ($(this).children(".flex-active").length == 0) {
-      var idx = $(this).index();
-      clearInterval(myTimer);
-      kundenClickByIdx(idx);
-      setAutoplay(9000);
-    }
-  });
-
-  // hover-out
-  $("#kunden--slider .slides").mouseenter(function () {
-    clearInterval(myTimer);
-  });
-  $("#kunden--slider .slides").mouseleave(function () {
-    setAutoplay(9000);
-  });
-
-  setAutoplay(9000);
 
   /*===============================================================================
    *  POPUPS
    * =============================================================================*/
-
-  /*
-  $(
-    ".elementor-location-popup > div > section > .elementor-container > .elementor-row > .elementor-column > .elementor-column-wrap > .elementor-widget-wrap"
-  ).prepend(
-    '<img class="popup-icon" src="/wp-content/uploads/2022/06/popup-icon.png">'
-  );
-  */
+  // ADD ICON ON TOP OF POPUP
   $(
     ".elementor-location-popup > .elementor-section > .elementor-container > .elementor-column > .elementor-widget-wrap"
   ).prepend(
@@ -564,23 +314,9 @@ jQuery(document).ready(function ($) {
     }
   });
 
-  // BA SLIDER BUTTON
-  $(
-    "#ba--sliders .slides li .elementor-button-content-wrapper .elementor-button-icon:first-child svg"
-  ).remove();
-  $(
-    "#ba--sliders .slides li .elementor-button-content-wrapper .elementor-button-icon:first-child"
-  ).append(
-    '<img class="btn-replaced" src="/wp-content/uploads/2022/06/contact-mob-icon.png">'
-  );
-
   /*=======================================================================================================
    * HEADER
    * ====================================================================================================*/
-
-  $("#stb-logo-wrapper .elementor-widget-wrap").prepend(
-    '<div class="logo-blocker">'
-  );
   function hamburgerClick() {
     $(".elementor-menu-toggle").on("click", function () {
       $("body").toggleClass("body-stopper");
@@ -592,97 +328,6 @@ jQuery(document).ready(function ($) {
     hamburgerClick();
   }, 1000);
 
-  // LOGO ANIMATION
-  function throttle(func, timeFrame) {
-    var lastTime = 0;
-    return function () {
-      var now = Date.now();
-      if (now - lastTime >= timeFrame) {
-        func();
-        lastTime = now;
-      }
-    };
-  }
-
-  $(window).scroll(function () {
-    var a = 400;
-    var b = 200;
-    var pos = $(window).scrollTop();
-    if (pos > a) {
-      $(".logo-blocker").css("opacity", "1");
-      $(".logo-blocker").addClass("active");
-      $("body").addClass("scrolled");
-      // $("header").eq(1).css("opacity", 0);
-    } else if (pos < b) {
-      $(".logo-blocker").removeClass("active");
-      $(".logo-blocker").css("opacity", "0");
-    } else {
-      $(".logo-blocker").removeClass("active");
-      $(".logo-blocker").css("opacity", "0");
-      $("body").removeClass("scrolled");
-      // $("header").eq(1).css("opacity", 1);
-    }
-  });
-
-  /* THROTTLE GIVES DELAY ON CLOSING THE .logo-blocker
-  $(window).scroll(
-    throttle(function () {
-      var a = 400;
-      var b = 200;
-      var pos = $(document).scrollTop();
-      console.log(pos);
-      if (pos > a) {
-        $(".logo-blocker").css("opacity", "1");
-        $(".logo-blocker").addClass("active");
-        $("body").addClass("scrolled");
-        // $("header").eq(1).css("opacity", 0);
-      } else if (pos < b) {
-        $(".logo-blocker").removeClass("active");
-        $(".logo-blocker").css("opacity", "0");
-      } else {
-        $(".logo-blocker").removeClass("active");
-        $(".logo-blocker").css("opacity", "0");
-        $("body").removeClass("scrolled");
-        // $("header").eq(1).css("opacity", 1);
-      }
-    }, 500)
-  );
-  */
-
-  /*=======================================================================================================
-   * SERVICES SECTION
-   * ====================================================================================================*/
-  function serviceBgChanger() {
-    var timeout = null;
-    var hasClicked = function () {
-      return $(".e-hotspot--active").length;
-    };
-    if ($("#butlerapp-services").length) {
-      $(window).scroll(function () {
-        if (hasClicked()) return;
-        var hT = $("#butlerapp-services").offset().top,
-          hH = $("#butlerapp-services").outerHeight(),
-          wH = $(window).height(),
-          wS = $(this).scrollTop(),
-          bsi1 = $(".butlerapp-services-img-container .pro-service"),
-          bsi2 = $(".butlerapp-services-img-container .casual-service");
-        clearTimeout(timeout);
-        if (wS > hT + hH - wH - 300) {
-          timeout = setTimeout(function () {
-            if (hasClicked()) return;
-            bsi1.fadeOut();
-            bsi2.css({ left: "0", opacity: "1" });
-          }, 3000);
-        } else {
-          timeout = setTimeout(function () {
-            if (hasClicked()) return;
-            bsi1.fadeIn();
-            bsi2.css({ left: "150%", opacity: "0" });
-          }, 3000);
-        }
-      });
-    }
-  }
   /*=======================================================================================
   * FAQs Section
   =======================================================================================*/

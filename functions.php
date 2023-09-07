@@ -287,15 +287,15 @@ add_filter( 'script_loader_tag', 'defer_parsing_of_js', 10 );
 // slick slider
 add_action( 'wp_enqueue_scripts', 'slick_register_styles' );
 function slick_register_styles() {
-	wp_enqueue_style( 'slick-css', get_stylesheet_directory_uri() . '/js/plugins/slick/slick.css', [], false, 'all' );
-	wp_enqueue_style( 'slick-theme-css', get_stylesheet_directory_uri() . '/js/plugins/slick/slick-theme.css', ['slick-css'], false, 'all' );
-	wp_enqueue_script( 'swiper', get_stylesheet_directory_uri() . '/js/plugins/coverflow-swiper/swiper5.3.6.min.js', ['jquery'], true );
 	wp_enqueue_script( 'carousel-js', get_stylesheet_directory_uri() . '/js/plugins/slick/slick.min.js', ['jquery'], true );
+	wp_enqueue_style( 'slick-css', get_stylesheet_directory_uri() . '/js/plugins/slick/slick.css', [], false, 'all' );
+	wp_enqueue_style( 'slick-theme-css', get_stylesheet_directory_uri() . '/js/plugins/slick/slick-theme.css', ['slick-css'], false, 'all' );	
 }
 
 // coverflow swiper
 add_action( 'wp_enqueue_scripts', 'coverflow_register' );
 function coverflow_register() {
+	wp_enqueue_script( 'swiper', get_stylesheet_directory_uri() . '/js/plugins/coverflow-swiper/swiper5.3.6.min.js', ['jquery'], true );
 	wp_enqueue_style( 'coverflow-css', get_stylesheet_directory_uri() . '/js/plugins/coverflow-swiper/style.css', [], false, 'all' );
 }
 
@@ -325,7 +325,6 @@ function enqueue_wp_child_theme() {
 		wp_enqueue_script("child-js", get_stylesheet_directory_uri() . "/js/script.js", array( "jquery" ), "1.0", true );
 		wp_enqueue_script("child-js2", get_stylesheet_directory_uri() . "/js/frontpage-v2.js", array( "jquery" ));
 		wp_enqueue_script("interactive-map", get_stylesheet_directory_uri() . "/js/interactive-map.js", array( "jquery" ));
-		wp_enqueue_script('tweenmax', get_stylesheet_directory_uri() . '/js/TweenMax.min.js');
 }
 
 // TEMPORARILY DISABLING ADMIN BAR ON FRONTEND

@@ -223,19 +223,6 @@ body .elementor-section.elementor-section-boxed > .elementor-container {
   }
   
   /*======================================================
-   * MOBILE SLIDERS
-   * ===================================================*/
-  #ba--sliders #target-button-hero-section .elementor-button-icon {
-    margin-top: -1.5px;
-    margin-right: 10px !important;
-  }
-  #ba--sliders .elementor-button-icon {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-  }
-  
-  /*======================================================
    * HERO SECTION
    * ===================================================*/
   #mainhero {
@@ -1704,11 +1691,7 @@ body .elementor-section.elementor-section-boxed > .elementor-container {
     #butlerapp-services > div > .elementor-row > div:first-child {
       order: unset !important;
     }
-    #ba--sliders .slides li:nth-child(2) img:not(.btn-replaced),
-    #ba--sliders .slides li:nth-child(3) img:not(.btn-replaced) {
-      top: unset !important;
-      left: 0 !important;
-    }
+    
     #kundenslide .th-slide-content .sld-back > div > div > section {
       left: unset !important;
       transform: none !important;
@@ -1779,18 +1762,7 @@ body .elementor-section.elementor-section-boxed > .elementor-container {
       border-radius: 50% 5px 50% 50%;
       padding: 5px;
     }
-    #ba--sliders
-      .th-slide-content
-      .elementor-section-wrap
-      section:first-child
-      > .elementor-container
-      > .elementor-row
-      > .elementor-column
-      > .elementor-column-wrap
-      > .elementor-widget-wrap {
-      min-height: 500px;
-      max-height: 500px;
-    }
+    
     #bm-guides {
       display: none;
     }
@@ -2240,14 +2212,6 @@ body .elementor-section.elementor-section-boxed > .elementor-container {
     }
     */
   
-    #ba--sliders img.size-full,
-    #funktionen > div > div > div > div > div > div:last-child,
-    #ba--sliders .ba-slider-controls-container,
-    ol.flex-control-nav.flex-control-paging,
-    .elementor-1458 .elementor-element.elementor-element-bcef45d img {
-      display: none;
-    }
-  
     #funktionen .elementor-container {
       margin: 0 !important;
       width: 100%;
@@ -2268,79 +2232,11 @@ body .elementor-section.elementor-section-boxed > .elementor-container {
       margin-bottom: 15px !important;
       margin-top: 30px !important;
     }
-    #ba--sliders .slides > li h2 {
-      font-size: 2em;
-      font-weight: 500;
-      color: #0b2541;
-    }
-    #ba--sliders .slides > li p {
-      font-size: 1em !important;
-      line-height: 1.55em;
-      color: #0b2541;
-    }
   
-    #funktionen
-      > .elementor-container
-      > .elementor-row
-      > .elementor-column
-      > .elementor-column-wrap
-      .elementor-widget-wrap {
-      padding: 20px;
-    }
-    #ba--sliders .slides > li {
-      margin: 20px 0 !important;
-      margin-bottom: 150px !important;
-    }
-    #ba--sliders
-      .slides
-      > li
-      > div
-      > div
-      > div
-      > div
-      > div
-      > div
-      > div
-      > section
-      > div
-      > div
-      > div
-      > div
-      > div {
-      margin: 20px !important;
-    }
-    #ba--sliders
-      .slides
-      > li:first-child
-      > div
-      > div
-      > div
-      > div
-      > div
-      > div
-      > div
-      > section
-      > div
-      > div
-      > div
-      > div {
-      background-position: top right;
-    }
     #funktionen .elementor-widget-heading {
       padding-top: 100px !important;
     }
-    #ba--sliders ul li {
-      margin-bottom: 15px !important;
-    }
-    #ba--sliders ul svg {
-      margin-right: 10px !important;
-    }
-    #ba--sliders .elementor-button-icon {
-      margin-left: 10px !important;
-    }
-    #ba--sliders .slides > li:last-child {
-      margin-bottom: 0 !important;
-    }
+    
     #funktionen {
       margin-bottom: 0 !important;
       margin-top: 40px !important;
@@ -2414,62 +2310,7 @@ body .elementor-section.elementor-section-boxed > .elementor-container {
     .ba-instructor-parent {
       display: none;
     }
-    #ba--sliders .slides > li {
-      transition: all 0.4s ease;
-      opacity: 1 !important;
-      position: absolute !important;
-    }
-    #ba--sliders .slides .th-slide-inner {
-      padding-right: 0;
-    }
-    #ba--sliders #main-flex-slider .flex-control-nav {
-      display: none !important;
-    }
-    #ba-slider-controls {
-      list-style: none;
-      position: absolute !important;
-      z-index: 2 !important;
-      right: 0;
-    }
-    #ba-slider-controls {
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-end;
-      right: 45px;
-    }
-    #ba-slider-controls li {
-      background: rgba(11, 37, 65, 0.163883);
-      border-radius: 4px;
-      width: 40px;
-      height: 4px;
-      margin-left: 10px;
-      cursor: pointer;
-      transition: all 0.4s ease;
-    }
-    #ba-slider-controls li.active {
-      background: #0b2541;
-    }
-    #ba-slider-controls li a {
-      opacity: 0;
-    }
-    #ba--sliders .slides > li:not(.active) {
-      right: 5% !important;
-      opacity: 1 !important;
-    }
-    /* ACTIVE SLIDE */
-    #ba--sliders .slides > li.active {
-      width: 100% !important;
-      display: block !important;
-      right: 100% !important;
-    }
-    /* SLIDER ARROWS */
-    #ba--sliders .ba-slider-arrows {
-      position: absolute;
-      width: 250px;
-      height: 45px;
-      top: -20px;
-      right: -10px;
-    }
+    
     .bas-inner {
       position: relative;
       display: flex;
@@ -2510,12 +2351,7 @@ body .elementor-section.elementor-section-boxed > .elementor-container {
     }
 
   }
-  @media (max-width: 500px) {
-    #ba--sliders #ba-slider-controls,
-    #ba--sliders .ba-slider-arrows {
-      display: none;
-    }
-  }
+
   @media (max-width: 467.98px) {
     .section-service .ba-points {
       max-width: 100%;
@@ -2613,9 +2449,7 @@ body .elementor-section.elementor-section-boxed > .elementor-container {
     #mainhero h1 {
       /*max-width: 82%;*/
     }
-    #ba--sliders .th-slide-content .elementor-section-wrap section:nth-child(2) {
-      display: block;
-    }
+    
     #mobile-hero-logos
       > .elementor-container
       > .elementor-row
@@ -2833,13 +2667,7 @@ body .elementor-section.elementor-section-boxed > .elementor-container {
       > .elementor-column {
       width: 50%;
     }
-    #ba--sliders .elementor-widget-image .elementor-widget-container {
-      margin-top: -59%;
-    }
-  
-    #ba--sliders .mobile-slider-img img {
-      display: block !important;
-    }
+    
     #masthead
       nav.elementor-nav-menu--dropdown.elementor-nav-menu__container
       .menu-item-3460 {
@@ -2851,9 +2679,7 @@ body .elementor-section.elementor-section-boxed > .elementor-container {
     #main-flex-slider .th-slide-inner {
       padding-top: 0;
     }
-    #ba--sliders .removio {
-      display: block !important;
-    }
+    
     #marquee .marq-container.track .marq-content:not(:first-child) {
       display: none;
     }
@@ -3677,16 +3503,7 @@ body .elementor-section.elementor-section-boxed > .elementor-container {
     .mobiler-footer:after {
       width: 50%;
     }
-    #ba--sliders
-      .slides
-      li
-      .th-slide-content
-      .elementor-section-wrap
-      > section:first-child {
-      max-height: 500px;
-      min-height: 500px;
-      display: flex;
-    }
+    
     .bsa-left,
     .bsa-right {
       background: #fff;
@@ -3703,186 +3520,7 @@ body .elementor-section.elementor-section-boxed > .elementor-container {
     #butlerapp-services .elementor-widget-hotspot {
       justify-content: center !important;
     }
-    #ba--sliders
-      .slides
-      > li
-      .th-slide-content
-      > div
-      > div
-      > div
-      > section:first-child
-      > div
-      > div
-      > div
-      > div
-      > div
-      > * {
-      margin-left: 30px !important;
-    }
-    #ba--sliders
-      .slides
-      > li
-      .th-slide-content
-      > div
-      > div
-      > div
-      > section:first-child
-      > div
-      > div
-      > div
-      > div
-      > div
-      > div:nth-child(2)
-      > div {
-      padding-right: 20px;
-    }
-    #ba--sliders
-      .slides
-      > li
-      .th-slide-content
-      > div
-      > div
-      > div
-      > section:first-child
-      section
-      > div
-      > div {
-      flex-direction: column !important;
-    }
-    #ba--sliders
-      .slides
-      > li
-      .th-slide-content
-      > div
-      > div
-      > div
-      > section:first-child
-      section
-      > div,
-    #ba--sliders
-      .slides
-      > li
-      .th-slide-content
-      > div
-      > div
-      > div
-      > section:first-child
-      > div
-      > div
-      > div
-      > div
-      > div
-      > div:last-child
-      > div {
-      margin-left: 0 !important;
-    }
-    #ba--sliders
-      .slides
-      > li
-      .th-slide-content
-      > div
-      > div
-      > div
-      > section:first-child
-      section
-      > div
-      > div
-      > div {
-      width: 100%;
-    }
-    #ba--sliders
-      .slides
-      > li
-      .th-slide-content
-      > div
-      > div
-      > div
-      > section:first-child
-      section
-      > div
-      > div
-      > div:last-child {
-      position: relative;
-      top: -18px;
-    }
-    #ba--sliders .ba-slider-controls-container .elementor-widget-container {
-      position: absolute;
-      left: 280px;
-      bottom: 100px;
-    }
-    #ba--sliders h2 {
-      font-size: 2.4em;
-    }
-    #ba--sliders
-      .slides
-      > li
-      .th-slide-content
-      > div
-      > div
-      > div
-      > section:first-child
-      > div
-      > div
-      > div
-      > div {
-      min-height: 600px;
-      max-height: 600px;
-      height: 600px;
-      transition: all 0.7s ease-in-out !important;
-    }
-    #ba--sliders .elementor-widget-button {
-      position: absolute;
-      bottom: 35px;
-    }
-    #ba--sliders .slides .th-slide-inner {
-      padding-top: 0;
-    }
-    #ba--sliders
-      .slides
-      > li:nth-child(1)
-      .th-slide-content
-      > div
-      > div
-      > div
-      > section:first-child
-      > div
-      > div
-      > div
-      > div {
-      background-image: url(/wp-content/uploads/2022/07/tab-fs-1.jpg);
-    }
-    #ba--sliders
-      .slides
-      > li:nth-child(2)
-      .th-slide-content
-      > div
-      > div
-      > div
-      > section:first-child
-      > div
-      > div
-      > div
-      > div {
-      background-image: url(/wp-content/uploads/2022/07/tab-fs-2.jpg);
-    }
-    #ba--sliders
-      .slides
-      > li:nth-child(3)
-      .th-slide-content
-      > div
-      > div
-      > div
-      > section:first-child
-      > div
-      > div
-      > div
-      > div {
-      background-image: url(/wp-content/uploads/2022/07/tab-fs-3.jpg);
-    }
-    #ba--sliders .slides .th-slide-inner {
-      padding-right: 15px;
-      padding-left: 25px;
-    }
+    
     #kundenslide
       .th-slide-content
       > div
@@ -4027,13 +3665,7 @@ body .elementor-section.elementor-section-boxed > .elementor-container {
       width: auto !important;
       max-width: fit-content !important;
     }
-    #ba--sliders .slides li img:not(.btn-replaced) {
-      max-width: 280px;
-      position: absolute;
-      left: 0;
-      bottom: 50%;
-    }
-  
+    
     /* contact form button */
     .elementor-column.elementor-col-66.elementor-field-type-acceptance {
       width: 100%;
@@ -4101,14 +3733,7 @@ body .elementor-section.elementor-section-boxed > .elementor-container {
       > .elementor-widget-container {
       margin-right: 0;
     }
-    #ba--sliders
-      .th-slide-content
-      .elementor-section-wrap
-      section:first-child
-      > .elementor-container {
-      min-height: 560.5px !important;
-      max-height: 560.5px !important;
-    }
+    
     #butlerapp-services > div > div > div:first-child {
       order: 1;
     }
@@ -4121,50 +3746,12 @@ body .elementor-section.elementor-section-boxed > .elementor-container {
       width: 100%;
       margin-top: 20px;
     }
-    #ba--sliders
-      .th-slide-content
-      > div
-      > div
-      > div
-      > section
-      > div
-      > div
-      > div
-      > div
-      > div {
-      padding: 40px;
-    }
+    
     #funktionen {
       margin: 0;
       padding: 100px 0 50px 0;
     }
-    #ba--sliders img:not(.btn-replaced) {
-      display: none;
-    }
-    #ba--sliders
-      .th-slide-content
-      > div
-      > div
-      > div
-      > section
-      > div
-      > div
-      > div
-      > div
-      > div
-      > div
-      > .elementor-widget-container {
-      padding-right: 0;
-    }
-    #ba--sliders .th-slide-content > div > div > div > section {
-      margin-left: -10px;
-      margin-right: 10px;
-    }
-    #ba--sliders .removio {
-      display: none !important; /*-- temporary -- will work on later --*/
-      z-index: 999;
-      margin-top: -54%;
-    }
+    
     .marq-text p {
       font-size: 5vw;
       padding-bottom: 10px;
