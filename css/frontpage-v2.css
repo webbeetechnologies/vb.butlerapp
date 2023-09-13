@@ -1993,6 +1993,19 @@ body .slick-dots {
         min-height: 285px;
     }
 
+    #butlerapp-team-container {
+        overflow-y: hidden;
+    }
+
+    #butlerapp-team-container .elementor-widget-container {
+        max-width: inherit !important;
+    }
+
+    #butlerapp-team-container .elementor-widget-hotspot img {
+        width: 320%;
+        max-width: 320%;
+    }
+        
     #footer-v2 .footer-logo-set {
         padding: 0;
     }
