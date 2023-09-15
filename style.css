@@ -40,5 +40,6 @@ body a {
   font-family: "+Jakarta Sans", Sans-serif;
   /*font-size: 16px;*/
   font-size: inherit;
+  color: inherit;
 }
 
