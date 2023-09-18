@@ -1996,6 +1996,7 @@ body .slick-dots {
     #butlerapp-team-container,
     #butlerapp-informal-team-container {
         overflow-y: hidden;
+        margin-bottom: -30px;
     }
 
     #butlerapp-team-container .elementor-widget-container,
