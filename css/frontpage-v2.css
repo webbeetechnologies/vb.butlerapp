@@ -1993,15 +1993,18 @@ body .slick-dots {
         min-height: 285px;
     }
 
-    #butlerapp-team-container {
+    #butlerapp-team-container,
+    #butlerapp-informal-team-container {
         overflow-y: hidden;
     }
 
-    #butlerapp-team-container .elementor-widget-container {
+    #butlerapp-team-container .elementor-widget-container,
+    #butlerapp-informal-team-container .elementor-widget-container {
         max-width: inherit !important;
     }
 
-    #butlerapp-team-container .elementor-widget-hotspot img {
+    #butlerapp-team-container .elementor-widget-hotspot img,
+    #butlerapp-informal-team-container .hotspot-v2 > .elementor-widget-container > img {
         width: 320%;
         max-width: 320%;
     }

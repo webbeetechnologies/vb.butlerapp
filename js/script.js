@@ -550,10 +550,13 @@ jQuery(document).ready(function ($) {
   $("#pro-team .e-hotspot").wrapAll('<div class="hotspot-container">');
   $("#casual-team .e-hotspot").wrapAll('<div class="hotspot-container">');
 
+  $("#butlerapp-informal-team-container .e-hotspot").wrapAll('<div class="hotspot-container">');
+
   function centerImage() {
     // img width is 320% of screen width..so
     var centerPoint = window.innerWidth * 3.2;
     $("#butlerapp-team-container").scrollLeft(centerPoint / 2.9);
+    $("#butlerapp-informal-team-container").scrollLeft(centerPoint / 2.9);
   }
 
   function mediaCenterImage(e) {
