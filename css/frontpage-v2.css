@@ -55,6 +55,9 @@ HERO
 
 .hero-sec-v2:before {
     background-position: right 30px center !important;
+    max-width: var(--content-width);
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .logo-ssl-container .e-con-inner {
@@ -1136,6 +1139,16 @@ body .slick-dots {
     left: 0;
     right: 0;
 }
+
+/********************************/
+/* MEDIA                        */
+/********************************/
+@media (min-width: 1200px) {
+    #mainhero-2 {
+        min-height: 730px !important;
+    }
+}
+
 @media (max-width: 1200px) {
     body header .elementor-section.elementor-section-boxed > .elementor-container {
         width: calc(100% - 20px);
@@ -1157,6 +1170,9 @@ body .slick-dots {
         padding: 0 20px;
     }
 
+    #mainhero-2 {
+        min-height: 100vh;
+    }
     /**************************************************
     PREMIUM MOBILE MENU
     ***************************************************/
