@@ -973,7 +973,7 @@ INDUSTRIES
     padding-right: 0;
 }
 
-/*
+
 .elementor-widget-premium-carousel-widget {
     overflow: hidden;
 }
@@ -982,7 +982,7 @@ INDUSTRIES
     margin-left: -20px;
     margin-right: -20px;
 }
-*/
+
 /****************************************
 FAQ V2 (override FAQ style in style.css
 *****************************************/
@@ -1194,9 +1194,10 @@ body .slick-dots {
     padding-right: 0;
 }
 
-#footer-v2 .elementor-section-boxed .elementor-container {
+#footer-v2 .elementor-section .elementor-container {
     width: 100%;
 }
+
 /********************************/
 /* MEDIA                        */
 /********************************/
@@ -1204,10 +1205,6 @@ body .slick-dots {
     #mainhero-2,
     #datenschutz {
         min-height: 730px !important;
-    }
-
-    #footer-v2 .elementor-section .elementor-container {
-        width: 100%;
     }
 }
 
