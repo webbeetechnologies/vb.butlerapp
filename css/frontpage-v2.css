@@ -44,6 +44,14 @@ body.ehf-header #masthead {
     line-height: 24px;
     padding-right: 30px;
     border-right: 1px solid #e2e5e8;
+    width: auto;
+}
+
+/********************************************
+PRODUCT SECOND MENU
+*********************************************/
+.product-nav-container a:hover {
+    color: #0B2541;
 }
 /***********************************
 HEADING OVERRIDING
@@ -90,6 +98,9 @@ HERO
     background-size: auto 100% !important;
 }
 
+.hero-container .logo-ssl-container {
+    padding: 0;
+}
 .logo-ssl-container .e-con-inner {
     justify-content: start !important;
     padding-bottom: 0 !important;
@@ -1530,6 +1541,7 @@ body .slick-dots {
         background-color: transparent !important;
         font-size: 16px !important;
         font-weight: 500 !important;
+        color: #0B2541;
     }
 
      /* WHEN MAIN MENU STILL EXIST */
