@@ -1187,6 +1187,10 @@ body .slick-dots {
 
 @media (max-width: 1200px) {
     body .elementor-section.elementor-section-boxed > .elementor-container {
+        width: calc(100% - 40px);
+    }
+
+    body footer .elementor-section.elementor-section-boxed > .elementor-container {
         width: calc(100% - 20px);
     }
     .premium-hamburger-toggle {
