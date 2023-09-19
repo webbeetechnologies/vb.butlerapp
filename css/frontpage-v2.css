@@ -46,6 +46,12 @@ HEADING OVERRIDING
 /***********************************
 HERO
 ************************************/
+.hero-container {
+    max-width: var(--content-width);
+    margin: 0 auto;
+    background-position: right center !important;
+    background-size: auto 100%;
+}
 .premium-fancy-text-wrapper {
     letter-spacing: -3px;
 }
@@ -1642,6 +1648,9 @@ body .slick-dots {
         padding-bottom: 0;
     }
 
+    .phone-button-container .elementor-element {
+        top: 10px;
+    }
     /* HERO V2 */
     #mainhero.hero-sec-v2 {
         margin-bottom: 0;
@@ -2006,7 +2015,9 @@ body .slick-dots {
     /* product page menu: the arrow */
     #stb-menu-wrapper {
         width: 45px;
+        margin-right: -10px;
     }
+
     .hfe-nav-menu-icon {
         padding-right: 0;
         padding-left: 0;
