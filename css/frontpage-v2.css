@@ -967,12 +967,12 @@ INTERACTIVE MAP
 /****************************************
 INDUSTRIES
 *****************************************/
-/*
-.industries-section .elementor-element {
+
+.industries-section > .e-con-inner > .elementor-element {
     padding-left: 0;
     padding-right: 0;
 }
-*/
+
 /*
 .elementor-widget-premium-carousel-widget {
     overflow: hidden;
