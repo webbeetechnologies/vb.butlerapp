@@ -1186,6 +1186,10 @@ body .slick-dots {
     #datenschutz {
         min-height: 730px !important;
     }
+
+    #footer-v2 .elementor-section-boxed .elementor-container {
+        width: 100%;
+    }
 }
 
 @media (max-width: 1200px) {
