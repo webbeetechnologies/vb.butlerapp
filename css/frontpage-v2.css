@@ -22,6 +22,10 @@ body.ehf-header #masthead {
 .headhesive--clone .hide-clone {
     display: none;
 }
+
+.product-menu-container > .e-con-inner > .elementor-element {
+    margin-left: 0 !important;
+}
 /***********************************
 HEADING OVERRIDING
 ************************************/
@@ -54,7 +58,7 @@ HERO
 }
 
 .hero-sec-v2:before {
-    background-position: right 30px center !important;
+    background-position: right center !important;
     max-width: var(--content-width);
     left: 50%;
     transform: translateX(-50%);
@@ -459,6 +463,10 @@ use border-radius 22px in the elementor btn
 .bg-rainbow .elementor-button:hover {
     background-size: 400% 400%;
     background-position: 0 center;
+}
+
+.function-section .e-con-inner .elementor-element {
+    padding: 0 !important;
 }
 /***********************************
 PERSONAL SERVICES: HOTSPOT V2
