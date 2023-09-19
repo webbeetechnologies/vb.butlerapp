@@ -25,6 +25,7 @@ body.ehf-header #masthead {
 
 .product-menu-container > .e-con-inner > .elementor-element {
     margin-left: 0 !important;
+    padding-left: 0 !important;
 }
 /***********************************
 HEADING OVERRIDING
