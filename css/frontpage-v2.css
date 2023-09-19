@@ -1682,7 +1682,7 @@ body .slick-dots {
     }
 
     .phone-button-container .elementor-element {
-        top: 10px;
+        top: 10px !important;
     }
     /* HERO V2 */
     #mainhero.hero-sec-v2 {
