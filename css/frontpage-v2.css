@@ -47,7 +47,7 @@ HEADING OVERRIDING
 HERO
 ************************************/
 .hero-container {
-    max-width: var(--content-width);
+    max-width: 1140px;
     margin: 0 auto;
     background-position: right center !important;
     background-size: auto 100% !important;
