@@ -1164,7 +1164,13 @@ body .slick-dots {
     left: 0;
     right: 0;
 }
-
+/****************************************
+  FOOTER
+*****************************************/
+#footer-v2 .elementor-widget-wrap {
+    padding-left: 0;
+    padding-right: 0;
+}
 /********************************/
 /* MEDIA                        */
 /********************************/
@@ -1177,7 +1183,7 @@ body .slick-dots {
 
 @media (max-width: 1200px) {
     body .elementor-section.elementor-section-boxed > .elementor-container {
-        width: calc(100% - 40px);
+        width: calc(100% - 20px);
     }
     .premium-hamburger-toggle {
         width: 35px;
