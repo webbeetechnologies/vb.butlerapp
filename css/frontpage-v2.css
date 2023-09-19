@@ -1167,6 +1167,9 @@ body .slick-dots {
 /****************************************
   FOOTER
 *****************************************/
+#footer-v2 > .elementor-container {
+    max-width: 1140px;
+}
 #footer-v2 .elementor-widget-wrap {
     padding-left: 0;
     padding-right: 0;
