@@ -27,6 +27,24 @@ body.ehf-header #masthead {
     margin-left: 0 !important;
     padding-left: 0 !important;
 }
+
+/* animate small logo */
+.sticky-product-menu-container .logo-animate {
+    width: 0;
+    transition: all 0.3s;
+}
+.sticky-product-menu-container.elementor-sticky--active .logo-animate {
+    width: 40px;
+}
+
+.logo-animate img {
+    width: 100%;
+}
+.sticky-product-menu-container .title-container {
+    line-height: 24px;
+    padding-right: 30px;
+    border-right: 1px solid #e2e5e8;
+}
 /***********************************
 HEADING OVERRIDING
 ************************************/
@@ -1415,6 +1433,9 @@ body .slick-dots {
         padding-left: 5px;
     }
 
+    .sticky-product-menu-container .title-container {
+        border: none;
+    }
     /**************************************************
     HOME
     ***************************************************/
