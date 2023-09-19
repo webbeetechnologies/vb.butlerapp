@@ -51,7 +51,7 @@ body.ehf-header #masthead {
 PRODUCT SECOND MENU
 *********************************************/
 .product-nav-container a:hover {
-    color: #0B2541;
+    color: #0B2541 !important;
 }
 /***********************************
 HEADING OVERRIDING
