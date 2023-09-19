@@ -63,6 +63,17 @@ HERO
 .logo-ssl-container .e-con-inner {
     justify-content: start;
 }
+
+/* small logo in product... */
+#mainhero-2 .hfe-retina-image,
+#mainhero-2 .hfe-retina-image-set,
+#mainhero-2 .hfe-retina-image-container {
+    margin-left: 0 !important;
+}
+
+#mainhero-2 .cta-container {
+    margin-right: 0 !important;
+}
 /***********************************
 QUESTIONNAIRE FORM 
 ************************************/
@@ -1144,16 +1155,13 @@ body .slick-dots {
 /* MEDIA                        */
 /********************************/
 @media (min-width: 1200px) {
-    #mainhero-2 {
+    #mainhero-2,
+    #datenschutz {
         min-height: 730px !important;
     }
 }
 
 @media (max-width: 1200px) {
-    body header .elementor-section.elementor-section-boxed > .elementor-container {
-        width: calc(100% - 20px);
-    }
-
     body .elementor-section.elementor-section-boxed > .elementor-container {
         width: calc(100% - 40px);
     }
