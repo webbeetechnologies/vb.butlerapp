@@ -1244,6 +1244,15 @@ body .slick-dots {
 }
 
 @media (max-width: 1200px) {
+    /* fit the menu on top */
+    #stb-logo-wrapper {
+        width: auto;
+    }
+
+    #stb-logo-wrapper .ba-logo img {
+        height: 18px;
+    }
+
     body .elementor-section.elementor-section-boxed > .elementor-container {
         width: calc(100% - 40px);
     }
@@ -1415,6 +1424,15 @@ body .slick-dots {
         margin-left: 0;
     }
     */
+
+    /* fit the menu on top */
+    #stb-logo-wrapper {
+        width: auto;
+    }
+
+    #stb-logo-wrapper .ba-logo img {
+        height: 28px;
+    }
 
     /* PREMIUM MOBILE MENU: SUBMENU/MEGAMENU */
     .premium-mega-content-container {
