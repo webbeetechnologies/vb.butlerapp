@@ -50,7 +50,7 @@ HERO
     max-width: var(--content-width);
     margin: 0 auto;
     background-position: right center !important;
-    background-size: auto 100% !important%;
+    background-size: auto 100% !important;
 }
 .premium-fancy-text-wrapper {
     letter-spacing: -3px;
