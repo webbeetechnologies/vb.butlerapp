@@ -66,7 +66,8 @@ HERO
 }
 
 .logo-ssl-container .e-con-inner {
-    justify-content: start;
+    justify-content: start !important;
+    padding-bottom: 0 !important;
 }
 
 /* small logo in product... */
@@ -466,6 +467,9 @@ use border-radius 22px in the elementor btn
     background-position: 0 center;
 }
 
+.function-section {
+    padding: 0;
+}
 .function-section .e-con-inner .elementor-element {
     padding: 0 !important;
 }
@@ -1689,6 +1693,9 @@ body .slick-dots {
     .swiper-coverflow-container .swiper-button-prev {
         left: 5px;
     }
+    .logo-ssl-container .e-con-inner {
+        justify-content: space-evenly !important;
+    }
     /* CUSTOMERS STATIC SECTION */
     .customers-static-section .logo-item {
         width: 45%;
@@ -2060,5 +2067,11 @@ body .slick-dots {
     .elementor-motion-effects-element 
     .e-con-inner > .elementor-element {
         min-height: 260px;
+    }
+}
+
+@media screen and (max-width: 330px) {
+    body .elementor-mobile-align-right .elementor-button {
+        font-size: 14px !important;
     }
 }

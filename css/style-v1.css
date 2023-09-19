@@ -3425,7 +3425,7 @@
   @media (min-width: 1025px) and (max-width: 1988px) {
     #mainhero > div,
     #mainhero-2 .hero-sec-v2 {
-      max-width: calc(93% - 20px);
+      max-width: calc(100% - 40px);
       margin: 0 auto;
     }
   }
