@@ -1187,7 +1187,7 @@ body .slick-dots {
         min-height: 730px !important;
     }
 
-    #footer-v2 .elementor-section-boxed .elementor-container {
+    #footer-v2 .elementor-section .elementor-container {
         width: 100%;
     }
 }
@@ -1197,7 +1197,7 @@ body .slick-dots {
         width: calc(100% - 40px);
     }
 
-    body footer .elementor-section.elementor-section-boxed > .elementor-container {
+    #footer-v2 .elementor-section.elementor-section-boxed > .elementor-container {
         width: calc(100% - 20px);
     }
     .premium-hamburger-toggle {
