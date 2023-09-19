@@ -965,6 +965,22 @@ INTERACTIVE MAP
 }
 
 /****************************************
+INDUSTRIES
+*****************************************/
+.industries-section .elementor-element {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.elementor-widget-premium-carousel-widget {
+    overflow: hidden;
+}
+
+.elementor-widget-premium-carousel-widget .premium-carousel-inner {
+    margin-left: -20px;
+    margin-right: -20px;
+}
+/****************************************
 FAQ V2 (override FAQ style in style.css
 *****************************************/
 #faqs-container .faq.faq-v2 {
