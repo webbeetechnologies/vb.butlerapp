@@ -1045,16 +1045,11 @@ INDUSTRIES
     padding-right: 0;
 }
 
-/*
-.elementor-widget-premium-carousel-widget {
-    overflow: hidden;
-}
-
-.elementor-widget-premium-carousel-widget .premium-carousel-inner {
+.elementor-widget-premium-carousel-widget .premium-carousel-inner .slick-list.draggable {
     margin-left: -20px;
     margin-right: -20px;
 }
-*/
+
 /****************************************
 FAQ V2 (override FAQ style in style.css
 *****************************************/
@@ -1277,6 +1272,10 @@ body .slick-dots {
     #mainhero-2,
     #datenschutz {
         min-height: 730px !important;
+    }
+
+    .payment-items-container {
+        margin-left: -20px;
     }
 }
 
