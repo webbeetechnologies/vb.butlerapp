@@ -970,6 +970,25 @@ INTERACTIVE MAP
     margin-top: 10.4em;
     margin-left: 25.4em;
 }
+
+.interactive-map-container .map-state.ch-zu {
+    width: 9.1em;
+    margin-top: 2.2em;
+    margin-left: 32.6em;
+}
+
+.interactive-map-container .map-state.ch-ur {
+    width: 7.9em;
+    margin-top: 16.3em;
+    margin-left: 33.2em;
+}
+
+.interactive-map-container .map-state.ch-be {
+    width: 21.8em;
+    margin-top: 7.5em;
+    margin-left: 12.5em;
+}
+
 /**************** */
 /* AUSTRIA
 *******************/
@@ -983,6 +1002,24 @@ INTERACTIVE MAP
     width: 3.7em;
     margin-top: 8.7em;
     margin-left: 53.8em;
+}
+
+.interactive-map-container .map-state.at-sa {
+    width: 15.7em;
+    margin-top: 12.1em;
+    margin-left: 20.9em;
+}
+
+.interactive-map-container .map-state.at-ti {
+    width: 23.4em;
+    margin-top: 15.6em;
+    margin-left: 5em;
+}
+
+.interactive-map-container .map-state.at-bu {
+    width: 9.7em;
+    margin-top: 11.1em;
+    margin-left: 52.3em;
 }
 
 .interactive-map-container .state-image {
