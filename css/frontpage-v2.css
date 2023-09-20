@@ -1277,6 +1277,10 @@ body .slick-dots {
     .payment-items-container {
         margin-left: -20px;
     }
+
+    #funktionen-section .funktionen-slider-container .elementor-container {
+        width: calc(100% - 40px);
+    }
 }
 
 @media (max-width: 1200px) {
