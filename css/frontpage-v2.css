@@ -1281,6 +1281,18 @@ body .slick-dots {
     #funktionen-section .funktionen-slider-container .elementor-container {
         width: calc(100% - 40px);
     }
+
+    .map-section {
+        padding: 0;
+    }
+
+    .country-buttons-container {
+        padding: 0;
+    }
+
+    .country-buttons-container .e-con-inner {
+        justify-content: center;
+    }
 }
 
 @media (max-width: 1200px) {
@@ -1431,6 +1443,10 @@ body .slick-dots {
         left: inherit !important;
         right: inherit !important;
         transform: translate(-50%, 0);
+    }
+
+    .map-section {
+        max-width: calc(100% - 40px);
     }
 }
 
