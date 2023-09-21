@@ -98,6 +98,16 @@ HERO
     background-size: auto 100% !important;
 }
 
+.full-hero-image:before,
+.full-hero-image .elementor-background-overlay {
+    background-position: left center !important;
+    left: 50%;
+    max-width: 100%;
+    transform: translateX(0%);
+    background-size: auto 90% !important;
+    height: calc(100% + 50px);
+}
+
 .hero-container .logo-ssl-container {
     padding: 0;
 }
@@ -1315,11 +1325,7 @@ body .slick-dots {
     .premium-hamburger-toggle {
         width: 35px;
     }
-
-    .hero-sec-v2:before {
-        background-position: right center !important;
-    }
-
+    
     /* FOR 1024px IMAGE CONTAINER forgot to set padding in ELEMENTOR */
     .hero-container > .e-con-inner > div:nth-child(2) {
         padding: 0 20px;
@@ -1691,6 +1697,14 @@ body .slick-dots {
         min-height: inherit !important;
     }
     .quiz-section > .e-con-inner:after {
+        display: none;
+    }
+
+    /**************************************************
+    HERO
+    ***************************************************/
+    .full-hero-image:before,
+    .full-hero-image .elementor-background-overlay {
         display: none;
     }
 
