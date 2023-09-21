@@ -1459,6 +1459,9 @@ body .slick-dots {
         max-width: calc(100% - 40px)!important;
         padding: 0;
     }
+    .country-buttons-container .e-con-inner {
+        justify-content: center;
+    }
 }
 
 /* ELEMENTOR TABLET  BREAKPOINT */
