@@ -1446,7 +1446,8 @@ body .slick-dots {
     }
 
     .map-section {
-        max-width: calc(100% - 40px);
+        max-width: calc(100% - 40px)!important;
+        padding: 0;
     }
 }
 
