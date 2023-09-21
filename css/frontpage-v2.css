@@ -101,7 +101,7 @@ HERO
 .full-hero-image:before,
 .full-hero-image .elementor-background-overlay {
     background-position: left center !important;
-    left: 50%;
+    left: 60%;
     max-width: 100%;
     transform: translateX(0%);
     background-size: auto 90% !important;
@@ -1325,7 +1325,7 @@ body .slick-dots {
     .premium-hamburger-toggle {
         width: 35px;
     }
-    
+
     /* FOR 1024px IMAGE CONTAINER forgot to set padding in ELEMENTOR */
     .hero-container > .e-con-inner > div:nth-child(2) {
         padding: 0 20px;
