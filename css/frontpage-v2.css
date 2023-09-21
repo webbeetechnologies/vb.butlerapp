@@ -116,6 +116,10 @@ HERO
     padding-bottom: 0 !important;
 }
 
+#mainhero .elementor-background-overlay {
+    max-width: 100% !important;
+}
+
 /* small logo in product... */
 #mainhero-2 .hfe-retina-image,
 #mainhero-2 .hfe-retina-image-set,
