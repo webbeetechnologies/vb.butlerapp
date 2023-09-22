@@ -735,18 +735,6 @@ INDUSTRIES/SCHUNGEN SECTION
 }
 
 /***********************************
-ELEMENTOR FIX:
-- LIST ITEMS
-************************************/
-.elementor-widget .elementor-icon-list-item {
-    align-items: start;
-}
-
-.elementor-widget .elementor-icon-list-item .elementor-icon-list-icon {
-    margin-top: 6px;
-}
-
-/***********************************
 DIALOG
 ************************************/
 .elementor-popup-modal .dialog-close-button svg {
@@ -1263,7 +1251,15 @@ OVERRIDE ELEMENTOR ELEMENTS (LAST RESORT)
 
 .premium-bullet-list-wrapper {
     align-self: start !important;
-    margin-top: 8px !important;
+    margin-top: 6px !important;
+}
+
+.elementor-widget .elementor-icon-list-item {
+    align-items: start !important;
+}
+
+.elementor-widget .elementor-icon-list-item .elementor-icon-list-icon {
+    margin-top: 6px;
 }
 
 .elementor-button-icon {
