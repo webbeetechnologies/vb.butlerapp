@@ -1347,11 +1347,9 @@ body .slick-dots {
 /* MEDIA                        */
 /********************************/
 @media screen and (min-width: 1600px) {
-    #mainhero .elementor-background-overlay {
-        max-width: 100% !important;
-    }
-
     .full-hero-image:before, .full-hero-image .elementor-background-overlay {
+        max-width: 100% !important;
+        left: 0;
         background-position: right center !important;
         background-size: auto 65% !important;
     }
