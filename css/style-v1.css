@@ -1438,27 +1438,6 @@
   .price-footer > div {
     width: 100%;
   }
-  .button {
-    border-radius: 20px;
-    /*
-    box-shadow: 0px 20px 30px -10px rgb(11 37 65 / 36%),
-      0px 10px 10px -7px rgb(11 37 65 / 22%) !important;
-    */
-    padding: 16px 25px;
-    display: block;
-    text-align: center;
-    margin-top: 16px;
-    font-size: 16px;
-    text-decoration: none !important;
-    transition: all 0.3s;
-  }
-  .button .elementor-button-icon {
-    margin-right: 12px;
-    align-items: center;
-    display: inline-flex;
-    top: 1px;
-    position: relative;
-  }
   
   .blue-button {
     background: #1d354f;
@@ -1556,7 +1535,7 @@
   .butler-price-features .features-list-footer {
     display: none;
   }
-  
+
   .butler-price-features .header {
     border-bottom: 1px solid transparent;
     background-color: white;

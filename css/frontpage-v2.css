@@ -309,7 +309,7 @@ BUTTONS
 /* Default: blue and small */
 .button a,
 .button a:active {
-    border-radius: 2px solid transparent;
+    border: 2px solid transparent;
     background-color: #0B2541;
     color: white;
     font-size: 16px;
@@ -338,14 +338,16 @@ BUTTONS
 }
 
 .button.white a:hover {
-    border-color: rgba(36, 70, 106, 0.6);
+    border-color: transparent;
+    background-color: rgba(36, 70, 106, 0.6);
+    color: white;
 }
 
 .button.rainbow a {
     background: rgb(237,33,119);
-    background: linear-gradient(90deg, rgba(237,33,119,1) 0%, rgba(253,208,58,0.19793855042016806) 100%);
+    background: linear-gradient(90deg, rgba(237,33,119,1) 0%, rgba(253,208,58,1) 100%);
     color: white;
-    border-color: transparent;
+    border: none;
 }
 
 .button.raibow a:hover {
