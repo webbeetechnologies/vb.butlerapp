@@ -101,7 +101,7 @@ HERO
 .full-hero-image:before,
 .full-hero-image .elementor-background-overlay {
     background-position: left center !important;
-    left: 60%;
+    left: 50%;
     max-width: 100%;
     transform: translateX(0%);
     background-size: auto 90% !important;
