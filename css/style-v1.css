@@ -1548,10 +1548,15 @@
     color: #0b2541;
   }
   .butler-price-features .features-list-table {
-    border-bottom: 2px solid #0b2641;
+    border-bottom: 2px solid #e8e9ec;
     margin-bottom: 30px;
     padding-bottom: 30px;
   }
+
+  .butler-price-features .features-list-footer {
+    display: none;
+  }
+  
   .butler-price-features .header {
     border-bottom: 1px solid transparent;
     background-color: white;
