@@ -352,6 +352,10 @@ BUTTONS
     color: white;
 }
 
+.button.white a svg {
+    fill: #0B2541;
+}
+
 .button.white a:hover svg {
     fill: white;
 }
@@ -368,7 +372,7 @@ BUTTONS
     fill: white;
 }
 
-.button.raibow a:hover {
+.button.rainbow a:hover {
     background-size: 400% 400%;
     background-position: 0 center;
 }
