@@ -361,6 +361,7 @@ BUTTONS
     background: linear-gradient(90deg, rgba(237,33,119,1) 0%, rgba(253,208,58,1) 100%);
     color: white;
     border: none;
+    padding: 9px 18px !important; /* add more padding top-bottom with 2px, since it doesnt have border */
 }
 
 .button.rainbow a svg {
@@ -370,6 +371,10 @@ BUTTONS
 .button.raibow a:hover {
     background-size: 400% 400%;
     background-position: 0 center;
+}
+
+.button.rainbow.big a {
+    padding: 21px 24px !important;
 }
 
 .button.raibow a:active {
