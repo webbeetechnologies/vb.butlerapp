@@ -335,7 +335,7 @@ BUTTONS
 .button.white a:active {
     border-color: #0B2541;
     color: #0B2541;
-    background-color: transparent ;
+    background-color: transparent;
 }
 
 .button.white a:hover {
@@ -1346,6 +1346,17 @@ body .slick-dots {
 /********************************/
 /* MEDIA                        */
 /********************************/
+@media screen and (min-width: 1400px) {
+    #mainhero .elementor-background-overlay {
+        max-width: 100% !important;
+    }
+
+    .full-hero-image:before, .full-hero-image .elementor-background-overlay {
+        background-position: right center !important;
+        background-size: auto 65% !important;
+    }
+}
+
 @media (min-width: 1200px) {
     #mainhero-2,
     #datenschutz {
