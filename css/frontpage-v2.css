@@ -735,6 +735,18 @@ INDUSTRIES/SCHUNGEN SECTION
 }
 
 /***********************************
+ELEMENTOR FIX:
+- LIST ITEMS
+************************************/
+.elementor-widget .elementor-icon-list-item {
+    align-items: start;
+}
+
+.elementor-widget .elementor-icon-list-item .elementor-icon-list-icon {
+    margin-top: 6px;
+}
+
+/***********************************
 DIALOG
 ************************************/
 .elementor-popup-modal .dialog-close-button svg {
