@@ -335,7 +335,7 @@ BUTTONS
 .button.white a:active {
     border-color: #0B2541;
     color: #0B2541;
-    background: white;
+    background-color: transparent ;
 }
 
 .button.white a:hover {
