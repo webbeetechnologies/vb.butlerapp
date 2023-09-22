@@ -304,6 +304,59 @@ so, we set it min-height 100vh from here? */
 }
 
 /***********************************
+BUTTONS
+************************************/
+/* Default: blue and small */
+.button a,
+.button a:active {
+    border-radius: 2px solid transparent;
+    background-color: #0B2541;
+    color: white;
+    font-size: 16px;
+    font-weight: normal;
+    text-decoration: none !important;
+    border-radius: 14px; /* DEFAULT */
+    padding: 7px 18px;
+    transition: all 0.3s;
+}
+
+.button a:hover {
+    color: white;
+    background-color: rgba(36, 70, 106, 0.6);
+}
+
+.button.big a {
+    padding: 19px 24px;
+    border-radius: 20px;
+}
+
+.button.white a,
+.button.white a:active {
+    border-color: #0B2541;
+    color: #0B2541;
+    background: white;
+}
+
+.button.white a:hover {
+    border-color: rgba(36, 70, 106, 0.6);
+}
+
+.button.rainbow a {
+    background: rgb(237,33,119);
+    background: linear-gradient(90deg, rgba(237,33,119,1) 0%, rgba(253,208,58,0.19793855042016806) 100%);
+    color: white;
+    border-color: transparent;
+}
+
+.button.raibow a:hover {
+    background-size: 400% 400%;
+    background-position: 0 center;
+}
+
+.button.raibow a:active {
+    background: linear-gradient(90deg, rgba(245, 78, 148, 1) 0%, rgba(245, 78, 148, 1) 100%);
+}
+/***********************************
 TESTIMONIALS SLICK
 ************************************/
 /* hide first */
