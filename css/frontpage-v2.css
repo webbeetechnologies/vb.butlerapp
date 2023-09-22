@@ -327,7 +327,7 @@ BUTTONS
 }
 
 .button a svg {
-    fill: #0B2541;
+    fill: white;
 }
 
 .button a:hover svg {
