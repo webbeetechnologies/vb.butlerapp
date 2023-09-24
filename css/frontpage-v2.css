@@ -306,6 +306,9 @@ so, we set it min-height 100vh from here? */
 /***********************************
 BUTTONS
 ************************************/
+.button a .elementor-button-text {
+    flex-grow: inherit;
+}
 .button.full a {
     width: 100% !important;
 }
