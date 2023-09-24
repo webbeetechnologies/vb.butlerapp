@@ -930,7 +930,7 @@ INTERACTIVE MAP
 
 .interactivemap.popover-content .customer-label {
     color: #3C5167;
-    font-size: 32px;
+    font-size: 24px;
     font-weight: 500;
 }
 
@@ -2194,7 +2194,7 @@ body .slick-dots {
     }
 
     .interactivemap.popover-content .customer-label {
-        font-size: 26px;
+        font-size: 20px;
     }
 
     #butlerapp-team-container.v2 {
