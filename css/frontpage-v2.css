@@ -344,7 +344,7 @@ BUTTONS
 
 .button a:hover {
     color: white;
-    background-color: rgba(36, 70, 106, 0.6);
+    background-color:#1C4066;
     -webkit-box-shadow: 0px 4px 14px 0px rgba(28,64,102,1);
     -moz-box-shadow: 0px 4px 14px 0px rgba(28,64,102,1);
     box-shadow: 0px 4px 14px 0px rgba(28,64,102,1) !important;
@@ -545,7 +545,7 @@ TESTIMONIALS SLICK
     position: relative;
 }
 .carousel-controller a {
-    background: #dee2e6;
+    background: #0b2641;
     border-radius: 22px;
     color: white;
     width: 64px;
@@ -563,7 +563,10 @@ TESTIMONIALS SLICK
 }
 
 .carousel-controller a:hover {
-    background-color: #0b2641;
+    background-color:#1C4066;    
+    -webkit-box-shadow: 0px 4px 14px 0px rgba(28,64,102,1);
+    -moz-box-shadow: 0px 4px 14px 0px rgba(28,64,102,1);
+    box-shadow: 0px 4px 14px 0px rgba(28,64,102,1) !important;
     text-decoration: none;
 }
 /***********************************
