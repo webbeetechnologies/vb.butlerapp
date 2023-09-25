@@ -943,7 +943,11 @@ HOTSPOT V2
 INDUSTRIES/SCHUNGEN SECTION
 ************************************/
 .industries-section .slick-slide .e-con-inner {
-    min-height: 465px;
+    min-height: 480px;
+}
+
+.industries-section  .slick-slide .elementor-widget-text-editor {
+    font-size: 15px;
 }
 
 .industries-section  .slick-slide .elementor-widget-button {
