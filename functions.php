@@ -420,6 +420,14 @@ function render_interactive_map($atts) {
 }
 add_shortcode('render_interactive_map', 'render_interactive_map'); 
 
+// CPT - KB list
+function knowledgebase_list() {
+	ob_start();
+	get_template_part('partials/knowledgebase_list','page');
+	return ob_get_clean();
+}
+add_shortcode('knowledgebase_list', 'knowledgebase_list'); 
+
 // danke page: send analytics to trusted
 function phpcode_trusted_api() {
 	ob_start();

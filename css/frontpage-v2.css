@@ -828,6 +828,12 @@ HOTSPOT V2
     padding: 0 !important;
 }
 
+.video-carousel-v2 .slick-slide,
+.image-carousel-gallery-v2 .slick-slide,
+.slick-container-v2 .slick-slide {
+    background-color: white;
+}
+
 .video-carousel-v2 .slick-list,
 .image-carousel-gallery-v2 .slick-list,
 .slick-container-v2 .slick-list {
