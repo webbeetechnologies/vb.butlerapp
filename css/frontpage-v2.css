@@ -425,6 +425,33 @@ BUTTONS
     -moz-box-shadow: 0px 4px 14px 0px rgba(36, 70, 106, 0.6);
     box-shadow: 0px 4px 14px 0px rgba(36, 70, 106, 0.6);
 }
+
+/*-- POPUP BUTTON --*/
+.elementor-popup-modal button span {
+    font-size: 16px;
+}
+.elementor-popup-modal button,
+.elementor-form .elementor-button[type="submit"] {
+    background: #0b2541 !important;
+    box-shadow: 0px 20px 30px -10px rgb(11 37 65 / 36%),
+        0px 10px 10px -7px rgb(11 37 65 / 22%) !important;
+    border-radius: 20px !important;
+    border: none !important;
+    height: 60px;
+    margin-top: 5px;
+    font-weight: 500 !important;
+}
+.elementor-popup-modal button:hover,
+.elementor-form .elementor-button[type="submit"]:hover {
+    color: white;
+    background-color:#1C4066;
+    -webkit-box-shadow: 0px 4px 14px 0px rgba(36, 70, 106, 0.6);
+    -moz-box-shadow: 0px 4px 14px 0px rgba(36, 70, 106, 0.6);
+    box-shadow: 0px 4px 14px 0px rgba(36, 70, 106, 0.6) !important;
+}
+.elementor-popup-modal button svg * {
+    fill: #ffffff !important;
+}
 /***********************************
 TESTIMONIALS SLICK
 ************************************/
