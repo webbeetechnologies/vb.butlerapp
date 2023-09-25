@@ -59,6 +59,9 @@ HERO
     height: 70px;
 }
 
+#mainhero-2 .elementor-sticky--active .product-menu-container {
+    border-color: transparent;
+}
 /********************************************
 PRODUCT SECOND MENU
 *********************************************/
@@ -1661,6 +1664,16 @@ body .slick-dots {
         margin-left: 0;
     }
     */
+    /********************************************
+    HERO
+    *********************************************/
+    #mainhero-2 {
+        margin-top: -90px;
+    }
+
+    #mainhero-2 .product-menu-container {
+        height: 50px;
+    }
 
     /* fit the menu on top */
     #stb-logo-wrapper {
