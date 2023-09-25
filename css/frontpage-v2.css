@@ -398,6 +398,24 @@ BUTTONS
     color: white;
     border: none;
     padding: 9px 18px !important; /* add more padding top-bottom with 2px, since it doesnt have border */
+    position: relative;
+    overflow: hidden;
+}
+
+.button.rainbow a:before {
+    content: "";
+    opacity: 0;
+    background-color: rgb(237,33,119);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: all 0.3s;
+}
+
+.button.rainbow a .elementor-button-content-wrapper {
+    position: relative;
+    z-index: 2;
 }
 
 .button.rainbow a svg {
@@ -405,11 +423,17 @@ BUTTONS
 }
 
 .button.rainbow a:hover {
+    /*
     background-size: 400% 400%;
     background-position: 0 center;
+    */
     box-shadow: none !important;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
+}
+
+.button.rainbow a:hover::before {
+    opacity: 1;
 }
 
 .button.rainbow.big a {
