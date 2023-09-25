@@ -1462,9 +1462,13 @@ body .slick-dots {
 }
 
 @media (min-width: 1200px) {
-    #mainhero-2,
-    #datenschutz {
+    #mainhero-2 {
         min-height: 730px !important;
+    }
+
+    #datenschutz > div,
+    .map-section {
+        min-height: inherit !important;
     }
 
     .payment-items-container {
