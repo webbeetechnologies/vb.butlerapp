@@ -536,6 +536,10 @@ TESTIMONIALS SLICK
     background-color: #29ABDC;
 }
 
+/* HIDE REAL BUTTON */
+.premium-carousel-wrapper .carousel-arrow {
+    opacity: 0;
+}
 /* fake prev next */
 .carousel-controller {
     position: relative;
