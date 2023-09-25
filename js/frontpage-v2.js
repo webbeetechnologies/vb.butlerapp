@@ -299,13 +299,13 @@ $(document).ready(function () {
     /*=======================================================================================
     * INDUSTRIES: ELEMENTOR CAROUSEL PREV NEXT FAKE BUTTON
     =======================================================================================*/
-    $('.carousel-container .carousel-controller .prev a').on('click', function(e) {
+    $('.industries-section .carousel-controller .prev a').on('click', function(e) {
         e.preventDefault();
-        $(this).parents('.carousel-container').find('.carousel-prev').click();
+        $(this).parents('.industries-section').find('.carousel-prev').click();
     });
-    $('.carousel-container .carousel-controller .next a').on('click', function(e) {
+    $('.industries-section .carousel-controller .next a').on('click', function(e) {
         e.preventDefault();
-        $(this).parents('.carousel-container').find('.carousel-next').click();
+        $(this).parents('.industries-section').find('.carousel-next').click();
     });
     /*=======================================================================================
     * FAQs Section
