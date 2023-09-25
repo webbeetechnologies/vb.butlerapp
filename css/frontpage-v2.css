@@ -856,6 +856,12 @@ HOTSPOT V2
     z-index: 10;
 }
 
+.video-carousel-v2 .slick-prev:hover, 
+.video-carousel-v2 .slick-next:hover {
+    background-color: #1C4066;
+    box-shadow: 0px 4px 14px 0px rgba(36, 70, 106, 0.6);
+}
+
 .slick-container-v2 .slick-prev,
 .slick-container-v2 .slick-prev:hover,
 .slick-container-v2 .slick-prev:focus,
