@@ -539,7 +539,6 @@ TESTIMONIALS SLICK
 /* fake prev next */
 .carousel-controller {
     position: relative;
-    top: -30px;
 }
 .carousel-controller a {
     background: #dee2e6;
