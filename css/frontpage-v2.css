@@ -71,7 +71,7 @@ PRODUCT SECOND MENU
 /***********************************
 HEADING OVERRIDING
 ************************************/
-.elementor-heading-title {
+body .elementor-heading-title {
     line-height: 1.2em;
 }
 
