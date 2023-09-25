@@ -55,7 +55,8 @@ HERO
 }
 
 #mainhero-2 .product-menu-container {
-    border-top: 1px solid rgb(181, 202, 220)
+    border-top: 1px solid rgb(181, 202, 220);
+    height: 70px;
 }
 
 /********************************************
