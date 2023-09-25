@@ -467,8 +467,8 @@ BUTTONS
 }
 .elementor-popup-modal button:hover,
 .elementor-form .elementor-button[type="submit"]:hover {
-    color: white;
-    background-color:#1C4066;
+    color: white !important;
+    background-color:#1C4066 !important;
     -webkit-box-shadow: 0px 4px 14px 0px rgba(36, 70, 106, 0.6);
     -moz-box-shadow: 0px 4px 14px 0px rgba(36, 70, 106, 0.6);
     box-shadow: 0px 4px 14px 0px rgba(36, 70, 106, 0.6) !important;
