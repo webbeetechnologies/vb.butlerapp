@@ -1474,6 +1474,10 @@ FAQ V2 (override FAQ style in style.css
 /****************************************
 OVERRIDE ELEMENTOR ELEMENTS (LAST RESORT)
 *****************************************/
+li.premium-bullet-list-content {
+    margin: 0 0 10px;
+}
+
 #preise .elementor-heading-title {
     text-align: center;
 }
@@ -2263,6 +2267,13 @@ body .slick-dots {
     .personal-services-section .support-cards-container  .elementor-motion-effects-element .e-con-inner > .elementor-element {
         min-height: 310px;
     }
+    /* left text section: force to full */
+    .personal-services-section .left-container {
+        padding-left: 20px;
+        padding-right: 20px;
+        width: 100%;
+    }
+    
     /* photos section */
     .personal-services-section > .e-con-inner > .e-con:nth-child(2) {
         max-height: inherit !important;
