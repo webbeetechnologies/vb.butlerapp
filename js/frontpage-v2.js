@@ -256,6 +256,7 @@ $(document).ready(function () {
 
     // CUSTOMERS TESTIMONIALS
     $('.testimonials-carousel-container .slider-nav').slick({
+        autoplay: false,
         slidesToShow: 1,
         slidesToScroll: 1,
         asNavFor: '.slider-for',
@@ -263,15 +264,18 @@ $(document).ready(function () {
         centerMode: true,
         centerPadding: 0,
         variableWidth: true,
-        autoplay: true
+        pauseOnHover:true
     });
     
     $('.testimonials-carousel-container .slider-for').slick({
+        autoplay: false,
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: true,
         fade: true,
         dots: true,
+        focusOnSelect: true,
+        pauseOnHover:true,
         asNavFor: '.slider-nav'
     });
 
