@@ -2415,12 +2415,28 @@ body .slick-dots {
     }
 
     /****************************************
+    principles: irina and diana zoom in
+    *****************************************/
+    .principles-section {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .customers-static-section {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .customers-static-section .elementor-element {
+        padding: 0;
+    }
+    /****************************************
     CTA CONTAINER NEAR BOTTOM
     *****************************************/
     .cta-section .elementor-widget-container {
         text-align: center;
     }
-    
+
     /****************************************
     FOOTER
     *****************************************/
