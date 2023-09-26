@@ -2369,11 +2369,58 @@ body .slick-dots {
     }
 
     /********************************************
+    map interactive
+    *********************************************/
+    .map-section .country-buttons-container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .map-section .country-buttons-container .e-con-inner > div {
+        width: 31%;
+    }
+
+    .map-section .country-buttons-container .premium-button {
+        font-size: 14px;
+        padding: 16px 10px;
+        width: 100%;
+    }
+
+    /********************************************
+    vision mission
+    *********************************************/
+    .vision-mission-section {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .vision-mission-section .stackable-card {
+        margin: 20px 0 40px;
+    }
+    /********************************************
     datenschutz
     *********************************************/
     #datenschutz .checked-desc .desc {
         width: calc(100% - 50px); /* to make it flex row :( */
     }
+
+    #datenschutz .image-container,
+    #datenschutz .text-container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    #datenschutz .checked-desc .elementor-widget-icon {
+        margin-top: 5px;
+    }
+
+    /****************************************
+    CTA CONTAINER NEAR BOTTOM
+    *****************************************/
+    .cta-section .elementor-widget-container {
+        text-align: center;
+    }
+    
     /****************************************
     FOOTER
     *****************************************/
@@ -2494,6 +2541,11 @@ body .slick-dots {
     .elementor-motion-effects-element .e-con-inner > .elementor-element:last-child {
         min-height: 160px;
         height: 58px;
+    }
+
+    /* SSL datenschutz */
+    #datenschutz .image-container .e-con-inner .elementor-element {
+        width: 100%;
     }
 
     footer .elementor-section-boxed .elementor-container {
