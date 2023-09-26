@@ -2064,7 +2064,7 @@ body .slick-dots {
     }
 
     .phone-button-container .elementor-element {
-        top: 6px !important;
+        top: 5px !important;
     }
     /* HERO V2 */
     #mainhero.hero-sec-v2 {
@@ -2278,6 +2278,8 @@ body .slick-dots {
     .personal-services-section > .e-con-inner > .e-con:nth-child(2) {
         max-height: inherit !important;
         margin-top: 0 !important;
+        padding-left: 10px;
+        padding-right: 10px;
     }
 
     .personal-services-section .e-hotspot__tooltip {
