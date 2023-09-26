@@ -2380,6 +2380,10 @@ body .slick-dots {
         width: 31%;
     }
 
+    .map-section .desc-container {
+        padding-right: 0 !important;
+    }
+    
     .map-section .country-buttons-container .premium-button {
         font-size: 14px;
         padding: 16px 10px;
