@@ -76,32 +76,35 @@ PRODUCT SECOND MENU
     color: #0B2541 !important;
 }
 
-/*
+
 .hfe-nav-menu-icon {
     background: transparent url(/wp-content/themes/entrepreneur-child/img/arrow-down.svg) center center no-repeat;
     width: 30px;
     height: 30px;
     transition: all 0.3s;
 }
+.hfe-nav-menu-icon svg {
+    opacity: 0;
+}
 
-.fa-bars:before,
-.fa-times:before,
-.fa-angle-down:before {
+header .fa-bars:before,
+header .fa-times:before,
+.premium-mobile-menu .fa-angle-down:before {
     content: "";
     width: 30px;
     height: 30px;
     display: block;
 }
 
-.fa-bars:before {
+header .fa-bars:before {
     background: transparent url(/wp-content/themes/entrepreneur-child/img/burger.svg) center center no-repeat;
 }
 
-.fa-times:before {
+header .fa-times:before {
     background: transparent url(/wp-content/themes/entrepreneur-child/img/close.svg) center center no-repeat;
 }
 
-.fa-angle-down:before {
+.premium-mobile-menu .fa-angle-down:before {
     background: transparent url(/wp-content/themes/entrepreneur-child/img/arrow-down.svg) center center no-repeat;
 }
 .premium-mobile-menu-container .premium-nav-menu-item .premium-dropdown-icon {
@@ -111,10 +114,7 @@ PRODUCT SECOND MENU
 .hfe-active-menu .hfe-nav-menu-icon {
     transform: rotate(180deg);
 }
-.hfe-nav-menu-icon svg {
-    opacity: 0;
-}
-*/
+
 /***********************************
 HEADING OVERRIDING
 ************************************/
