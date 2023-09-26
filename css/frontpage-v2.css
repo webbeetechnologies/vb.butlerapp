@@ -2449,6 +2449,17 @@ body .slick-dots {
     .customers-static-section .elementor-element {
         padding: 0;
     }
+
+    /****************************************
+    Ccontact section
+    *****************************************/
+    .contact-form-section .elementor-background-overlay {
+        background: none !important;
+    }
+
+    .contact-form-section .elementor-container > div {
+        width: 100% !important;
+    }
     /****************************************
     CTA CONTAINER NEAR BOTTOM
     *****************************************/
