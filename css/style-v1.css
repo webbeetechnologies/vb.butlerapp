@@ -2442,10 +2442,6 @@
     #mainhero .elementor-icon-list-items li:nth-child(even) {
       margin-left: 50px;
     }
-    #mainhero .elementor-widget-button > div {
-      margin-left: 0;
-      padding-left: 20px;
-    }
   }
   @media (min-width: 468px) and (max-width: 1024px) {
     /*=========================================

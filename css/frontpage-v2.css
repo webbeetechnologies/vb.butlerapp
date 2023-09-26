@@ -145,6 +145,14 @@ HERO
 #mainhero-2 .cta-container {
     margin-right: 0 !important;
 }
+
+.rating-slideshow img {
+    opacity: 0;
+}
+
+.rating-slideshow .swiper-container-initialized img {
+    opacity: 1;
+}
 /***********************************
 QUESTIONNAIRE FORM 
 ************************************/
@@ -2086,6 +2094,9 @@ body .slick-dots {
         flex-direction: column-reverse;
     }
 
+    .hero-sec-v2 .elementor-widget-container {
+        margin-left: 0 !important;
+    }
     .hero-sec-v2 .hero-container {
         display: flex;
         flex-direction: column-reverse;
