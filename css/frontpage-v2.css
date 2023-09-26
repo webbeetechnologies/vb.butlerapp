@@ -2299,6 +2299,10 @@ body .slick-dots {
     .elementor-element-dd7d865 .premium-equal-height-yes {
         margin-bottom: 50px;
     }
+
+    .function-section .elementor-element.button {
+        text-align: left;
+    }
     
     /* PRICE */
     .butler-price-features .option-item .button {
