@@ -2060,7 +2060,7 @@ body .slick-dots {
     }
 
     .phone-button-container .elementor-element {
-        top: 10px !important;
+        top: 6px !important;
     }
     /* HERO V2 */
     #mainhero.hero-sec-v2 {
@@ -2411,6 +2411,9 @@ body .slick-dots {
         background-color: white;
         box-shadow: 0 0 7px rgb(0 0 0 / 20%);
     } 
+    body.website-v2 #masthead.header-no-shadow {
+        box-shadow: none;
+    }
     body #mainhero-2 .product-menu-container {
         background-color: white;
         padding: 5px 20px;
