@@ -1849,6 +1849,9 @@ body .slick-dots {
         padding-right: 0;
     }
 
+    .premium-nav-widget-container .premium-hamburger-toggle i {
+        padding: 0;
+    }
     .submenu-button-back img {
         width: auto !important;
     }
@@ -2099,6 +2102,11 @@ body .slick-dots {
     .header-v2 .phone-button-container .elementor-widget-html {
         right: 0 !important;
     }
+    .premium-toggle-text {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
     /* button container */
     .elementor .premium-mobile-menu-container .cta-container {
         flex-direction: column-reverse;
@@ -2238,7 +2246,15 @@ body .slick-dots {
     #butlerapp-team-container {
         margin-top: -30px;
     }
-    /* FAQ */
+    
+    /**************************************************
+    FAQ SECTION
+    ***************************************************/
+    .faq-section .left-container,
+    .faq-section .right-container {
+        width: 100%;
+    }
+
     #faqs-container .faq.faq-v2 {
         background: none;
         box-shadow: none;
@@ -2266,6 +2282,24 @@ body .slick-dots {
         padding: 0;
     }
 
+    /**************************************************
+    BUTTONS ALIGNMENTS
+    - box benefit
+    - etc
+    ***************************************************/
+    .box-benefit .elementor-widget-button {
+        text-align: left;
+    }
+
+    /* FUKTIONEN LIST THAT WILL BE REPLACED BY KNOWLEDGE BASED */
+    .elementor-element-dd7d865 .elementor-button-wrapper {
+        text-align: left;
+    }
+
+    .elementor-element-dd7d865 .premium-equal-height-yes {
+        margin-bottom: 50px;
+    }
+    
     /* PRICE */
     .butler-price-features .option-item .button {
         display: none;
