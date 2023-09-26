@@ -2535,7 +2535,7 @@ body .slick-dots {
     }
 
     .map-section .premium-button-text-icon-wrapper svg {
-        margin: 0;
+        margin: 0 !important;
     }
     .map-section .premium-button-text-icon-wrapper > span {
         display: none;
