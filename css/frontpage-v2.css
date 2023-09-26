@@ -2527,6 +2527,20 @@ body .slick-dots {
         height: 70px;
     }
     
+    /********************************************
+    map interactive
+    *********************************************/
+    .map-section .country-buttons-container .e-con-inner  {
+        gap: 10px;
+    }
+
+    .map-section .premium-button-text-icon-wrapper svg {
+        margin: 0;
+    }
+    .map-section .premium-button-text-icon-wrapper > span {
+        display: none;
+    }
+
     .bewertung img {
         width: 150px;
         height: auto
