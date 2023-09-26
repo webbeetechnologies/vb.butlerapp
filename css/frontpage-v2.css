@@ -2155,6 +2155,10 @@ body .slick-dots {
     .swiper-coverflow-container .swiper-button-prev {
         left: 5px;
     }
+
+    .swiper-text-container {
+        margin-bottom: 0;
+    }
     .logo-ssl-container .e-con-inner {
         justify-content: space-evenly !important;
     }
@@ -2383,7 +2387,7 @@ body .slick-dots {
     .map-section .desc-container {
         padding-right: 0 !important;
     }
-    
+
     .map-section .country-buttons-container .premium-button {
         font-size: 14px;
         padding: 16px 10px;
