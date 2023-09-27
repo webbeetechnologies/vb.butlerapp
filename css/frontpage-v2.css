@@ -2038,7 +2038,7 @@ body .slick-dots {
     .industries-section .carousel-controller.mobile {
         position: absolute;
         z-index: 10;
-        top: 26%;
+        margin-top: 26%;
     }
 }   
 
@@ -2573,14 +2573,6 @@ body .slick-dots {
         padding: 0;
     }
 
-    /****************************************
-    industries section
-    *****************************************/
-    .industries-section .carousel-controller.mobile {
-        position: absolute;
-        z-index: 10;
-        top: 21%;
-    }
     /****************************************
     Ccontact section
     *****************************************/
