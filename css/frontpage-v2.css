@@ -1898,6 +1898,7 @@ body .slick-dots {
     /* burger and close button..make it vertically centre */
     .premium-hamburger-toggle {
         display: flex;
+        margin-top: 4px;
     }
 
     .premium-hamburger-toggle .premium-toggle-text {
