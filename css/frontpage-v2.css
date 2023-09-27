@@ -2705,6 +2705,12 @@ body .slick-dots {
     .hero-sec-v2 .hero-container .hero-tab img {
         max-width: 150%;
     }
+
+    .full-hero-image .hero-image-mobile img {
+        width: 160%;
+        max-width: 160%;
+        margin: 30px 0 0;
+    }
     /* product page menu: the arrow */
     #stb-menu-wrapper {
         width: 45px;
