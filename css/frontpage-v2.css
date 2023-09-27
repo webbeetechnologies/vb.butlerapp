@@ -2804,14 +2804,9 @@ body .slick-dots {
     /********************************************
     industries
     *********************************************/
-    .industries-section .e-con-inner {
+    .industries-section > .e-con-inner {
         padding-top: 50px !important;
         padding-bottom: 50px !important;
-    }
-
-    .industries-section > .e-con-inner {
-        padding-top: 0 !important;
-        padding-bottom: 0 !important;
     }
 
     .industries-section .carousel-controller.mobile {
