@@ -2196,7 +2196,7 @@ body .slick-dots {
     }
     .hero-sec-v2 .hero-container {
         display: flex;
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
     .hero-sec-v2 .hero-container .hero-tab {
         display: block;
@@ -2687,6 +2687,10 @@ body .slick-dots {
         font-size: 5px;
     }
 
+    /* HERO IMAGE FULL TO RIGHT */
+    .hero-sec-v2 .hero-container .hero-tab img {
+        max-width: 150%;
+    }
     /* product page menu: the arrow */
     #stb-menu-wrapper {
         width: 45px;
