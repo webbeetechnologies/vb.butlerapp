@@ -2805,6 +2805,11 @@ body .slick-dots {
         padding-bottom: 50px !important;
     }
 
+    .industries-section > .e-con-inner {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+
     .industries-section .carousel-controller.mobile {
         margin-top: 25%;
     }
