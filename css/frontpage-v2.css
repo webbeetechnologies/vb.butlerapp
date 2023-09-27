@@ -2470,8 +2470,13 @@ body .slick-dots {
 
     .map-section .left-container {
         padding-right: 0 !important;
+        padding-left: 0 !important;
     }
 
+    .map-section .left-container  .e-con-inner {
+        padding: 0;
+    }
+    
     .map-section .right-container {
         padding: 0;
     }
@@ -2780,7 +2785,7 @@ body .slick-dots {
     .industries-section .carousel-controller.mobile {
         margin-top: 27%;
     }
-    
+
     #footer-v2 .footer-logo-set {
         padding: 0;
     }
