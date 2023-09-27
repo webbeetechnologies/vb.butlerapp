@@ -2271,6 +2271,9 @@ body .slick-dots {
         justify-content: space-evenly !important;
     }
     /* CUSTOMERS STATIC SECTION */
+    .customers-static-section .customer-logo {
+        max-width: 45% !important;
+    }
     .customers-static-section .logo-item {
         width: 45%;
     }
@@ -2600,7 +2603,7 @@ body .slick-dots {
     }
 
     /****************************************
-    Ccontact section
+    Contact section
     *****************************************/
     .contact-form-section .elementor-background-overlay {
         background: none !important;
@@ -2691,7 +2694,7 @@ body .slick-dots {
     .button-hero a {
         width: 100% !important;
     }
-    
+
     .hero-sec-v2 .hero-container .hero-tab img {
         max-width: 150%;
     }
