@@ -174,6 +174,10 @@ HERO
     opacity: 1;
 }
 
+.hero-sec-v2:before {
+    opacity: 1;
+}
+
 .hero-container .logo-ssl-container {
     padding: 0;
 }
@@ -2126,7 +2130,8 @@ body .slick-dots {
     HERO
     ***************************************************/
     .full-hero-image:before,
-    .full-hero-image .elementor-background-overlay {
+    .full-hero-image .elementor-background-overlay,
+    .hero-sec-v2:before {
         display: none;
     }
 
