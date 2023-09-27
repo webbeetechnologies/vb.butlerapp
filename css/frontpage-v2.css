@@ -2728,6 +2728,10 @@ body .slick-dots {
         width: 100%;
     }
     /* HERO IMAGE FULL TO RIGHT */
+    .button-hero {
+        width: 100%;
+    }
+    
     .button-hero a {
         width: 100% !important;
     }
