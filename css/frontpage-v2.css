@@ -2855,6 +2855,10 @@ body .slick-dots {
         max-width: 320%;
     }
     */
+    .hotspot-container {
+        max-width: 100%;
+        width: 100%;
+    }
     .e-hotspot__button {
         zoom: 0.7;
     }
