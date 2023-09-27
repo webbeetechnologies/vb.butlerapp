@@ -1741,6 +1741,10 @@ body .slick-dots {
         position: relative;
     }
 
+    /* anti jumpy before class applied */
+    .product-nav-container nav {
+        position: absolute;
+    }
     /* POPUP */
     .elementor-popup-modal .popup-icon {
         width: 90px;
