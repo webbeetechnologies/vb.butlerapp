@@ -2688,6 +2688,10 @@ body .slick-dots {
     }
 
     /* HERO IMAGE FULL TO RIGHT */
+    .button-hero a {
+        width: 100% !important;
+    }
+    
     .hero-sec-v2 .hero-container .hero-tab img {
         max-width: 150%;
     }
