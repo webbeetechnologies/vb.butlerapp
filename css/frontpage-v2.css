@@ -1727,7 +1727,7 @@ body .slick-dots {
     
     .header-v2 .premium-mobile-menu-container .premium-mobile-menu li.menu-item > a {
         font-size: 18px !important;
-        padding: 10px 30px;
+        padding: 10px 20px;
     }
 
     .header-v2 .premium-mobile-menu-container .premium-mobile-menu li.menu-item.menu-item-has-children a {
@@ -1756,7 +1756,7 @@ body .slick-dots {
         display: flex;
         /*position: absolute;*/
         bottom: env(safe-area-inset-bottom);
-        padding: 20px 20px 70px;
+        padding: 20px 20px 80px;
     }
 
     /* TWEAK NEW ELEMENTOR'S HTML STRUCTURE */
@@ -1893,6 +1893,27 @@ body .slick-dots {
 
     .sticky-product-menu-container .title-container {
         border: none;
+    }
+
+    /* burger and close button..make it vertically centre */
+    .premium-hamburger-toggle {
+        display: flex;
+    }
+
+    .premium-hamburger-toggle .premium-toggle-text {
+        margin: 0;
+        display: flex;
+    }
+    .premium-hamburger-toggle .premium-toggle-text .fas {
+        padding: 0;
+    }
+
+    .premium-hamburger-toggle .premium-toggle-close {
+        margin: 0;
+    }
+
+    .premium-hamburger-toggle .premium-toggle-close .fas {
+        padding: 0;
     }
     /**************************************************
     HOME
