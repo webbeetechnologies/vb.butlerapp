@@ -2038,7 +2038,7 @@ body .slick-dots {
     .industries-section .carousel-controller.mobile {
         position: absolute;
         z-index: 10;
-        margin-top: 26%;
+        margin-top: 23%;
     }
 }   
 
@@ -2724,6 +2724,14 @@ body .slick-dots {
     .elementor-motion-effects-element .e-con-inner > .elementor-element:last-child {
         min-height: 160px;
         height: 58px;
+    }
+
+    
+    /********************************************
+    industries
+    *********************************************/
+    .industries-section .carousel-controller.mobile {
+        margin-top: 25%;
     }
 
     /* SSL datenschutz */
