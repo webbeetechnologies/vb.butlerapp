@@ -2673,7 +2673,7 @@ body .slick-dots {
 @media (max-width: 640px) {
     body.website-v2 #masthead {
         background-color: white;
-        box-shadow: 0 0 7px rgb(0 0 0 / 20%);
+        box-shadow: none;
     } 
     body.website-v2 #masthead.header-no-shadow {
         box-shadow: none;
@@ -2690,6 +2690,9 @@ body .slick-dots {
         font-size: 5px;
     }
 
+    .rating-slideshow .swiper-container-initialized img {
+        width: 100%;
+    }
     /* HERO IMAGE FULL TO RIGHT */
     .button-hero a {
         width: 100% !important;
