@@ -1675,11 +1675,6 @@ body .slick-dots {
         width: 35px;
     }
 
-    /* FOR 1024px IMAGE CONTAINER forgot to set padding in ELEMENTOR */
-    .hero-container > .e-con-inner > div:nth-child(2) {
-        padding: 0 20px;
-    }
-
     #mainhero-2 {
         min-height: 100vh;
     }
@@ -2086,6 +2081,14 @@ body .slick-dots {
         position: absolute;
         z-index: 10;
         margin-top: 23%;
+    }
+
+    /***********************************
+    SSL section
+    ************************************/
+    #datenschutz .checked-desc > .e-con-inner .e-con-inner {
+        margin: 0;
+        padding: 0;
     }
 }   
 
@@ -2607,10 +2610,6 @@ body .slick-dots {
         padding-right: 0;
     }
 
-    #datenschutz .checked-desc .elementor-widget-icon {
-        margin-top: 5px;
-    }
-
     /****************************************
     principles: irina and diana zoom in
     *****************************************/
@@ -2801,6 +2800,11 @@ body .slick-dots {
     /********************************************
     industries
     *********************************************/
+    .industries-section .e-con-inner {
+        padding-top: 50px !important;
+        padding-bottom: 50px !important;
+    }
+
     .industries-section .carousel-controller.mobile {
         margin-top: 25%;
     }
