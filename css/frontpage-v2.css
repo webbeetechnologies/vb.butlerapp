@@ -170,6 +170,10 @@ HERO
     height: calc(100% + 50px);
 }
 
+.full-hero-image:before {
+    opacity: 1;
+}
+
 .hero-container .logo-ssl-container {
     padding: 0;
 }
