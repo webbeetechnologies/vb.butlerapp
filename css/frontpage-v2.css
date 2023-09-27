@@ -2023,6 +2023,23 @@ body .slick-dots {
     .industries-section  .slick-slide .elementor-widget-button {
         position: relative;
     }
+
+    /* carousel */
+    .carousel-controller a {
+        width: 40px;
+        height: 40px;
+        border-radius: 11px;
+        font-size: 12px;
+    }
+    .premium-carousel-template.slick-slide {
+        padding: 0 20px;
+    }
+
+    .industries-section .carousel-controller.mobile {
+        position: absolute;
+        z-index: 10;
+        top: 26%;
+    }
 }   
 
 @media (min-width: 768px) and (max-width: 1200px) {
@@ -2303,7 +2320,7 @@ body .slick-dots {
     .function-section .elementor-element.button {
         text-align: left;
     }
-    
+
     /* PRICE */
     .butler-price-features .option-item .button {
         display: none;
@@ -2556,6 +2573,14 @@ body .slick-dots {
         padding: 0;
     }
 
+    /****************************************
+    industries section
+    *****************************************/
+    .industries-section .carousel-controller.mobile {
+        position: absolute;
+        z-index: 10;
+        top: 21%;
+    }
     /****************************************
     Ccontact section
     *****************************************/
