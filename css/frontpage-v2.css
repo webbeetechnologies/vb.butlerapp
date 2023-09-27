@@ -2773,7 +2773,14 @@ body .slick-dots {
         width: 320%;
         max-width: 320%;
     }
-        
+    
+    /********************************************
+    industries
+    *********************************************/
+    .industries-section .carousel-controller.mobile {
+        margin-top: 27%;
+    }
+    
     #footer-v2 .footer-logo-set {
         padding: 0;
     }
