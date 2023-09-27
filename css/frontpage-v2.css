@@ -2837,6 +2837,7 @@ body .slick-dots {
         min-height: 285px;
     }
 
+    /*
     #butlerapp-team-container,
     #butlerapp-informal-team-container {
         overflow-y: hidden;
@@ -2853,7 +2854,16 @@ body .slick-dots {
         width: 320%;
         max-width: 320%;
     }
-    
+    */
+    .e-hotspot__button {
+        zoom: 0.7;
+    }
+    .e-hotspot__tooltip {
+        zoom: 0.8;
+    }
+    .ba-instructor-parent {
+        display: none;
+    }
     /********************************************
     industries
     *********************************************/
