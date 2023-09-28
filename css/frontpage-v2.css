@@ -1745,10 +1745,6 @@ body .slick-dots {
         position: relative;
     }
 
-    /* anti jumpy before class applied */
-    .product-nav-container nav {
-        position: absolute;
-    }
     /* POPUP */
     .elementor-popup-modal .popup-icon {
         width: 90px;
@@ -1918,6 +1914,11 @@ body .slick-dots {
 
     .premium-hamburger-toggle .premium-toggle-close .fas {
         padding: 0;
+    }
+
+    /* anti jumpy before class applied */
+    .product-nav-container nav {
+        position: absolute;
     }
     /**************************************************
     HOME
@@ -2731,7 +2732,7 @@ body .slick-dots {
     .button-hero {
         width: 100%;
     }
-    
+
     .button-hero a {
         width: 100% !important;
     }
