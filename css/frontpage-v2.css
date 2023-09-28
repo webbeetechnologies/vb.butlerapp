@@ -2811,7 +2811,7 @@ body .slick-dots {
     }
 
     /* TEAM PHOTO */
-    .headline.heading-rainbow {
+    .headline.heading-rainbow .elementor-widget-container {
         padding: 10px 0 0 !important;
     }
     
