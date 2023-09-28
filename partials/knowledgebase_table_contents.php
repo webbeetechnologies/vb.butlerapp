@@ -7,7 +7,7 @@ $slug = substr($current_url , strrpos($current_url , '/') + 1);
 $post =  get_page_by_path($slug,  OBJECT, 'post');
 
 $post_id = $post ? $post->ID : null;
-$cat_id = end(wp_get_post_categories($post_id));
+$cat_id = wp_get_post_categories($post_id)[0];
 
 $main_cat = get_category_by_slug( 'knowledgebase' );
 
@@ -21,7 +21,7 @@ $cats = get_terms( 'category', $arg );
 		<?php
 		$args=array(
 			'posts_per_page' => 10000, // basically, all :D
-			'category' => 54 //$cat->term_id
+			'category' => $cat->term_id
 		);
 		
 		// $wp_query = new WP_Query( $args );
