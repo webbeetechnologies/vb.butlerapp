@@ -854,6 +854,34 @@ KNOWLEDGE BASE: LIST
 }
 
 /***********************************
+da reaction: post reaction with emoji
+************************************/
+.da-reactions-outer {
+    border: 1px solid #E7E7E7;
+    background: #f1f2f3;
+    padding: 30px 20px;
+    text-align: center;
+    border-radius: 20px;
+    margin: 50px 0;
+}
+
+.da-reactions-outer p {
+    font-weight: bold;
+}
+
+.da-reactions-outer .count {
+    font-size: 10px;
+    font-weight: bold;
+}
+
+div.da-reactions-container div.reactions div.reaction {
+    margin: 4px 10px;
+}
+
+div.da-reactions-container div.reactions div.reaction:hover:after {
+    display: none;
+}
+/***********************************
 PERSONAL SERVICES: HOTSPOT V2
 ************************************/
 .e-hotspot-active .e-hotspot--fade-in-out {
