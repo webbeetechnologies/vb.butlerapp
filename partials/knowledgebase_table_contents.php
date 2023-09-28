@@ -7,7 +7,7 @@ $slug = substr($current_url , strrpos($current_url , '/') + 1);
 $post =  get_page_by_path($slug,  OBJECT, 'post');
 
 $post_id = $post ? $post->ID : null;
-$cat_id = wp_get_post_categories($post_id)[0];
+$cat_id = end(wp_get_post_categories($post_id));
 
 $main_cat = get_category_by_slug( 'knowledgebase' );
 
