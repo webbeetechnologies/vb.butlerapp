@@ -65,6 +65,8 @@ $cats = get_terms( 'category', $arg );
 	display: flex;
 	align-items: center;
 	padding-right: 40px;
+	padding-top: 6px;
+    padding-bottom: 6px;
 	font-weight: bold;
 	min-height: 28px;
 	cursor: pointer;
