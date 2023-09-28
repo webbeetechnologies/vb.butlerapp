@@ -426,7 +426,14 @@ function knowledgebase_list() {
 	get_template_part('partials/knowledgebase_list','page');
 	return ob_get_clean();
 }
-add_shortcode('knowledgebase_list', 'knowledgebase_list'); 
+add_shortcode('knowledgebase_list', 'knowledgebase_list');
+
+function knowledgebase_table_contents() {
+	ob_start();
+	get_template_part('partials/knowledgebase_table_contents','page');
+	return ob_get_clean();
+}
+add_shortcode('knowledgebase_table_contents', 'knowledgebase_table_contents');
 
 // danke page: send analytics to trusted
 function phpcode_trusted_api() {
