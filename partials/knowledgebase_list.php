@@ -10,7 +10,7 @@ $child_cat = get_terms( 'category', $child_arg );
 	<?php
 	$args=array(
 		'posts_per_page' => 1,
-		'cat' => $child_term->id
+		'category' => $child_term->term_id
 	);
 	$wp_query = new WP_Query( $args );
 
