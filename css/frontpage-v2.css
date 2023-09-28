@@ -2810,6 +2810,10 @@ body .slick-dots {
         height: 58px;
     }
 
+    /* TEAM PHOTO */
+    .headline.heading-rainbow {
+        padding: 10px 0 0 !important;
+    }
     
     /********************************************
     industries
