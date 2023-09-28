@@ -869,7 +869,7 @@ da reaction: post reaction with emoji
     font-weight: bold;
 }
 
-.da-reactions-outer .count {
+div.da-reactions-container .count {
     font-size: 10px;
     font-weight: bold;
 }
