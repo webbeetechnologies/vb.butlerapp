@@ -813,6 +813,46 @@ use border-radius 22px in the elementor btn
 .function-section .e-con-inner .elementor-element {
     padding: 0 !important;
 }
+
+/***********************************
+KNOWLEDGE BASE: LIST
+************************************/
+.kb-list {
+	display: grid;
+	gap: 20px;
+	width: 100%;
+}
+
+.kb-item {
+	background-color: white;
+    color: #0B2541;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    width: 100%;
+    min-height: 112px;
+    border-radius: 32px;
+    align-items: center;
+    padding: 0 40px;
+}
+
+.kb-item:hover {
+	text-decoration: none;
+	box-shadow: 0px 4px 14px 0px rgba(36, 70, 106, 0.6);
+}
+
+.kb-item h5 {
+	font-size: 30px;
+	font-weight: 500;
+	margin: 0;
+	flex-grow: 1;
+}
+.kb-item svg {
+	fill: #0B2541;
+	height: 30px;
+}
+
 /***********************************
 PERSONAL SERVICES: HOTSPOT V2
 ************************************/
@@ -2099,6 +2139,19 @@ body .slick-dots {
         margin: 0;
         padding: 0;
     }
+
+    /***********************************
+    KNOWLEDGE BASE: LIST
+    ************************************/
+    .kb-item {
+        min-height: 74px;
+    }
+
+    .kb-item h5,
+    .kb-item .elementor-button-icon {
+        font-size: 22px;
+    }
+
 }   
 
 @media (min-width: 768px) and (max-width: 1200px) {
