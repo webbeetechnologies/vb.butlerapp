@@ -113,6 +113,7 @@ $cats = get_terms( 'category', $arg );
 .kb-table-of-contents ul.post-list .post-item a {
 	font-size: 14px;
 	position: relative;
+	display: block;
 }
 
 .kb-table-of-contents ul.post-list .post-item.active a,
