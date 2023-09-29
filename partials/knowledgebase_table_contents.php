@@ -117,12 +117,16 @@ $cats = get_terms( 'category', $arg );
 
 .kb-table-of-contents ul.post-list .post-item.active a,
 .kb-table-of-contents ul.post-list .post-item:hover a {
+	color: #ED2177;
+}
+
+.kb-table-of-contents ul.post-list .post-item.active a {
+	font-weight: bold;
 	background: linear-gradient(90deg, #ED2177 0%, #F9A04B 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-fill-color: transparent;
-	font-weight: bold;
 }
 
 .kb-table-of-contents ul.post-list .post-item.active a:before {
