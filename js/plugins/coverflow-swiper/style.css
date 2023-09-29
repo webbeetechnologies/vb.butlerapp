@@ -115,6 +115,7 @@
 .swiper-text-container {
     text-align: center;
     margin: 50px -20px;
+    overflow: hidden;
 }
 
 .swiper-text-container .swiper-slide {
