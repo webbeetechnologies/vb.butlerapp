@@ -2405,6 +2405,7 @@ body .slick-dots {
 
     .swiper-text-container {
         margin-bottom: 0;
+        overflow: hidden;
     }
     .logo-ssl-container .e-con-inner {
         justify-content: space-evenly !important;
