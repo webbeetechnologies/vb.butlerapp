@@ -881,6 +881,23 @@ div.da-reactions-container div.reactions div.reaction {
 div.da-reactions-container div.reactions div.reaction:hover:after {
     display: none;
 }
+/* popup */
+.da-reactions-window {
+    position: relative;
+}
+
+.da-reactions-window p {
+    margin: 0;
+}
+
+.da-reactions-window-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: transparent;
+    padding: 0 8px;
+    font-size: 24px;
+}
 /***********************************
 PERSONAL SERVICES: HOTSPOT V2
 ************************************/
