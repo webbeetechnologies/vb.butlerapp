@@ -947,6 +947,15 @@ PERSONAL SERVICES: HOTSPOT V2
     opacity: 0;
     width: 26px;
 }
+
+/***********************************
+SLICK SLIDER MOBILE SCROLL BUG
+************************************/
+.slick-slider,
+.elementor-motion-effects-parent {
+    touch-action: auto;
+    -ms-touch-action: auto;
+}
 /***********************************
 HOTSPOT V2
 ************************************/
@@ -2405,7 +2414,6 @@ body .slick-dots {
 
     .swiper-text-container {
         margin-bottom: 0;
-        overflow: hidden;
     }
     .logo-ssl-container .e-con-inner {
         justify-content: space-evenly !important;
