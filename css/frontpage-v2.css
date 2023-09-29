@@ -956,6 +956,10 @@ SLICK SLIDER MOBILE SCROLL BUG
     touch-action: auto;
     -ms-touch-action: auto;
 }
+.slick-slider img,
+.elementor-motion-effects-parent > div {
+    pointer-events: none;
+}
 /***********************************
 HOTSPOT V2
 ************************************/
