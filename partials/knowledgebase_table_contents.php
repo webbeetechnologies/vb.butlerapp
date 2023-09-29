@@ -118,6 +118,7 @@ $cats = get_terms( 'category', $arg );
 .kb-table-of-contents ul.post-list .post-item.active a,
 .kb-table-of-contents ul.post-list .post-item:hover a {
 	color: #ED2177;
+	text-decoration: none;
 }
 
 .kb-table-of-contents ul.post-list .post-item.active a {
