@@ -899,7 +899,7 @@ div.da-reactions-container div.reactions div.reaction:hover:after {
     padding: 0 8px !important;
     font-size: 24px;
 }
-}
+
 /***********************************
 PERSONAL SERVICES: HOTSPOT V2
 ************************************/
@@ -948,18 +948,7 @@ PERSONAL SERVICES: HOTSPOT V2
     width: 26px;
 }
 
-/***********************************
-SLICK SLIDER MOBILE SCROLL BUG
-************************************/
-.slick-slider,
-.elementor-motion-effects-parent {
-    touch-action: auto;
-    -ms-touch-action: auto;
-}
-.slick-slider img,
-.elementor-motion-effects-parent > div {
-    pointer-events: none;
-}
+
 /***********************************
 HOTSPOT V2
 ************************************/
@@ -2750,6 +2739,17 @@ body .slick-dots {
         padding: 0;
     }
 
+    /***********************************
+    SLICK SLIDER MOBILE SCROLL BUG
+    ************************************/
+    .slick-slider {
+        touch-action: auto;
+        -ms-touch-action: auto;
+    }
+    .slick-slider img {
+        pointer-events: none;
+    }
+    
     /****************************************
     Contact section
     *****************************************/
@@ -2940,6 +2940,21 @@ body .slick-dots {
         margin-top: 25%;
     }
 
+    /* TEAM HOTSPOT */
+    .hotspot-container {
+        max-width: 100%;
+        width: 100%;
+    }
+    .e-hotspot__button {
+        zoom: 0.7;
+    }
+    .e-hotspot__tooltip {
+        zoom: 0.7;
+    }
+    .ba-instructor-parent {
+        display: none;
+    }
+
     /* SSL datenschutz */
     #datenschutz .image-container .e-con-inner .elementor-element {
         width: 100%;
@@ -2981,19 +2996,7 @@ body .slick-dots {
         max-width: 320%;
     }
     */
-    .hotspot-container {
-        max-width: 100%;
-        width: 100%;
-    }
-    .e-hotspot__button {
-        zoom: 0.7;
-    }
-    .e-hotspot__tooltip {
-        zoom: 0.8;
-    }
-    .ba-instructor-parent {
-        display: none;
-    }
+    
     /********************************************
     industries
     *********************************************/
