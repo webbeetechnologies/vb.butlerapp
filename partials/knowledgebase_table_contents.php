@@ -100,6 +100,7 @@ $cats = get_terms( 'category', $arg );
 	border-radius: 8px;
 	padding: 5px 15px;
 	margin: 2px 0;
+	overflow: hidden;
 }
 
 .kb-table-of-contents ul.post-list .post-item.active,
