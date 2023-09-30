@@ -316,24 +316,27 @@ $(document).ready(function () {
     =======================================================================================*/
     (function faqClosure() {
         var timeout = null;
-        var extraTopSpace = 20;
+        var extraTopSpace = 80;
         $(".faq-v2 .faq-inner").on("click", function () {
-            $(this).parent().find(".faq-content-area").slideToggle();
+            $(this).parent().find(".faq-content-area").slideToggle('50');
             $(this).parent().toggleClass("faq-active");
             $(".faq-v2 .faq-inner")
                 .not(this)
                 .parent()
                 .find(".faq-content-area")
-                .slideUp()
+                .slideUp('50')
                 .removeClass("faq-active");
             var activo = $(".faq-active").length;
             if (activo > 1) {
-                $(".faq-inner").not(this).parent().find(".faq-content-area").slideUp();
+                $(".faq-inner").not(this).parent().find(".faq-content-area").slideUp('50');
                 $(".faq-inner").not(this).parent().removeClass("faq-active");
             }
 
+            // mobile, stop here
+            if ($(window).width() < breakpoint.medium) return;
+
             // scroll to opened faq only in desktop
-            if (!$(this).parent().hasClass(".faq-active") && $(window).width() > breakpoint.medium) {
+            if (!$(this).parent().hasClass(".faq-active")) {
                 clearTimeout(timeout);
                 timeout = setTimeout(function () {
                 var offset = $(".faq-active").offset().top - extraTopSpace;
