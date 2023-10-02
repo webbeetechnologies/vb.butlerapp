@@ -2754,11 +2754,11 @@ body .slick-dots {
     /***********************************
     SLICK SLIDER MOBILE SCROLL BUG
     ************************************/
-    .slick-slider {
+    body .slick-slider {
         touch-action: auto;
         -ms-touch-action: auto;
     }
-    .slick-slider img {
+    body .slick-slider img {
         pointer-events: none;
     }
 
