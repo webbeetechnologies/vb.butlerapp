@@ -2222,6 +2222,9 @@ body .slick-dots {
 }
 
 @media (max-width: 768px) {
+    html, body {
+        scroll-behavior: smooth;
+    }
     .eq-height {
         min-height: inherit !important;
     }
@@ -2749,7 +2752,7 @@ body .slick-dots {
     .slick-slider img {
         pointer-events: none;
     }
-    
+
     /****************************************
     Contact section
     *****************************************/
