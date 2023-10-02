@@ -835,6 +835,7 @@ KNOWLEDGE BASE: LIST
     border-radius: 32px;
     align-items: center;
     padding: 0 40px;
+    word-break:  break-all;
 }
 
 .kb-item:hover {
@@ -851,6 +852,7 @@ KNOWLEDGE BASE: LIST
 .kb-item svg {
 	fill: #0B2541;
 	height: 30px;
+    margin-left: 20px;
 }
 
 /***********************************
