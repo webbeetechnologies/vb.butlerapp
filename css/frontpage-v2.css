@@ -2952,6 +2952,14 @@ body .slick-dots {
         margin-top: 25%;
     }
 
+    .industries-section .elementor-widget-button a {
+        margin: 0 !important;
+    }
+
+    .industries-section .carousel-container {
+        margin-bottom: -30px;
+    }
+
     /* TEAM HOTSPOT */
     .hotspot-container {
         max-width: 100%;
