@@ -2571,9 +2571,10 @@ body .slick-dots {
     
     /* fix only inside template: not full in left side */
     .elementor-template .personal-services-section > .e-con-inner .elementor-element:nth-child(1),
-    .elementor-template .map-section > .e-con-inner .elementor-element:nth-child(1) {
+    .elementor-template .map-section > .e-con-inner .left-container {
         max-width: calc(100% - 40px);
         width: 100% !important;
+        margin: 0 auto;
     }
     
     /* QUIZ */
