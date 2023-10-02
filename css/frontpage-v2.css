@@ -1683,6 +1683,63 @@ body .slick-dots {
     left: 0;
     right: 0;
 }
+
+/****************************************
+  LIST RAINBOW
+*****************************************/
+.list-rainbow {
+    list-style: none;
+	padding: 0;
+}
+
+.list-rainbow .list-item {
+	transition: all 0.3s;
+	border-radius: 8px;
+	padding: 5px 15px;
+	margin: 2px 0;
+	overflow: hidden;
+}
+
+.list-rainbow .list-item.active,
+.list-rainbow .list-item:hover {
+	
+	background: rgb(237,33,119);
+	background: linear-gradient(90deg, rgba(237,33,119,0.3) 0%, rgba(253,208,58,0.3) 100%);
+	
+}
+
+.list-rainbow .list-item a {
+	font-size: 14px;
+	position: relative;
+	display: block;
+    cursor: pointer;
+}
+
+.list-rainbow .list-item.active a,
+.list-rainbow .list-item:hover a {
+	color: #ED2177;
+	text-decoration: none;
+}
+
+.list-rainbow .list-item.active a {
+	font-weight: bold;
+	background: linear-gradient(90deg, #ED2177 0%, #F9A04B 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+.list-rainbow .list-item.active a:before {
+	content: "";
+	width: 4px;
+	border-radius: 0 2px 2px 0;
+	background-color: #ED2177;
+	height: 100%;
+	position: absolute;
+	left: -15px;
+	top: 0;
+}
 /****************************************
   FOOTER
 *****************************************/
@@ -2572,7 +2629,7 @@ body .slick-dots {
     /* fix only inside template: not full in left side */
     .elementor-template .personal-services-section > .e-con-inner .elementor-element:nth-child(1),
     .elementor-template .map-section > .e-con-inner .left-container {
-        max-width: calc(100% - 40px);
+        /*max-width: calc(100% - 40px);*/
         width: 100% !important;
         margin: 0 auto;
     }
