@@ -2570,7 +2570,7 @@ body .slick-dots {
     }
     
     /* fix only inside template: not full in left side */
-    .elementor-template .personal-services-section .e-con-inner .elementor-element:nth-child(1) {
+    .elementor-template .personal-services-section > .e-con-inner .elementor-element:nth-child(1) {
         max-width: calc(100% - 40px);
         width: 100% !important;
     }
@@ -2666,6 +2666,7 @@ body .slick-dots {
     .elementor-motion-effects-element .e-con-inner > .elementor-element:last-child {
         min-height: 160px;
         height: 58px;
+        max-width: 100%;
     }
 
     /****************************************
