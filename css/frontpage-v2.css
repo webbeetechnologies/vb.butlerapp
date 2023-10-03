@@ -1652,7 +1652,7 @@ FAQ V2 (override FAQ style in style.css
     margin-top: 0;
     max-height: 0;
     overflow: hidden;
-    transition: all 0.8s;
+    transition: all 0.2s;
 }
 
 .faq.faq-v2.faq-active .faq-content-area {
@@ -2923,7 +2923,7 @@ body .slick-dots {
     .container-interactive-map {
         padding: 0;
     }
-    
+
     body .interactive-map-container .map-container.ch {
         font-size: 6px;
     }
