@@ -336,7 +336,7 @@ $(document).ready(function () {
             if (!$(this).parent().hasClass(".faq-active")) {
                 clearTimeout(timeout);
                 timeout = setTimeout(function () {
-                var offset = $(".faq-active").offset().top - extraTopSpace;
+                var offset = ($(".faq-active").length ? $(".faq-active").offset().top : 0) - extraTopSpace;
                 var headerHeight = $("#masthead").height();
                 $("body, html").animate(
                     {
