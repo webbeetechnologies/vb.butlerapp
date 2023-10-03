@@ -2919,6 +2919,11 @@ body .slick-dots {
         background-color: white;
         padding: 5px 20px;
     }
+
+    .container-interactive-map {
+        padding: 0;
+    }
+    
     body .interactive-map-container .map-container.ch {
         font-size: 6px;
     }
@@ -3089,7 +3094,13 @@ body .slick-dots {
         max-width: 320%;
     }
     */
-    
+
+    body .interactive-map-container .map-container.ch,
+    body .interactive-map-container .map-container.de,
+    body .interactive-map-container .map-container.at {
+        font-size: 4px;
+    }
+
     /********************************************
     industries
     *********************************************/
