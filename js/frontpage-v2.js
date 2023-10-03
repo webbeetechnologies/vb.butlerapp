@@ -318,17 +318,14 @@ $(document).ready(function () {
         var timeout = null;
         var extraTopSpace = 80;
         $(".faq-v2 .faq-inner").on("click", function () {
-            $(this).parent().find(".faq-content-area").slideToggle('50');
             $(this).parent().toggleClass("faq-active");
             $(".faq-v2 .faq-inner")
                 .not(this)
                 .parent()
                 .find(".faq-content-area")
-                .slideUp('50')
                 .removeClass("faq-active");
             var activo = $(".faq-active").length;
             if (activo > 1) {
-                $(".faq-inner").not(this).parent().find(".faq-content-area").slideUp('50');
                 $(".faq-inner").not(this).parent().removeClass("faq-active");
             }
 
