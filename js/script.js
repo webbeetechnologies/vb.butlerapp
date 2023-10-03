@@ -64,7 +64,6 @@ jQuery(document).ready(function ($) {
     if (e.matches) {
       centerImage();
       // restructureSlider();
-      faqMobile();
       hotspotScroller();
     }
   });
@@ -327,58 +326,6 @@ jQuery(document).ready(function ($) {
     hamburgerClick();
   }, 1000);
 
-  /*=======================================================================================
-  * FAQs Section
-  =======================================================================================*/
-  (function faqClosure() {
-    var timeout = null;
-    var extraTopSpace = 20;
-    $(".faq:not(.faq-v2) .faq-inner").on("click", function () {
-      $(this).parent().find(".faq-content-area").slideToggle();
-      $(this).parent().toggleClass("faq-active");
-      $(".faq-inner")
-        .not(this)
-        .parent()
-        .find(".faq-content-area")
-        .slideUp()
-        .removeClass("faq-active");
-      var activo = $(".faq-active").length;
-      if (activo > 1) {
-        $(".faq-inner").not(this).parent().find(".faq-content-area").slideUp();
-        $(".faq-inner").not(this).parent().removeClass("faq-active");
-      }
-      if (!$(this).parent().hasClass(".faq-active")) {
-        clearTimeout(timeout);
-        timeout = setTimeout(function () {
-          var offset = $(".faq-active").offset().top - extraTopSpace;
-          var headerHeight = $("#masthead").height();
-          $("body, html").animate(
-            {
-              scrollTop: offset - headerHeight,
-            },
-            1000
-          );
-        }, 1000);
-      }
-    });
-  })();
-  function faqMobile() {
-    // FAQs Close Button --  Buggy (gotta fix this later...)
-    $(".faq-close-btn").click(function () {
-      if ($("#faqs-container .faq").hasClass("faq-active")) {
-        $(this).parent().removeClass("faq-active");
-        $(this)
-          .parent()
-          .find(".faq-content-area")
-          .slideUp()
-          .css("opacity", "0");
-      }
-    });
-    // 	Restructure faq-meta
-    $("#faqs-container .faq-meta").each(function () {
-      $(this).find("h5, span, a").wrapAll("<div>");
-    });
-  }
   /*=======================================================================================
   * CONTACT FORM SECTION 
   =======================================================================================*/

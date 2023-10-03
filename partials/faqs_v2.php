@@ -30,7 +30,7 @@
 				<div class="heading-content-area">
 					<h3><?php the_title(); ?></h3>
 					<!-- content area -->
-					<div style="display:none" class="faq-content-area">
+					<div class="faq-content-area">
 						<div class="faq-content-v2">
 							<?php the_content(); ?>
 						</div>

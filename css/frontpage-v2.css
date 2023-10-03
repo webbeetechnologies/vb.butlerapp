@@ -1532,6 +1532,7 @@ FAQ V2 (override FAQ style in style.css
 .faq-content-area .faq-content-v2 {
     opacity: 0.6;
     margin-bottom: 20px;
+    margin-top: 25px;
 }
 .faq-content-area .faq-footer {
     display: flex;
@@ -1645,6 +1646,19 @@ FAQ V2 (override FAQ style in style.css
 .faq.faq-v2 .faq-meta a i.fas {
     margin-left: 10px;
 }
+
+/* animate open-close using css. jquery slideToggle not so good in mobile */
+.faq.faq-v2 .faq-content-area {
+    margin-top: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.8s;
+}
+
+.faq.faq-v2.faq-active .faq-content-area {
+    max-height: 800px;
+}
+
 
 /****************************************
 OVERRIDE ELEMENTOR ELEMENTS (LAST RESORT)
@@ -2517,7 +2531,6 @@ body .slick-dots {
     #faqs-container .faq.faq-v2  .faq-arrow-flipper {
         padding: 0;
     }
-
     /**************************************************
     BUTTONS ALIGNMENTS
     - box benefit
