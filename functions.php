@@ -327,6 +327,19 @@ function enqueue_wp_child_theme() {
 		wp_enqueue_script("interactive-map", get_stylesheet_directory_uri() . "/js/interactive-map.js", array( "jquery" ));
 }
 
+// ADD ID IN POST LIST
+function add_column( $columns ){
+	$columns['post_id_clmn'] = 'ID'; // $columns['Column ID'] = 'Column Title';
+	return $columns;
+}
+add_filter('manage_posts_columns', 'add_column', 5);
+
+function column_content( $column, $id ){
+	if( $column === 'post_id_clmn')
+		echo $id;
+}
+add_action('manage_posts_custom_column', 'column_content', 5, 2);
+
 // TEMPORARILY DISABLING ADMIN BAR ON FRONTEND
 /* Disable WordPress Admin Bar for all users */
 add_filter( 'show_admin_bar', '__return_false' );
@@ -434,6 +447,13 @@ function knowledgebase_table_contents() {
 	return ob_get_clean();
 }
 add_shortcode('knowledgebase_table_contents', 'knowledgebase_table_contents');
+
+function videos_slideshow($atts) {
+	ob_start();
+	get_template_part('partials/videos_slideshow','page', array('atts'=>$atts));
+	return ob_get_clean();
+}
+add_shortcode('videos_slideshow', 'videos_slideshow');
 
 // danke page: send analytics to trusted
 function phpcode_trusted_api() {
