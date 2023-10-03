@@ -2768,7 +2768,7 @@ body .slick-dots {
     }
 
     .map-section .country-buttons-container .e-con-inner > div {
-        width: 31%;
+        flex-grow: 1;
     }
 
     .map-section .desc-container {
