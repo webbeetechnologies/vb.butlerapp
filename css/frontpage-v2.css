@@ -712,10 +712,6 @@ TESTIMONIALS SLICK
 /***********************************
 MEGAMENU
 ************************************/
-.premium-mega-content-container {
-    filter: drop-shadow(0px 8px 40px #C7BEBE);
-}
-
 .premium-mega-content-container > div > .elementor-inner > .elementor-section-wrap > .elementor-element {
     padding-left: 30px;
     padding-right: 30px;
@@ -1816,6 +1812,12 @@ body .slick-dots {
     }
 }
 
+@media (min-width: 1024px) {
+    .premium-mega-content-container {
+        filter: drop-shadow(0px 8px 40px #C7BEBE);
+    }
+}
+
 @media (max-width: 1200px) {
     /* fit the menu on top */
     #stb-logo-wrapper {
@@ -2016,7 +2018,6 @@ body .slick-dots {
     /* PREMIUM MOBILE MENU: SUBMENU/MEGAMENU */
     .premium-mega-content-container {
         top: 0;
-        filter: none;
         position: absolute !important;
         overflow-y: scroll;
         height: 100vh;
