@@ -16,6 +16,10 @@ $cats = get_terms( 'category', $arg );
 ?>
 
 <div class="kb-table-of-contents">
+	<div class="filter-container">
+		<h3 class="heading">Knowledge base</h3>
+		<input type="search" class="query" placeholder="Search" />
+	</div>
 	<!-- ONE ITEM CATEGORY -->
 	<?php foreach( $cats as $cat ):?>
 		<?php
@@ -42,7 +46,7 @@ $cats = get_terms( 'category', $arg );
 						<?php $link = get_permalink();?>
 						<?php $is_active_post = get_the_ID() == $post_id ?>
 						<?php $post_title = get_the_title(); ?>
-						<li class="post-item <?php echo $is_active_post ? 'active': ''; ?>">
+						<li class="post-item <?php echo $is_active_post ? 'active': ''; ?>" data-title="<?php echo strtolower($post_title); ?>">
 							<a href="<?php echo $link;?>"><?php echo $post_title; ?></a>
 						</li>
 					<?php endforeach; ?>
@@ -60,6 +64,37 @@ $cats = get_terms( 'category', $arg );
 	background: white;
 	border-radius: 16px;
 	padding: 16px;
+}
+
+.filter-container {
+	border-bottom: 1px solid #E7E9EC;
+	margin: 0px -16px 10px;
+    padding: 0 15px;
+}
+.filter-container .heading {
+	background: white url(/wp-content/themes/entrepreneur-child/img/kb-title.svg) left 0px no-repeat;
+    color: #0B2541;
+    font-weight: 700;
+    font-size: 16px;
+    padding-left: 33px;
+    margin: 6px 0 0;
+}
+
+.filter-container input.query {
+	background: white url(/wp-content/themes/entrepreneur-child/img/kb-search.svg) 12px center no-repeat;
+    border: 1px solid #E7E9EC !important;
+    border-radius: 16px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    padding-left: 43px;
+    width: 100%;
+    font-size: 15px;
+}
+
+.filter-container input.query:focus-visible {
+	outline: 1px solid #E7E9EC;
 }
 .kb-table-of-contents .category-title {
 	display: flex;
@@ -141,5 +176,13 @@ $cats = get_terms( 'category', $arg );
 	position: absolute;
 	left: -15px;
 	top: 0;
+}
+
+/* ON SEARCHING... */
+.kb-table-of-contents.on-searching .category-title {
+	display: none;
+}
+.kb-table-of-contents.on-searching .accordion-body {
+	display: block !important;
 }
 </style>

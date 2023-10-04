@@ -385,6 +385,39 @@ $(document).ready(function () {
             $this.next().slideToggle(350);
         }
     });
+
+    /*=======================================================================================
+    * KNOWLEDGE BASE: SEARCH
+    =======================================================================================*/
+    console.log($('.kb-table-of-contents input.query').length);
+    $('.kb-table-of-contents input.query').on('input',function() {
+        var val = this.value.toLowerCase();
+        if (val != "") {
+            $('.kb-table-of-contents').addClass('on-searching');
+        } else {
+            $('.kb-table-of-contents').removeClass('on-searching');
+        }
+
+        //find all .user-profile divs
+        $('.kb-table-of-contents').find('.post-item')
+        .filter(function() {
+            return $(this).data('title').indexOf( val ) > -1;
+        })
+        
+        //make them visible
+        .show()
+        
+        //now go back and get only the visible ones
+        .end().filter(':visible')
+        
+        //filter only those for which typed value 'val' does not match the `data-id` value
+        .filter(function() {
+            return $(this).data('title').toLowerCase().indexOf( val ) === -1;
+        })
+        
+        //fade those out
+        .fadeOut();
+    });
     /***********************************
      * MOBILE LAYOUT
      ***********************************/
