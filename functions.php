@@ -285,14 +285,12 @@ function defer_parsing_of_js( $url ) {
 add_filter( 'script_loader_tag', 'defer_parsing_of_js', 10 );
 
 // slick slider
-/*
 add_action( 'wp_enqueue_scripts', 'slick_register_styles' );
 function slick_register_styles() {
-	wp_enqueue_script( 'carousel-js', get_stylesheet_directory_uri() . '/js/plugins/slick/slick.min.js', ['jquery'], true );
+	// wp_enqueue_script( 'carousel-js', get_stylesheet_directory_uri() . '/js/plugins/slick/slick.min.js', ['jquery'], true );
 	wp_enqueue_style( 'slick-css', get_stylesheet_directory_uri() . '/js/plugins/slick/slick.css', [], false, 'all' );
 	wp_enqueue_style( 'slick-theme-css', get_stylesheet_directory_uri() . '/js/plugins/slick/slick-theme.css', ['slick-css'], false, 'all' );	
 }
-*/
 
 // coverflow swiper
 add_action( 'wp_enqueue_scripts', 'coverflow_register' );
