@@ -97,12 +97,15 @@ wp_reset_postdata();
 	border-radius: 2px;
 	background: #E2E5E8;
 	cursor: initial;
+	position: relative;
 }
 .video-with-progressbar .video-carousel-v2 .slick-dots li button {
 	width: 100%;
 	height: 4px;
 	background-color: transparent;
 	cursor: initial;
+	position: absolute;
+	left: 0;
 }
 
 .video-with-progressbar .video-carousel-v2 .slick-dots li.slick-active button {
