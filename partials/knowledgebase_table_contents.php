@@ -20,7 +20,7 @@ $cats = get_terms( 'category', $arg );
 		<h3 class="heading">Knowledge base</h3>
 		<div class="input-container">
 			<input type="search" class="query" placeholder="Search" />
-			<div class="clear-query" />
+			<div class="clear-query"></div>
 		</div>
 	</div>
 	<!-- ONE ITEM CATEGORY -->
