@@ -81,6 +81,10 @@ wp_reset_postdata();
 	opacity: 1;
 }
 
+.video-slider-container .slick-slide {
+	line-height: 0;
+}
+
 .video-with-progressbar {
 	position: relative;
 }
