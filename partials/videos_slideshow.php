@@ -190,15 +190,16 @@ $(document).ready(function() {
 		var total = $('#video-list-<?php echo $id; ?> .video-list-item').length;
 
 		// STOP PREV VIDEO JUST IN CASE PLAYING
-		var thePrevVid = $('#video-slider-<?php echo $id; ?> .video-item.slick-active video')[0];
+		var thePrevVid = $('#video-slider-<?php echo $id; ?> .slick-active video')[0];
 		thePrevVid.pause();
 		thePrevVid.currentTime = 0;
 		
 		$('#video-slider-<?php echo $id; ?>').slick('slickGoTo', slideno);
 
 		// play the video
-		if ($('#video-slider-<?php echo $id; ?> .video-item.slick-active video').length) {
-			var theVid = $('#video-slider-<?php echo $id; ?> .video-item.slick-active video')[0];
+		if ($('#video-slider-<?php echo $id; ?> .slick-active  video').length) {
+			var theVid = $('#video-slider-<?php echo $id; ?> .slick-active video')[0];
+			console.log('prepare to play...');
 			theVid.play();
 			
 			theVid.ontimeupdate = function() {
@@ -236,7 +237,7 @@ $(document).ready(function() {
 			setTimeout(() => {
 				$('#video-list-<?php echo $id; ?> .video-list-item:first-child .link').click();
 				// pause
-				var theVid = $('#video-slider-<?php echo $id; ?> .video-item.slick-active video')[0];
+				var theVid = $('#video-slider-<?php echo $id; ?> .slick-active video')[0];
 				theVid.pause();
 			}, 1000);
 		}
@@ -285,12 +286,14 @@ $(document).ready(function() {
 	$( '#video-container-<?php echo $id; ?>').exopiteInViewPort({
 		onWholeInside: function(element, inViewport) {
 			// play the paused video
-			var theVid = $('#video-slider-<?php echo $id; ?> .video-item.slick-active video')[0];
+			var theVid = $('#video-slider-<?php echo $id; ?> .slick-active video')[0];
+			console.log('onwhole inside, prepare to play');
 			theVid.play();
 		},
 		onLeft:function(element, direction) {
 			// pause the active vid
-			var theVid = $('#video-slider-<?php echo $id; ?> .video-item.slick-active video')[0];
+			var theVid = $('#video-slider-<?php echo $id; ?> .slick-active video')[0];
+			console.log('on left prepare to pause');
 			theVid.pause();
 		}
     });
