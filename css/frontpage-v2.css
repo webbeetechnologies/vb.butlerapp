@@ -1576,7 +1576,7 @@ FAQ V2 (override FAQ style in style.css
 
 .faq.faq-v2 .faq-arrow-flipper .fas {
     font-size: 22px;
-    transition: all 0.3s;
+    transition: all 0.2s;
 }
 /* HOVER AND ACTIVE */
 .faq.faq-v2:not(.faq-active):hover .faq-flipper img,
@@ -2531,6 +2531,12 @@ body .slick-dots {
 
     #faqs-container .faq.faq-v2  .faq-arrow-flipper {
         padding: 0;
+    }
+
+    /* animate open-close using css. jquery slideToggle not so good in mobile */
+    .faq.faq-v2 .faq-arrow-flipper .fas,
+    .faq.faq-v2 .faq-content-area {
+        transition: all 0.1s;
     }
     /**************************************************
     BUTTONS ALIGNMENTS
