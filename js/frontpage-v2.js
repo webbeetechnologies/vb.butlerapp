@@ -389,7 +389,7 @@ $(document).ready(function () {
     /*=======================================================================================
     * KNOWLEDGE BASE: SEARCH
     =======================================================================================*/
-    console.log($('.kb-table-of-contents input.query').length);
+    
     $('.kb-table-of-contents input.query').on('input',function() {
         var val = this.value.toLowerCase();
         if (val != "") {
@@ -417,6 +417,11 @@ $(document).ready(function () {
         
         //fade those out
         .fadeOut();
+    });
+
+    $('.kb-table-of-contents .clear-query').on('click', function() {
+        $('.kb-table-of-contents input.query').val('').trigger('input');
+        $('.kb-table-of-contents input.query').focus();
     });
     /***********************************
      * MOBILE LAYOUT

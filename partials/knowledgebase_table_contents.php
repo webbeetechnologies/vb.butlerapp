@@ -18,7 +18,10 @@ $cats = get_terms( 'category', $arg );
 <div class="kb-table-of-contents">
 	<div class="filter-container">
 		<h3 class="heading">Knowledge base</h3>
-		<input type="search" class="query" placeholder="Search" />
+		<div class="input-container">
+			<input type="search" class="query" placeholder="Search" />
+			<div class="clear-query" />
+		</div>
 	</div>
 	<!-- ONE ITEM CATEGORY -->
 	<?php foreach( $cats as $cat ):?>
@@ -89,8 +92,28 @@ $cats = get_terms( 'category', $arg );
     align-items: center;
     margin: 20px 0;
     padding-left: 43px;
+	padding-right: 40px;
+	position: relative;
     width: 100%;
     font-size: 15px;
+}
+
+.input-container {
+	position: relative;
+}
+.input-container .clear-query {
+	background: white url(/wp-content/themes/entrepreneur-child/img/kb-x.svg) center center no-repeat;
+	position: absolute;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    right: 15px;
+    top: 10px;
+	transition: all 0.2s;
+	opacity: 0;
+}
+.on-searching .input-container .clear-query {
+	opacity: 1;
 }
 
 .filter-container input.query:focus-visible {
