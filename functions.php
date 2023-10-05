@@ -381,6 +381,14 @@ function butler_team() {
 }
 add_shortcode('b_team', 'butler_team'); 
 
+// CPT - INDUSTRIES/BRANCHEN
+function industries_carousel() {
+	ob_start();
+	get_template_part('partials/industries_carousel','page');
+	return ob_get_clean();
+}
+add_shortcode('industries_carousel', 'industries_carousel'); 
+
 // CPT - PRICES
 function butler_prices() {
 	ob_start();

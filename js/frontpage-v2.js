@@ -306,10 +306,13 @@ $(document).ready(function () {
     $('.industries-section .carousel-controller .prev a').on('click', function(e) {
         e.preventDefault();
         $(this).parents('.industries-section').find('.carousel-prev').click();
+        $(this).parents('.industries-section').find('.slick-prev').click();
+        console.log($(this).parents('.industries-section').find('.slick-prev').length);
     });
     $('.industries-section .carousel-controller .next a').on('click', function(e) {
         e.preventDefault();
         $(this).parents('.industries-section').find('.carousel-next').click();
+        $(this).parents('.industries-section').find('.slick-next').click();
     });
     /*=======================================================================================
     * FAQs Section
