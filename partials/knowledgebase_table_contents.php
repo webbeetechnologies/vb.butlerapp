@@ -23,42 +23,44 @@ $cats = get_terms( 'category', $arg );
 			<div class="clear-query"></div>
 		</div>
 	</div>
-	<!-- ONE ITEM CATEGORY -->
-	<?php foreach( $cats as $cat ):?>
-		<?php
-		$args=array(
-			'posts_per_page' => 10000, // basically, all :D
-			'category' => $cat->term_id
-		);
-		
-		// $wp_query = new WP_Query( $args );
-		$posts = get_posts( $args );
-		$is_accordion_opened = in_array($cat->term_id, $cat_ids);
+	<div class="list-container">
+		<!-- ONE ITEM CATEGORY -->
+		<?php foreach( $cats as $cat ):?>
+			<?php
+			$args=array(
+				'posts_per_page' => 10000, // basically, all :D
+				'category' => $cat->term_id
+			);
+			
+			// $wp_query = new WP_Query( $args );
+			$posts = get_posts( $args );
+			$is_accordion_opened = in_array($cat->term_id, $cat_ids);
 
-		$custom_title = get_field( 'custom_title', $cat );
+			$custom_title = get_field( 'custom_title', $cat );
 
-		$title = $custom_title ? $custom_title : $cat->name;
-		?>
+			$title = $custom_title ? $custom_title : $cat->name;
+			?>
 
-		<div class="category-item accordion <?php echo $is_accordion_opened ? 'opened': ''; ?>">
-			<div class="category-title accordion-title"><?php echo $title;?></div>
+			<div class="category-item accordion <?php echo $is_accordion_opened ? 'opened': ''; ?>">
+				<div class="category-title accordion-title"><?php echo $title;?></div>
 
-			<div class="category-children accordion-body">
-				<ul class="post-list">
-					<?php foreach ( $posts as $post ) : setup_postdata( $post ); ?>
-						<?php $link = get_permalink();?>
-						<?php $is_active_post = get_the_ID() == $post_id ?>
-						<?php $post_title = get_the_title(); ?>
-						<li class="post-item <?php echo $is_active_post ? 'active': ''; ?>" data-title="<?php echo strtolower($post_title); ?>">
-							<a href="<?php echo $link;?>"><?php echo $post_title; ?></a>
-						</li>
-					<?php endforeach; ?>
-				</ul>
+				<div class="category-children accordion-body">
+					<ul class="post-list">
+						<?php foreach ( $posts as $post ) : setup_postdata( $post ); ?>
+							<?php $link = get_permalink();?>
+							<?php $is_active_post = get_the_ID() == $post_id ?>
+							<?php $post_title = get_the_title(); ?>
+							<li class="post-item <?php echo $is_active_post ? 'active': ''; ?>" data-title="<?php echo strtolower($post_title); ?>">
+								<a href="<?php echo $link;?>"><?php echo $post_title; ?></a>
+							</li>
+						<?php endforeach; ?>
+					</ul>
+				</div>
 			</div>
-		</div>
-		<?php wp_reset_query(); ?>
-	<?php endforeach;?> 
-	<!-- /ONE ITEM -->
+			<?php wp_reset_query(); ?>
+		<?php endforeach;?> 
+		<!-- /ONE ITEM -->
+	</div>
 </div>
 
 
@@ -67,6 +69,10 @@ $cats = get_terms( 'category', $arg );
 	background: white;
 	border-radius: 16px;
 	padding: 16px;
+	max-height: 85vh;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
 }
 
 .filter-container {
@@ -118,6 +124,13 @@ $cats = get_terms( 'category', $arg );
 
 .filter-container input.query:focus-visible {
 	outline: 1px solid #E7E9EC;
+}
+
+.kb-table-of-contents .list-container {
+	margin-right: -15px;
+    padding-right: 15px;
+	overflow-y: scroll;
+	flex-grow: 1;
 }
 .kb-table-of-contents .category-title {
 	display: flex;
