@@ -94,6 +94,9 @@ $cats = get_terms( 'category', $arg );
 }
 
 .kb-table-of-contents .list-view {
+	display: flex;
+    flex-direction: column;
+    overflow: hidden;
 }
 
 /* opened state, default */
