@@ -1119,6 +1119,10 @@ HOTSPOT V2
 /***********************************
 INDUSTRIES/SCHUNGEN SECTION
 ************************************/
+.industries-section {
+    background-size: 100% auto !important;
+}
+
 .industries-section .slick-slide .e-con-inner {
     min-height: 480px;
 }

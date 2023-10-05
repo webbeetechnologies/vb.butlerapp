@@ -61,6 +61,11 @@
 
 .industries-carousel-container .slider {
     margin: 0 -15px;
+    display: none;
+}
+
+.industries-carousel-container .slider.slick-initialized {
+    display: block;
 }
 
 .image-container {
