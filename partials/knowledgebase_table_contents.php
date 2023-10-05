@@ -110,7 +110,7 @@ $cats = get_terms( 'category', $arg );
 .filter-container {
 	border-bottom: 1px solid #E7E9EC;
 	margin: 0px -16px 10px;
-    padding: 0 15px;
+    padding: 0 16px;
 }
 
 .filter-container .heading-container {
