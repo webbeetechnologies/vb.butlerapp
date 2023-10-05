@@ -15,7 +15,7 @@ $arg = array( 'hide_empty' => false, 'parent' => $main_cat->term_id );
 $cats = get_terms( 'category', $arg );
 ?>
 
-<div class="kb-table-of-contents closed">
+<div class="kb-table-of-contents">
 	<div class="button-view">
 		<button class="toggler toggle-open">
 			<img src="/wp-content/themes/entrepreneur-child/img/burger.svg" alt="toggle open">
@@ -260,7 +260,7 @@ $cats = get_terms( 'category', $arg );
 
 @media (min-width: 768px) {
 	/* closed state ONLY IN DESKTOP */
-	body.kb-table-of-contents-closed .kb-supercontainer .e-con-inner {
+	body.kb-table-of-contents-closed .kb-supercontainer > .e-con-inner {
 		gap: 0 !important;
 	}
 
@@ -272,6 +272,7 @@ $cats = get_terms( 'category', $arg );
 	.kb-table-of-contents.closed {
 		position: absolute;
 		right: 0;
+		z-index: 10;
 	}
 	.kb-table-of-contents.closed .button-view {
 		width: 24px;
