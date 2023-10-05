@@ -15,51 +15,63 @@ $arg = array( 'hide_empty' => false, 'parent' => $main_cat->term_id );
 $cats = get_terms( 'category', $arg );
 ?>
 
-<div class="kb-table-of-contents">
-	<div class="filter-container">
-		<h3 class="heading">Knowledge base</h3>
-		<div class="input-container">
-			<input type="search" class="query" placeholder="Search" />
-			<div class="clear-query"></div>
-		</div>
+<div class="kb-table-of-contents closed">
+	<div class="button-view">
+		<button class="toggler toggle-open">
+			<img src="/wp-content/themes/entrepreneur-child/img/burger.svg" alt="toggle open">
+		</button>
 	</div>
-	<div class="list-container">
-		<!-- ONE ITEM CATEGORY -->
-		<?php foreach( $cats as $cat ):?>
-			<?php
-			$args=array(
-				'posts_per_page' => 10000, // basically, all :D
-				'category' => $cat->term_id
-			);
-			
-			// $wp_query = new WP_Query( $args );
-			$posts = get_posts( $args );
-			$is_accordion_opened = in_array($cat->term_id, $cat_ids);
-
-			$custom_title = get_field( 'custom_title', $cat );
-
-			$title = $custom_title ? $custom_title : $cat->name;
-			?>
-
-			<div class="category-item accordion <?php echo $is_accordion_opened ? 'opened': ''; ?>">
-				<div class="category-title accordion-title"><?php echo $title;?></div>
-
-				<div class="category-children accordion-body">
-					<ul class="post-list">
-						<?php foreach ( $posts as $post ) : setup_postdata( $post ); ?>
-							<?php $link = get_permalink();?>
-							<?php $is_active_post = get_the_ID() == $post_id ?>
-							<?php $post_title = get_the_title(); ?>
-							<li class="post-item <?php echo $is_active_post ? 'active': ''; ?>" data-title="<?php echo strtolower($post_title); ?>">
-								<a href="<?php echo $link;?>"><?php echo $post_title; ?></a>
-							</li>
-						<?php endforeach; ?>
-					</ul>
-				</div>
+	<div class="list-view">
+		<div class="filter-container">
+			<div class="heading-container">
+				<button class="toggler toggle-close">
+					<img src="/wp-content/themes/entrepreneur-child/img/kb-title.svg" alt="toggle close">
+				</button>
+				<h3 class="heading">Knowledge base</h3>
 			</div>
-			<?php wp_reset_query(); ?>
-		<?php endforeach;?> 
-		<!-- /ONE ITEM -->
+			<div class="input-container">
+				<input type="search" class="query" placeholder="Search" />
+				<div class="clear-query"></div>
+			</div>
+		</div>
+		<div class="list-container">
+			<!-- ONE ITEM CATEGORY -->
+			<?php foreach( $cats as $cat ):?>
+				<?php
+				$args=array(
+					'posts_per_page' => 10000, // basically, all :D
+					'category' => $cat->term_id
+				);
+				
+				// $wp_query = new WP_Query( $args );
+				$posts = get_posts( $args );
+				$is_accordion_opened = in_array($cat->term_id, $cat_ids);
+
+				$custom_title = get_field( 'custom_title', $cat );
+
+				$title = $custom_title ? $custom_title : $cat->name;
+				?>
+
+				<div class="category-item accordion <?php echo $is_accordion_opened ? 'opened': ''; ?>">
+					<div class="category-title accordion-title"><?php echo $title;?></div>
+
+					<div class="category-children accordion-body">
+						<ul class="post-list">
+							<?php foreach ( $posts as $post ) : setup_postdata( $post ); ?>
+								<?php $link = get_permalink();?>
+								<?php $is_active_post = get_the_ID() == $post_id ?>
+								<?php $post_title = get_the_title(); ?>
+								<li class="post-item <?php echo $is_active_post ? 'active': ''; ?>" data-title="<?php echo strtolower($post_title); ?>">
+									<a href="<?php echo $link;?>"><?php echo $post_title; ?></a>
+								</li>
+							<?php endforeach; ?>
+						</ul>
+					</div>
+				</div>
+				<?php wp_reset_query(); ?>
+			<?php endforeach;?> 
+			<!-- /ONE ITEM -->
+		</div>
 	</div>
 </div>
 
@@ -75,18 +87,42 @@ $cats = get_terms( 'category', $arg );
 	overflow: hidden;
 }
 
+.kb-table-of-contents .toggler {
+	padding: 0;
+	border: none;
+	background: transparent;
+}
+
+.kb-table-of-contents .list-view {
+}
+
+/* opened state, default */
+.kb-table-of-contents .button-view {
+	width: 0;
+	height: 0;
+	opacity: 0;
+	transition: all 0.3s;
+}
+
 .filter-container {
 	border-bottom: 1px solid #E7E9EC;
 	margin: 0px -16px 10px;
     padding: 0 15px;
 }
+
+.filter-container .heading-container {
+	display: flex;
+}
+
+.filter-container .heading-container {
+	opacity: 1;
+	color: #0B2541;
+}
 .filter-container .heading {
-	background: white url(/wp-content/themes/entrepreneur-child/img/kb-title.svg) left 0px no-repeat;
     color: #0B2541;
     font-weight: 700;
     font-size: 16px;
-    padding-left: 33px;
-    margin: 6px 0 0;
+    margin: 0 0 0 5px;
 }
 
 .filter-container input.query {
@@ -221,4 +257,49 @@ $cats = get_terms( 'category', $arg );
 .kb-table-of-contents.on-searching .accordion-body {
 	display: block !important;
 }
+
+@media (min-width: 768px) {
+	/* closed state ONLY IN DESKTOP */
+	body.kb-table-of-contents-closed .kb-supercontainer .e-con-inner {
+		gap: 0 !important;
+	}
+
+	body.kb-table-of-contents-closed .kb-table-container {
+		width: 0 !important;
+		padding: 0 !important;
+	}
+
+	.kb-table-of-contents.closed {
+		position: absolute;
+		right: 0;
+	}
+	.kb-table-of-contents.closed .button-view {
+		width: 24px;
+		height: 24px;
+		opacity: 1;
+	}
+
+	.kb-table-of-contents.closed .list-view {
+		width: 0;
+		height: 0;
+		overflow: hidden;
+	}
+}
+
 </style>
+
+<script>
+var $ = jQuery;
+
+$(document).ready(function() {
+	$('.kb-table-of-contents .toggler').on('click', function() {
+		if ($(this).hasClass('toggle-close')) {
+			$(this).parents('.kb-table-of-contents').addClass('closed');
+			$('body').addClass('kb-table-of-contents-closed');
+		} else {
+			$(this).parents('.kb-table-of-contents').removeClass('closed');
+			$('body').removeClass('kb-table-of-contents-closed');
+		}
+	})
+});
+</script>
