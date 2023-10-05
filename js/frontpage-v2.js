@@ -314,40 +314,37 @@ $(document).ready(function () {
     /*=======================================================================================
     * FAQs Section
     =======================================================================================*/
-    (function faqClosure() {
-        var timeout = null;
-        var extraTopSpace = 80;
-        $(".faq-v2 .faq-inner").on("click", function () {
-            $(this).parent().toggleClass("faq-active");
-            $(".faq-v2 .faq-inner")
-                .not(this)
-                .parent()
-                .find(".faq-content-area")
-                .removeClass("faq-active");
-            var activo = $(".faq-active").length;
-            if (activo > 1) {
-                $(".faq-inner").not(this).parent().removeClass("faq-active");
-            }
+    $(".faq-v2 .faq-inner").on("click", function () {
+        $(this).parent().toggleClass("faq-active");
+        $(".faq-v2 .faq-inner")
+            .not(this)
+            .parent()
+            .find(".faq-content-area")
+            .removeClass("faq-active");
+        var activo = $(".faq-active").length;
+        if (activo > 1) {
+            $(".faq-inner").not(this).parent().removeClass("faq-active");
+        }
 
-            // mobile, stop here
-            if ($(window).width() < breakpoint.medium) return;
+        // mobile, stop here
+        if ($(window).width() < breakpoint.medium) return;
 
-            // scroll to opened faq only in desktop
-            if (!$(this).parent().hasClass(".faq-active")) {
-                clearTimeout(timeout);
-                timeout = setTimeout(function () {
-                var offset = $(".faq-active").offset().top - extraTopSpace;
-                var headerHeight = $("#masthead").height();
-                $("body, html").animate(
-                    {
-                    scrollTop: offset - headerHeight,
-                    },
-                    1000
-                );
-                }, 1000);
-            }
-        });
-    })();
+        // scroll to opened faq only in desktop
+        var timeout;
+        if (!$(this).parent().hasClass(".faq-active")) {
+            clearTimeout(timeout);
+            timeout = setTimeout(function () {
+            var offset = $(".faq-active").offset().top - extraTopSpace;
+            var headerHeight = $("#masthead").height();
+            $("body, html").animate(
+                {
+                scrollTop: offset - headerHeight,
+                },
+                1000
+            );
+            }, 1000);
+        }
+    });
 
     var delay=1000, setTimeoutConst;
     $('.faq-v2:not(".faq-active")').hover(function() {
