@@ -298,9 +298,11 @@ var $ = jQuery;
 $(document).ready(function() {
 	$('.kb-table-of-contents .toggler').on('click', function() {
 		if ($(this).hasClass('toggle-close')) {
+			$(window).scrollTop(0);
 			$(this).parents('.kb-table-of-contents').addClass('closed');
 			$('body').addClass('kb-table-of-contents-closed');
 		} else {
+			$(window).scrollTop(0);
 			$(this).parents('.kb-table-of-contents').removeClass('closed');
 			$('body').removeClass('kb-table-of-contents-closed');
 		}
