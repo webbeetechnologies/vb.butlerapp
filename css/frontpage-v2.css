@@ -157,7 +157,8 @@ HERO
     max-width: var(--content-width);
     left: 50%;
     transform: translateX(-50%);
-    background-size: auto 100% !important;
+    background-size: auto 94% !important;
+    /* rrsize problematic branchen page hero with 94% */
 }
 
 .full-hero-image:before,
