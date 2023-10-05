@@ -64,6 +64,7 @@
 }
 
 .image-container {
+    background-color: #cccccc;
     border-radius: 32px;
     position: relative;
     padding-top: 56%;
