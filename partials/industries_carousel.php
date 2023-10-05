@@ -71,7 +71,7 @@
 }
 
 .image-container img {
-    object-fit: cover;
+    width: 100%;
     position: absolute;
     top: 0;
     left: 0;
@@ -81,7 +81,7 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    padding: 0 15px;
+    padding: 0 14px;
     min-height: 440px;
 }
 .industry-item h3.heading {
