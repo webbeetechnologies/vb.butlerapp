@@ -68,7 +68,7 @@
     display: block;
 }
 
-.image-container {
+.industries-carousel-container .image-container {
     background-color: #cccccc;
     border-radius: 32px;
     position: relative;
@@ -76,7 +76,7 @@
     overflow: hidden;
 }
 
-.image-container img {
+.industries-carousel-container .image-container img {
     width: 100%;
     position: absolute;
     top: 0;
