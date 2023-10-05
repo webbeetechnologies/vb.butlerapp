@@ -110,6 +110,30 @@
     order: 15;
     margin-left: 10px;
 }
+
+@media (max-width: 1024px) {
+    .industries-carousel-container {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 640px) {
+    .industries-section .carousel-controller.mobile {
+        margin-top: 22%;
+    }
+}
+
+@media (max-width: 480px) {
+    .industries-section .carousel-controller.mobile {
+        margin-top: 20%;
+    }
+}
+
+@media (max-width: 360px) {
+    .industries-section .carousel-controller.mobile {
+        margin-top: 18%;
+    }
+}
 </style>
 
 <script>
