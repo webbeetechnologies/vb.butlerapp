@@ -2297,9 +2297,9 @@ body .slick-dots {
 }
 
 @media (max-width: 768px) {
-    html, body {
+    html, body, * {
         /* safari issue */
-        /*scroll-behavior: smooth;*/
+        scroll-behavior: smooth;
         /*-webkit-transform: translate3d(0, 0, 0);*/
     }
     .eq-height {
