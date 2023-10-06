@@ -2010,6 +2010,10 @@ body .slick-dots {
     #mainhero-2 .product-menu-container {
         height: 50px;
     }
+    .hfe-nav-menu__toggle {
+        margin: 0 !important;
+        text-align: right;
+    }
 
     /* fit the menu on top */
     #stb-logo-wrapper {
@@ -2304,6 +2308,9 @@ body .slick-dots {
         -ms-touch-action: manipulation;
         touch-action: manipulation;
         /*-webkit-transform: translate3d(0, 0, 0);*/
+        overflow-y: scroll;
+        overflow-x: hidden; 
+        -webkit-overflow-scrolling: touch;
     }
     .eq-height {
         min-height: inherit !important;
