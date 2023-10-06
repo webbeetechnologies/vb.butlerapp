@@ -341,17 +341,18 @@ $(document).ready(function () {
         }
         */
     });
-
-    var delay=1000, setTimeoutConst;
-    $('.faq-v2:not(".faq-active")').hover(function() {
-        var $that = $(this);
-        setTimeoutConst = setTimeout(function() {
-            $that.addClass('hover');
-        }, delay);
-    }, function() {
-        clearTimeout(setTimeoutConst);
-        $(this).removeClass('hover');
-    });
+    if ($(window).width() > breakpoint.medium) {
+        var delay=1000, setTimeoutConst;
+        $('.faq-v2:not(".faq-active")').hover(function() {
+            var $that = $(this);
+            setTimeoutConst = setTimeout(function() {
+                $that.addClass('hover');
+            }, delay);
+        }, function() {
+            clearTimeout(setTimeoutConst);
+            $(this).removeClass('hover');
+        });
+    }
 
     /*=======================================================================================
     * KNOWLEDGE BASE: ACCORDION
