@@ -2553,6 +2553,15 @@ body .slick-dots {
     }
 
     /* animate open-close using css. jquery slideToggle not so good in mobile */
+    .faq.faq-v2 .faq-content-area {
+        display: none;
+        transition: none;
+    }
+
+    .faq.faq-v2.faq-active .faq-content-area {
+        display: block;
+    }
+    /* animate open-close using css. jquery slideToggle not so good in mobile */
     .faq.faq-v2 .faq-arrow-flipper .fas,
     .faq.faq-v2 .faq-content-area {
         /*transition: all 0.1s;*/
