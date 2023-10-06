@@ -2297,9 +2297,12 @@ body .slick-dots {
 }
 
 @media (max-width: 768px) {
-    html, body, * {
+    html, body {
         /* safari issue */
         scroll-behavior: smooth;
+        /* TOUCH when click */
+        -ms-touch-action: manipulation;
+        touch-action: manipulation;
         /*-webkit-transform: translate3d(0, 0, 0);*/
     }
     .eq-height {
