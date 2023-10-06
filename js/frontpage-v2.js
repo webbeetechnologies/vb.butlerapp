@@ -317,7 +317,7 @@ $(document).ready(function () {
     /*=======================================================================================
     * FAQs Section
     =======================================================================================*/
-    $(".faq-v2 .faq-inner").on("click", function () {
+    $(".faq-v2 .faq-inner").fastClick(function () {
         $('.faq-v2.faq-active').not($(this).parent()).removeClass('faq-active');
         $(this).parent().toggleClass("faq-active");
 

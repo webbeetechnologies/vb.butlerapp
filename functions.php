@@ -288,6 +288,7 @@ add_filter( 'script_loader_tag', 'defer_parsing_of_js', 10 );
 add_action( 'wp_enqueue_scripts', 'slick_register_styles' );
 function slick_register_styles() {
 	// slick.js already called by elementor PA. we only need the style
+	wp_enqueue_script( 'fastclick-js', get_stylesheet_directory_uri() . '/js/plugins/fastclick/jQuery.fastClick.js', ['jquery'], true );
 	wp_enqueue_script( 'carousel-js', get_stylesheet_directory_uri() . '/js/plugins/slick/slick.min.js', ['jquery'], true );
 	wp_enqueue_style( 'slick-css', get_stylesheet_directory_uri() . '/js/plugins/slick/slick.css', [], false, 'all' );
 	wp_enqueue_style( 'slick-theme-css', get_stylesheet_directory_uri() . '/js/plugins/slick/slick-theme.css', ['slick-css'], false, 'all' );	
