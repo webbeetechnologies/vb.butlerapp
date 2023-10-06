@@ -374,7 +374,14 @@ function butler_faqs($atts = null) {
 	get_template_part('partials/faqs_v2','page');
 	return ob_get_clean();
 }
-add_shortcode('b_faqs', 'butler_faqs'); 
+add_shortcode('b_faqs', 'butler_faqs');
+
+function butler_faqs_mobile($atts = null) {
+	ob_start();
+	get_template_part('partials/faqs_mobile_v2','page');
+	return ob_get_clean();
+}
+add_shortcode('b_faqs_mobile', 'butler_faqs_mobile'); 
 
 // CPT - TEAM
 function butler_team() {
