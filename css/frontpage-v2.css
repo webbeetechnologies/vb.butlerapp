@@ -1492,6 +1492,7 @@ FAQ V2 (override FAQ style in style.css
 }
 #faqs-container .faq.faq-v2 .faq-inner h3 {
     padding: 0;
+    min-height: 50px;
 }
 
 .faq.faq-v2 .faq-flipper {
@@ -2534,6 +2535,7 @@ body .slick-dots {
 
     #faqs-container .faq.faq-v2 .faq-inner h3 {
         padding: 12px 0;
+        min-height: inherit;
     }
 
     #faqs-container .faq.faq-v2 .faq-inner .heading-content-area {
@@ -2939,6 +2941,18 @@ body .slick-dots {
 }
 
 @media (max-width: 640px) {
+    /* make sure all transition off, to make the performance better in mobile device */
+    body > * {
+        -webkit-transition: none !important;
+        -moz-transition: none !important;
+        -o-transition: none !important;
+        transition: none !important;
+        -webkit-animation: none !important;
+        -moz-animation: none !important;
+        -o-animation: none !important;
+        animation: none !important;
+    }
+
     body.website-v2 #masthead {
         background-color: white;
         box-shadow: none;
