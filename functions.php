@@ -356,6 +356,7 @@ add_shortcode('b_guides', 'butler_guides');
 // CPT - FAQs
 function butler_faqs($atts = null) {
 	ob_start();
+	/*
 	$ver = ($atts && $atts['ver']) ? $atts['ver'] : '1';
 
 	switch ($ver) {
@@ -368,7 +369,8 @@ function butler_faqs($atts = null) {
 			break;
 
 	}
-	get_template_part($template,'page');
+	*/
+	get_template_part('partials/faqs_v2','page');
 	return ob_get_clean();
 }
 add_shortcode('b_faqs', 'butler_faqs'); 
