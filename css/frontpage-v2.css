@@ -1491,7 +1491,7 @@ FAQ V2 (override FAQ style in style.css
     gap: 10px;
 }
 #faqs-container .faq.faq-v2 .faq-inner h3 {
-    padding: 12px 0;
+    padding: 0;
 }
 
 .faq.faq-v2 .faq-flipper {
@@ -2530,6 +2530,10 @@ body .slick-dots {
 
     #faqs-container .faq.faq-v2 .faq-flipper {
         display: none;
+    }
+
+    #faqs-container .faq.faq-v2 .faq-inner h3 {
+        padding: 12px 0;
     }
 
     #faqs-container .faq.faq-v2 .faq-inner .heading-content-area {

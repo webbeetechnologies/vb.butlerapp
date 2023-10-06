@@ -318,16 +318,8 @@ $(document).ready(function () {
     * FAQs Section
     =======================================================================================*/
     $(".faq-v2 .faq-inner").on("click", function () {
+        $('.faq-v2.faq-active').not($(this).parent()).removeClass('faq-active');
         $(this).parent().toggleClass("faq-active");
-        $(".faq-v2 .faq-inner")
-            .not(this)
-            .parent()
-            .find(".faq-content-area")
-            .removeClass("faq-active");
-        var activo = $(".faq-active").length;
-        if (activo > 1) {
-            $(".faq-inner").not(this).parent().removeClass("faq-active");
-        }
 
         if ($(window).width() > breakpoint.medium) {
             // scroll to opened faq only in desktop
