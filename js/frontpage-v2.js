@@ -341,7 +341,7 @@ $(document).ready(function () {
         }
         */
     });
-    /*
+    
     if ($(window).width() > breakpoint.medium) {
         var delay=1000, setTimeoutConst;
         $('.faq-v2:not(".faq-active")').hover(function() {
@@ -354,7 +354,6 @@ $(document).ready(function () {
             $(this).removeClass('hover');
         });
     }
-    */
 
     /*=======================================================================================
     * KNOWLEDGE BASE: ACCORDION
