@@ -1491,7 +1491,7 @@ FAQ V2 (override FAQ style in style.css
     gap: 10px;
 }
 #faqs-container .faq.faq-v2 .faq-inner h3 {
-    padding: 0;
+    padding: 12px 0;
 }
 
 .faq.faq-v2 .faq-flipper {
@@ -1516,7 +1516,6 @@ FAQ V2 (override FAQ style in style.css
 }
 #faqs-container .faq.faq-v2 .faq-inner .heading-content-area {
     border-left: 1px solid #e2e3e3;
-    min-height: 50px;
     justify-content: center;
     display: flex;
     flex-direction: column;
@@ -2522,7 +2521,7 @@ body .slick-dots {
     }
 
     #faqs-container .faq.faq-v2 .faq-inner {
-        padding-bottom: 20px;
+        padding-bottom: 10px;
     }
 
     #faqs-container .faq.faq-v2 .faq-flipper {
@@ -2541,7 +2540,11 @@ body .slick-dots {
     /* animate open-close using css. jquery slideToggle not so good in mobile */
     .faq.faq-v2 .faq-arrow-flipper .fas,
     .faq.faq-v2 .faq-content-area {
-        transition: all 0.1s;
+        /*transition: all 0.1s;*/
+        -webkit-transition: none !important;
+        -moz-transition: none !important;
+        -o-transition: none !important;
+        transition: none !important;
     }
     /**************************************************
     BUTTONS ALIGNMENTS
