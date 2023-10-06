@@ -2274,6 +2274,10 @@ body .slick-dots {
 }   
 
 @media (min-width: 768px) and (max-width: 1200px) {
+    #mainhero-2 .hero-sec-v2 .hero-container > .e-con-inner > div:nth-child(2) {
+        display: none;
+    }
+
     .header-v2 .caller-icon-container.header-phone-icon {
         margin-top: 12px;
     }
