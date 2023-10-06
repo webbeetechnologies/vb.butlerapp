@@ -321,6 +321,7 @@ $(document).ready(function () {
         $('.faq-v2.faq-active').not($(this).parent()).removeClass('faq-active');
         $(this).parent().toggleClass("faq-active");
 
+        /*
         if ($(window).width() > breakpoint.medium) {
             // scroll to opened faq only in desktop
             var timeout;
@@ -338,6 +339,7 @@ $(document).ready(function () {
                 }, 1000);
             }
         }
+        */
     });
 
     var delay=1000, setTimeoutConst;
