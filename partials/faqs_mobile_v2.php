@@ -16,6 +16,7 @@
 				<div class="heading-content-area">
 					<h3><?php the_title(); ?></h3>
 					<!-- content area -->
+                    <?php /*
 					<div>
 						<div class="faq-content-area">
 							<div class="faq-content-v2">
@@ -32,6 +33,7 @@
 							</div>
 						</div>
 					</div>
+                    */ ?>
 				</div>
 
 				<div class="faq-arrow-flipper">
