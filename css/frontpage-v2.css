@@ -2889,7 +2889,8 @@ body .slick-dots {
     /***********************************
     SLICK SLIDER MOBILE SCROLL BUG
     ************************************/
-    body .slick-slider {
+    body .slick-slider,
+    .faq-v2 {
         touch-action: auto;
         -ms-touch-action: auto;
     }
