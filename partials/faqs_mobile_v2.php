@@ -9,7 +9,7 @@
 		); ?>
 		<!-- START THE FAQ LOOP -->
 		<?php $loop = new WP_Query( $args ); ?>
-        <?php if ($loop->have_posts() )):?>
+        <?php if ($loop->have_posts() ):?>
 		<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
 		<div class="faq faq-v2">
             <div class="heading-content-area">
