@@ -2304,13 +2304,17 @@ body .slick-dots {
     html, body {
         /* safari issue */
         scroll-behavior: smooth;
+        touch-action: auto;
+        -ms-touch-action: auto;
         /* TOUCH when click */
+        /*
         -ms-touch-action: manipulation;
         touch-action: manipulation;
-        /*-webkit-transform: translate3d(0, 0, 0);*/
+        /*-webkit-transform: translate3d(0, 0, 0);
         overflow-y: scroll;
         overflow-x: hidden; 
         -webkit-overflow-scrolling: touch;
+        */
     }
     .eq-height {
         min-height: inherit !important;
