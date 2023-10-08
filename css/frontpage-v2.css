@@ -1652,12 +1652,13 @@ FAQ V2 (override FAQ style in style.css
 .faq.faq-v2 .faq-content-area {
     margin-top: 0;
     max-height: 0;
-    overflow: hidden;
-    transition: all 0.2s;
+    opacity: 0;
+    transition: opacity 0.2s, max-height 0.2s;
 }
 
 .faq.faq-v2.faq-active .faq-content-area {
     max-height: 800px;
+    opacity: 1;
 }
 
 
@@ -2567,6 +2568,7 @@ body .slick-dots {
     .faq.faq-v2 .faq-content-area {
         height: 0;
         opacity: 0;
+        overflow: unset;
         transition: none;
         max-height: none !important;
     }
