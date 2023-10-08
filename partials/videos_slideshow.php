@@ -60,7 +60,7 @@ wp_reset_postdata();
 				<?php $idx = 0; ?>
 				<?php foreach ($arr_videos as $vid): ?>
 					<div class="video-item">
-						<video controls muted="muted">
+						<video controls playsinline muted>
 							<source src="<?php echo $vid['url']; ?>" type="video/mp4">
 						</video>
 					</div>
