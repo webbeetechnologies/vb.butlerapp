@@ -344,6 +344,7 @@ $(document).ready(function () {
         }
 
         // scrolltop to active one
+        /*
         if ($(window).width() > breakpoint.medium) {
             // scroll to opened faq only in desktop
             var timeout;
@@ -361,6 +362,7 @@ $(document).ready(function () {
                 }, 500);
             }
         }
+        */
     });
     
     if ($(window).width() > breakpoint.medium) {
