@@ -1649,6 +1649,7 @@ FAQ V2 (override FAQ style in style.css
 }
 
 /* animate open-close using css. jquery slideToggle not so good in mobile */
+/*
 .faq.faq-v2 .faq-content-area {
     margin-top: 0;
     max-height: 0;
@@ -1660,7 +1661,7 @@ FAQ V2 (override FAQ style in style.css
     max-height: 800px;
     opacity: 1;
 }
-
+*/
 
 /****************************************
 OVERRIDE ELEMENTOR ELEMENTS (LAST RESORT)
@@ -2565,6 +2566,7 @@ body .slick-dots {
     }
 
     /* animate open-close using css. jquery slideToggle not so good in mobile */
+    /*
     .faq.faq-v2 .faq-content-area {
         height: 0;
         opacity: 0;
@@ -2578,6 +2580,7 @@ body .slick-dots {
         opacity: 1;
         max-height: none !important;
     }
+    */
     /* animate open-close using css. jquery slideToggle not so good in mobile */
     .faq.faq-v2 .faq-arrow-flipper .fas,
     .faq.faq-v2 .faq-content-area {

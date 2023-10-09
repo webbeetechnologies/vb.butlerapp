@@ -317,11 +317,33 @@ $(document).ready(function () {
     /*=======================================================================================
     * FAQs Section
     =======================================================================================*/
-    $(".faq-v2 .faq-inner").fastClick(function () {
-        $('.faq-v2.faq-active').not($(this).parent()).removeClass('faq-active');
-        $(this).parent().toggleClass("faq-active");
+    // close all
+    var extraTopSpace = 80;
+    var animTime = 150;
+    $('.faq-v2').each(function(idx) {
+        if (!$(this).hasClass('faq-active')) {
+            $(this).find('.faq-inner .faq-content-area').slideUp(animTime);
+        }
+    });
 
-        /*
+    $('.faq-v2 .faq-inner').click(function(e) {
+        e.preventDefault();
+    
+        let $this = $(this);
+        
+        if ($this.parent().hasClass('faq-active')) {
+            console.log('closing..');
+            $this.parent().removeClass('faq-active');
+            $this.find('.faq-content-area').slideUp(animTime);
+        } else {
+            console.log('opening..');
+            $this.parents('.faq-v2-container').find('.faq-active .faq-content-area').slideUp(animTime);
+            $('.faq-v2-container .faq-active').removeClass('faq-active');
+            $this.parent().addClass('faq-active');
+            $this.find('.faq-content-area').slideToggle(animTime);
+        }
+
+        // scrolltop to active one
         if ($(window).width() > breakpoint.medium) {
             // scroll to opened faq only in desktop
             var timeout;
@@ -339,9 +361,8 @@ $(document).ready(function () {
                 }, 1000);
             }
         }
-        */
     });
-    /*
+    
     if ($(window).width() > breakpoint.medium) {
         var delay=1000, setTimeoutConst;
         $('.faq-v2:not(".faq-active")').hover(function() {
@@ -354,7 +375,6 @@ $(document).ready(function () {
             $(this).removeClass('hover');
         });
     }
-    */
 
     /*=======================================================================================
     * KNOWLEDGE BASE: ACCORDION

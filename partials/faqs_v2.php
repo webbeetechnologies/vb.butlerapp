@@ -57,3 +57,10 @@
 		 <!-- END THE FAQ LOOP -->
 	</div>
 </div>
+
+<style>
+/* default content closed */
+.faq-content-area {
+	display: none;
+}
+</style>
