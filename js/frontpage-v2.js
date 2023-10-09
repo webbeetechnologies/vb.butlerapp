@@ -356,9 +356,9 @@ $(document).ready(function () {
                     {
                     scrollTop: offset - headerHeight,
                     },
-                    1000
+                    500
                 );
-                }, 1000);
+                }, 500);
             }
         }
     });
