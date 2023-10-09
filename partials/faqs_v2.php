@@ -30,19 +30,17 @@
 				<div class="heading-content-area">
 					<h3><?php the_title(); ?></h3>
 					<!-- content area -->
-					<div>
-						<div class="faq-content-area">
-							<div class="faq-content-v2">
-								<?php the_content(); ?>
+					<div class="faq-content-area">
+						<div class="faq-content-v2">
+							<?php the_content(); ?>
+						</div>
+						<div class="faq-footer">
+							<div>
+								<h5><?php the_field('faq_name') ?></h5>
+								<div class="position"><?php the_field('faq_position') ?></div>
 							</div>
-							<div class="faq-footer">
-								<div>
-									<h5><?php the_field('faq_name') ?></h5>
-									<div class="position"><?php the_field('faq_position') ?></div>
-								</div>
-								<div>
-									<a href="<?php the_field('faq_contact_link') ?>">Kontaktieren <i class="fas fa-arrow-right"></i></a>
-								</div>
+							<div>
+								<a href="<?php the_field('faq_contact_link') ?>">Kontaktieren <i class="fas fa-arrow-right"></i></a>
 							</div>
 						</div>
 					</div>
