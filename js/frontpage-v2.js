@@ -332,11 +332,9 @@ $(document).ready(function () {
         let $this = $(this);
         
         if ($this.parent().hasClass('faq-active')) {
-            console.log('closing..');
             $this.parent().removeClass('faq-active');
             $this.find('.faq-content-area').slideUp(animTime);
         } else {
-            console.log('opening..');
             $this.parents('.faq-v2-container').find('.faq-active .faq-content-area').slideUp(animTime);
             $('.faq-v2-container .faq-active').removeClass('faq-active');
             $this.parent().addClass('faq-active');
