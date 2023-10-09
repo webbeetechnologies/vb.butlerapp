@@ -1513,7 +1513,6 @@ FAQ V2 (override FAQ style in style.css
     position: relative;
     top: 0;
     left: 0;
-    z-index: 2;
 }
 #faqs-container .faq.faq-v2 .faq-inner .heading-content-area {
     border-left: 1px solid #e2e3e3;
