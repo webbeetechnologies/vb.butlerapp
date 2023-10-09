@@ -27,10 +27,10 @@ $cats = get_terms( 'category', $arg );
 				<button class="toggler toggle-close">
 					<img src="/wp-content/themes/entrepreneur-child/img/kb-title.svg" alt="toggle close">
 				</button>
-				<h3 class="heading">Knowledge base</h3>
+				<h3 class="heading">Knowledge Base</h3>
 			</div>
 			<div class="input-container">
-				<input type="search" class="query" placeholder="Search" />
+				<input type="search" class="query" placeholder="Suche" />
 				<div class="clear-query"></div>
 			</div>
 		</div>
