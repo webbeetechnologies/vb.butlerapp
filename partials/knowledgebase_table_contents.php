@@ -24,10 +24,10 @@ $cats = get_terms( 'category', $arg );
 	<div class="list-view">
 		<div class="filter-container">
 			<div class="heading-container">
+				<h3 class="heading">Knowledge Base</h3>
 				<button class="toggler toggle-close">
 					<img src="/wp-content/themes/entrepreneur-child/img/kb-title.svg" alt="toggle close">
 				</button>
-				<h3 class="heading">Knowledge Base</h3>
 			</div>
 			<div class="input-container">
 				<input type="search" class="query" placeholder="Suche" />
@@ -126,6 +126,7 @@ $cats = get_terms( 'category', $arg );
     font-weight: 700;
     font-size: 16px;
     margin: 0 0 0 5px;
+	flex-grow: 1;
 }
 
 .filter-container input.query {
