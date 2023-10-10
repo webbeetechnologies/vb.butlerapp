@@ -2316,6 +2316,7 @@ body .slick-dots {
         overflow-x: hidden; 
         -webkit-overflow-scrolling: touch;
         */
+        word-break: break-all;
     }
     .eq-height {
         min-height: inherit !important;
