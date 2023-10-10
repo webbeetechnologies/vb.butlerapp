@@ -2551,6 +2551,13 @@
       font-size: 15.5px;
       width: 82%;
     }
+    .faq-overlay {
+      transition: none;
+    }
+    .faq-active .faq-flipper {
+      animation: none;
+    }
+
     .faq-content-area .faq-meta {
       position: relative;
       width: 97%;
@@ -3028,6 +3035,13 @@
       width: 170px;
       height: auto;
     }
+    #masthead
+    nav.elementor-nav-menu--dropdown.elementor-nav-menu__container
+    ul
+    li:not(li:last-child).active:before {
+      transition: none;
+    }
+
     .elementor-menu-toggle {
       background: transparent;
     }

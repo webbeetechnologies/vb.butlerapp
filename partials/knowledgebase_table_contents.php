@@ -260,34 +260,35 @@ $cats = get_terms( 'category', $arg );
 .kb-table-of-contents.on-searching .accordion-body {
 	display: block !important;
 }
+/* closed state ONLY IN DESKTOP */
+body.kb-table-of-contents-closed .kb-supercontainer > .e-con-inner {
+	gap: 0 !important;
+}
+
+body.kb-table-of-contents-closed .kb-table-container {
+	width: 0 !important;
+	padding: 0 !important;
+}
+
+.kb-table-of-contents.closed {
+	position: absolute;
+	right: 0;
+	z-index: 10;
+}
+.kb-table-of-contents.closed .button-view {
+	width: 24px;
+	height: 24px;
+	opacity: 1;
+}
+
+.kb-table-of-contents.closed .list-view {
+	width: 0;
+	height: 0;
+	overflow: hidden;
+}
 
 @media (min-width: 768px) {
-	/* closed state ONLY IN DESKTOP */
-	body.kb-table-of-contents-closed .kb-supercontainer > .e-con-inner {
-		gap: 0 !important;
-	}
-
-	body.kb-table-of-contents-closed .kb-table-container {
-		width: 0 !important;
-		padding: 0 !important;
-	}
-
-	.kb-table-of-contents.closed {
-		position: absolute;
-		right: 0;
-		z-index: 10;
-	}
-	.kb-table-of-contents.closed .button-view {
-		width: 24px;
-		height: 24px;
-		opacity: 1;
-	}
-
-	.kb-table-of-contents.closed .list-view {
-		width: 0;
-		height: 0;
-		overflow: hidden;
-	}
+	
 }
 
 </style>

@@ -2524,6 +2524,39 @@ body .slick-dots {
         margin-top: -30px;
     }
     
+    /***********************************
+    BUTTONS
+    ************************************/
+    .button a .elementor-button-text {
+        flex-grow: inherit;
+    }
+    .button.full a {
+        width: 100% !important;
+    }
+
+    /* Default: blue and small */
+    .button a,
+    .button a:active {
+        transition: none;
+    }
+
+    .button.rainbow a:before {
+        transition: none;
+    }
+
+    /***********************************
+    INTERACTIVE MAP
+    ************************************/
+    .container-interactive-map {
+        transition: none;
+    }
+
+    /***********************************
+    POPUP FAQ
+    ************************************/
+    .faq.faq-v2 .faq-popup-area {
+        transition: none;
+    }
     /**************************************************
     FAQ SECTION
     ***************************************************/
