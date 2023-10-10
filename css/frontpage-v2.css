@@ -1,3 +1,7 @@
+body {
+    word-break: break-word;
+}
+
 /***********************************
 MENU AND NAV
 ************************************/
@@ -2316,7 +2320,6 @@ body .slick-dots {
         overflow-x: hidden; 
         -webkit-overflow-scrolling: touch;
         */
-        word-break: break-word;
     }
     .eq-height {
         min-height: inherit !important;
