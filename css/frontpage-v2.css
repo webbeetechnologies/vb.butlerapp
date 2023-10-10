@@ -806,7 +806,13 @@ use border-radius 22px in the elementor btn
 
 .function-section {
     padding: 0;
+    word-break: break-word;
 }
+
+.elementor-heading-title {
+    word-break: break-word;
+}
+
 .function-section .e-con-inner .elementor-element {
     padding: 0 !important;
 }
