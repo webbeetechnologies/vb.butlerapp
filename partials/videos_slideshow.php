@@ -5,12 +5,12 @@ id: int. ID of cpt post passed via var in shrotcode, and wp_query
 type: string. enum['list', 'slideshow'] 
 */
 
-$id = $args['atts'] ? strtolower($args['atts']['id']) : null;
+$id_videos_group = $args['atts'] ? strtolower($args['atts']['id']) : null;
 $presentation_type = $args['atts'] ? strtolower($args['atts']['type']) : 'list';
 
 $args = array(  
 	'post_type' => 'video-functions',
-	'p' => $id
+	'p' => $id_videos_group
 );
 
 $arr_videos = [];
@@ -19,7 +19,7 @@ $loop = new WP_Query( $args );
 while ( $loop->have_posts() ) {
 	$loop->the_post();
 
-	if (get_field('video_items', $id)) {
+	if (get_field('video_items', $id_videos_group)) {
 		while( the_repeater_field('video_items') ) {
 			$video_item = array("title" => get_sub_field('video_title'), "url" =>  get_sub_field('video_file')['url'] );
 			$arr_videos[] = $video_item;
@@ -35,7 +35,7 @@ wp_reset_postdata();
 <!-- FOREACH $arr_videos -->
 <div class="video-listname-container">
 	<?php if (count($arr_videos)): ?>
-		<ul class="video-list list-rainbow" id="video-list-<?php echo $id; ?>" data-post-id="<?php echo $id; ?>">
+		<ul class="video-list list-rainbow" id="video-list-<?php echo $id_videos_group; ?>" data-post-id="<?php echo $id_videos_group; ?>">
 		<?php $idx = 0; ?>
 		<?php foreach ($arr_videos as $vid): ?>
 			<li class="video-list-item list-item" data-idx="<?php echo $idx; ?>">
@@ -51,12 +51,12 @@ wp_reset_postdata();
 
 <?php if ($presentation_type == 'slider') : ?>
 	<?php if (count($arr_videos)): ?>
-		<div class="video-slider-container video-with-progressbar" id="video-container-<?php echo $id; ?>">
+		<div class="video-slider-container video-with-progressbar" id="video-container-<?php echo $id_videos_group; ?>">
 			<div class="fake-nav">
 				<button class="prev" />
 				<button class="next" />
 			</div>
-			<div class="video-carousel-v2 slick-container-v2" id="video-slider-<?php echo $id; ?>" data-post-id="<?php echo $id; ?>">
+			<div class="video-carousel-v2 slick-container-v2" id="video-slider-<?php echo $id_videos_group; ?>" data-post-id="<?php echo $id_videos_group; ?>">
 				<?php $idx = 0; ?>
 				<?php foreach ($arr_videos as $vid): ?>
 					<div class="video-item">
@@ -188,31 +188,31 @@ $(document).ready(function() {
 	/**********************************************************
 	 *  VIDEO LIST NAMES, PLAY THE VID IS HERE
 	 **********************************************************/
-	$('#video-list-<?php echo $id; ?> .link').click(function(e) {
+	$('#video-list-<?php echo $id_videos_group; ?> .link').click(function(e) {
 		// e.preventDefault();
-		$('#video-list-<?php echo $id; ?> .active').removeClass('active');
+		$('#video-list-<?php echo $id_videos_group; ?> .active').removeClass('active');
 		$(this).parent().addClass('active');
 
 		var slideno = $(this).parent('.video-list-item').index();
-		var total = $('#video-list-<?php echo $id; ?> .video-list-item').length;
+		var total = $('#video-list-<?php echo $id_videos_group; ?> .video-list-item').length;
 
 		// STOP PREV VIDEO JUST IN CASE PLAYING
-		var thePrevVid = $('#video-slider-<?php echo $id; ?> .slick-active video')[0];
+		var thePrevVid = $('#video-slider-<?php echo $id_videos_group; ?> .slick-active video')[0];
 		thePrevVid.pause();
 		thePrevVid.currentTime = 0;
 		
-		$('#video-slider-<?php echo $id; ?>').slick('slickGoTo', slideno);
+		$('#video-slider-<?php echo $id_videos_group; ?>').slick('slickGoTo', slideno);
 
 		// play the video
-		if ($('#video-slider-<?php echo $id; ?> .slick-active  video').length) {
-			var theVid = $('#video-slider-<?php echo $id; ?> .slick-active video')[0];
+		if ($('#video-slider-<?php echo $id_videos_group; ?> .slick-active  video').length) {
+			var theVid = $('#video-slider-<?php echo $id_videos_group; ?> .slick-active video')[0];
 			console.log('prepare to play...');
 			theVid.play();
 			
 			theVid.ontimeupdate = function() {
 				var percentage = ( theVid.currentTime / theVid.duration ) * 100;
 				
-				$('#video-slider-<?php echo $id; ?> li.slick-active button').css("width", percentage+"%");
+				$('#video-slider-<?php echo $id_videos_group; ?> li.slick-active button').css("width", percentage+"%");
 			};
 
 			theVid.onended = function(e) {
@@ -224,7 +224,7 @@ $(document).ready(function() {
 					// back to first vid
 					idx = 0;
 				}
-				$('#video-list-<?php echo $id; ?> .link').eq(idx).click();
+				$('#video-list-<?php echo $id_videos_group; ?> .link').eq(idx).click();
 			};
 		}
 	});
@@ -239,18 +239,18 @@ $(document).ready(function() {
 <script>
 var $ = jQuery;
 $(document).ready(function() {
-	$('#video-slider-<?php echo $id; ?>').on('init', function(event, slick) {
-		if ($('#video-list-<?php echo $id; ?> .active').length == 0) {
+	$('#video-slider-<?php echo $id_videos_group; ?>').on('init', function(event, slick) {
+		if ($('#video-list-<?php echo $id_videos_group; ?> .active').length == 0) {
 			setTimeout(() => {
-				$('#video-list-<?php echo $id; ?> .video-list-item:first-child .link').click();
+				$('#video-list-<?php echo $id_videos_group; ?> .video-list-item:first-child .link').click();
 				// pause
-				var theVid = $('#video-slider-<?php echo $id; ?> .slick-active video')[0];
+				var theVid = $('#video-slider-<?php echo $id_videos_group; ?> .slick-active video')[0];
 				theVid.pause();
 			}, 1000);
 		}
 	});
 
-	$("#video-slider-<?php echo $id; ?>").not('.slick-initialized').slick({
+	$("#video-slider-<?php echo $id_videos_group; ?>").not('.slick-initialized').slick({
 		autoplay: false,
 		slidesToShow: 1,
 		slidesToScroll: 1,
@@ -261,7 +261,7 @@ $(document).ready(function() {
 	/**********************************************************
 	 *  VIDEOS SLIDER, when PREV NEXT BEFORE+AFTERCHANGE
 	 **********************************************************/
-	$('#video-container-<?php echo $id; ?> .fake-nav .prev').on('click', function(e) {
+	$('#video-container-<?php echo $id_videos_group; ?> .fake-nav .prev').on('click', function(e) {
 		var idx = $('#video-list-<?php echo $id; ?> .active').index();
 		var ln = $('#video-list-<?php echo $id; ?> .video-list-item').length;
 
@@ -276,30 +276,30 @@ $(document).ready(function() {
 		
 	});
 
-	$('#video-container-<?php echo $id; ?> .fake-nav .next').on('click', function(e) {
-		var idx = $('#video-list-<?php echo $id; ?> .active').index();
-		var ln = $('#video-list-<?php echo $id; ?> .video-list-item').length;
+	$('#video-container-<?php echo $id_videos_group; ?> .fake-nav .next').on('click', function(e) {
+		var idx = $('#video-list-<?php echo $id_videos_group; ?> .active').index();
+		var ln = $('#video-list-<?php echo $id_videos_group; ?> .video-list-item').length;
 
 		if (idx != ln-1) {
-			$('#video-list-<?php echo $id; ?> .active').removeClass('.active');
-			$('#video-list-<?php echo $id; ?> .video-list-item').eq(idx+1).find('a').click();
+			$('#video-list-<?php echo $id_videos_group; ?> .active').removeClass('.active');
+			$('#video-list-<?php echo $id_videos_group; ?> .video-list-item').eq(idx+1).find('a').click();
 		} else {
 			// goto first vid
-			$('#video-list-<?php echo $id; ?> .active').removeClass('.active');
-			$('#video-list-<?php echo $id; ?> .video-list-item').eq(0).find('a').click();
+			$('#video-list-<?php echo $id_videos_group; ?> .active').removeClass('.active');
+			$('#video-list-<?php echo $id_videos_group; ?> .video-list-item').eq(0).find('a').click();
 		}
 	});
 
-	$( '#video-container-<?php echo $id; ?>').exopiteInViewPort({
+	$( '#video-container-<?php echo $id_videos_group; ?>').exopiteInViewPort({
 		onWholeInside: function(element, inViewport) {
 			// play the paused video
-			var theVid = $('#video-slider-<?php echo $id; ?> .slick-active video')[0];
+			var theVid = $('#video-slider-<?php echo $id_videos_group; ?> .slick-active video')[0];
 			console.log('onwhole inside, prepare to play');
 			theVid.play();
 		},
 		onLeft:function(element, direction) {
 			// pause the active vid
-			var theVid = $('#video-slider-<?php echo $id; ?> .slick-active video')[0];
+			var theVid = $('#video-slider-<?php echo $id_videos_group; ?> .slick-active video')[0];
 			console.log('on left prepare to pause');
 			theVid.pause();
 		}
