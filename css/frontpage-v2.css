@@ -2276,6 +2276,7 @@ body .slick-dots {
     ************************************/
     .kb-item {
         min-height: 74px;
+        padding: 0 25px;
     }
 
     .kb-item h5,
