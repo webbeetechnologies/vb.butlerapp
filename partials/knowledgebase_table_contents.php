@@ -261,7 +261,7 @@ $cats = get_terms( 'category', $arg );
 .kb-table-of-contents.on-searching .accordion-body {
 	display: block !important;
 }
-/* closed state ONLY IN DESKTOP */
+/* closed state */
 body.kb-table-of-contents-closed .kb-supercontainer > .e-con-inner {
 	gap: 0 !important;
 }
@@ -287,11 +287,12 @@ body.kb-table-of-contents-closed .kb-table-container {
 	height: 0;
 	overflow: hidden;
 }
-
-@media (min-width: 768px) {
-	
+/* give some space on right hand side of heading for the button */
+body.kb-table-of-contents-closed h1.elementor-heading-title {
+	padding-right: 80px;
 }
 
+@media (min-width: 768px) {}
 </style>
 
 <script>
