@@ -2970,6 +2970,18 @@ body .slick-dots {
     }
 
     /****************************************
+    SAFARI CRASH ISSUE
+    *****************************************/
+    .list-rainbow .list-item.active a,
+    body.e--ua-safari .heading-rainbow {
+        background: none;
+        -webkit-background-clip: inherit;
+        -webkit-text-fill-color: inherit;
+        background-clip: inherit;
+        text-fill-color: transparent;
+        color: #ED2177;
+    }
+    /****************************************
     FOOTER
     *****************************************/
     #footer-v2 {
