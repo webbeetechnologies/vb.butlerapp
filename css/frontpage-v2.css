@@ -2775,6 +2775,12 @@ body .slick-dots {
     }
 
     /**************************************
+    FUNKTIONEN VIDEO SLIDER
+    ***************************************/
+    .funktionen-slider-container .video-carousel-v2 > .elementor-widget-container {
+        margin: 0 0 20px !important;
+    }
+    /**************************************
     MAPS
     ***************************************/
     .maps-supercontainer {
