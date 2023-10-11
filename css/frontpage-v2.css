@@ -2979,7 +2979,7 @@ body .slick-dots {
         -webkit-text-fill-color: inherit;
         background-clip: inherit;
         text-fill-color: transparent;
-        color: #ED2177;
+        color: #ED2177 !important;
     }
     /****************************************
     FOOTER
