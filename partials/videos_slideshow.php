@@ -262,16 +262,16 @@ $(document).ready(function() {
 	 *  VIDEOS SLIDER, when PREV NEXT BEFORE+AFTERCHANGE
 	 **********************************************************/
 	$('#video-container-<?php echo $id_videos_group; ?> .fake-nav .prev').on('click', function(e) {
-		var idx = $('#video-list-<?php echo $id; ?> .active').index();
-		var ln = $('#video-list-<?php echo $id; ?> .video-list-item').length;
+		var idx = $('#video-list-<?php echo $id_videos_group; ?> .active').index();
+		var ln = $('#video-list-<?php echo $id_videos_group; ?> .video-list-item').length;
 
 		if (idx !== 0) {
-			$('#video-list-<?php echo $id; ?> .active').removeClass('.active');
-			$('#video-list-<?php echo $id; ?> .video-list-item').eq(idx-1).find('a').click();
+			$('#video-list-<?php echo $id_videos_group; ?> .active').removeClass('.active');
+			$('#video-list-<?php echo $id_videos_group; ?> .video-list-item').eq(idx-1).find('a').click();
 		} else {
 			// loop to last vid
-			$('#video-list-<?php echo $id; ?> .active').removeClass('.active');
-			$('#video-list-<?php echo $id; ?> .video-list-item').eq(ln-1).find('a').click();
+			$('#video-list-<?php echo $id_videos_group; ?> .active').removeClass('.active');
+			$('#video-list-<?php echo $id_videos_group; ?> .video-list-item').eq(ln-1).find('a').click();
 		}
 		
 	});
