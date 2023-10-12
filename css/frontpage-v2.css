@@ -514,7 +514,10 @@ BUTTONS
     box-shadow: 0px 4px 14px 0px rgba(36, 70, 106, 0.6);
 }
 
-/*-- POPUP BUTTON --*/
+/*-- POPUP BUTTON ETC --*/
+.elementor-popup-modal form .elementor-field-type-html {
+    display: inline;
+}
 .elementor-popup-modal button span {
     font-size: 16px;
 }
