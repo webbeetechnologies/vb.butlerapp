@@ -59,8 +59,8 @@ wp_reset_postdata();
 			<div class="video-carousel-v2 slick-container-v2" id="video-slider-<?php echo $id_videos_group; ?>" data-post-id="<?php echo $id_videos_group; ?>">
 				<?php $idx = 0; ?>
 				<?php foreach ($arr_videos as $vid): ?>
-					<div class="video-item">
-						<video controls playsinline muted>
+					<div class="video-item" class="video-<?php echo $idx; ?>">
+						<video controls playsinline muted preload="auto">
 							<source src="<?php echo $vid['url']; ?>" type="video/mp4">
 						</video>
 					</div>
