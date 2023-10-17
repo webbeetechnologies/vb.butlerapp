@@ -1710,6 +1710,13 @@ body .slick-dots {
 }
 
 /****************************************
+  FUNKTIONEN
+*****************************************/
+div#funktionen-section .elementor-heading-title.elementor-size-default {
+    font-size: 36px !important;
+}
+
+/****************************************
   LIST RAINBOW
 *****************************************/
 .list-rainbow {
@@ -2632,6 +2639,14 @@ body .slick-dots {
         -o-transition: none !important;
         transition: none !important;
     }
+
+    /****************************************
+    FUNKTIONEN
+    *****************************************/
+    div#funktionen-section .elementor-heading-title.elementor-size-default {
+        font-size: 29px !important;
+    }
+
     /**************************************************
     BUTTONS ALIGNMENTS
     - box benefit
